@@ -64,9 +64,20 @@ ul.posts span {
   font-size: 115%;
   text-align: justify;
   width: 42em;
-  margin: 3em auto 2em;
+  margin: 0 auto 2em;
   line-height: 1.5em;
-  padding:1em;
+  padding:0 2em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-width:1px;
+  border-color:black;
+  border-style:solid;
+}
+
+.site .header {
+  background-color:#000000;
+  margin:0 -2em 1em -2em;
+  padding:1em 2em .5em  2em;
 }
 
 .site .header a {
@@ -76,7 +87,7 @@ ul.posts span {
 
 .site .header h1.title {
   display: inline-block;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .site .header h1.title a {

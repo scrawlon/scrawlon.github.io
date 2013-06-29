@@ -14,6 +14,7 @@ think there'd be a button for that... There isn't.  A little background: I'm on 
 machine. Back up all your data, and proceed at your own risk.*
 
 Here's how I did it:  
+--------------------
 
 1. Shut down the virtual machine you're trying to resize.
 
