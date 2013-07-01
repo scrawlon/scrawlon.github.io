@@ -44,5 +44,5 @@ the way, follow this guide:
 
 Virtualization is an amazing thing.
 The ability to create customized, clonable, disposable virtual computing
-environments is endlessly useful. If that interests you, stay tuned for my next
-post about [Vagrant](http://http://www.vagrantup.com/)
+environments is endlessly useful. If that interests you, stay tuned for my upcoming
+post about [Vagrant](http://http://www.vagrantup.com/).
