@@ -8,7 +8,9 @@ tags: []
 
 So, I recently found out what happens when a virtual machine
 runs out of space. Just resize the hard drive, right? Intuitively, one might
-think there'd be a button for that... There isn't.  A little background: I'm on OS X 10.7.5 and VirtualBox 4.2.12
+think there'd be a button for that... There isn't.   
+
+A little background: I'm on OS X 10.7.5 and VirtualBox 4.2.12
 
 *** __Disclaimer:__ *This could potentially destroy all data on your virtual
 machine. Back up all your data, and proceed at your own risk.*
@@ -31,10 +33,10 @@ progress bar going from 0% to 100%.
 `VBoxManage modifyhd clone.vdi --resize 20000`   
 (where the number is the new size in mb) 
 
-Half way there! Now you have to repartition the hard drive,
+Half way there! Now you have to repartition the hard drive
 so your virtual machine can use the space you just added. Fortunately, someone has
 already written an excellent guide: 
-[How To Enlarge a Virtual Machine’s Disk in VirtualBox or VMware](http://www.howtogeek.com/124622/how-to-enlarge-a-virtual-machines-disk-in-virtualbox-or-vmware)  
+[How To Enlarge a Virtual Machine’s Disk in VirtualBox or VMware](http://www.howtogeek.com/124622/how-to-enlarge-a-virtual-machines-disk-in-virtualbox-or-vmware)
 __Skip about halfway down to the paragraph beginning "You can use a GParted live
 CD..."__
 

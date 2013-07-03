@@ -1,1 +1,6 @@
 _site
+Vagrantfile
+.DS_Store
+.vagrant
+*.swp
+*.box

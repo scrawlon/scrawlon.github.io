@@ -1,2 +1,62 @@
-name: Scrawlon 
-pygments: true
+title:            Scrawlon 
+description:      Programming confuses me. I lose sleep. You read about it.
+logo:             jekyll-simple.jpg 
+disqus_shortname: scrawlon
+#Comment out url when working locally to resolve base urls correctly
+#url:              http://blog.scrawlon.com
+
+# Owner/author information
+owner:
+  name:           Scott McGrath 
+  avatar:         jekyll-simple.jpg 
+  #email:          michael@mademistakes.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        "scrawlon"
+  #facebook:       "michaelrose"
+  github:         "scrawlon"
+  linkedin:       "scrawlon"
+  instagram:      "scrawlon"
+  #tumblr:         "mademistakes"
+  # For Google Authorship https://plus.google.com/authorship
+  #google_plus:    "http://plus.google.com/118238196859537351707"
+
+# Analytics and webmaster tools stuff goes here
+#google_analytics:   UA-2011187-2
+#google_verify:      UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+#bing_verify:        D81F4C18A6CB3018F64D7C827D953DFD   
+
+# Internal pages/posts to include in top navigation
+links:
+  - title: Scrawlon
+    url: /
+  - title: About
+    url: /about
+  - title: Articles
+    url: /articles
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+pygments:    true
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "so-simple-theme.sublime-project", "so-simple-theme.sublime-workspace"]
