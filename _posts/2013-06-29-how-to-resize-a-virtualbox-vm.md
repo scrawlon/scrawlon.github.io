@@ -4,6 +4,7 @@ title: "How to Resize a VirtualBox VM"
 description: ""
 category: 
 tags: []
+comments: true
 ---
 _**Last edited 03 Jul 13_
 

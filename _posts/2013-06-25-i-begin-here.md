@@ -4,6 +4,7 @@ title: "I Begin Here"
 description: ""
 category: 
 tags: []
+comments: true
 ---
 
 I'm no expert. Since I made the decision to become a programmer, I've
