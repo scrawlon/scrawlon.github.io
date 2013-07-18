@@ -55,6 +55,7 @@ This step could take an hour or more, depending on you connection speed. Luckily
 
 If everything worked, you should see a prompt like this:
 `vagrant@precise32: $` If so, congrats! You've got a real Ubuntu environment running in Windows.
+Your shared folder is in the "/vagrant" directory of your virtual machine.
 
 To get back to your normal prompt, just type "exit". To stop the Vagrant virtual machine, 
 type "vagrant halt" from your normal prompt. To delete a Vagrant virtual machine, type "vagrant destroy".
