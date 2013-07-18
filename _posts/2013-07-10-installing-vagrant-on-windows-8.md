@@ -5,33 +5,56 @@ description: ""
 category: 
 tags: []
 comments: true
-published: false
+published: true
 ---
 *** __Disclaimer__ ** I make no guarantees that the following instructions will work for you. 
 Proceed at your own risk.*
 
-I just bought a used Windows 8 tablet, because I wanted a lightweight development machine. 
-Since I have to set it up anyway, this is a good opportunity to document my process.
+I just bought a used Windows 8 tablet, and I need to get a working development environment on it.
+I usually work with Macs and Linux, so my aim is to run Linux from Windows. VirtualBox makes this possible.
+Just like running any other program, the new OS opens in its own window.
 
-If you're not famililar with VirtualBox,
-basically it lets you use another operating system inside of your current operating system.
-There are a few reasons someone might want to do this, but my needs are for
-disposable, repeatable development environments. I create a virtual machine, install whatever
-dependencies I need at the moment and delete it when I'm done. If I need that particular setup
-again, I can have a fresh new virtual machine installed in minutes.
+Vagrant uses VirtualBox to create custom command-line driven virtual machines for projects.
+The real magic in Vagrant, is that it
+syncs folders between your real OS and your virtual machines.
+You can edit a file in your real OS, start your app on localhost in the
+virtual machine and then load it in the browser on your real OS. It may sound confusing, but it's very simple
+once you start using it.
 
-What's Vagrant? We'll cover the details below, but here's the
-long-and-short-of-it: Vagrant lets you create a folder on your computer that has access to its own
-virtual machine, specific to the project your working on there. You install your dependencies and run
-your apps there, but all of the files you create are mirrored back into the project folder in your
-real OS. Furthermore, you can send your app to localhost in the virtual machine and then preview it
-in the browser on your real OS. The best part is it's easy to use.
-
-Dependencies
+Installation
 ------------
-Vagrant requires VirtualBox and Ruby to do its magic:   
- [VirtualBox](https://www.virtualbox.org/wiki/Downloads) Look for "VirtualBox 4.2.16 for Windows hosts"  
- [Ruby](http://rubyinstaller.org/downloads/) Look for "Ruby 1.9.3"  
+* Dependencies (You'll need these installed in order to run Vagrant):   
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads) -> "4.2.16 for Windows hosts"  
+[Ruby and Git](http://railsinstaller.org) -> "Rails Installer 1.9 will install Ruby, Rails, Git and more"  
+[Vagrant](http://downloads.vagrantup.com/) -> 1.2.3 .msi for Windows
 
-It shouldn't matter which order you install them, and there are no special settings required - just
-run the installers.
+* Run this command after running Rails Installer to make ssh work:   
+`setx PATH "%PATH%;C:\RailsInstaller\Git\bin"`   
+_You have to exit and reopen your command prompt to make windows see the new path._ 
+ 
+_Versions listed were the latest at the time of this post_
+
+Create your first Vagrant box
+-----------------------------
+Most of these instructions are taken directly from the ["Getting Started"](http://docs.vagrantup.com/v2/getting-started/index.html)
+guide at [Vagrantup.com](http://vagrantup.com)
+
+1. If you installed Ruby from the link above you should have a _'Command Prompt with Ruby on Rails'_ shortcut
+on your desktop. Start by opening your command prompt.
+
+2. Create a new directory for your first Vagrant virtual machine. For example: 
+`C:\vagrant_test` and change to that directory.
+ 
+2. Next, we'll initialize this directory and download a Vagrant box. 
+`vagrant init precise32 http://files.vagrantup.com/precise32.box`  
+This step could take an hour or more, depending on you connection speed. Luckily, you only need to download the 'precise32' image once.
+
+3. Now we can start Vagrant and connect to our new virtual machine. 
+`vagrant up`  
+`vagrant ssh`  
+
+If everything worked, you should see a prompt like this:
+`vagrant@precise32: $` If so, congrats! You've got a real Ubuntu environment running in Windows.
+
+To get back to your normal prompt, just type "exit". To stop the Vagrant virtual machine, 
+type "vagrant halt" from your normal prompt. To delete a Vagrant virtual machine, type "vagrant destroy".
