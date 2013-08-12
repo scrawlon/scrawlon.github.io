@@ -6,11 +6,9 @@ category:
 tags: []
 ---
 
-*** __Disclaimer__ ** I make no guarantees that the following instructions will work for you. 
-Proceed at your own risk. Also, I am not affiliated with FatSecret.com in any way.*
-
 *These instructions were tested on Ubuntu 12.04 / Ruby 2.0.0-p0 / Rails 3.2.14*  
 *A __$__ indicates a line typed in a terminal window. __Do not type the $__*  
+*Also, I am not affiliated with FatSecret.com in any way.*  
 
 ---
 The following is a quick guide to the [FatSecret OmniAuth gem]. 
@@ -46,6 +44,7 @@ you want, and press the 'Sign up' button. "Welcome! You have signed up successfu
 
 Install FatSecret OmniAuth 
 ----
+
 If you followed the instructions to set up the example Rails app, return to your command prompt and stop the
 Rails server with `ctrl-c`.  
 
@@ -73,7 +72,6 @@ with individual users:
     $`rake db:migrate`  
 
 2. Now we need to set up a has_many/belongs_to association between our User and ApiToken models.
-
       
     Below __class User < ActiveRecord::Base__ in `app/models/user.rb` add:  
     `has_many :api_tokens`  
@@ -90,55 +88,61 @@ with individual users:
     class ApiTokensController < ApplicationController
       before_filter :authenticate_user!
       def create
-        omniauth = request.env['omniauth.auth']
+        auth = omniauth(request.env['omniauth.auth'])
         user_id = request.env['omniauth.params']['user_id']
         origin = request.env['omniauth.origin']
     
         @user = User.find(user_id)
     
-        @new_api = @user.api_tokens.build do |u|
-          u.provider = omniauth['provider']
-          u.auth_token = omniauth['credentials']['token']
-          u.auth_secret = omniauth['credentials']['secret']
-        end
+        @new_api = @user.api_tokens.build(auth) 
     
         if @new_api.save
           redirect_to origin
         end
       end
+      
+      private
+      
+      def omniauth auth
+        params = { 
+          "provider" => auth['provider'],
+          "auth_token" => auth['credentials']['token'],
+          "auth_secret" => auth['credentials']['secret'] 
+        }
+      end
     end
     </pre></h5>
 
-    There&#39;s a lot going on here. Let me explain. When our users sign in to FatSecret, the FatSecret server
-    returns a __request.env__ hash to the __api_tokens_controller__, including the _provider name_, 
-    the _auth tokens_ and the _user_id_. The _origin_ is the route back to where the user started. There is actually
-    a lot more data contained in the request.env hash that we&#39;re not using. Check out the [Auth Hash Schema doc] for more info.
+    There&#39;s a lot going on here. Let me explain. When our users sign into FatSecret, the FatSecret OmniAuth gem 
+    returns a __request.env__ hash to the __api_tokens_controller__ including the _provider name_, 
+    the _auth tokens_, the _user_id_, the _origin_ (the route back to where the user started) and 
+    a lot more data we&#39;re not using. Check out the [Auth Hash Schema doc] for more info.
 
     [Auth Hash Schema doc]: https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema "Auth Hash Schema doc"
   
 Create the routes and views:
 ---
 
-1. Edit `config/routes.rb`:
-    <h5><pre>
+Edit `config/routes.rb`:  
+<h5><pre>
     Rails3DeviseRspecCucumber::Application.routes.draw do
       match '/users/:user_id/api_tokens/new' => redirect('/auth/fatsecret?user_id=%{user_id}')
       get '/auth/fatsecret/callback', to: 'api_tokens#create'
-
+    
       authenticated :user do
         root :to => 'home#index'
       end
       root :to => "home#index"
-
+    
       devise_for :users
       resources :users do
         resources :api_tokens
       end
     end
-    </pre></h5>
-  
-2. Edit `app/views/users/show.html.erb`:
-    <h5><pre>
+</pre></h5>
+ 
+Edit `app/views/users/show.html.erb`:
+<h5><pre>
     &lt;h3>User&lt;/h3>
     &lt;p>User: &lt;%= @user.name %>&lt;/p>
     &lt;p>Email: &lt;%= @user.email if @user.email %>&lt;/p>
@@ -153,5 +157,19 @@ Create the routes and views:
       &lt;%= link_to 'Add FatSecret', new_user_api_token_path(@user) %>
     &lt;% end %>
     &lt;/ul>
-    </pre></h5>
+</pre></h5>
   
+Done. Get connected to FatSecret!
+---
+
+Start the app $`rails s`   
+Open `http://localhost:3000` in your browser.  
+Sign up and login as a new user.  
+Click on your user name.  
+Click 'Add Fatsecret'.   
+
+You should be redirected to the FatSecret website.  
+Sign In (if you're already signed in click 'Allow')  
+You'll be redirected back to the app.   
+Your FatSecret tokens are saved in the database.  
+
