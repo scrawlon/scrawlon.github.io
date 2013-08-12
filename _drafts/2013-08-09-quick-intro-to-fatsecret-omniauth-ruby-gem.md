@@ -159,6 +159,11 @@ Edit `app/views/users/show.html.erb`:
     &lt;/ul>
 </pre></h5>
   
+In the routes, we&#39;ve made :api_tokens a nested resource of :users. This performs some magic for us:  
+
+* It creates a few named routes, including the __new_user_api_token_path__ we&#39;re using for our 'Add FatSecret' link.  
+* It includes the user_id in the route, so we can send that to our api_tokens_controller along with our Fatsecret data.  
+
 Done. Get connected to FatSecret!
 ---
 
@@ -173,3 +178,11 @@ Sign In (if you're already signed in click 'Allow')
 You'll be redirected back to the app.   
 Your FatSecret tokens are saved in the database.  
 
+Conclusion
+---
+
+If you were able to follow along, you should have an app that can retrieve FatSecret auth data.
+If you get stuck or have any questions, leave a comment here or Tweet me @scrawlon.  
+
+The next step is using the auth data to connect to the FatSecret REST API and do searches on a user&#39;s
+behalf. That will be the topic of my next post.
