@@ -12,7 +12,7 @@ tags: []
 
 ---
 The following is a quick guide to the [FatSecret OmniAuth gem]. 
-With this gem, we can gain access to users&#39; diet/fitness data from the FatSecret API. 
+With this gem, you can obtain authorization to access a user&#39;s FatSecret account.
 You&#39;ll need a [FatSecret API account], and your consumer_key and consumer_secret
 to work with the example app. If you&#39;re not familiar with OmniAuth, you might want to [browse the README on Github]. 
 
