@@ -4,6 +4,8 @@ title: "Quick Intro to FatSecret OmniAuth Ruby Gem"
 description: ""
 category: 
 tags: []
+comments: true
+published: true
 ---
 
 *These instructions were tested on Ubuntu 12.04 / Ruby 2.0.0-p0 / Rails 3.2.14*  
