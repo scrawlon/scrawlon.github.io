@@ -39,7 +39,7 @@ links:
 timezone:    America/New_York
 future:      true
 pygments:    true
-markdown:    redcarpet
+markdown:    redcarpet2
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
