@@ -145,7 +145,7 @@ end
  
 Edit `app/views/users/show.html.erb`:
 
-```html  
+```erb  
 <h3>User</h3>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
