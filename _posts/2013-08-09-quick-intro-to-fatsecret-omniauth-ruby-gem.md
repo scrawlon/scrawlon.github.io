@@ -12,9 +12,9 @@ tags: []
 
 ---
 The following is a quick guide to the [FatSecret OmniAuth gem]. 
-With this gem, you can obtain authorization to access a user&#39;s FatSecret account.
-You&#39;ll need a [FatSecret API account], and your consumer_key and consumer_secret
-to work with the example app. If you&#39;re not familiar with OmniAuth, you might want to [browse the README on Github]. 
+With this gem, you can obtain authorization to access a user's FatSecret account.
+You'll need a [FatSecret API account], and your consumer_key and consumer_secret
+to work with the example app. If you're not familiar with OmniAuth, you might want to [browse the README on Github]. 
 
 [FatSecret OmniAuth gem]: https://github.com/scrawlon/fatsecret-omniauth "FatSecret OmniAuth gem"
 [FatSecret API account]: http://platform.fatsecret.com/api/Default.aspx?screen=si "FatSecret API account"
@@ -22,15 +22,15 @@ to work with the example app. If you&#39;re not familiar with OmniAuth, you migh
 
 Install a dummy User app
 ---
-Before we do anything, we need a Rails app with a User model. We&#39;re going to take advantage of the 
+Before we do anything, we need a Rails app with a User model. We're going to take advantage of the 
 [Rails Composer project] to get us started.
 
 [Rails Composer project]: https://github.com/RailsApps/rails-composer "Rails Composer project"  
 
-1. First let&#39;s git clone the [rails3-devise-rspec-cucumber sample app]:  
+1. First let's git clone the [rails3-devise-rspec-cucumber sample app]:  
 $`git clone https://github.com/RailsApps/rails3-devise-rspec-cucumber.git`  
  
-2. Now let&#39;s initialize and start the app to make sure everything is working:  
+2. Now let's initialize and start the app to make sure everything is working:  
 $`cd rails3-devise-rspec-cucumber`   
 $`bundle install`  
 $`rake db:migrate`  
@@ -55,9 +55,10 @@ Rails server with `ctrl-c`.
 $`bundle install`  
 
 3. Create `omniauth.rb` in the `config/initializers` directory, and add the following code with your real FatSecret key and secret:  
-```ruby
+
+```ruby  
 Rails.application.config.middleware.use OmniAuth::Builder do   
-    provider :fatsecret, 'consumer_key', 'consumer_secret'   
+  provider :fatsecret, 'consumer_key', 'consumer_secret'   
 end   
 ```
 
@@ -83,47 +84,49 @@ with individual users:
     $`rails g controller ApiTokens create`  
 
     Edit `app/controllers/api_tokens_controller.rb`: 
-```ruby
-    class ApiTokensController < ApplicationController
-      before_filter :authenticate_user!
-      def create
-        auth = omniauth(request.env['omniauth.auth'])
-        user_id = request.env['omniauth.params']['user_id']
-        origin = request.env['omniauth.origin']
-    
-        @user = User.find(user_id)
-    
-        @new_api = @user.api_tokens.build(auth) 
-    
-        if @new_api.save
-          redirect_to origin
-        end
-      end
-      
-      private
-      
-      def omniauth auth
-        params = { 
-          "provider" => auth['provider'],
-          "auth_token" => auth['credentials']['token'],
-          "auth_secret" => auth['credentials']['secret'] 
-        }
-      end
+
+```ruby  
+class ApiTokensController < ApplicationController
+  before_filter :authenticate_user!
+  def create
+    auth = omniauth(request.env['omniauth.auth'])
+    user_id = request.env['omniauth.params']['user_id']
+    origin = request.env['omniauth.origin']
+  
+    @user = User.find(user_id)
+  
+    @new_api = @user.api_tokens.build(auth) 
+  
+    if @new_api.save
+      redirect_to origin
     end
+  end
+  
+  private
+  
+  def omniauth auth
+    params = { 
+      "provider" => auth['provider'],
+      "auth_token" => auth['credentials']['token'],
+      "auth_secret" => auth['credentials']['secret'] 
+    }
+  end
+end
 ```
 
-    There&#39;s a lot going on here. Let me explain. When our users sign into FatSecret, the FatSecret OmniAuth gem 
-    returns a __request.env__ hash to the __api_tokens_controller__ including the _provider name_, 
-    the _auth tokens_, the _user_id_, the _origin_ (the route back to where the user started) and 
-    a lot more data we&#39;re not using. Check out the [Auth Hash Schema doc] for more info.
+There's a lot going on here. Let me explain. When our users sign into FatSecret, the FatSecret OmniAuth gem 
+returns a __request.env__ hash to the __api_tokens_controller__ including the _provider name_, 
+the _auth tokens_, the _user_id_, the _origin_ (the route back to where the user started) and 
+a lot more data we're not using. Check out the [Auth Hash Schema doc] for more info.
 
-    [Auth Hash Schema doc]: https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema "Auth Hash Schema doc"
+[Auth Hash Schema doc]: https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema "Auth Hash Schema doc"
   
 Create the routes and views:
 ---
 
 Edit `config/routes.rb`:  
-```ruby
+
+```ruby  
 Rails3DeviseRspecCucumber::Application.routes.draw do
   match '/users/:user_id/api_tokens/new' => redirect('/auth/fatsecret?user_id=%{user_id}')
   get '/auth/fatsecret/callback', to: 'api_tokens#create'
@@ -141,7 +144,8 @@ end
 ```
  
 Edit `app/views/users/show.html.erb`:
-```html
+
+```html  
 <h3>User</h3>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
@@ -158,9 +162,9 @@ Edit `app/views/users/show.html.erb`:
 </ul>
 ```
   
-In the routes, we&#39;ve made :api_tokens a nested resource of :users. This performs some magic for us:  
+In the routes, we've made :api_tokens a nested resource of :users. This performs some magic for us:  
 
-* It creates a few named routes, including the __new_user_api_token_path__ we&#39;re using for our 'Add FatSecret' link.  
+* It creates a few named routes, including the __new_user_api_token_path__ we're using for our 'Add FatSecret' link.  
 * It includes the user_id in the route, so we can send that to our api_tokens_controller along with our Fatsecret data.  
 
 Done. Get connected to FatSecret!
@@ -183,5 +187,5 @@ Conclusion
 If you were able to follow along, you should have an app that can retrieve FatSecret auth data.
 If you get stuck or have any questions, leave a comment here or Tweet me @scrawlon.  
 
-The next step is using the auth data to connect to the FatSecret REST API and do searches on a user&#39;s
+The next step is using the auth data to connect to the FatSecret REST API and do searches on a user's
 behalf. That will be the topic of my next post.
