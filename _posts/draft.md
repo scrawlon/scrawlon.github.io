@@ -142,15 +142,15 @@ end
  
 Edit `app/views/users/show.html.erb`:
 ```html
-<h3>User&lt;/h3>
-<p>User: &lt;%= @user.name %>&lt;/p>
-<p>Email: &lt;%= @user.email if @user.email %>&lt;/p>
-<h4>Your APIs&lt;/h4>
+<h3>User</h3>
+<p>User: <%= @user.name %></p>
+<p>Email: <%= @user.email if @user.email %></p>
+<h4>Your APIs</h4>
 <ul>
 <% user_apis = [] %>
 <% @user.api_tokens.each do |api| %>
-  <li>&lt;b>&lt;%= api.provider.camelize %>&lt;/b>( token: &lt;%= api.auth_token %>, secret: &lt;%= api.auth_secret %> ) &lt;/li>
-  <% user_apis &lt;&lt; api.provider %>
+  <li><b><%= api.provider.camelize %></b>( token: <%= api.auth_token %>, secret: <%= api.auth_secret %>  </li>
+  <% user_apis << api.provider %>
 <% end %>
 <% unless user_apis.include?('fatsecret') %>
   <%= link_to 'Add FatSecret', new_user_api_token_path(@user) %>
