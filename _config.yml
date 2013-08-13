@@ -39,8 +39,9 @@ links:
 timezone:    America/New_York
 future:      true
 pygments:    true
-markdown:    redcarpet2
-
+markdown:    redcarpet
+redcarpet:
+    extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
 
