@@ -7,7 +7,7 @@ tags: []
 ---
 
 *These instructions were tested on Ubuntu 12.04 / Ruby 2.0.0-p0 / Rails 3.2.14*  
-*A __\$__ indicates a line typed in a terminal window. __Do not type the \$__*  
+*A __$__ indicates a line typed in a terminal window. __Do not type the $__*  
 *Also, I am not affiliated with FatSecret.com in any way.*  
 
 ---
@@ -28,13 +28,13 @@ Before we do anything, we need a Rails app with a User model. We&#39;re going to
 [Rails Composer project]: https://github.com/RailsApps/rails-composer "Rails Composer project"  
 
 1. First let&#39;s git clone the [rails3-devise-rspec-cucumber sample app]:  
-\$`git clone https://github.com/RailsApps/rails3-devise-rspec-cucumber.git`  
+$`git clone https://github.com/RailsApps/rails3-devise-rspec-cucumber.git`  
  
 2. Now let&#39;s initialize and start the app to make sure everything is working:  
-\$`cd rails3-devise-rspec-cucumber`   
-\$`bundle install`  
-\$`rake db:migrate`  
-\$`rails s`
+$`cd rails3-devise-rspec-cucumber`   
+$`bundle install`  
+$`rake db:migrate`  
+$`rails s`
 
 3. Open 'http://localhost:3000' in your internet browser. You should see a 
 simple web page with 'login' and 'Sign up' links at the top. Click 'Sign up'. Type any name/email/password
@@ -57,7 +57,7 @@ $`bundle install`
 3. Create `omniauth.rb` in the `config/initializers` directory, and add the following code with your real FatSecret key and secret:  
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do   
-  provider :fatsecret, 'consumer_key', 'consumer_secret'   
+    provider :fatsecret, 'consumer_key', 'consumer_secret'   
 end   
 ```
 
@@ -67,8 +67,8 @@ Create an api_token model/controller
 1. Generate the api_token model and migrate the database. This will give us a way to save FatSecret tokens and associate them
 with individual users: 
   
-    \$`rails g model ApiToken provider:string auth_token:string auth_secret:string user_id:integer`   
-    \$`rake db:migrate`  
+    $`rails g model ApiToken provider:string auth_token:string auth_secret:string user_id:integer`   
+    $`rake db:migrate`  
 
 2. Now we need to set up a has_many/belongs_to association between our User and ApiToken models.
       
@@ -80,7 +80,7 @@ with individual users:
 
 3. Create the ApiTokens controller:
 
-    \$`rails g controller ApiTokens create`  
+    $`rails g controller ApiTokens create`  
 
     Edit `app/controllers/api_tokens_controller.rb`: 
 ```ruby
@@ -141,7 +141,7 @@ end
 ```
  
 Edit `app/views/users/show.html.erb`:
-```ruby
+```html
 &lt;h3>User&lt;/h3>
 &lt;p>User: &lt;%= @user.name %>&lt;/p>
 &lt;p>Email: &lt;%= @user.email if @user.email %>&lt;/p>
@@ -166,7 +166,7 @@ In the routes, we&#39;ve made :api_tokens a nested resource of :users. This perf
 Done. Get connected to FatSecret!
 ---
 
-Start the app \$`rails s`   
+Start the app $`rails s`   
 Open `http://localhost:3000` in your browser.  
 Sign up and login as a new user.  
 Click on your user name.  
