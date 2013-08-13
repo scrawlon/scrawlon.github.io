@@ -84,32 +84,32 @@ with individual users:
 
     Edit `app/controllers/api_tokens_controller.rb`: 
 ```ruby
-class ApiTokensController < ApplicationController
-  before_filter :authenticate_user!
-  def create
-    auth = omniauth(request.env['omniauth.auth'])
-    user_id = request.env['omniauth.params']['user_id']
-    origin = request.env['omniauth.origin']
-
-    @user = User.find(user_id)
-
-    @new_api = @user.api_tokens.build(auth) 
-
-    if @new_api.save
-      redirect_to origin
+    class ApiTokensController < ApplicationController
+      before_filter :authenticate_user!
+      def create
+        auth = omniauth(request.env['omniauth.auth'])
+        user_id = request.env['omniauth.params']['user_id']
+        origin = request.env['omniauth.origin']
+    
+        @user = User.find(user_id)
+    
+        @new_api = @user.api_tokens.build(auth) 
+    
+        if @new_api.save
+          redirect_to origin
+        end
+      end
+      
+      private
+      
+      def omniauth auth
+        params = { 
+          "provider" => auth['provider'],
+          "auth_token" => auth['credentials']['token'],
+          "auth_secret" => auth['credentials']['secret'] 
+        }
+      end
     end
-  end
-  
-  private
-  
-  def omniauth auth
-    params = { 
-      "provider" => auth['provider'],
-      "auth_token" => auth['credentials']['token'],
-      "auth_secret" => auth['credentials']['secret'] 
-    }
-  end
-end
 ```
 
     There&#39;s a lot going on here. Let me explain. When our users sign into FatSecret, the FatSecret OmniAuth gem 
@@ -142,20 +142,20 @@ end
  
 Edit `app/views/users/show.html.erb`:
 ```html
-&lt;h3>User&lt;/h3>
-&lt;p>User: &lt;%= @user.name %>&lt;/p>
-&lt;p>Email: &lt;%= @user.email if @user.email %>&lt;/p>
-&lt;h4>Your APIs&lt;/h4>
-&lt;ul>
-&lt;% user_apis = [] %>
-&lt;% @user.api_tokens.each do |api| %>
-  &lt;li>&lt;b>&lt;%= api.provider.camelize %>&lt;/b>( token: &lt;%= api.auth_token %>, secret: &lt;%= api.auth_secret %> ) &lt;/li>
-  &lt;% user_apis &lt;&lt; api.provider %>
-&lt;% end %>
-&lt;% unless user_apis.include?('fatsecret') %>
-  &lt;%= link_to 'Add FatSecret', new_user_api_token_path(@user) %>
-&lt;% end %>
-&lt;/ul>
+<h3>User&lt;/h3>
+<p>User: &lt;%= @user.name %>&lt;/p>
+<p>Email: &lt;%= @user.email if @user.email %>&lt;/p>
+<h4>Your APIs&lt;/h4>
+<ul>
+<% user_apis = [] %>
+<% @user.api_tokens.each do |api| %>
+  <li>&lt;b>&lt;%= api.provider.camelize %>&lt;/b>( token: &lt;%= api.auth_token %>, secret: &lt;%= api.auth_secret %> ) &lt;/li>
+  <% user_apis &lt;&lt; api.provider %>
+<% end %>
+<% unless user_apis.include?('fatsecret') %>
+  <%= link_to 'Add FatSecret', new_user_api_token_path(@user) %>
+<% end %>
+</ul>
 ```
   
 In the routes, we&#39;ve made :api_tokens a nested resource of :users. This performs some magic for us:  
