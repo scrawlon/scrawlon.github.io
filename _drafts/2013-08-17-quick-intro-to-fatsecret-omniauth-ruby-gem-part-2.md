@@ -76,3 +76,26 @@ class ApisController < ApplicationController
 end
 ```
 
+<h3>User</h3>
+<p>User: <%= @user.name %></p>
+<p>Email: <%= @user.email if @user.email %></p>
+<h4>Your APIs</h4>
+<ul>
+<% user_apis = [] %>
+<% @user.api_tokens.each do |api| %>
+<li><b><%= api.provider.camelize %>:</b></li>
+<% user_apis << api.provider %>
+
+<%= form_tag new_fatsecret_path(@user), :method => "get" do %>
+  <%= label_tag(:search_expression, "Search for food:") %>
+  <%= text_field_tag(:search_expression) %>
+  <%= hidden_field_tag 'method', 'foods.search' %>
+  <%= submit_tag("Search") %>
+<% end %> 
+
+<% end %>
+<% unless user_apis.include?('fatsecret') %>
+  <%= link_to 'Add FatSecret', new_user_api_token_path(@user) %>
+<% end %>
+<%= link_to 'Search FatSecret', new_fatsecret_path(@user) %>
+</ul>
