@@ -47,6 +47,9 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
+*Also, you'll need to make sure you're using the latest version of the fatsecret-omniauth
+gem. The current version at the time of this blog post is 0.0.2.*
+
 A different controller for a different task
 ---
 
@@ -60,42 +63,72 @@ Edit the new `app/controllers/apis_controller.rb`:
 
 ```ruby
 class ApisController < ApplicationController
-  before_filter :authenticate_user!
   def fatsecret
-    user = User.find(params[:user_id])
-    tokens = user.api_tokens.find_by_provider('fatsecret')
+    tokens = {}
+    unless params[:user_id].nil? 
+      user = User.find(params[:user_id])
+      tokens = user.api_tokens.find_by_provider('fatsecret')
+    end
     request = Fatsecret::Api.new({}).api_call(
-      tokens['auth_token'], 
-      tokens['auth_secret'], 
       ENV['FATSECRET_KEY'], 
       ENV['FATSECRET_SECRET'], 
-      params
-    )   
+      params,
+      tokens['auth_token'] ||= "",  
+      tokens['auth_secret'] ||= ""
+    )
     @response = request.body
   end 
 end
 ```
 
-<h3>User</h3>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
-<h4>Your APIs</h4>
-<ul>
-<% user_apis = [] %>
-<% @user.api_tokens.each do |api| %>
-<li><b><%= api.provider.camelize %>:</b></li>
-<% user_apis << api.provider %>
+Create a new route for the apis#fatsecret method in `config/routes.rb`:
 
-<%= form_tag new_fatsecret_path(@user), :method => "get" do %>
+```ruby
+Rails3DeviseRspecCucumber::Application.routes.draw do
+  get "/fatsecret", to: "apis#fatsecret"
+```
+
+
+The apis#fatscret method provides a way to make any FatSecret API request, 
+authenticated or not. You only need to include your FatSecret query in a params hash, 
+and send this to the api#fatsecret. See the [FatSecret API method docs]
+for details on what parameters are required for each FatSecret API method.
+
+[FatSecret API method docs]: http://platform.fatsecret.com/api/Default.aspx?screen=rapiref "FatSecret API method docs"
+
+To test this, let's create a form to use the __foods.search__ method without user authentication:
+
+Edit `app/views/home/index.html.erb` to include a search form: 
+
+```ruby
+<h3>Home</h3>
+<h1>Try FatSecret Food Search</h1>
+<%= form_tag fatsecret_path, :method => "get" do %>
   <%= label_tag(:search_expression, "Search for food:") %>
   <%= text_field_tag(:search_expression) %>
   <%= hidden_field_tag 'method', 'foods.search' %>
   <%= submit_tag("Search") %>
 <% end %> 
 
+<% @users.each do |user| %>
+  <p>User: <%= link_to user.name, user %></p>
 <% end %>
-<% unless user_apis.include?('fatsecret') %>
-  <%= link_to 'Add FatSecret', new_user_api_token_path(@user) %>
-<% end %>
-<%= link_to 'Search FatSecret', new_fatsecret_path(@user) %>
-</ul>
+```
+
+Edit `app/views/apis/fatsecret.html.erb`:
+
+```ruby
+<h1>Apis#fatsecret</h1>
+<pre><%= @response %></pre>
+```
+
+* Now start the Rails server and open the home page in your browser.  
+
+![FatSecret foods.search form](/images/fatsecret-omniauth-foods-search-form.jpg "foods.search form")
+
+* Enter a food and press the 'Search' button.
+
+![FatSecret foods.search results](/images/fatsecret-omniauth-foods-search-results.jpg "foods.search results")
+
+If everything worked as expected you should see something like my search for 'banana' above.
+

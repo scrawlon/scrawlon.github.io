@@ -3,7 +3,7 @@ description:      Programming confuses me. I lose sleep. You read about it.
 logo:             jekyll-simple.jpg 
 disqus_shortname: scrawlon
 #Comment out url when working locally to resolve base urls correctly
-url:              http://scrawlon.com
+#url:              http://scrawlon.com
 
 # Owner/author information
 owner:
