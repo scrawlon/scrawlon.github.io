@@ -136,7 +136,7 @@ If everything worked as expected you should see something like my search for 'ba
 Awesome. Now, let's tie everything together and make an authenticated API call using the
 using the auth_token and auth_secret we obtained in Part 1 of this blog post.
 
-First, add a new route for authenticated API calls below `get "/fatsecret", to: "apis#fatsecret"` 
+First, add a new route for authenticated API calls below `post "/fatsecret", to: "apis#fatsecret"` 
 in `config/routes.rb`:
 
 ```ruby
