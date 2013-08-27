@@ -146,7 +146,7 @@ post "/users/:user_id/fatsecret", to: "apis#fatsecret", as: "fatsecret_auth"
 Edit `app/views/users/show.html.erb`:
 
 ```ruby
-er</h3>
+<h3>User</h3>
 <p>User: <%= @user.name %></p>
 <p>Email: <%= @user.email if @user.email %></p>
 <h4>Your APIs</h4>
