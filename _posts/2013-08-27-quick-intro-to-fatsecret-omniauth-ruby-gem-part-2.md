@@ -4,6 +4,7 @@ title: "Quick Intro to FatSecret OmniAuth Ruby Gem Part 2"
 description: ""
 category: 
 tags: []
+comments: true
 ---
 
 OK. You're back, chomping at the bit, wondering why the heck I stopped in 
