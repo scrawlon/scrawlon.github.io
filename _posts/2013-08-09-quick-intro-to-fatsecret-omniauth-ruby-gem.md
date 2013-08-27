@@ -191,3 +191,7 @@ If you get stuck or have any questions, leave a comment here or Tweet me @scrawl
 
 The next step is using the auth data to connect to the FatSecret REST API and do searches on a user's
 behalf. That will be the topic of my next post.
+
+__UPDATE__ [Added Part 2 of this tutorial explaining how to make FatSecret API calls.]
+
+[Added Part 2 of this tutorial explaining how to make FatSecret API calls.]: http://scrawlon.com/quick-intro-to-fatsecret-omniauth-ruby-gem-part-2/ " Added Part 2 of this tutorial explaining how to make FatSecret API calls."
