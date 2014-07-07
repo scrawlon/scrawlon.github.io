@@ -1,5 +1,5 @@
 title:            Scrawlon 
-description:      Programming confuses me. I lose sleep. You read about it.
+description:      A blog about programming and technology
 logo:             jekyll-simple.jpg 
 disqus_shortname: scrawlon
 #Comment out url when working locally to resolve base urls correctly
@@ -8,7 +8,7 @@ disqus_shortname: scrawlon
 # Owner/author information
 owner:
   name:           Scott McGrath 
-  avatar:         jekyll-simple.jpg 
+  avatar:         owner-avatar.jpg 
   # Social networking links used in footer. Update and remove as you like.
   twitter:        "scrawlon"
   github:         "scrawlon"
@@ -23,23 +23,24 @@ owner:
 #bing_verify:        D81F4C18A6CB3018F64D7C827D953DFD   
 
 # Internal pages/posts to include in top navigation
-links:
+home:
   - title: Scrawlon
     url: /
+links:
   - title: About
     url: /about
   - title: Articles
     url: /articles
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-future:      true
-highlighter:   pygments
-markdown:    redcarpet
+timezone:     America/New_York
+future:       true
+highlighter:  pygments
+markdown:     redcarpet
 redcarpet:
     extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+permalink:    /:categories/:title
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "so-simple-theme.sublime-project", "so-simple-theme.sublime-workspace"]

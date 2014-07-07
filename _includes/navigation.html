@@ -1,12 +1,15 @@
-<div class="navigation-wrapper">
-	<nav role="navigation" id="site-nav" class="animated fadeInDown" itemscope itemtype="http://schema.org/SiteNavigationElement">
-	    <ul>
-	        {% for link in site.links %}
-			<li><a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a></li>
-	        {% endfor %}
-	        <li><i class="icon-rss"></i> <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed">Feed</a>
-	    </ul>
-	</nav>
-</div><!-- /.navigation-wrapper -->
+<nav>
+  <ul>
+    <!-- navigation - landscape/desktop: float right, mobile: top -->
+    {% for link in site.links reversed %}
+	    <li class="float-right"><a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a></li>
+    {% endfor %}
+
+    <!-- home/attribution - landscape/desktop: float right, mobile: top -->
+    {% for home in site.home %}
+	    <li><a href="{{ site.url }}{{ home.url }}">{{ home.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
 
 

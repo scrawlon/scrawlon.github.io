@@ -1,19 +1,30 @@
 ---
 layout: page
-description: "A simple and clean responsive Jekyll theme for words and photos."
-tags: [Jekyll, theme, themes, responsive, blog, minimalism]
+description: "Scrawlon: A programming blog by Scott McGrath"
+tags: [code ruby javascipt programming]
 ---
-<header class="masthead">
-	<div class="wrap">
-		<a href="{{ site.url }}" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" class="animated fadeInUp"></a>
-		<h1 class="site-title animated fadeIn"><a href="{{ site.url }}">{{ site.title }}</a></h1>
-		<h2 class="site-description animated fadeIn">{{ site.description }}</h2>
-	</div>
-</header><!-- /.masthead -->
 
-<h2>Latest Blog Posts</h2>
-{% for post in site.posts limit:10 %} 
-<ul class="post-list">
-  <li><article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost"><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time> &raquo; </span> <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></article></li>
-</ul>
-{% endfor %}
+<header>
+  <div class="wrapper">
+    <h1>{{ site.posts.first.heading }}</h1>
+    <h4>{{ site.posts.first.subheading }}</h4>
+  </div>
+</header>
+
+<aside>
+  <p>
+  <img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" />
+  by {{ site.owner.name }}
+</aside>
+
+<article>
+  <div class="wrapper">
+    {{ site.posts.first.content }}
+
+    {% if site.posts.first.previous %}
+      <nav>
+        <a href="{{ site.url }}{{ site.posts.first.previous.url }}" class="btn" title="{{ site.posts.first.previous.title }}">Previous article</a>
+      </nav>
+    {% endif %}
+  </div>
+</article>

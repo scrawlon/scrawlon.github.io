@@ -1,1 +1,300 @@
-:
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain) */
+@import url(syntax.css);
+/* line 5, ../_sass/_reset.sass */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, ../_sass/_reset.sass */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 30, ../_sass/_reset.sass */
+body {
+  line-height: 1;
+}
+
+/* line 33, ../_sass/_reset.sass */
+ol, ul {
+  list-style: none;
+}
+
+/* line 36, ../_sass/_reset.sass */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, ../_sass/_reset.sass */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 44, ../_sass/_reset.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 32, ../_sass/main.sass */
+html {
+  font-size: 66.5%;
+}
+
+/* line 35, ../_sass/main.sass */
+body {
+  font-size: 15px;
+  line-height: 22.5px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-family: sans-serif;
+  color: black;
+}
+
+/* line 22, ../_sass/main.sass */
+h1 {
+  padding-top: 1em;
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  font-size: 250%;
+  line-height: 1.25em;
+}
+
+/* line 22, ../_sass/main.sass */
+h2 {
+  padding-top: 1em;
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  font-size: 200%;
+  line-height: 1.25em;
+}
+
+/* line 22, ../_sass/main.sass */
+h1 {
+  padding-top: 1em;
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  font-size: 250%;
+  line-height: 1.25em;
+}
+
+/* line 22, ../_sass/main.sass */
+h4 {
+  padding-top: 1em;
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  font-size: 150%;
+  line-height: 1.25em;
+}
+
+/* line 22, ../_sass/main.sass */
+h5 {
+  padding-top: 1em;
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  font-size: 125%;
+  line-height: 1.25em;
+}
+
+/* line 22, ../_sass/main.sass */
+h6 {
+  padding-top: 1em;
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  font-size: 115%;
+  line-height: 1.25em;
+}
+
+/* line 43, ../_sass/main.sass */
+a {
+  text-decoration: none;
+}
+
+/* line 46, ../_sass/main.sass */
+p {
+  width: 90%;
+  max-width: 30em;
+  margin: 1.25em auto;
+}
+
+/* line 51, ../_sass/main.sass */
+em {
+  font-style: italic;
+}
+
+/* line 54, ../_sass/main.sass */
+strong {
+  font-weight: bold;
+}
+
+/* line 57, ../_sass/main.sass */
+ul {
+  list-style-type: disc;
+}
+
+/* line 60, ../_sass/main.sass */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 63, ../_sass/main.sass */
+ul, ol {
+  width: 100%;
+  margin: 0.5em;
+}
+/* line 66, ../_sass/main.sass */
+ul li, ol li {
+  margin-right: 1.5em;
+}
+
+/* line 69, ../_sass/main.sass */
+blockquote {
+  width: 100%;
+  margin: 0 2em;
+  background-color: whitesmoke;
+}
+
+/* line 74, ../_sass/main.sass */
+code {
+  background-color: whitesmoke;
+}
+
+/* line 77, ../_sass/main.sass */
+nav {
+  font-size: 0.75em;
+  width: 98%;
+  margin: 0 auto;
+  padding-top: 0.9em;
+}
+/* line 82, ../_sass/main.sass */
+nav li {
+  display: inline-block;
+  margin-right: 0.9em;
+}
+
+/* line 86, ../_sass/main.sass */
+header, footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+/* line 90, ../_sass/main.sass */
+header a, footer a {
+  color: white;
+}
+
+/* line 93, ../_sass/main.sass */
+header {
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+/* line 97, ../_sass/main.sass */
+article {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+/* line 101, ../_sass/main.sass */
+aside {
+  display: none;
+  width: 25%;
+  max-width: 10em;
+}
+/* line 105, ../_sass/main.sass */
+aside img {
+  width: 100%;
+}
+
+/* line 108, ../_sass/main.sass */
+.float-right {
+  float: right;
+}
+
+/* line 111, ../_sass/main.sass */
+.wrapper {
+  width: 90%;
+  max-width: 30em;
+  margin: 0 auto;
+}
+/* line 115, ../_sass/main.sass */
+.wrapper p {
+  width: 100%;
+}
+
+@media only screen and (min-width: 40em) {
+  /* line 124, ../_sass/main.sass */
+  body {
+    font-size: 16px;
+    line-height: 24.0px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+@media only screen and (min-width: 60em) {
+  /* line 128, ../_sass/main.sass */
+  body {
+    font-size: 17px;
+    line-height: 25.5px;
+    font-size: 1.7rem;
+    line-height: 2.55rem;
+  }
+
+  /* line 130, ../_sass/main.sass */
+  aside {
+    display: inline-block;
+    float: left;
+    font-size: 0.8em;
+    margin-left: 1em;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 137, ../_sass/main.sass */
+  body {
+    font-size: 18px;
+    line-height: 27px;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  /* line 139, ../_sass/main.sass */
+  aside {
+    margin-left: 2em;
+    max-width: 15em;
+  }
+}
