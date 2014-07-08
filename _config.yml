@@ -38,7 +38,7 @@ highlighter:  pygments
 markdown:     redcarpet
 redcarpet:
     extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-permalink:    /:categories/:title
+permalink:    /:categories/:title.html
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]

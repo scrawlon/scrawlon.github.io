@@ -4,27 +4,8 @@ description: "Scrawlon: A programming blog by Scott McGrath"
 tags: [code ruby javascipt programming]
 ---
 
-<header>
-  <div class="wrapper">
-    <h1>{{ site.posts.first.heading }}</h1>
-    <h4>{{ site.posts.first.subheading }}</h4>
-  </div>
-</header>
-
-<aside>
-  <p>
-  <img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" />
-  by {{ site.owner.name }}
-</aside>
-
-<article>
-  <div class="wrapper">
-    {{ site.posts.first.content }}
-
-    {% if site.posts.first.previous %}
-      <nav>
-        <a href="{{ site.url }}{{ site.posts.first.previous.url }}" class="btn" title="{{ site.posts.first.previous.title }}">Previous article</a>
-      </nav>
-    {% endif %}
-  </div>
-</article>
+<//-- load first post -->
+{% assign post = site.posts.first %}
+{% assign page = post %}
+{% assign content = post.content %}
+{% include post_detail.html %}

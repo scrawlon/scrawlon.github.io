@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 permalink: /articles/index.html
 title: "Scrawlon: Articles"
 heading: "Articles:"
@@ -7,13 +7,30 @@ subheading: "Collected posts from Scrawlon.com"
 description: "An archive of posts sorted by date."
 ---
 
-<ul>
-  {% for post in site.posts %} 
-    <li>
-      <time datetime="{{ post.date | date_to_xmlschema }}">
-        {{ post.date | date: "%m-%Y" }}
-      </time>
-      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></article>
-    </li>
-  {% endfor %}
-</ul>
+<header>
+  <div class="wrapper">
+    <h1>
+      {% if page.heading %}
+        {{ page.heading }}
+      {% else %}
+        {{ page.title }}
+      {% endif %}
+    </h1>
+    <h4>
+      {% if page.subheading %}
+        {{ page.subheading }}
+      {% endif %}
+    </h4>
+  <div>
+</header>
+
+  <ul class="articles">
+    {% for post in site.posts %} 
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%m/%d/%y" }}
+        </time>
+        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></article>
+      </li>
+    {% endfor %}
+  </ul>
