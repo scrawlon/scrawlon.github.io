@@ -15,7 +15,7 @@
       </h4>
 
       <div class="by-line">
-        By <a href="{{ site.url }}/about" title="About {{ site.owner.name }}">{{ site.owner.name }}</a> 
+        By {{ site.owner.name }} 
         {% if page.date %}
           <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
         {% endif %}
@@ -27,8 +27,8 @@
     <p>
     <img src="{{ site.url }}/images/{{ site.owner.avatar }}" title="About {{ site.owner.name }}" /><br />
     
+    By {{ site.owner.name }}<br />
     {% if page.date %}
-      By <a href="{{ site.url }}/about" title="About {{ site.owner.name }}">{{ site.owner.name }}</a><br />
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
     </p>
