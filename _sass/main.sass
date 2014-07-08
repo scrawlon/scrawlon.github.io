@@ -45,7 +45,7 @@ a
 
 p
   width: 90%
-  max-width: 30em
+  max-width: $readable-width
   margin: 1.25em auto
 
 em
@@ -100,6 +100,14 @@ article
 
 aside
   display: none
+  float: left
+  margin-top: 2em
+  margin-left: 1em
+  font-size: .8em
+  width: 25%
+  max-width: 10em
+  img
+    width: 0
 
 .float-right
   float: right
@@ -152,16 +160,13 @@ $large-desktop: '(min-width: 90em)'
     +font-size(1.7)
   aside
     display: inline-block
-    float: left
-    font-size: .8em
-    margin-left: 1em
-    width: 25%
-    max-width: 10em
     img
       width: 100%
     .articles
       width: 90%
       max-width: $readable-width * 2
+  .by-line
+    display: none
 
 @media only screen and #{$desktop}
   body

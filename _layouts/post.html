@@ -8,7 +8,8 @@
 <article>
   <header>
     {% include navigation.html %}
-
+  </header>
+  <header>
     <div class="wrapper">
       <h1>
         {% if page.heading %}
@@ -22,16 +23,17 @@
           {{ page.subheading }}
         {% endif %}
       </h4>
-      
-      {% if page.date %}
-        By <a href="{{ site.url }}/about" title="About {{ site.owner.name }}">{{ site.owner.name }}</a>
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-      {% endif %}
+    
+      <div class="by-line">
+        By <a href="{{ site.url }}/about" title="About {{ site.owner.name }}">{{ site.owner.name }}</a> 
+        {% if page.date %}
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% endif %}
+      </div>
     </div>
   </header>
 
   <aside>
-    <p>
     <img src="{{ site.url }}/images/{{ site.owner.avatar }}" title="About {{ site.owner.name }}" /><br />
     
     By <a href="{{ site.url }}/about" title="About {{ site.owner.name }}">{{ site.owner.name }}</a><br />
@@ -47,7 +49,6 @@
     {% unless forloop.last %} &bull; 
     {% endunless %}
     {% endfor %}
-    </p>
   </aside>
 
   <div class="wrapper">

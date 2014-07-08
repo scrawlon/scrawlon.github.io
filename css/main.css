@@ -233,25 +233,35 @@ article {
 /* line 101, ../_sass/main.sass */
 aside {
   display: none;
+  float: left;
+  margin-top: 2em;
+  margin-left: 1em;
+  font-size: 0.8em;
+  width: 25%;
+  max-width: 10em;
+}
+/* line 109, ../_sass/main.sass */
+aside img {
+  width: 0;
 }
 
-/* line 104, ../_sass/main.sass */
+/* line 112, ../_sass/main.sass */
 .float-right {
   float: right;
 }
 
-/* line 107, ../_sass/main.sass */
+/* line 115, ../_sass/main.sass */
 .wrapper {
   width: 90%;
   max-width: 30em;
   margin: 0 auto;
 }
-/* line 111, ../_sass/main.sass */
+/* line 119, ../_sass/main.sass */
 .wrapper p {
   width: 100%;
 }
 
-/* line 114, ../_sass/main.sass */
+/* line 122, ../_sass/main.sass */
 .articles {
   width: 95%;
   margin: 1em auto;
@@ -259,49 +269,49 @@ aside {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 120, ../_sass/main.sass */
+/* line 128, ../_sass/main.sass */
 .articles li {
   list-style-type: none;
   margin-bottom: 0.5em;
 }
-/* line 123, ../_sass/main.sass */
+/* line 131, ../_sass/main.sass */
 .articles time {
   display: none;
 }
 
-/* line 126, ../_sass/main.sass */
+/* line 134, ../_sass/main.sass */
 #disqus_thread {
   width: 90%;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 40em) {
-  /* line 137, ../_sass/main.sass */
+  /* line 145, ../_sass/main.sass */
   body {
     font-size: 16px;
     line-height: 24.0px;
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
-  /* line 139, ../_sass/main.sass */
+  /* line 147, ../_sass/main.sass */
   body .articles {
     width: 90%;
     max-width: 30em;
     margin: 2em auto;
   }
-  /* line 143, ../_sass/main.sass */
+  /* line 151, ../_sass/main.sass */
   body .articles li {
     list-style-type: none;
     margin-bottom: 1em;
   }
-  /* line 146, ../_sass/main.sass */
+  /* line 154, ../_sass/main.sass */
   body .articles time {
     display: inline;
     margin-right: 0.5em;
   }
 }
 @media only screen and (min-width: 60em) {
-  /* line 151, ../_sass/main.sass */
+  /* line 159, ../_sass/main.sass */
   body {
     font-size: 17px;
     line-height: 25.5px;
@@ -309,27 +319,27 @@ aside {
     line-height: 2.55rem;
   }
 
-  /* line 153, ../_sass/main.sass */
+  /* line 161, ../_sass/main.sass */
   aside {
     display: inline-block;
-    float: left;
-    font-size: 0.8em;
-    margin-left: 1em;
-    width: 25%;
-    max-width: 10em;
   }
-  /* line 160, ../_sass/main.sass */
+  /* line 163, ../_sass/main.sass */
   aside img {
     width: 100%;
   }
-  /* line 162, ../_sass/main.sass */
+  /* line 165, ../_sass/main.sass */
   aside .articles {
     width: 90%;
     max-width: 60em;
   }
+
+  /* line 168, ../_sass/main.sass */
+  .by-line {
+    display: none;
+  }
 }
 @media only screen and (min-width: 80em) {
-  /* line 167, ../_sass/main.sass */
+  /* line 172, ../_sass/main.sass */
   body {
     font-size: 18px;
     line-height: 27px;
@@ -337,14 +347,14 @@ aside {
     line-height: 2.7rem;
   }
 
-  /* line 169, ../_sass/main.sass */
+  /* line 174, ../_sass/main.sass */
   aside {
     margin-left: 2em;
     max-width: 15em;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 174, ../_sass/main.sass */
+  /* line 179, ../_sass/main.sass */
   body {
     font-size: 20px;
     line-height: 30px;

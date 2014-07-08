@@ -13,6 +13,13 @@
           {{ page.subheading }}
         {% endif %}
       </h4>
+
+      <div class="by-line">
+        By <a href="{{ site.url }}/about" title="About {{ site.owner.name }}">{{ site.owner.name }}</a> 
+        {% if page.date %}
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% endif %}
+      </div>
     </div>
   </header>
 
