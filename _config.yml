@@ -1,6 +1,5 @@
 title:            Scrawlon 
 description:      A blog about programming and technology
-logo:             jekyll-simple.jpg 
 disqus_shortname: scrawlon
 #Comment out url when working locally to resolve base urls correctly
 #url:              http://scrawlon.com
@@ -39,8 +38,7 @@ highlighter:  pygments
 markdown:     redcarpet
 redcarpet:
     extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-# https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:    /:categories/:title
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "so-simple-theme.sublime-project", "so-simple-theme.sublime-workspace"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
