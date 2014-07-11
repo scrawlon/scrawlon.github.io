@@ -27,7 +27,7 @@ If you know any other tips, leave a comment and I'll add them to the list.
   * This can take a long time.
   <p>
     <small>
-      [SOURCE]: https://plus.google.com/communities/108883927831773328803
+      SOURCE: https://plus.google.com/communities/108883927831773328803
     </small>
   </p>
 
