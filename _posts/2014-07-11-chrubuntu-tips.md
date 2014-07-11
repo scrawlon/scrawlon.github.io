@@ -27,10 +27,9 @@ If you know any other tips, leave a comment and I'll add them to the list.
   * This can take a long time.
   <p>
     <small>
-      [SOURCE]
+      [SOURCE]: https://plus.google.com/communities/108883927831773328803
     </small>
   </p>
-[SOURCE]: https://plus.google.com/communities/108883927831773328803
 
 ####Enable suspend:
 1. Ctrl+Alt+T
