@@ -52,7 +52,7 @@ If you know any other tips, leave a comment and I'll add them to the list.
 * change 300 to any number up to 900
   * <strong>To test different brightness levels</strong>
       1. echo 300 | sudo tee /sys/class/backlight/intel_backlight/brightness > /dev/null
-      * repeat above command subsituting numbers up to 900
+      * repeat above command substituting numbers up to 900
       <p>
         <small>
           SOURCE: https://plus.google.com/communities/108883927831773328803
