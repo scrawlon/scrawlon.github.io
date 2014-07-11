@@ -11,26 +11,28 @@ comments: true
 
 I've been running ChrUbuntu on a C720 for a couple months now.
 It's a great cheap laptop option for developers, but it does require a few
-OS tweaks. This a list of the ones I'm using. I found most of these in the
-ChrUbuntu communities on [Reddit] and [Google+].
+OS tweaks. This is a list of the ones I've been using. 
 
+I found most of these in the
+ChrUbuntu communities on [Reddit] and [Google+].
 If you know any other tips, leave a comment and I'll add them to the list.
 
 [Reddit]: http://www.reddit.com/r/Chrubuntu
 [Google+]: https://plus.google.com/communities/108883927831773328803
 
-####To restore the trackpad:
+####Restore the trackpad:
 1. Ctrl+Alt+T
 * wget http://goo.gl/kz917j
 * sudo bash kz917j
   * This can take a long time.
   <p>
     <small>
-      SOURCE: https://plus.google.com/communities/108883927831773328803
+      [SOURCE]
     </small>
   </p>
+[SOURCE]: https://plus.google.com/communities/108883927831773328803
 
-####To enable suspend:
+####Enable suspend:
 1. Ctrl+Alt+T
 * edit: /etc/default/grub
 * comment out: GRUB_CMDLINE_LINUX_DEFAULT
@@ -44,7 +46,7 @@ If you know any other tips, leave a comment and I'll add them to the list.
   </small>
 </p>
 
-####To change default brightness
+####Change the default screen brightness
 1. Ctrl+Alt+T
 * sudo vim /etc/rc.local
 * edit: echo 300 > /sys/class/backlight/intel_backlight/brightness
@@ -58,7 +60,7 @@ If you know any other tips, leave a comment and I'll add them to the list.
         </small>
       </p>
 
-####To remap search key to shift key
+####Remap the search key to shift key
 1. Ctrl+Alt+T
 * xmodmap -e "keycode 133 = Shift_L"
   * Unfortunately, this is a temporary fix. You'll need to rerun this command at every reboot.
@@ -78,7 +80,7 @@ If you know any other tips, leave a comment and I'll add them to the list.
   </small>
 </p>
 
-####To mute the annoying login sound
+####Mute the annoying login sound
 1. On the login screen, before you enter your User Name and Password, 
 go to the speaker icon in upper right-hand corner of your screen and select mute.
   * From now on the audio will be muted on the login screen. Audio will return to normal once you're logged in.
