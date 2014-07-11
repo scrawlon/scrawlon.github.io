@@ -79,7 +79,7 @@ If you know any other tips, leave a comment and I'll add them to the list.
   </small>
 </p>
 
-####Mute the annoying login sound
+####Mute the login sound
 1. On the login screen, before you enter your User Name and Password, 
 go to the speaker icon in upper right-hand corner of your screen and select mute.
   * From now on the audio will be muted on the login screen. Audio will return to normal once you're logged in.
