@@ -24,13 +24,13 @@ description: "An archive of posts sorted by date."
   <div>
 </header>
 
-  <ul class="articles">
-    {% for post in site.posts %} 
-      <li>
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%m/%d/%y" }}
-        </time>
-        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></article>
-      </li>
-    {% endfor %}
-  </ul>
+<ul class="articles">
+  {% for post in site.posts %} 
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%m/%d/%y" }}
+      </time>
+      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></article>
+    </li>
+  {% endfor %}
+</ul>

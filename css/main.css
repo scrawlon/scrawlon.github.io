@@ -92,18 +92,18 @@ h2 {
   line-height: 45px;
   font-size: 3rem;
   line-height: 4.5rem;
-  font-size: 200%;
+  font-size: 225%;
   line-height: 1.25em;
 }
 
 /* line 22, ../_sass/main.sass */
-h1 {
+h3 {
   padding-top: 1em;
   font-size: 30px;
   line-height: 45px;
   font-size: 3rem;
   line-height: 4.5rem;
-  font-size: 250%;
+  font-size: 200%;
   line-height: 1.25em;
 }
 
@@ -163,74 +163,79 @@ strong {
 }
 
 /* line 57, ../_sass/main.sass */
+small {
+  font-size: 0.8em;
+}
+
+/* line 60, ../_sass/main.sass */
 ul {
   list-style-type: disc;
 }
 
-/* line 60, ../_sass/main.sass */
+/* line 63, ../_sass/main.sass */
 ol {
   list-style-type: decimal;
 }
 
-/* line 63, ../_sass/main.sass */
+/* line 66, ../_sass/main.sass */
 ul, ol {
   width: 100%;
   margin: 0.5em;
 }
-/* line 66, ../_sass/main.sass */
+/* line 69, ../_sass/main.sass */
 ul li, ol li {
   margin-right: 1.5em;
 }
 
-/* line 69, ../_sass/main.sass */
+/* line 72, ../_sass/main.sass */
 blockquote {
   width: 100%;
   margin: 0 2em;
   background-color: whitesmoke;
 }
 
-/* line 74, ../_sass/main.sass */
+/* line 77, ../_sass/main.sass */
 code {
   background-color: whitesmoke;
 }
 
-/* line 77, ../_sass/main.sass */
+/* line 80, ../_sass/main.sass */
 nav {
   font-size: 0.75em;
   width: 98%;
   margin: 0 auto;
   padding-top: 0.9em;
 }
-/* line 82, ../_sass/main.sass */
+/* line 85, ../_sass/main.sass */
 nav li {
   display: inline-block;
   margin-right: 0.9em;
 }
 
-/* line 86, ../_sass/main.sass */
+/* line 89, ../_sass/main.sass */
 header, footer {
   background-color: black;
   color: white;
   width: 100%;
 }
-/* line 90, ../_sass/main.sass */
+/* line 93, ../_sass/main.sass */
 header a, footer a {
   color: white;
 }
 
-/* line 93, ../_sass/main.sass */
+/* line 96, ../_sass/main.sass */
 header {
   width: 100%;
   padding-bottom: 2em;
 }
 
-/* line 97, ../_sass/main.sass */
+/* line 100, ../_sass/main.sass */
 article {
   width: 100%;
   margin-bottom: 2em;
 }
 
-/* line 101, ../_sass/main.sass */
+/* line 104, ../_sass/main.sass */
 aside {
   display: none;
   float: left;
@@ -240,78 +245,76 @@ aside {
   width: 25%;
   max-width: 10em;
 }
-/* line 109, ../_sass/main.sass */
+/* line 112, ../_sass/main.sass */
 aside img {
   width: 0;
 }
 
-/* line 112, ../_sass/main.sass */
+/* line 115, ../_sass/main.sass */
 .float-right {
   float: right;
 }
 
-/* line 115, ../_sass/main.sass */
+/* line 118, ../_sass/main.sass */
 .wrapper {
   width: 90%;
   max-width: 30em;
   margin: 0 auto;
 }
-/* line 119, ../_sass/main.sass */
+/* line 122, ../_sass/main.sass */
 .wrapper p {
   width: 100%;
 }
 
-/* line 122, ../_sass/main.sass */
+/* line 125, ../_sass/main.sass */
 .articles {
   width: 95%;
   margin: 1em auto;
-  text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
-/* line 128, ../_sass/main.sass */
+/* line 129, ../_sass/main.sass */
 .articles li {
   list-style-type: none;
   margin-bottom: 0.5em;
 }
-/* line 131, ../_sass/main.sass */
+/* line 132, ../_sass/main.sass */
 .articles time {
   display: none;
 }
 
-/* line 134, ../_sass/main.sass */
+/* line 135, ../_sass/main.sass */
 #disqus_thread {
   width: 90%;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 40em) {
-  /* line 145, ../_sass/main.sass */
+  /* line 146, ../_sass/main.sass */
   body {
     font-size: 16px;
     line-height: 24.0px;
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
-  /* line 147, ../_sass/main.sass */
+  /* line 148, ../_sass/main.sass */
   body .articles {
     width: 90%;
     max-width: 30em;
     margin: 2em auto;
   }
-  /* line 151, ../_sass/main.sass */
+  /* line 152, ../_sass/main.sass */
   body .articles li {
     list-style-type: none;
     margin-bottom: 1em;
   }
-  /* line 154, ../_sass/main.sass */
+  /* line 155, ../_sass/main.sass */
   body .articles time {
     display: inline;
     margin-right: 0.5em;
   }
 }
 @media only screen and (min-width: 60em) {
-  /* line 159, ../_sass/main.sass */
+  /* line 160, ../_sass/main.sass */
   body {
     font-size: 17px;
     line-height: 25.5px;
@@ -319,27 +322,27 @@ aside img {
     line-height: 2.55rem;
   }
 
-  /* line 161, ../_sass/main.sass */
+  /* line 162, ../_sass/main.sass */
   aside {
     display: inline-block;
   }
-  /* line 163, ../_sass/main.sass */
+  /* line 164, ../_sass/main.sass */
   aside img {
     width: 100%;
   }
-  /* line 165, ../_sass/main.sass */
+  /* line 166, ../_sass/main.sass */
   aside .articles {
     width: 90%;
     max-width: 60em;
   }
 
-  /* line 168, ../_sass/main.sass */
+  /* line 169, ../_sass/main.sass */
   .by-line {
     display: none;
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 172, ../_sass/main.sass */
+  /* line 173, ../_sass/main.sass */
   body {
     font-size: 18px;
     line-height: 27px;
@@ -347,14 +350,14 @@ aside img {
     line-height: 2.7rem;
   }
 
-  /* line 174, ../_sass/main.sass */
+  /* line 175, ../_sass/main.sass */
   aside {
     margin-left: 2em;
     max-width: 15em;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 179, ../_sass/main.sass */
+  /* line 180, ../_sass/main.sass */
   body {
     font-size: 20px;
     line-height: 30px;
