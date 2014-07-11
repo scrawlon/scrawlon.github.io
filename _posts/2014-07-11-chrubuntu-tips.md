@@ -50,7 +50,7 @@ If you know any other tips, leave a comment and I'll add them to the list.
 1. Ctrl+Alt+T
 * sudo vim /etc/rc.local
 * edit: echo 300 > /sys/class/backlight/intel_backlight/brightness
-* change 300 to any number up to 900
+  * substitute any number up to 900 for "300" in the line above
   * <strong>To test different brightness levels</strong>
       1. echo 300 | sudo tee /sys/class/backlight/intel_backlight/brightness > /dev/null
       * repeat above command substituting numbers up to 900
