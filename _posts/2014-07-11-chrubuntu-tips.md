@@ -39,6 +39,7 @@ If you know any other tips, leave a comment and I'll add them to the list.
 * close file
 * sudo update-grub
 * sudo update-grub2
+* reboot
 <p>
   <small>
     SOURCE: http://realityequation.net/installing-elementary-os-on-an-hp-chromebook-14
