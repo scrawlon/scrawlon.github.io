@@ -48,8 +48,8 @@ If you know any other tips, leave a comment and I'll add them to the list.
 
 ####Change the default screen brightness
 1. Ctrl+Alt+T
-* sudo vim /etc/rc.local
-* echo 300 > /sys/class/backlight/intel_backlight/brightness
+* edit: /etc/rc.local
+* add: echo 300 > /sys/class/backlight/intel_backlight/brightness
   * substitute any number up to 900 for "300" in the line above
   * <strong>To test different brightness levels</strong>
       1. echo 300 | sudo tee /sys/class/backlight/intel_backlight/brightness > /dev/null
