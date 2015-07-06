@@ -41,7 +41,7 @@ Is $1099 too much for a device used primarily as a digital notepad? YES! So I wa
 
 **Specs:** i7 4600U, 8gb ram, 256gb SSD, Windows 8.1, 12.5" screen, 3.6 pounds, price $1499, released in 2013
 
-I was actually looking for an ultrabook when I bought this. I loved having a pen tablet, so the hybrid concept drew me in. I thought I could replace two devices with one. That plus a 7 hour battery life, are what sold be on this machine. I grabbed one on eBay for $750.
+I was actually looking for an ultrabook when I bought this. I loved having a pen tablet, so the hybrid concept drew me in. I thought I could replace two devices with one. That plus a 7 hour battery life, are what sold me on this machine. I grabbed one on eBay for $750.
 
 **Pros:**
 
@@ -75,7 +75,6 @@ This is my current note taking tablet. I found one on eBay for $150. It's light.
 
 *   Pen accuracy: The screen suffers the same issues as the other Thinkpad. It doesn't pick up the pen strokes as well as the Samsung Slate.
 *   The pen: This has the exact same pen as the Thinkpad S1 Yoga. It's small and uncomfortable to hold.
-*   Charger: The tablet has to be turned off to charge, probably because micro USB can't handle the power. Fortunately, the battery charges fairly quickly.
 
 ## Now the Easy Part...
 
