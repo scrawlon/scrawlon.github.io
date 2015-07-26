@@ -27,7 +27,7 @@ Let's quickly cover the top 3 browsers, so we can get to the code ASAP:
 
 3.  **Internet Explorer**: API is unsupported on all versions at the time of this writing, as Microsoft is focusing on an entirely separate API. This should surprise no one.
 
-OK. That doesn't seems so bad, just use the correct browser prefix and avoid Internet Explorer. Simple. Not quite. There are further differences in the APIs between Firefox and Chrome, and if you're building a web app, you'll want it to run in all the browsers. There are shims ([for example][2]) to handle these incompatibilities, but this shouldn't be necessary.
+OK. That doesn't seem so bad, just use the correct browser prefix and avoid Internet Explorer. Simple. Not quite. There are further differences in the APIs between Firefox and Chrome, and if you're building a web app, you'll want it to run in all the browsers. There are shims ([for example][2]) to handle these incompatibilities, but this shouldn't be necessary.
 
 For this basic tutorial, I'm only interested in handling the basics and making an app that works locally. Unfortunately, Google Chrome requires a running server to use the getUserMedia API. If you're using **Chrome**, continue to the *"Install a Local Server"* section. If you're using Firefox you can skip to *"Access the Webcam"*. If you're using Internet Explorer, you clearly haven't been reading very carefully, and I don't care what you do. ;)
 
@@ -39,7 +39,7 @@ It would be nice if the makers of Google Chrome would let us access our local we
 
 There are plenty of tutorials and intros to the [HTML5 getUserMedia() API][4]. Most of the code I'll be sharing here comes directly from the API, so I recommend taking a look at that info.
 
-First, we need an html page with some basic elements. Create a new file called *mirror.html*. If you're using Chrome, you should have XAMPP installed in c:/xampp and it should be running. Chrome users should add these new files in the c:\xampp\htdocs directory. Firefox users can create them in any directory you want (as it should be).
+First, we need an html page with some basic elements. Create a new file called *mirror.html*. If you're using Chrome, you should have XAMPP installed in c:\xampp and it should be running. Chrome users should add these new files in the c:\xampp\htdocs directory. Firefox users can create them in any directory you want (as it should be).
 
 Keeping this as simple as possible. Add the code below to the new *mirror.html* file.
 
