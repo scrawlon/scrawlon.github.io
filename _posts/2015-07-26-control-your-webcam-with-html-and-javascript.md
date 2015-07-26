@@ -29,7 +29,7 @@ Let's quickly cover the top 3 browsers, so we can get to the code ASAP:
 
 OK. That doesn't seem so bad, just use the correct browser prefix and avoid Internet Explorer. Simple. Not quite. There are further differences in the APIs between Firefox and Chrome, and if you're building a web app, you'll want it to run in all the browsers. There are shims ([for example][2]) to handle these incompatibilities, but this shouldn't be necessary.
 
-For this basic tutorial, I'm only interested in handling the basics and making an app that works locally. Unfortunately, Google Chrome requires a running server to use the getUserMedia API. If you're using **Chrome**, continue to the *"Install a Local Server"* section. If you're using Firefox you can skip to *"Access the Webcam"*. If you're using Internet Explorer, you clearly haven't been reading very carefully, and I don't care what you do. ;)
+For this basic tutorial, I'm only interested in handling the basics and making an app that works locally. Unfortunately, Google Chrome requires a running server to use the getUserMedia API. If you're using **Chrome**, continue to the *"Install a Local Server"* section. If you're using **Firefox** you can skip to *"Access the Webcam"*. If you're using Internet Explorer, you clearly haven't been reading very carefully, and I don't care what you do. ;)
 
 ## Install A Local Server
 
@@ -120,11 +120,11 @@ Create a new file called *mirror.js* in the same directory as *mirror.html*:
 
 Let's walk down through the code.
 
-1.  First we capture the *video* and *canvas* elements from the html file and define the resolution of our webcam (1280x720 for HD video).
+1.  First we capture the *video* element from the html file and define our webcam video resolution (1280x720 for HD video).
 
 2.  In the main *activateWebcam()* function:
 
-*   We have to deal with those browser prefixes and API differences. I've added two small functions to separate these details: *hasUserMedia()* and *getBrowserVideoSettings*. The first returns the current browser's correct getUserMedia() prefix or NULL. The second returns the current browser's video resolution definition object. **These necessary alternative APIs are so similar, it's difficult to fathom that they couldn't agree to use one or the other...**
+*   We have to deal with those browser prefixes and API differences. I've added two small functions to separate these details: *hasUserMedia()* and *getBrowserVideoSettings()*. The first returns the current browser's correct getUserMedia() prefix or NULL. The second returns the current browser's video resolution definition object. **These necessary alternative APIs are so similar, it's difficult to fathom that they couldn't agree to use one or the other...**
 
 *   If *hasUserMedia()* isn't null, then we can finally call *getUserMedia()* with the appropriate video resolution object and apply the webcam video stream to our html *video* element's src.
 
