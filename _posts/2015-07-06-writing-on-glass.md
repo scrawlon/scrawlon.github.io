@@ -3,7 +3,8 @@ ID: 74
 post_title: Writing On Glass
 author: smcgrath
 post_date: 2015-07-06 07:34:46
-post_excerpt: ""
+post_excerpt: |
+  In this post, I talk about my search for the "infinite notebook" and the Windows tablet devices I've tried along the way.
 layout: post
 permalink: >
   http://scrawlon.com/2015/07/06/writing-on-glass/
