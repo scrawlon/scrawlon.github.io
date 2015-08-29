@@ -5,7 +5,7 @@ post_title: >
   JavaScript
 author: smcgrath
 post_date: 2015-07-26 01:24:43
-post_excerpt: ""
+post_excerpt: "In this short tutorial you'll learn how to take control of your computer's web cam, using HTML and JavaScript."
 layout: post
 permalink: >
   http://scrawlon.com/2015/07/26/control-your-webcam-with-html-and-javascript/
