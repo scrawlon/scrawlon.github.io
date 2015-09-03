@@ -11,8 +11,6 @@ permalink: >
   http://scrawlon.com/2015/07/26/control-your-webcam-with-html-and-javascript/
 published: true
 ---
-## Intro -
-
 The more I learn about programming, the more I want to build things that are just for me. If I have access to a capable device, I want to take control of it and create the user interface that works best for me personally. Now that I have a small stack of old smartphones, tablets and laptops, it's time to experiment. Today, I'm going to look at what can I do with a webcam and a web browser.
 
 ## HTML is still a tangled mess (YAY !?)
