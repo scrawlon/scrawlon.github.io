@@ -9,7 +9,7 @@ permalink: >
   http://scrawlon.com/2015/07/06/writing-on-glass/
 published: true
 ---
-## Infinite Notebook -
+## Infinite Notebook
 
 Before the age of touchscreen computers, smartphones and tablets, I dreamed of a simple computing device that could do just one thing, mimic pen and paper - an infinite virtual notebook contained within a single page. The modern Windows 8.1 tablet w/ Wacom digitizer is the closest we've come to that ideal, plus they are fully functioning PCs as well.
 
