@@ -15,7 +15,7 @@ published: true
 
 The more I learn about programming, the more I want to build things that are just for me. If I have access to a capable device, I want to take control of it and create the user interface that works best for me personally. Now that I have a small stack of old smartphones, tablets and laptops, it's time to experiment. Today, I'm going to look at what can I do with a webcam and a web browser.
 
-## HTML is a still tangled mess (YAY !?)
+## HTML is still a tangled mess (YAY !?)
 
 So, HTML5 provides us with *[Navigator.getUserMedia()][1]*, so all we need to do is call that function and we're gold. Right? Hell no! Just like the pre-HTML5 days, we still have browser prefixes, API differences and Internet Explorer incompatibilities.
 
