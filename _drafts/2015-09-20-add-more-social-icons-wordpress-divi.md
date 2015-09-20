@@ -1,8 +1,8 @@
 ---
 ID: 222
-post_title: Add more social icons to Divi
+post_title: 'Add more social icons  WordPress Divi'
 author: smcgrath
-post_date: 2015-09-20 01:04:36
+post_date: 2015-09-20 01:06:36
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
