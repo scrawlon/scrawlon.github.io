@@ -4,17 +4,17 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: smcgrath
-post_date: 2015-09-20 19:30:13
+post_date: 2015-09-20 19:32:13
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
 published: false
 ---
-My employer began using Divi for all new builds close to a year ago now. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, Divi has been built on pluggable
+My employer began using Divi for all new builds close to a year ago now. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, Divi has been built on [pluggable functions][1], so it's developers can customize the Divi experience without worrying about
 
 The first step in extending the Divi social media options, is to override the existing function that loads those options. That function is *et_load_core_options*, located in 'Divi/epanel/custom_functions.php'. That purpose of that function is to require another file 'Divi/epanel/options_divi.php'.
 
-While it is possible to edit that file directly, it is highly recommended that you create a child theme and make your edits there ([learn more about child theme's here][1]).
+While it is possible to edit that file directly, it is highly recommended that you create a child theme and make your edits there ([learn more about child theme's here][2]).
 
 Add the following code at the bottom of your child theme's functions.php:
 
@@ -72,4 +72,5 @@ Create a new folder called includes and create a files called social_icons.php. 
     
     </ul>
 
- [1]: http://www.eleganttweaks.com/learn/creating-a-child-theme/
+ [1]: https://codex.wordpress.org/Pluggable_Functions
+ [2]: http://www.eleganttweaks.com/learn/creating-a-child-theme/
