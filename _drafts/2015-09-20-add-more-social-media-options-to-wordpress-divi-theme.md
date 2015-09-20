@@ -3,8 +3,8 @@ ID: 222
 post_title: >
   Add more social media options to
   WordPress Divi Theme
-author: smcgrath
-post_date: 2015-09-20 20:12:56
+author: Scott McGrath
+post_date: 2015-09-20 20:14:38
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
