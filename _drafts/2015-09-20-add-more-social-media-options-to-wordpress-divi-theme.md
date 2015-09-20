@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: smcgrath
-post_date: 2015-09-20 01:09:48
+post_date: 2015-09-20 01:10:50
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -24,3 +24,6 @@ Add the following to your child theme's functions.php:
             $options = array_merge($options, $custom_options);
         }
     }
+    
+
+Create a new
