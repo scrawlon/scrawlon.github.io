@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: smcgrath
-post_date: 2015-09-20 01:15:54
+post_date: 2015-09-20 01:17:25
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -30,7 +30,7 @@ Create a new folder called includes and create a files called social_icons.php. 
 
     <ul class="et-social-icons">
     
-    <!-- These are the new Social Media Options -->yy
+    <!-- These are the new Social Media Options -->
     <?php if ( 'on' === et_get_option( 'divi_show_github_icon', 'on' ) ) : ?>
         <li class="et-social-icon">
             <a href="<?php echo esc_url( et_get_option( 'divi_github_url', '#' ) ); ?>" class="icon">
