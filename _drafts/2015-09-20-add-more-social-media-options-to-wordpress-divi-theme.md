@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-20 22:51:51
+post_date: 2015-09-20 22:53:51
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -18,7 +18,9 @@ The first step in extending the Divi social media options, is to find and overri
 
 *While it is possible to edit that file directly, it is not recommended. Any theme file that you edit will be overwritten when you update that theme, causing your work to be lost and your site to stop working. For that reason, we'll make our changes in the child theme.*
 
-Now that we know what file Add the following code at the bottom of your child theme's functions.php:
+Now that we know where our options variable is, we need a way to add our own options to
+
+Add the following code at the bottom of your child theme's functions.php:
 
     function load_custom_core_options() {
         if ( ! function_exists( 'et_load_core_options' ) ) {
