@@ -4,13 +4,13 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: smcgrath
-post_date: 2015-09-20 19:22:13
+post_date: 2015-09-20 19:24:13
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
 published: false
 ---
-My employer began using Divi for all new builds close to a year ago now.
+My employer began using Divi for all new builds close to a year ago now. The Divi page builder is real game changer for web designers. Creating and changing page layout visually saves a ton of time
 
 The first step in extending the Divi social media options, is to override the existing function that loads those options. That function is *et_load_core_options*, located in 'Divi/epanel/custom_functions.php'. That purpose of that function is to require another file 'Divi/epanel/options_divi.php'.
 
