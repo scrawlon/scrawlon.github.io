@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 06:30:38
+post_date: 2015-09-21 06:32:38
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -96,7 +96,7 @@ The above code loads the 'options_divi.php' file and our 'custom_options_divi.ph
 
 If you log into your WordPress admin, and open 'Divi > Theme Options > General', you should see the GitHub and LinkedIn buttons at the bottom. You can enable them and add URLs for them, but the icons won't appear on your site until we add the new icons to the template.
 
-We're going to use the Font Awesome font icons to get all of the cu
+We're going to use the [Font Awesome icon font][4] to get all of the current social media logos. The easiest way to add this to WordPress is the [Better Font Awesome plugin][5].
 
 Create a new folder called includes and create a files called social_icons.php. Paste in the following code:
 
@@ -140,3 +140,5 @@ Create a new folder called includes and create a files called social_icons.php. 
  [1]: http://www.elegantthemes.com/gallery/divi/
  [2]: https://codex.wordpress.org/Pluggable_Functions
  [3]: http://www.eleganttweaks.com/learn/creating-a-child-theme/
+ [4]: https://fortawesome.github.io/Font-Awesome/
+ [5]: https://wordpress.org/plugins/better-font-awesome/
