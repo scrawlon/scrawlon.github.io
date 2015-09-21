@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 06:26:38
+post_date: 2015-09-21 06:28:38
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -93,8 +93,6 @@ With the custom_options_divi.php file created, we can create the new *et_load_co
     
 
 What the above code does is it loads the 'options_divi.php' file and our 'custom_options_divi.php' file. It then merges the arrays, $options and $custom_options. If you log into your WordPress admin, and open 'Divi > Theme Options > General', you should see the GitHub and LinkedIn buttons at the bottom. You can enable them and add URLs for them, but the icons won't appear on your site until we add the new icons to the template.
-
-Before we do that, we need to add
 
 Create a new folder called includes and create a files called social_icons.php. Paste in the following code:
 
