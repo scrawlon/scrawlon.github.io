@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 02:23:30
+post_date: 2015-09-21 02:25:30
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -73,7 +73,7 @@ Our next step, is to create a custom options array and combine it with the origi
     );
     
 
-This is our custom options array. We're ad Add the following code at the bottom of your child theme's functions.php:
+This is our custom options array. We're adding two new options, one for GitHub and one for LinkedIn. You could add others, but for the purpose of this tutorial, let's just focus on those. If you're curious where this code comes from Add the following code at the bottom of your child theme's functions.php:
 
     function load_custom_core_options() {
         if ( ! function_exists( 'et_load_core_options' ) ) {
