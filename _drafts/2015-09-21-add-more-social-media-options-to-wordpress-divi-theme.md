@@ -4,15 +4,15 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 02:10:29
+post_date: 2015-09-21 02:12:13
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
 published: false
 ---
-My employer began using the Divi for all new WordPress builds about a year ago. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, the Divi codebase includes [pluggable functions][1], that permit us to customize it as needed.
+My employer began using the WordPress [Divi theme][1] about a year ago. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, the Divi codebase includes [pluggable functions][2], that permit us to customize it as needed.
 
-**This tutorial assumes you have knowledge of WordPress and PHP, you have ftp access to your sites files, you have the Divi theme installed and you've created a Divi child theme ([learn more about child theme's here][2]).**
+**This tutorial assumes you have knowledge of WordPress and PHP, you have ftp access to your sites files, you have the Divi theme installed and you've created a Divi child theme ([learn more about child theme's here][3]).**
 
 The first step in extending the Divi social media options, is to find and override the function that loads those options. If you look in the file 'Divi/epanel/custom_functions.php', the function we're looking for is *et_load_core_options*. The purpose of this function is to load the file 'Divi/epanel/options_divi.php'. Inside that file is the global $options array. That's the code that builds the options tab you see when you open 'Divi > Theme Options > General' in your WordPress admin menu.
 
@@ -76,5 +76,6 @@ W Create a new folder called includes and create a files called social_icons.php
     
     </ul>
 
- [1]: https://codex.wordpress.org/Pluggable_Functions
- [2]: http://www.eleganttweaks.com/learn/creating-a-child-theme/
+ [1]: http://www.elegantthemes.com/gallery/divi/
+ [2]: https://codex.wordpress.org/Pluggable_Functions
+ [3]: http://www.eleganttweaks.com/learn/creating-a-child-theme/
