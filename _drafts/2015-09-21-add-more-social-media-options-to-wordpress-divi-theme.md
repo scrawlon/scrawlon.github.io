@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 06:45:54
+post_date: 2015-09-21 06:47:54
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -136,6 +136,9 @@ The last thing we need to do is override the Divi social icons template file. In
         <?php endif; ?>
     
     </ul>
+    
+
+Here we have an array of social networks and their associated Font Awesome icons. We loop through that array and add new list element for each social site we've
 
  [1]: http://www.elegantthemes.com/gallery/divi/
  [2]: https://codex.wordpress.org/Pluggable_Functions
