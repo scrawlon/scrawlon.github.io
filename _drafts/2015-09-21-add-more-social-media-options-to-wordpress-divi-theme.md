@@ -4,13 +4,13 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-20 22:55:10
+post_date: 2015-09-21 00:06:30
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
 published: false
 ---
-My employer began using Divi for all new builds close to a year ago now. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, the Divi codebase includes [pluggable functions][1], that permit us to customize it as needed.
+My employer began using Divi for all new Wordprebuilds close to a year ago now. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, the Divi codebase includes [pluggable functions][1], that permit us to customize it as needed.
 
 **This tutorial assumes you have knowledge of WordPress and PHP, you have ftp access to your sites files, you have the Divi theme installed and you've created a Divi child theme ([learn more about child theme's here][2]).**
 
