@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 07:00:55
+post_date: 2015-09-21 07:02:55
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -18,7 +18,7 @@ The first step in extending the Divi social media options, is to find and overri
 
 *While it is possible to edit that file directly, it is not recommended. Any theme file that you edit will be overwritten when you update that theme, causing your work to be lost and your site to stop working. For that reason, we'll make our changes in the child theme.*
 
-Our next step, is to create a custom options array and combine it with the original Divi options array. In you child theme folder create a new folder named 'includes' and add a new file named '/includes/custom_options_divi.php'. Add the following code to the new file:
+Our next step, is to create a custom options array and combine it with the original Divi options array. In you child theme folder create a new folder named 'includes' and add a new file named '/epanel/custom_options_divi.php'. Add the following code to the new file:
 
     <?php
     $custom_options = array (
@@ -140,7 +140,7 @@ The last thing we need to do is override the Divi social icons template file. In
 
 Here we have an array of social networks and their associated Font Awesome icons. We loop through that array and add a new list item for any social site that are activated in the Divi epanel.
 
-That's it. If you activate GitHub or LinkedIn now, their icons will appear in you WordPress site's header or footer (depending on your settings). In order to add other social networks, you can add
+That's it. If you activate GitHub or LinkedIn now, their icons will appear in you WordPress site's header or footer (depending on your settings). In order to add other social networks, you can add them to the '/epanel/custom_options_divi.php' and the '/includes
 
  [1]: http://www.elegantthemes.com/gallery/divi/
  [2]: https://codex.wordpress.org/Pluggable_Functions
