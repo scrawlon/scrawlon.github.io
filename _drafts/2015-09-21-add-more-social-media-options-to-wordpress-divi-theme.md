@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 06:18:38
+post_date: 2015-09-21 06:20:38
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -92,7 +92,9 @@ With the custom_options_divi.php file created, we can create the new *et_load_co
     add_action( 'after_setup_theme', 'load_custom_core_options' );
     
 
-What the above code does is it loads the 'options_divi.php' file and our 'custom_options_divi.php' file. It then merges the arrays, $options and $custom Create a new folder called includes and create a files called social_icons.php. Paste in the following code:
+What the above code does is it loads the 'options_divi.php' file and our 'custom_options_divi.php' file. It then merges the arrays, $options and $custom_options. If you log into your WordPress admin, and open 'Divi > Theme Options > General', you should see t
+
+Create a new folder called includes and create a files called social_icons.php. Paste in the following code:
 
     <ul class="et-social-icons">
     
