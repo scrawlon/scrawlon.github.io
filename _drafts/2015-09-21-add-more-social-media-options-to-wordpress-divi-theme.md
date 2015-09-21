@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 06:58:54
+post_date: 2015-09-21 07:00:55
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -140,7 +140,7 @@ The last thing we need to do is override the Divi social icons template file. In
 
 Here we have an array of social networks and their associated Font Awesome icons. We loop through that array and add a new list item for any social site that are activated in the Divi epanel.
 
-That's it. If you activate GitHub or LinkedIn now, their icons will appear in you WordPress site's header or footer (depending on your settings).
+That's it. If you activate GitHub or LinkedIn now, their icons will appear in you WordPress site's header or footer (depending on your settings). In order to add other social networks, you can add
 
  [1]: http://www.elegantthemes.com/gallery/divi/
  [2]: https://codex.wordpress.org/Pluggable_Functions
