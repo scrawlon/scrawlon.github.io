@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 02:31:41
+post_date: 2015-09-21 02:51:16
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
