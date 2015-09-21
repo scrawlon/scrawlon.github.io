@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 02:25:30
+post_date: 2015-09-21 02:27:30
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -14,7 +14,7 @@ My employer began using the WordPress [Divi theme][1] about a year ago. The Divi
 
 **This tutorial assumes you have knowledge of WordPress and PHP, you have ftp access to your sites files, you have the Divi theme installed and you've created a Divi child theme ([learn more about child theme's here][3]).**
 
-The first step in extending the Divi social media options, is to find and override the function that loads those options. If you look in the file 'Divi/epanel/custom_functions.php', the function we're looking for is *et_load_core_options*. The purpose of this function is to load the file 'Divi/epanel/options_divi.php'. Inside that file is the global $options array. That's the code that builds the options tab you see when you open 'Divi > Theme Options > General' in your WordPress admin menu.
+The first step in extending the Divi social media options, is to find and override the function that loads those options. If you look in the file '/wp-content/themes/Divi/epanel/custom_functions.php', the function we're looking for is *et_load_core_options*. The purpose of this function is to load the file '/wp-content/themes/Divi/epanel/options_divi.php'. Inside that file is the global $options array. That's the code that builds the options tab you see when you open 'Divi > Theme Options > General' in your WordPress admin menu.
 
 *While it is possible to edit that file directly, it is not recommended. Any theme file that you edit will be overwritten when you update that theme, causing your work to be lost and your site to stop working. For that reason, we'll make our changes in the child theme.*
 
@@ -73,7 +73,9 @@ Our next step, is to create a custom options array and combine it with the origi
     );
     
 
-This is our custom options array. We're adding two new options, one for GitHub and one for LinkedIn. You could add others, but for the purpose of this tutorial, let's just focus on those. If you're curious where this code comes from Add the following code at the bottom of your child theme's functions.php:
+This is our custom options array. We're adding two new options, one for GitHub and one for LinkedIn. You could add others, but for the purpose of this tutorial, let's just focus on those. If you're curious where this code comes from, you can take a look at the original file '/wp-content/themes/Divi/epanel/options_divi.php'.
+
+Add the following code at the bottom of your child theme's functions.php:
 
     function load_custom_core_options() {
         if ( ! function_exists( 'et_load_core_options' ) ) {
