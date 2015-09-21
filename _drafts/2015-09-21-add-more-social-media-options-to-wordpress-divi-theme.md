@@ -4,7 +4,7 @@ post_title: >
   Add more social media options to
   WordPress Divi Theme
 author: Scott McGrath
-post_date: 2015-09-21 02:15:53
+post_date: 2015-09-21 02:16:48
 post_excerpt: ""
 layout: post
 permalink: http://scrawlon.com/?p=222
@@ -19,6 +19,59 @@ The first step in extending the Divi social media options, is to find and overri
 *While it is possible to edit that file directly, it is not recommended. Any theme file that you edit will be overwritten when you update that theme, causing your work to be lost and your site to stop working. For that reason, we'll make our changes in the child theme.*
 
 Our next step, is to create a custom options array and combine it with the original Divi options array. In you child theme folder create a new folder named 'includes' and add a new file named '/includes/custom_options_divi.php'. Add the following code to the new file:
+
+    <?php
+    $custom_options = array (
+    
+        array( "name" => "wrap-general",
+               "type" => "contenttab-wrapstart",),
+    
+            array( "type" => "subnavtab-start",),
+    
+                array( "name" => "custom-1",
+                       "type" => "subnav-tab",
+                       "desc" => esc_html__("Custom Options",$themename)),
+    
+            array( "type" => "subnavtab-end",),
+    
+                array( "name" => "general-1",
+                       "type" => "subcontent-start",),
+    
+                    array( "type" => "clearfix",),
+    
+                    array( "name" => __( "Show GitHub Icon", $themename ),
+                           "id" => $shortname."_show_github_icon",
+                           "type" => "checkbox",
+                           "std" => "on",
+                           "desc" => __( "Here you can choose to display the GitHub Icon. ", $themename ) ),
+    
+                    array( "name" => __( "Show LinkedIn Icon", $themename ),
+                           "id" => $shortname."_show_linkedin_icon",
+                           "type" => "checkbox2",
+                           "std" => "on",
+                           "desc" => __( "Here you can choose to display the LinkedIn Icon on your homepage. ", $themename ) ),
+    
+                    array( "type" => "clearfix",),
+    
+                    array( "name" => __( "GitHub Profile Url", $themename ),
+                           "id" => $shortname."_github_url",
+                           "std" => "#",
+                           "type" => "text",
+                           "validation_type" => "url",
+                           "desc" => __( "Enter the URL of your GitHub feed. ", $themename ) ),
+    
+                    array( "name" => __( "LinkedIn Profile Url", $themename ),
+                           "id" => $shortname."_linkedin_url",
+                           "std" => "#",
+                           "type" => "text",
+                           "validation_type" => "url",
+                           "desc" => __( "Enter the URL of your LinkedIn Profile. ", $themename ) ),
+    
+                array( "name" => "general-1",
+                       "type" => "subcontent-end",),
+    
+    );
+    
 
 Add the following code at the bottom of your child theme's functions.php:
 
