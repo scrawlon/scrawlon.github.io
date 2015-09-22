@@ -5,7 +5,7 @@ post_title: >
   WordPress Divi Theme
 author: Scott McGrath
 post_date: 2015-09-21 23:08:57
-post_excerpt: ""
+post_excerpt: "A tutorial on the Divi theme's pluggable functions, focused on extending the header/foooter social media options."
 layout: post
 permalink: >
   http://scrawlon.com/2015/09/21/add-more-social-media-options-to-wordpress-divi-theme/
