@@ -11,13 +11,19 @@ permalink: >
   http://scrawlon.com/2015/09/21/add-more-social-media-options-to-wordpress-divi-theme/
 published: true
 ---
+## The Divi Builder (really good, but not perfect)
+
 My employer began using the WordPress [Divi theme][1] about a year ago. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, the Divi codebase includes [pluggable functions][2], that permit us to customize it as needed.
 
 **This tutorial assumes you have knowledge of WordPress and PHP, you have ftp access to your sites files, you have the Divi theme installed and you've created a Divi child theme ([learn more about child theme's here][3]).**
 
+## Find the Divi epanel options files
+
 The first step in extending the Divi social media options, is to find and override the function that loads those options. If you look in the file '/wp-content/themes/Divi/epanel/custom_functions.php', the function we're looking for is *et_load_core_options*. The purpose of this function is to load the file '/wp-content/themes/Divi/epanel/options_divi.php'. Inside that file is the global $options array. That's the code that builds the options tab you see when you open 'Divi > Theme Options > General' in your WordPress admin menu.
 
 *While it is possible to edit that file directly, it is not recommended. Any theme file that you edit will be overwritten when you update that theme, causing your work to be lost and your site to stop working. For that reason, we'll make our changes in the child theme.*
+
+## Create the custom epanel options file
 
 Our next step, is to create a custom options array and combine it with the original Divi options array. In you child theme folder create a new folder named 'includes' and add a new file named '/epanel/custom_options_divi.php'. Add the following code to the new file:
 
@@ -76,6 +82,8 @@ Our next step, is to create a custom options array and combine it with the origi
 
 This is our custom options array. We're adding two new options, one for GitHub and one for LinkedIn. You could add others, but for the purpose of this tutorial, let's just focus on those. If you're curious where this code comes from, you can take a look at the original file '/wp-content/themes/Divi/epanel/options_divi.php'.
 
+## Merge the custom epanel options with the standard epanel options
+
 With the custom_options_divi.php file created, we can create the new *et_load_core_options* function that puts it all together. Add the following code at the bottom of your child theme's functions.php:
 
     function load_custom_core_options() {
@@ -96,6 +104,8 @@ With the custom_options_divi.php file created, we can create the new *et_load_co
 The above code loads the 'options_divi.php' file and our 'custom_options_divi.php' file. It then merges the arrays, $options and $custom_options.
 
 If you log into your WordPress admin, and open 'Divi > Theme Options > General', you should see the GitHub and LinkedIn buttons at the bottom. You can enable them and add URLs for them, but the icons won't appear on your site until we add the new icons to the template.
+
+## Load Font Awesome icon fonts and create a new Social Media template
 
 We're going to use the [Font Awesome icon font][4] to get all of the current social media logos. The easiest way to add this to WordPress is the [Better Font Awesome plugin][5]. Install that before continuing.
 
