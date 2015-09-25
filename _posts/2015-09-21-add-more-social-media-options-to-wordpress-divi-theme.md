@@ -11,11 +11,13 @@ permalink: >
   http://scrawlon.com/2015/09/21/add-more-social-media-options-to-wordpress-divi-theme/
 published: true
 ---
+Code from this guide is available on [GitHub][1].
+
 ## The Divi Builder (really good, but not perfect)
 
-My employer began using the WordPress [Divi theme][1] about a year ago. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, the Divi codebase includes [pluggable functions][2], that permit us to customize it as needed.
+My employer began using the WordPress [Divi theme][2] about a year ago. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, the Divi codebase includes [pluggable functions][3], that permit us to customize it as needed.
 
-**This tutorial assumes you have knowledge of WordPress and PHP, you have ftp access to your sites files, you have the Divi theme installed and you've created a Divi child theme ([learn more about child theme's here][3]).**
+**This tutorial assumes you have knowledge of WordPress and PHP, you have ftp access to your sites files, you have the Divi theme installed and you've created a Divi child theme ([learn more about child theme's here][4]).**
 
 ## Find the Divi epanel options files
 
@@ -107,7 +109,7 @@ If you log into your WordPress admin, and open 'Divi > Theme Options > General',
 
 ## Load Font Awesome icon fonts and create a new Social Media template
 
-We're going to use the [Font Awesome icon font][4] to get all of the current social media logos. The easiest way to add this to WordPress is the [Better Font Awesome plugin][5]. Install that before continuing.
+We're going to use the [Font Awesome icon font][5] to get all of the current social media logos. The easiest way to add this to WordPress is the [Better Font Awesome plugin][6]. Install that before continuing.
 
 The last thing we need to do is override the Divi social icons template file. In your child theme folder, create a new folder called 'includes' and add a file called '/include/social_icons.php'. Paste in the following code:
 
@@ -153,8 +155,9 @@ Here we have an array of social networks and their associated Font Awesome icons
 
 That's it. If you activate GitHub or LinkedIn now, their icons will should now appear in you WordPress site's header or footer (depending on your settings). In order to add other social networks, you can add them to the code in '/epanel/custom_options_divi.php' and '/includes/social_icons.php'.
 
- [1]: http://www.elegantthemes.com/gallery/divi/
- [2]: https://codex.wordpress.org/Pluggable_Functions
- [3]: http://www.eleganttweaks.com/learn/creating-a-child-theme/
- [4]: https://fortawesome.github.io/Font-Awesome/
- [5]: https://wordpress.org/plugins/better-font-awesome/
+ [1]: https://github.com/scrawlon/add-more-social-media-options-to-wordpress-divi-theme
+ [2]: http://www.elegantthemes.com/gallery/divi/
+ [3]: https://codex.wordpress.org/Pluggable_Functions
+ [4]: http://www.eleganttweaks.com/learn/creating-a-child-theme/
+ [5]: https://fortawesome.github.io/Font-Awesome/
+ [6]: https://wordpress.org/plugins/better-font-awesome/
