@@ -27,7 +27,7 @@ The first step in extending the Divi social media options, is to find and overri
 
 ## Create the custom epanel options file
 
-Our next step, is to create a custom options array and combine it with the original Divi options array. In you child theme folder create a new folder named 'includes' and add a new file named '/epanel/custom_options_divi.php'. Add the following code to the new file:
+Our next step, is to create a custom options array and combine it with the original Divi options array. In your child theme folder create a new folder named 'epanel' and add a new file named '/epanel/custom_options_divi.php'. Add the following code to the new file:
 
     <?php
     $custom_options = array (
