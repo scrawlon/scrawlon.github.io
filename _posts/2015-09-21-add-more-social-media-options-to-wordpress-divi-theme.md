@@ -111,7 +111,7 @@ If you log into your WordPress admin, and open 'Divi > Theme Options > General',
 
 We're going to use the [Font Awesome icon font][5] to get all of the current social media logos. The easiest way to add this to WordPress is the [Better Font Awesome plugin][6]. Install that before continuing.
 
-The last thing we need to do is override the Divi social icons template file. In your child theme folder, create a new folder called 'includes' and add a file called '/include/social_icons.php'. Paste in the following code:
+The last thing we need to do is override the Divi social icons template file. In your child theme folder, create a new folder called 'includes' and add a file called '/includes/social_icons.php'. Paste in the following code:
 
     <ul class="et-social-icons">
     
