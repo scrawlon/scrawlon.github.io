@@ -30,80 +30,83 @@ The first step in extending the Divi social media options, is to find and overri
 Our next step, is to create a custom options array and combine it with the original Divi options array. In your child theme folder create a new folder named 'epanel' and add a new file named '/epanel/custom_options_divi.php'. Add the following code to the new file:
 
     <?php
+    
+    global $options;
+    require_once( get_template_directory() . esc_attr( "/epanel/options_divi.php" ) );
+    $epanel_key = "name";
+    $epanel_value = "Show RSS Icon";
+    
     $custom_options = array (
+        array( "type" => "clearfix",),
     
-        array( "name" => "wrap-general",
-               "type" => "contenttab-wrapstart",),
+        array( "name" => __( "Show GitHub Icon", $themename ),
+               "id" => $shortname."_show_github_icon",
+               "type" => "checkbox",
+               "std" => "on",
+               "desc" => __( "Here you can choose to display the GitHub Icon. ", $themename ) ),
     
-            array( "type" => "subnavtab-start",),
+        array( "name" => __( "Show LinkedIn Icon", $themename ),
+               "id" => $shortname."_show_linkedin_icon",
+               "type" => "checkbox2",
+               "std" => "on",
+               "desc" => __( "Here you can choose to display the LinkedIn Icon on your homepage. ", $themename ) ),
     
-                array( "name" => "custom-1",
-                       "type" => "subnav-tab",
-                       "desc" => esc_html__("Custom Options",$themename)),
+        array( "type" => "clearfix",),
     
-            array( "type" => "subnavtab-end",),
+        array( "name" => __( "GitHub Profile Url", $themename ),
+               "id" => $shortname."_github_url",
+               "std" => "#",
+               "type" => "text",
+               "validation_type" => "url",
+               "desc" => __( "Enter the URL of your GitHub feed. ", $themename ) ),
     
-                array( "name" => "general-1",
-                       "type" => "subcontent-start",),
-    
-                    array( "type" => "clearfix",),
-    
-                    array( "name" => __( "Show GitHub Icon", $themename ),
-                           "id" => $shortname."_show_github_icon",
-                           "type" => "checkbox",
-                           "std" => "on",
-                           "desc" => __( "Here you can choose to display the GitHub Icon. ", $themename ) ),
-    
-                    array( "name" => __( "Show LinkedIn Icon", $themename ),
-                           "id" => $shortname."_show_linkedin_icon",
-                           "type" => "checkbox2",
-                           "std" => "on",
-                           "desc" => __( "Here you can choose to display the LinkedIn Icon on your homepage. ", $themename ) ),
-    
-                    array( "type" => "clearfix",),
-    
-                    array( "name" => __( "GitHub Profile Url", $themename ),
-                           "id" => $shortname."_github_url",
-                           "std" => "#",
-                           "type" => "text",
-                           "validation_type" => "url",
-                           "desc" => __( "Enter the URL of your GitHub feed. ", $themename ) ),
-    
-                    array( "name" => __( "LinkedIn Profile Url", $themename ),
-                           "id" => $shortname."_linkedin_url",
-                           "std" => "#",
-                           "type" => "text",
-                           "validation_type" => "url",
-                           "desc" => __( "Enter the URL of your LinkedIn Profile. ", $themename ) ),
-    
-                array( "name" => "general-1",
-                       "type" => "subcontent-end",),
+        array( "name" => __( "LinkedIn Profile Url", $themename ),
+               "id" => $shortname."_linkedin_url",
+               "std" => "#",
+               "type" => "text",
+               "validation_type" => "url",
+               "desc" => __( "Enter the URL of your LinkedIn Profile. ", $themename ) ),
     
     );
+    
+    foreach( $options as $index => $value ) {
+        if ( $value[$epanel_key] === $epanel_value ) {
+            foreach( $custom_options as $custom_index => $custom_option ) {
+                $options = insertArrayIndex($options, $custom_option, $index+$custom_index+1);
+            }
+            break;
+        }
+    }
+    
+    function insertArrayIndex($array, $new_element, $index) {
+        $start = array_slice($array, 0, $index);
+        $end = array_slice($array, $index);
+        $start[] = $new_element;
+    
+        return array_merge($start, $end);
+    }
+    
+    return $options;
     
 
 This is our custom options array. We're adding two new options, one for GitHub and one for LinkedIn. You could add others, but for the purpose of this tutorial, let's just focus on those. If you're curious where this code comes from, you can take a look at the original file '/wp-content/themes/Divi/epanel/options_divi.php'.
 
-## Merge the custom epanel options with the standard epanel options
+The variables $epanel_key and $epanel_value define where our custom options will appear on the admin screen. If you take a look at the original file '/wp-content/themes/Divi/epanel/options_divi.php', you'll see an array that includes the 'name' => 'Show RSS Icon' key value pair. Our options appear after RSS feed button in the admin screen. You could move the options by change the values of $epanel_key and $epanel_value.
+
+## Make the new options available to Divi
 
 With the custom_options_divi.php file created, we can create the new *et_load_core_options* function that puts it all together. Add the following code at the bottom of your child theme's functions.php:
 
     function load_custom_core_options() {
         if ( ! function_exists( 'et_load_core_options' ) ) {
             function et_load_core_options() {
-                global $shortname, $options;
-    
-                require_once( get_template_directory() . esc_attr( "/epanel/options_{$shortname}.php" ) );
-                require_once( get_stylesheet_directory() . esc_attr( "/epanel/custom_options_{$shortname}.php" ) );
-    
-                $options = array_merge($options, $custom_options);
+                global $options;
+                $options = require_once( get_stylesheet_directory() . esc_attr( "/epanel/custom_options_divi.php" ) );
             }
         }
     }
     add_action( 'after_setup_theme', 'load_custom_core_options' );
     
-
-The above code loads the 'options_divi.php' file and our 'custom_options_divi.php' file. It then merges the arrays, $options and $custom_options.
 
 If you log into your WordPress admin, and open 'Divi > Theme Options > General', you should see the GitHub and LinkedIn buttons at the bottom. You can enable them and add URLs for them, but the icons won't appear on your site until we add the new icons to the template.
 
