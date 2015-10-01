@@ -158,7 +158,7 @@ Here we have an array of social networks and their associated Font Awesome icons
 
 That's it. If you activate GitHub or LinkedIn now, their icons will should now appear in you WordPress site's header or footer (depending on your settings). In order to add other social networks, you can add them to the code in '/epanel/custom_options_divi.php' and '/includes/social_icons.php'.
 
- [1]: https://github.com/scrawlon/add-more-social-media-options-to-wordpress-divi-theme
+ [1]: https://gist.github.com/scrawlon/62a87592c38bb2adbcc4
  [2]: http://www.elegantthemes.com/gallery/divi/
  [3]: https://codex.wordpress.org/Pluggable_Functions
  [4]: http://www.eleganttweaks.com/learn/creating-a-child-theme/
