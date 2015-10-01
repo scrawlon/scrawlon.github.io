@@ -29,7 +29,7 @@ The first step in extending the Divi social media options, is to find and overri
 
 Our next step, is to create a custom options array and combine it with the original Divi options array. In your child theme folder create a new folder named 'epanel' and add a new file named '/epanel/custom_options_divi.php'. Add the following code to the new file:
 
-[[gist id="62a87592c38bb2adbcc4"]]
+[[wpgist id="62a87592c38bb2adbcc4"]]
 
     <?php
     
