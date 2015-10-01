@@ -29,65 +29,7 @@ The first step in extending the Divi social media options, is to find and overri
 
 Our next step, is to create a custom options array and combine it with the original Divi options array. In your child theme folder create a new folder named 'epanel' and add a new file named '/epanel/custom_options_divi.php'. Add the following code to the new file:
 
-    <?php
-    
-    global $options;
-    require_once( get_template_directory() . esc_attr( "/epanel/options_divi.php" ) );
-    $epanel_key = "name";
-    $epanel_value = "Show RSS Icon";
-    
-    $custom_options = array (
-        array( "type" => "clearfix",),
-    
-        array( "name" => __( "Show GitHub Icon", $themename ),
-               "id" => $shortname."_show_github_icon",
-               "type" => "checkbox",
-               "std" => "on",
-               "desc" => __( "Here you can choose to display the GitHub Icon. ", $themename ) ),
-    
-        array( "name" => __( "Show LinkedIn Icon", $themename ),
-               "id" => $shortname."_show_linkedin_icon",
-               "type" => "checkbox2",
-               "std" => "on",
-               "desc" => __( "Here you can choose to display the LinkedIn Icon on your homepage. ", $themename ) ),
-    
-        array( "type" => "clearfix",),
-    
-        array( "name" => __( "GitHub Profile Url", $themename ),
-               "id" => $shortname."_github_url",
-               "std" => "#",
-               "type" => "text",
-               "validation_type" => "url",
-               "desc" => __( "Enter the URL of your GitHub feed. ", $themename ) ),
-    
-        array( "name" => __( "LinkedIn Profile Url", $themename ),
-               "id" => $shortname."_linkedin_url",
-               "std" => "#",
-               "type" => "text",
-               "validation_type" => "url",
-               "desc" => __( "Enter the URL of your LinkedIn Profile. ", $themename ) ),
-    
-    );
-    
-    foreach( $options as $index => $value ) {
-        if ( $value[$epanel_key] === $epanel_value ) {
-            foreach( $custom_options as $custom_index => $custom_option ) {
-                $options = insertArrayIndex($options, $custom_option, $index+$custom_index+1);
-            }
-            break;
-        }
-    }
-    
-    function insertArrayIndex($array, $new_element, $index) {
-        $start = array_slice($array, 0, $index);
-        $end = array_slice($array, $index);
-        $start[] = $new_element;
-    
-        return array_merge($start, $end);
-    }
-    
-    return $options;
-    
+[embed]https://gist.github.com/62a87592c38bb2adbcc4?file=custom_options_divi.php[/embed]
 
 This is our custom options array. We're adding two new options, one for GitHub and one for LinkedIn. You could add others, but for the purpose of this tutorial, let's just focus on those. If you're curious where this code comes from, you can take a look at the original file '/wp-content/themes/Divi/epanel/options_divi.php'.
 
@@ -97,16 +39,7 @@ The variables $epanel_key and $epanel_value define where our custom options will
 
 With the custom_options_divi.php file created, we can create the new *et_load_core_options* function that puts it all together. Add the following code at the bottom of your child theme's functions.php:
 
-    function load_custom_core_options() {
-        if ( ! function_exists( 'et_load_core_options' ) ) {
-            function et_load_core_options() {
-                global $options;
-                $options = require_once( get_stylesheet_directory() . esc_attr( "/epanel/custom_options_divi.php" ) );
-            }
-        }
-    }
-    add_action( 'after_setup_theme', 'load_custom_core_options' );
-    
+[embed]https://gist.github.com/62a87592c38bb2adbcc4?file=functions.php[/embed]
 
 If you log into your WordPress admin, and open 'Divi > Theme Options > General', you should see the GitHub and LinkedIn buttons at the bottom. You can enable them and add URLs for them, but the icons won't appear on your site until we add the new icons to the template.
 
@@ -116,43 +49,7 @@ We're going to use the [Font Awesome icon font][5] to get all of the current soc
 
 The last thing we need to do is override the Divi social icons template file. In your child theme folder, create a new folder called 'includes' and add a file called '/includes/social_icons.php'. Paste in the following code:
 
-    <ul class="et-social-icons">
-    
-        <?php
-            $social_sites = array(
-                "facebook"  => "fa-facebook",
-                "twitter"   => "fa-twitter",
-                "github"    => "fa-github",
-                "linkedin"  => "fa-linkedin",
-                "google"    => "fa-google-plus"
-            );
-        ?>
-    
-        <?php foreach( $social_sites as $social_site => $social_icon ): ?>
-            <?php if ( 'on' === et_get_option( 'divi_show_' . $social_site . '_icon', 'on' ) ) : ?>
-                <li class="et-social-icon">
-                    <a href="<?php echo esc_url( et_get_option( 'divi_' . $social_site . '_url', '#' ) ); ?>" target="_blank" class="icon">
-                        <i class="fa <?php echo $social_icon; ?>"></i>
-                    </a>
-                </li>
-            <?php endif; ?>
-        <?php endforeach; ?>
-    
-        <?php if ( 'on' === et_get_option( 'divi_show_rss_icon', 'on' ) ) : ?>
-        <?php
-            $et_rss_url = '' !== et_get_option( 'divi_rss_url' )
-                ? et_get_option( 'divi_rss_url' )
-                : get_bloginfo( 'rss2_url' );
-        ?>
-            <li class="et-social-icon">
-                <a href="<?php echo esc_url( $et_rss_url ); ?>" target="_blank" class="icon">
-                    <i class="fa fa-rss"></i>
-                </a>
-            </li>
-        <?php endif; ?>
-    
-    </ul>
-    
+[embed]https://gist.github.com/62a87592c38bb2adbcc4?file=social_icons.php[/embed]
 
 Here we have an array of social networks and their associated Font Awesome icons. The code loops through the array, adding each social network that has been activated in the Divi epanel.
 
