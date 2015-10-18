@@ -14,11 +14,11 @@ published: true
 **You may have found this page while:** 
 1.  Browsing awesome web developers on LinkedIn
 2.  Reading something clever I posted on Twitter.
-3.  Randomly Googling the phrase "Scrawl On" [/et_pb_text][/et_pb_column][/et_pb_row][et_pb_row admin_label="Row"][et_pb_column type="1_3"][et_pb_blurb admin_label="Twitter" url_new_window="on" use_icon="on" font_icon="%%301%%" icon_color="#0074b1" use_circle="off" circle_color="#7EBEC5" use_circle_border="off" circle_border_color="#7EBEC5" icon_placement="top" animation="off" background_layout="light" text_orientation="left" use_icon_font_size="off" use_border_color="off" border_color="#ffffff" border_style="solid" url="https://www.linkedin.com/in/scrawlon"] 
+3.  Randomly Googling the phrase "Scrawl On" [/et_pb_text][/et_pb_column][/et_pb_row][et_pb_row admin_label="Row"][et_pb_column type="4_4"][/et_pb_column][/et_pb_row][et_pb_row admin_label="Row"][et_pb_column type="1_3"][et_pb_blurb admin_label="Linkedin" url_new_window="on" use_icon="on" font_icon="%%301%%" icon_color="#ffffff" use_circle="on" circle_color="#0074b1" use_circle_border="off" circle_border_color="#7EBEC5" icon_placement="top" animation="off" background_layout="light" text_orientation="left" use_icon_font_size="off" use_border_color="off" border_color="#ffffff" border_style="solid" url="https://www.linkedin.com/in/scrawlon"] 
 
 <h2 style="text-align: center;">
   <a href="https://www.linkedin.com/in/scrawlon" target="_blank">Linkedin.com/in/ScrawlOn</a>
-</h2> [/et_pb_blurb][/et_pb_column][et_pb_column type="1_3"][et_pb_blurb admin_label="Twitter" url_new_window="on" use_icon="on" font_icon="%%292%%" icon_color="#7EBEC5" use_circle="off" circle_color="#7EBEC5" use_circle_border="off" circle_border_color="#7EBEC5" icon_placement="top" animation="off" background_layout="light" text_orientation="left" use_icon_font_size="off" use_border_color="off" border_color="#ffffff" border_style="solid" url="http://twitter.com/scrawlon"] 
+</h2> [/et_pb_blurb][/et_pb_column][et_pb_column type="1_3"][et_pb_blurb admin_label="Twitter" url_new_window="on" use_icon="on" font_icon="%%292%%" icon_color="#ffffff" use_circle="on" circle_color="#7EBEC5" use_circle_border="off" circle_border_color="#7EBEC5" icon_placement="top" animation="off" background_layout="light" text_orientation="left" use_icon_font_size="off" use_border_color="off" border_color="#ffffff" border_style="solid" url="http://twitter.com/scrawlon"] 
 
 <h2 style="text-align: center;">
   <a href="http://twitter.com/scrawlon" target="_blank">Twitter.com/ScrawlOn</a>
