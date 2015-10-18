@@ -8,7 +8,7 @@ layout: page
 permalink: http://scrawlon.com/home-new/
 published: true
 ---
-[et_pb_section admin_label="section" fullwidth="off" specialty="off"][et_pb_row admin_label="row"][et_pb_column type="1_3"][et_pb_image admin_label="Avatar Image" src="http://scrawlon.com/wp-content/uploads/2015/08/photo2-e1442171634406.jpg" show_in_lightbox="off" url_new_window="off" animation="off" sticky="off" align="left" force_fullwidth="off" always_center_on_mobile="on" use_border_color="off" border_color="#ffffff" border_style="solid"]   
+[et_pb_section admin_label="section" fullwidth="off" specialty="off"][et_pb_row admin_label="row"][et_pb_column type="1_3"][et_pb_image admin_label="Avatar Image" src="http://scrawlon.com/wp-content/uploads/2015/08/photo2-e1442171634406.jpg" show_in_lightbox="off" url_new_window="off" animation="off" sticky="off" align="left" force_fullwidth="off" always_center_on_mobile="on" use_border_color="off" border_color="#ffffff" border_style="solid" module_id="avatar"]   
 [/et_pb_image][et_pb_social_media_follow admin_label="Social Media Follow" link_shape="rounded_rectangle" background_layout="light" url_new_window="on" follow_button="off"] [et_pb_social_media_follow_network social_network="twitter" url="https://twitter.com/scrawlon" bg_color="#00aced"]
 Twitter[/et_pb_social_media_follow_network][et_pb_social_media_follow_network social_network="linkedin" url="https://www.linkedin.com/in/scrawlon" bg_color="#007bb6"]
 
