@@ -17,7 +17,7 @@ published: true
 
 ##  [/et_pb_text][et_pb_text admin_label="Intro text" background_layout="light" text_orientation="left" use_border_color="off" border_color="#ffffff" border_style="solid" text_font_size="14"] 
 
-**You may have found this page while:** 
+**You may have found me while:** 
 1.  <a href="http://linkedin.com/in/ScrawlOn" target="_blank">Browsing awesome web developers on LinkedIn.</a>
 2.  <a href="http://twitter.com/ScrawlOn" target="_blank">Reading something clever I Tweeted.</a>
 3.  <a href="https://www.google.com/search?q=scrawlon" target="_blank">Randomly Googling for "ScrawlOn".</a> [/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section][et_pb_section admin_label="Section" fullwidth="off" specialty="off" transparent_background="off" background_color="#7ebec5" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="off" padding_mobile="off" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off" module_class="full-width-header"][et_pb_row admin_label="Row"][et_pb_column type="4_4"][et_pb_text admin_label="Recent Blog Posts" background_layout="dark" text_orientation="left" use_border_color="off" border_color="#ffffff" border_style="solid" text_font_size="14"] 
