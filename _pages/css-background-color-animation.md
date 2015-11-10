@@ -1,12 +1,12 @@
 ---
 ID: 542
-post_title: Background Color Animation
+post_title: CSS Background Color Animation
 author: Scott McGrath
 post_date: 2015-11-08 17:10:30
 post_excerpt: ""
 layout: page
 permalink: >
-  http://scrawlon.com/showcase/background-color-animation/
+  http://scrawlon.com/showcase/css-background-color-animation/
 published: true
 ---
 [et_pb_section admin_label="section" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="off" padding_mobile="off" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off" gutter_width="3" custom_css_main_element="width: 100%;||margin: 0;||padding: 0;" module_id="background-color-animation"][et_pb_row admin_label="row" make_fullwidth="off" use_custom_width="off" width_unit="on" use_custom_gutter="off" gutter_width="3" padding_mobile="off" allow_player_pause="off" parallax="off" parallax_method="off" make_equal="off" parallax_1="off" parallax_method_1="off" column_padding_mobile="on" module_class="background-color" parallax_2="off" parallax_method_2="off"][et_pb_column type="4_4"][et_pb_blurb admin_label="Intro to Background Color Animation" url_new_window="off" use_icon="off" icon_color="#7EBEC5" use_circle="off" circle_color="#7EBEC5" use_circle_border="off" circle_border_color="#7EBEC5" icon_placement="top" animation="top" background_layout="light" text_orientation="left" use_icon_font_size="off" header_font_size="18" body_font_size="16" use_border_color="off" border_color="#ffffff" border_style="solid" module_class="background-color-title" module_id="background-color-intro" header_line_height="2em"] <h1 style="text-align: center;">
