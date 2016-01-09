@@ -1,7 +1,7 @@
 ---
 ID: 222
 post_title: >
-  Add more social media options to
+  Add More Social Media Options to
   WordPress Divi Theme
 author: Scott McGrath
 post_date: 2015-09-21 23:08:57
