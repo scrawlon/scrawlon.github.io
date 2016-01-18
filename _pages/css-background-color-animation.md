@@ -11,30 +11,34 @@ published: true
 ---
 [et_pb_section admin_label="Section" fullwidth="on" specialty="off"][et_pb_fullwidth_code admin_label="CSS & Javascript"][wp_enqueue_assets type='css' file='background_color_animation.css'][/et_pb_fullwidth_code][/et_pb_section][et_pb_section admin_label="section" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="off" padding_mobile="off" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off" gutter_width="3" custom_css_main_element="width: 100%;||margin: 0;||padding: 0;" module_id="background-color-animation"][et_pb_row admin_label="row" make_fullwidth="off" use_custom_width="off" width_unit="on" use_custom_gutter="off" gutter_width="3" padding_mobile="off" allow_player_pause="off" parallax="off" parallax_method="off" make_equal="off" parallax_1="off" parallax_method_1="off" column_padding_mobile="on" module_class="background-color" parallax_2="off" parallax_method_2="off" module_id="background-color-intro"][et_pb_column type="4_4"][et_pb_blurb admin_label="Intro to Background Color Animation" url_new_window="off" use_icon="off" icon_color="#7EBEC5" use_circle="off" circle_color="#7EBEC5" use_circle_border="off" circle_border_color="#7EBEC5" icon_placement="top" animation="top" background_layout="light" text_orientation="left" use_icon_font_size="off" header_font_size="18" body_font_size="16" use_border_color="off" border_color="#ffffff" border_style="solid" module_class="background-color-title" header_line_height="2em"] <h1 style="text-align: center;">
   CSS Background Color Animation Demo
-</h1>   
+</h1> This experiment was inspired by a design talk at my office. We were examining whether is was possible to change a page's background color while scrolling down that page. The speaker chose to use JavaScript to implement this feature, and added that it would be difficult or impossible to use only CSS. I took this as a challenge... 
 
 <p style="text-align: left;">
+  Some notes:
+</p>
+
+<li style="text-align: left;">
   Is it possible to animate the <body> background color with CSS :hover events? <strong>NO!</strong>
-</p>
-
-<p style="text-align: left;">
+</li>
+<li style="text-align: left;">
   Is it possible to fake an animated background color with :hover events? <strong>YES!</strong>
-</p>
+</li>
+<li style="text-align: left;">
+  I based the CSS on a concept I found on <a href="http://stackoverflow.com/questions/14039723/change-body-bgcolor-on-hovering-a-div-using-css-only" target="_blank">stackoverflow</a>.
+</li>
+<li style="text-align: left;">
+  I worked out the animations with <a href="http://jsfiddle.net/smcgrath/qvy3mgrf/" target="_blank">jsfiddle</a>.
+</li>
+<li style="text-align: left;">
+  These :hover events also work on iOS. Thanks to <a href="http://stackoverflow.com/questions/3885018/active-pseudo-class-doesnt-work-in-mobile-safari" target="_blank">another hack found on StackOverflow</a>.
+</li>
 
-<p style="text-align: left;">
-  This page is a demonstration of that CSS trickery. The CSS that makes it work is based on a concept I found on <a href="http://stackoverflow.com/questions/14039723/change-body-bgcolor-on-hovering-a-div-using-css-only" target="_blank">stackoverflow</a>. I worked the animations out on <a href="http://jsfiddle.net/smcgrath/qvy3mgrf/" target="_blank">jsfiddle</a>.
-</p>
-
-<p style="text-align: left;">
-  <strong>BONUS! </strong>These :hover events also work on iOS. Thanks to <a href="http://stackoverflow.com/questions/3885018/active-pseudo-class-doesnt-work-in-mobile-safari" target="_blank">another hack found on StackOverflow</a>.
+<p style="text-align: center;">
+  <em>The graphics on this page were sourced from the <a href="https://github.com/MarieSchweiz/lorem-ipsum-illustration" target="_blank">Lorem Ipsum Illustration library on Github</a>.</em>
 </p>
 
 <p style="text-align: center;">
-  <em>The graphics on this page were borrowed from the <a href="https://github.com/MarieSchweiz/lorem-ipsum-illustration" target="_blank">Lorem Ipsum Illustration library on Github</a>.</em>
-</p>
-
-<p style="text-align: center;">
-  <strong>SCROLL down or CLICK the button below to start the animated background color demo.</strong>
+  <strong>SCROLL down to start the animated background color demo.</strong>
 </p>
 
 <a href="#background-color-intro" name="background-color-intro"></a> [/et_pb_blurb][et_pb_cta admin_label="Background Color 1 button" button_url="#background-color-1" url_new_window="off" button_text="Background Color 1" use_background_color="off" background_color="#ffffff" background_layout="light" text_orientation="center" header_font_size="26" body_font_size="14" use_border_color="off" border_color="#ffffff" border_style="solid" custom_button="off" button_text_size="20" button_border_width="2" button_border_radius="3" button_letter_spacing="0" button_use_icon="default" button_icon_placement="right" button_on_hover="on" button_border_radius_hover="3" button_letter_spacing_hover="0" module_class="background-color-button"]   [/et_pb_cta][/et_pb_column][/et_pb_row][et_pb_row admin_label="row" make_fullwidth="off" use_custom_width="off" width_unit="on" use_custom_gutter="off" gutter_width="3" padding_mobile="off" allow_player_pause="off" parallax="off" parallax_method="off" make_equal="off" parallax_1="off" parallax_method_1="off" column_padding_mobile="on" module_class="background-color" parallax_2="off" parallax_method_2="off" module_id="background-color-1"][et_pb_column type="4_4"][et_pb_blurb admin_label="Background Color 1" url_new_window="off" use_icon="off" icon_color="#7EBEC5" use_circle="off" circle_color="#7EBEC5" use_circle_border="off" circle_border_color="#7EBEC5" icon_placement="top" animation="top" background_layout="light" text_orientation="left" use_icon_font_size="off" header_font_size="18" body_font_size="14" use_border_color="off" border_color="#ffffff" border_style="solid" module_class="background-color-title"] <a href="#background-color-1" name="background-color-1"></a> <h1 style="text-align: center;">
