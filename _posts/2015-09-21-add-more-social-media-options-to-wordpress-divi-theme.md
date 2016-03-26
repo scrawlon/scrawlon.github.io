@@ -15,6 +15,8 @@ Code from this guide is available on [GitHub][1].
 
 ## The Divi Builder (really good, but not perfect)
 
+> **Update 3/26/16:** It looks like Divi version 2.6+ moved one of the files used in this tutorial. The file '/wp-content/themes/Divi/epanel/options_divi.php' is now located at '/wp-content/themes/Divi/options_divi.php'. That's the only change needed to make this code work in the latest Divi.
+
 My employer began using the WordPress [Divi theme][2] about a year ago. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, the Divi codebase includes [pluggable functions][3], that permit us to customize it as needed.
 
 **This tutorial assumes you have knowledge of WordPress and PHP, you have ftp access to your site's files, you have the [Divi theme][2] installed and you've created a Divi child theme ([learn more about child theme's here][4]).**
