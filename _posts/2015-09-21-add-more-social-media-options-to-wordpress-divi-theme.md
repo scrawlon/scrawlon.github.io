@@ -15,6 +15,12 @@ Code from this guide is available on [GitHub][1].
 
 > **Update 3/26/16:** It looks like Divi version 2.6+ moved one of the files used in this tutorial. The file '/wp-content/themes/Divi/epanel/options_divi.php' is now located at '/wp-content/themes/Divi/options_divi.php'. That's the only change needed to make this code work in the latest Divi.
 
+* * *
+
+> **Update 6/30/16:** The tutorial and code have been updated to work with version 2.7 of Divi. Comment below if you run into any issues.
+
+* * *
+
 ## The Divi Builder (really good, but not perfect)
 
 My employer began using the WordPress [Divi theme][2] about a year ago. The Divi Builder is real game changer for web designers. It provides a selection of the most commonly used page elements that can be easily added to our designs. That said, Divi can't be everything for all people, and sometimes client's ask for the less-popular options that Divi doesn't natively support. Fortunately, the Divi codebase includes [pluggable functions][3], that permit us to customize it as needed.
@@ -23,7 +29,7 @@ My employer began using the WordPress [Divi theme][2] about a year ago. The Divi
 
 ## Find the Divi epanel options files
 
-The first step in extending the Divi social media options, is to find and override the function that loads those options. If you look in the file '/wp-content/themes/Divi/epanel/custom_functions.php', the function we're looking for is *et_load_core_options*. The purpose of this function is to load the file '/wp-content/themes/Divi/epanel/options_divi.php'. Inside that file is the global $options array. That's the code that builds the options tab you see when you open 'Divi > Theme Options > General' in your WordPress admin menu.
+The first step in extending the Divi social media options, is to find and override the function that loads those options. If you look in the file '/wp-content/themes/Divi/epanel/custom_functions.php', the function we're looking for is *et_load_core_options*. The purpose of this function is to load the file '/wp-content/themes/Divi/options_divi.php'. Inside that file is the global $options array. That's the code that builds the General Options admin screen at 'Divi > Theme Options > General' in your WordPress admin menu.
 
 *While it is possible to edit that file directly, it is not recommended. Any theme file that you edit will be overwritten when you update that theme, causing your work to be lost and your site to stop working. For that reason, we'll make our changes in the child theme.*
 
@@ -33,9 +39,9 @@ Our next step, is to create a custom options array and combine it with the origi
 
 [embed]https://gist.github.com/62a87592c38bb2adbcc4?file=custom_options_divi.php[/embed]
 
-This is our custom options array. We're adding two new options, one for GitHub and one for LinkedIn. You could add others, but for the purpose of this tutorial, let's just focus on those. If you're curious where this code comes from, you can take a look at the original file '/wp-content/themes/Divi/epanel/options_divi.php'.
+This is our custom options array. We're adding two new options, one for GitHub and one for LinkedIn. You could add others, but for the purpose of this tutorial, let's just focus on those. If you're curious where this code comes from, you can take a look at the original file '/wp-content/themes/Divi/options_divi.php'.
 
-The variables $epanel_key and $epanel_value define where our custom options will appear on the admin screen. If you take a look at the original file '/wp-content/themes/Divi/epanel/options_divi.php', you'll see an array that includes the 'name' => 'Show RSS Icon' key value pair. Our options appear after RSS feed button in the admin screen. You could move the options by change the values of $epanel_key and $epanel_value.
+The variables $epanel_key and $epanel_value define where our custom options will appear on the admin screen. If you take a look at the original file '/wp-content/themes/Divi/options_divi.php', you'll see an array that includes the 'name' => 'Show RSS Icon' key value pair. Our options will appear after RSS feed button in the admin screen. You could move the new custom options by changing the values of $epanel_key and $epanel_value.
 
 ## Make the new options available to Divi
 
