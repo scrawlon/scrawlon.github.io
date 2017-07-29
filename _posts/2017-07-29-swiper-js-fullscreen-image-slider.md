@@ -2,7 +2,9 @@
 ID: 1724
 post_title: Swiper JS Fullscreen Image Slider
 author: Scott McGrath
-post_excerpt: ""
+post_excerpt: >
+  Create an image slider with a fullscreen
+  view.
 layout: post
 permalink: >
   http%3a//scrawlon.com/2017/07/29/swiper-js-fullscreen-image-slider/
