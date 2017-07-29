@@ -8,7 +8,7 @@ post_date: 2015-09-21 23:08:57
 post_excerpt: "A tutorial on the Divi theme's pluggable functions, focused on extending the header/foooter social media options."
 layout: post
 permalink: >
-  http://scrawlon.com/2015/09/21/add-more-social-media-options-to-wordpress-divi-theme/
+  http%3a//scrawlon.com/2015/09/21/add-more-social-media-options-to-wordpress-divi-theme/
 published: true
 ---
 Code from this guide is available on [GitHub][1].

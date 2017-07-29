@@ -8,7 +8,7 @@ post_date: 2016-07-02 05:08:22
 post_excerpt: "Problems with DigitalOcean's WordPress One-Click Install"
 layout: post
 permalink: >
-  http://scrawlon.com/2016/07/02/dysfunctional-wordpress-droplets-on-digitalocean/
+  http%3a//scrawlon.com/2016/07/02/dysfunctional-wordpress-droplets-on-digitalocean/
 published: true
 ---
 I've been a DigitalOcean user for a few years now, so when I decided to start this WordPress blog I chose the DigitalOcean WordPress One-Click Install. Unfortunately, the WordPress One-Click Install wasn't very stable out-of-the-box.
@@ -38,8 +38,8 @@ I followed much of the advice from the above articles. I'd implement a change, r
 
 Tips I found on these two pages finally did the trick:
 
-*   [Apache Performance Tuning: KeepAlive to remove latency][6] 
-*   [Configuring Apache/PHP/MySQL for Low Memory (RAM) VPS][7] 
+*   [Apache Performance Tuning: KeepAlive to remove latency][6]
+*   [Configuring Apache/PHP/MySQL for Low Memory (RAM) VPS][7]
 
 My site has been stable for a few months now, so it appears that something I did fixed it. Unfortunately, as these things often go, I can't say for sure what combination of the above fixes actually did the trick.
 

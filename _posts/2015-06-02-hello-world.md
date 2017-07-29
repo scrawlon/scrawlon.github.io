@@ -6,7 +6,7 @@ post_date: 2015-06-02 03:18:08
 post_excerpt: ""
 layout: post
 permalink: >
-  http://scrawlon.com/2015/06/02/hello-world/
+  http%3a//scrawlon.com/2015/06/02/hello-world/
 published: true
 ---
 # Welcome to WordPress.

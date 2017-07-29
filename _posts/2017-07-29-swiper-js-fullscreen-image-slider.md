@@ -5,7 +5,7 @@ author: Scott McGrath
 post_excerpt: ""
 layout: post
 permalink: >
-  http://scrawlon.com/2017/07/29/swiper-js-fullscreen-image-slider/
+  http%3a//scrawlon.com/2017/07/29/swiper-js-fullscreen-image-slider/
 published: true
 post_date: 2017-07-29 18:22:47
 ---

@@ -6,7 +6,7 @@ post_date: 2015-07-06 07:34:46
 post_excerpt: 'Pen tablets, Windows 8.1 and note taking apps: My search for a usable device for writing and maintaining handwritten notes.'
 layout: post
 permalink: >
-  http://scrawlon.com/2015/07/06/writing-on-glass/
+  http%3a//scrawlon.com/2015/07/06/writing-on-glass/
 published: true
 ---
 ## Infinite Notebook
@@ -25,9 +25,9 @@ Is $1099 too much for a device used primarily as a digital notepad? YES! So I wa
 
 **Pros:**
 
-*   Screen - It's bright. The size is a little smaller than a legal pad. It doesn't flex as I write or rest my hand on it. Great pen accuracy. 
+*   Screen - It's bright. The size is a little smaller than a legal pad. It doesn't flex as I write or rest my hand on it. Great pen accuracy.
 *   Pen - It's the size and shape of a normal pen, and the eraser side works like an eraser.
-*   CPU/RAM - Aside from the handwriting, it's a decent pc. Add a keyboard. Attach a monitor. It's as capable as a laptop. 
+*   CPU/RAM - Aside from the handwriting, it's a decent pc. Add a keyboard. Attach a monitor. It's as capable as a laptop.
 
 **Cons:**
 
@@ -45,8 +45,8 @@ I was actually looking for an ultrabook when I bought this. I loved having a pen
 
 **Pros:**
 
-*   Battery life - 7+ hours! 
-*   Pen slot - The pen is always tucked away in it's slot and ready to go when you need it. 
+*   Battery life - 7+ hours!
+*   Pen slot - The pen is always tucked away in it's slot and ready to go when you need it.
 *   Hybrid - It's a full ultrabook as well, so it's as useful as any other computer. Since this post is about tablets, I won't cover the specific pros/cons of the non-tablet features
 
 **Cons:**
