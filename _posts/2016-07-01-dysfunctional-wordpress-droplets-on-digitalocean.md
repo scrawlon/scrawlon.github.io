@@ -7,8 +7,6 @@ author: Scott McGrath
 post_date: 2016-07-01 11:12:04
 post_excerpt: ""
 layout: post
-permalink: >
-  http%3a//scrawlon.dev/2016/07/01/dysfunctional-wordpress-droplets-on-digitalocean/
 published: true
 ---
 I've been a DigitalOcean user for a few years now, so when I decided to start this WordPress blog I chose the DigitalOcean WordPress One-Click Install. Unfortunately, the WordPress One-Click Install wasn't very stable out-of-the-box.

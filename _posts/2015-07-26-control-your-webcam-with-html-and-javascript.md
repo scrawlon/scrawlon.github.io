@@ -7,8 +7,6 @@ author: Scott McGrath
 post_date: 2015-07-26 01:24:43
 post_excerpt: "In this short tutorial you'll learn how to take control of your computer's web cam, using HTML and JavaScript."
 layout: post
-permalink: >
-  http%3a//scrawlon.com/2015/07/26/control-your-webcam-with-html-and-javascript/
 published: true
 ---
 Code from this post is available on [GitHub][1].

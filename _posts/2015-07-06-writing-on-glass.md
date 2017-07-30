@@ -5,8 +5,6 @@ author: smcgrath
 post_date: 2015-07-06 07:34:46
 post_excerpt: 'Pen tablets, Windows 8.1 and note taking apps: My search for a usable device for writing and maintaining handwritten notes.'
 layout: post
-permalink: >
-  http%3a//scrawlon.com/2015/07/06/writing-on-glass/
 published: true
 ---
 ## Infinite Notebook
