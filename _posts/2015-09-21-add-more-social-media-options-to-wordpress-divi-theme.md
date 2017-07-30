@@ -35,7 +35,7 @@ The first step in extending the Divi social media options, is to find and overri
 
 Our next step, is to create a custom options array and combine it with the original Divi options array. In your child theme folder create a new folder named 'epanel' and add a new file named '/epanel/custom_options_divi.php'. Add the following code to the new file:
 
-[embed]https://gist.github.com/62a87592c38bb2adbcc4?file=custom_options_divi.php[/embed]
+<script src="https://gist.github.com/scrawlon/62a87592c38bb2adbcc4.js?file=custom_options_divi.php"></script>
 
 This is our custom options array. We're adding two new options, one for GitHub and one for LinkedIn. You could add others, but for the purpose of this tutorial, let's just focus on those. If you're curious where this code comes from, you can take a look at the original file '/wp-content/themes/Divi/options_divi.php'.
 
@@ -45,7 +45,7 @@ The variables $epanel_key and $epanel_value define where our custom options will
 
 With the custom_options_divi.php file created, we can create the new *et_load_core_options* function that puts it all together. Add the following code at the bottom of your child theme's functions.php:
 
-[embed]https://gist.github.com/62a87592c38bb2adbcc4?file=functions.php[/embed]
+<script src="https://gist.github.com/scrawlon/62a87592c38bb2adbcc4.js?file=functions.php"></script>
 
 If you log into your WordPress admin, and open 'Divi > Theme Options > General', you should see the GitHub and LinkedIn buttons at the bottom. You can enable them and add URLs for them, but the icons won't appear on your site until we add the new icons to the template.
 
@@ -55,7 +55,7 @@ We're going to use the [Font Awesome icon font][5] to get all of the current soc
 
 The last thing we need to do is override the Divi social icons template file. In your child theme folder, create a new folder called 'includes' and add a file called '/includes/social_icons.php'. Paste in the following code:
 
-[embed]https://gist.github.com/62a87592c38bb2adbcc4?file=social_icons.php[/embed]
+<script src="https://gist.github.com/scrawlon/62a87592c38bb2adbcc4.js?file=social_icons.php"></script>
 
 Here we have an array of social networks and their associated Font Awesome icons. The code loops through the array, adding each social network that has been activated in the Divi epanel.
 

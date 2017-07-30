@@ -41,13 +41,13 @@ First, we need an html page with some basic elements. Create a new file called *
 
 Keeping this as simple as possible. Add the code below to the new *mirror.html* file.
 
-[embed]https://gist.github.com/ff7afd87f81edb0ce004?file=mirror.html[/embed]
+<script src="https://gist.github.com/scrawlon/ff7afd87f81edb0ce004.js?file=mirror.html"></script>
 
 It's just an empty page with a **video** element and a **JavaScript** file (which we will create next). If you tried to load this page now, you wouldn't see anything. That's because most of the getUserMedia() magic happens in the JavaScript. We're going to insert our webcam video into the *video* element with JavaScript.
 
 Create a new file called *mirror.js* in the same directory as *mirror.html*:
 
-[embed]https://gist.github.com/ff7afd87f81edb0ce004?file=mirror.js[/embed]
+<script src="https://gist.github.com/scrawlon/ff7afd87f81edb0ce004.js?file=mirror.js"></script>
 
 Let's walk down through the code.
 
@@ -71,7 +71,7 @@ You should be prompted with a webcam access prompt. Click 'Allow' or 'Share Sele
 
 Those are the basics to accessing your webcam with a web browser. As a finale, I'll share a few lines of CSS I found [here][6] that will flip the video horizontally. Put this in the head of the html file, and your video will appear like a mirror.
 
-[embed]https://gist.github.com/ff7afd87f81edb0ce004?file=mirror.html.extra[/embed]
+<script src="https://gist.github.com/scrawlon/ff7afd87f81edb0ce004.js?file=mirror.html.extra"></script>
 
 If all of that worked for you, then 'cool'. You can take these basics and build on them. What else would this be useful for? You could do time lapse photography, create a security camera or a photobooth app. I hope to follow up this tutorial with those very projects soon.
 
