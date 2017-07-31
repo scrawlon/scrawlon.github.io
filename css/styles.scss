@@ -4,6 +4,7 @@
 /* test */
 @import "reset";
 @import "syntax";
+@import url('https://fonts.googleapis.com/css?family=Oswald|Pathway+Gothic+One|Muli');
 
 @function calculateRem($size) {
   $remSize: $size / $base-font-size;
@@ -29,17 +30,13 @@
     $i: index($percentages, $percentage);
 
     h#{$i} {
-      padding-top: 1em;
-
       @include font-size(3);
-
       font-size: $percentage;
-      line-height: 1.25em;
     }
   }
 }
 
-$readable-width: 30em;
+$readable-width: 35em;
 $base-font-size: 16px;
 $padding: 0.9em;
 
@@ -50,12 +47,24 @@ html {
 body {
   @include font-size(1.5);
 
-  font-family: sans-serif;
+  font-family: 'Muli', serif;
   color: black;
 }
 
 // include h1-h6
-@include h(250%, 225%, 200%, 150%, 125%, 115%);
+@include h(235%, 175%, 150%, 125%, 115%, 105%);
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: bold;
+  padding-top: 1em;
+}
+
+h1 {
+  letter-spacing: .09em;
+  line-height: 5.5rem;
+  word-spacing: .1em;
+}
 
 a {
   text-decoration: none;
@@ -99,7 +108,7 @@ ul, ol {
 
 blockquote {
   width: 100%;
-  margin: 0 2em;
+  padding: 5px 15px;
   background-color: #f5f5f5;
 }
 
@@ -108,14 +117,20 @@ code {
 }
 
 nav {
-  font-size: 0.75em;
-  width: 98%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  letter-spacing: .15em;
   margin: 0 auto;
   padding-top: $padding;
+  width: 98%;
 
-  li {
-    display: inline-block;
-    margin-right: $padding;
+  ul {
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -160,7 +175,7 @@ aside {
 .wrapper {
   width: 90%;
   max-width: $readable-width;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 
   p {
     width: 100%;
@@ -251,6 +266,6 @@ $large-desktop: "(min-width: 90em)";
 
 @media only screen and #{$large-desktop} {
   body {
-    @include font-size(2);
+    @include font-size(1.8);
   }
 }

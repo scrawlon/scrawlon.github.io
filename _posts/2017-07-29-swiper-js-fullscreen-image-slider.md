@@ -9,7 +9,6 @@ layout: post
 published: true
 post_date: 2017-07-29 18:22:47
 ---
-# Swiper JS Fullscreen Image Slider
 
 Image slideshows are ubiquitous in modern web design. The ["Swiper"][1] JavaScript library is a simple lightweight solution. Here, I'm going to create an image slider with a fullscreen viewing option.
 
