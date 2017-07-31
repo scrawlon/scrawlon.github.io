@@ -1,0 +1,256 @@
+---
+---
+
+/* test */
+@import "reset";
+@import "syntax.css";
+
+@function calculateRem($size) {
+  $remSize: $size / $base-font-size;
+
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin font-size($size: 1.6, $line: $size * 1.5) {
+  font-size: $size * 10 + px;
+  line-height: $line * 10 + px;
+  font-size: $size + rem;
+  line-height: $line + rem;
+}
+
+// create responsive h1-h6 tags
+@mixin h($percentages...) {
+  @each $percentage in $percentages {
+    $i: index($percentages, $percentage);
+
+    h#{$i} {
+      padding-top: 1em;
+
+      @include font-size(3);
+
+      font-size: $percentage;
+      line-height: 1.25em;
+    }
+  }
+}
+
+$readable-width: 30em;
+$base-font-size: 16px;
+$padding: 0.9em;
+
+html {
+  font-size: 66.5%;
+}
+
+body {
+  @include font-size(1.5);
+
+  font-family: sans-serif;
+  color: black;
+}
+
+// include h1-h6
+@include h(250%, 225%, 200%, 150%, 125%, 115%);
+
+a {
+  text-decoration: none;
+}
+
+p {
+  width: 90%;
+  max-width: $readable-width;
+  margin: 1.25em auto;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul, ol {
+  width: 100%;
+  margin: 0.5em;
+  padding-left: 1em;
+
+  li {
+    margin-right: 1.5em;
+  }
+}
+
+blockquote {
+  width: 100%;
+  margin: 0 2em;
+  background-color: #f5f5f5;
+}
+
+code {
+  background-color: #f5f5f5;
+}
+
+nav {
+  font-size: 0.75em;
+  width: 98%;
+  margin: 0 auto;
+  padding-top: $padding;
+
+  li {
+    display: inline-block;
+    margin-right: $padding;
+  }
+}
+
+header, footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+
+  a {
+    color: white;
+  }
+}
+
+header {
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+article {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+aside {
+  display: none;
+  float: left;
+  margin-top: 2em;
+  margin-left: 1em;
+  font-size: 0.8em;
+  width: 25%;
+  max-width: 10em;
+
+  img {
+    width: 0;
+  }
+}
+
+.float-right {
+  float: right;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: $readable-width;
+  margin: 0 auto;
+
+  p {
+    width: 100%;
+  }
+}
+
+.articles {
+  width: 95%;
+  margin: 1em auto;
+  white-space: nowrap;
+
+  li {
+    list-style-type: none;
+    margin-bottom: 0.5em;
+  }
+
+  time {
+    display: none;
+  }
+}
+
+#disqus_thread {
+  width: 90%;
+  margin: 0 auto;
+}
+
+$smartphone: "(max-width: 30em)";
+$tablet: "(min-width: 40em)";
+$landscape: "(min-width: 60em)";
+$desktop: "(min-width: 80em)";
+$large-desktop: "(min-width: 90em)";
+
+@media only screen and #{$tablet} {
+  body {
+    @include font-size(1.6);
+
+    .articles {
+      width: 90%;
+      max-width: $readable-width;
+      margin: 2em auto;
+
+      li {
+        list-style-type: none;
+        margin-bottom: 1em;
+      }
+
+      time {
+        display: inline;
+        margin-right: 0.5em;
+      }
+    }
+  }
+}
+
+@media only screen and #{$landscape} {
+  body {
+    @include font-size(1.7);
+  }
+
+  aside {
+    display: inline-block;
+
+    img {
+      width: 100%;
+    }
+
+    .articles {
+      width: 90%;
+      max-width: $readable-width * 2;
+    }
+  }
+
+  .by-line {
+    display: none;
+  }
+}
+
+@media only screen and #{$desktop} {
+  body {
+    @include font-size(1.8);
+  }
+
+  aside {
+    margin-left: 2em;
+    max-width: 15em;
+  }
+}
+
+@media only screen and #{$large-desktop} {
+  body {
+    @include font-size(2);
+  }
+}

@@ -3,6 +3,9 @@ description:      A blog about programming and technology
 baseurl: ""
 url: "https://scrawlon.github.io"
 disqus_shortname: scrawlon
+sass:
+    sass_dir: _sass
+    style: compressed
 
 # Owner/author information
 owner:
