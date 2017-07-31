@@ -6,6 +6,9 @@ disqus_shortname: scrawlon
 sass:
     sass_dir: _sass
     style: compressed
+defaults:
+  values:
+    comments: true
 
 # Owner/author information
 owner:
