@@ -3,7 +3,7 @@
 
 /* test */
 @import "reset";
-@import "syntax.css";
+@import "syntax";
 
 @function calculateRem($size) {
   $remSize: $size / $base-font-size;

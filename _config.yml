@@ -7,8 +7,12 @@ sass:
     sass_dir: _sass
     style: compressed
 defaults:
-  values:
-    comments: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
 
 # Owner/author information
 owner:
