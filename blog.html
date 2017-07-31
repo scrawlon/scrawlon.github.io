@@ -1,10 +1,8 @@
 ---
 layout: page
-permalink: /articles/index.html
-title: "Scrawlon: Articles"
-heading: "Articles:"
-subheading: "Collected posts from Scrawlon.com"
-description: "An archive of posts sorted by date."
+permalink: /blog/index.html
+title: "Scrawlon: Blog"
+heading: "Blog"
 ---
 
 <header>
@@ -25,7 +23,7 @@ description: "An archive of posts sorted by date."
 </header>
 
 <ul class="articles">
-  {% for post in site.posts %} 
+  {% for post in site.posts %}
     <li>
       <time datetime="{{ post.date | date_to_xmlschema }}">
         {{ post.date | date: "%m/%d/%y" }}
