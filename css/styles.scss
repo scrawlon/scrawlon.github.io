@@ -125,11 +125,15 @@ nav {
   font-size: 1em;
   letter-spacing: .15em;
   margin: 0 auto;
-  padding-top: $padding;
-  width: 98%;
 
   ul {
-    padding-left: 0;
+    background: #3949ab;
+    margin: 0;
+    padding: 10px 10px 5px;
+
+    a, a:visited {
+      color: #fff;
+    }
 
     li {
       display: inline-block;
@@ -150,7 +154,7 @@ header, footer {
 
 header {
   background-size: cover;
-  min-height: 350px;
+  min-height: 450px;
   padding-bottom: 2em;
   position: relative;
   width: 100%;
@@ -159,7 +163,7 @@ header {
     position: relative;
 
     h1 {
-      padding: 30% 0 0;
+      padding: 40% 0 0;
     }
   }
 
