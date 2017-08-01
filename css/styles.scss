@@ -127,12 +127,13 @@ nav {
   margin: 0 auto;
 
   ul {
-    background: #3949ab;
     margin: 0;
     padding: 10px 10px 5px;
 
     a, a:visited {
       color: #fff;
+      background: #666;
+      padding: 2px 5px;
     }
 
     li {
