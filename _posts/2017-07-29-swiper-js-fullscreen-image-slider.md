@@ -1,7 +1,7 @@
 ---
 ID: 1724
 author: Scott McGrath
-image: http://scrawlon.com/wp-content/uploads/2017/07/Screen-Shot-2017-07-29-at-2.21.17-PM.png
+image: swiper-js-fullscreen-image-slider.png
 layout: post
 post_date: 2017-07-29 18:22:47
 post_excerpt: >
