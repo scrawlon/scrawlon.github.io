@@ -1,18 +1,57 @@
-<meta charset="utf-8">
-<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-{% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
 
-<!-- Webmaster Tools verfication -->
-{% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
-{% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
+    <!-- Webmaster Tools verfication -->
+    {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
+    {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
 
-<link rel="canonical" href="{{ canonical }}">
-{% if site.owner.google_plus %}<link rel="author" href="{{ site.owner.google_plus }}?rel=author">{% endif %}
+    <link rel="canonical" href="{{ canonical }}">
+    {% if site.owner.google_plus %}<link rel="author" href="{{ site.owner.google_plus }}?rel=author">{% endif %}
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.url }}/css/styles.css">
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="{{ site.url }}/css/styles.css">
 
-<meta http-equiv="cleartype" content="on">
+    <meta http-equiv="cleartype" content="on">
+  </head>
+
+  <body>
+    {% include navigation.html %}
+
+    {% if page.heading or page.title %}
+      <header
+        {% if page.image %}
+          style="background-image:url({{ page.image }})"
+        {% endif %}>
+        <div class="backdrop">
+        </div>
+        <div class="wrapper">
+          <h1 {% if page.heading %} class="page" {% endif %}>
+            {% if page.heading %}
+              {{ page.heading }}
+            {% else %}
+              {{ page.title }}
+            {% endif %}
+          </h1>
+          <h4>
+            {% if page.subheading %}
+              {{ page.subheading }}
+            {% endif %}
+          </h4>
+
+          {% if page.author %}
+            <div class="by-line">
+              By {{ page.author }}
+              {% if page.date %}
+                <time datetime="{{ page.post_date | date_to_xmlschema }}">{{ page.post_date | date: "%B %d, %Y" }}</time>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </header>
+    {% endif %}

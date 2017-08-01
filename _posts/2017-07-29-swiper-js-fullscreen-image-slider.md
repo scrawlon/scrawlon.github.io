@@ -1,13 +1,14 @@
 ---
 ID: 1724
-post_title: Swiper JS Fullscreen Image Slider
 author: Scott McGrath
+image: http://scrawlon.com/wp-content/uploads/2017/07/Screen-Shot-2017-07-29-at-2.21.17-PM.png
+layout: post
+post_date: 2017-07-29 18:22:47
 post_excerpt: >
   Create an image slider with a fullscreen
   view.
-layout: post
+post_title: Swiper JS Fullscreen Image Slider
 published: true
-post_date: 2017-07-29 18:22:47
 ---
 
 Image slideshows are ubiquitous in modern web design. The ["Swiper"][1] JavaScript library is a simple lightweight solution. Here, I'm going to create an image slider with a fullscreen viewing option.

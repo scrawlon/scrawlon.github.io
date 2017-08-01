@@ -1,52 +1,20 @@
-<!doctype html>
-<head>
 {% include head.html %}
-</head>
-
-<body>
 
 <article>
-  <header>
-    {% include navigation.html %}
-  </header>
-  <header>
-    <div class="wrapper">
-      <h1>
-        {% if page.heading %}
-          {{ page.heading }}
-        {% else %}
-          {{ page.title }}
-        {% endif %}
-      </h1>
-      <h4>
-        {% if page.subheading %}
-          {{ page.subheading }}
-        {% endif %}
-      </h4>
-    
-      <div class="by-line">
-        By {{ site.owner.name }} 
-        {% if page.date %}
-          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-        {% endif %}
-      </div>
-    </div>
-  </header>
-
   <aside>
     <img src="{{ site.url }}/images/{{ site.owner.avatar }}" title="About {{ site.owner.name }}" /><br />
-    
+
     By {{ site.owner.name }}<br />
     {% if page.date %}
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
     {% endif %}
 
     {% if page.tags.first %}
-      TAGS: 
+      TAGS:
     {% endif %}
     {% for tag in page.tags %}
       <a href="{{ site.url }}/tags.html#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>
-    {% unless forloop.last %} &bull; 
+    {% unless forloop.last %} &bull;
     {% endunless %}
     {% endfor %}
   </aside>
@@ -55,10 +23,10 @@
     {{ content }}
     <nav>
       {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}"><< previous</a>
       {% endif %}
       {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">next >></a>
       {% endif %}
     </nav><!-- /.pagination -->
   </div>
@@ -69,11 +37,4 @@
 
 </article>
 
-<footer>
-  {% include footer.html %}
-</footer>
-
-{% include scripts.html %}	        
-
-</body>
-</html>
+{% include footer.html %}

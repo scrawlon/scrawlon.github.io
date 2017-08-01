@@ -1,26 +1,9 @@
 ---
 layout: page
-permalink: /blog/index.html
 title: "Scrawlon: Blog"
 heading: "Blog"
 ---
 
-<header>
-  <div class="wrapper">
-    <h1>
-      {% if page.heading %}
-        {{ page.heading }}
-      {% else %}
-        {{ page.title }}
-      {% endif %}
-    </h1>
-    <h4>
-      {% if page.subheading %}
-        {{ page.subheading }}
-      {% endif %}
-    </h4>
-  <div>
-</header>
 
 <ul class="articles">
   {% for post in site.posts %}

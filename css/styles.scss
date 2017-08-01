@@ -4,7 +4,7 @@
 /* test */
 @import "reset";
 @import "syntax";
-@import url('https://fonts.googleapis.com/css?family=Oswald|Pathway+Gothic+One|Muli');
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Muli');
 
 @function calculateRem($size) {
   $remSize: $size / $base-font-size;
@@ -64,6 +64,10 @@ h1 {
   letter-spacing: .09em;
   line-height: 5.5rem;
   word-spacing: .1em;
+}
+
+h1.page {
+  font-size: 8rem;
 }
 
 a {
@@ -145,8 +149,30 @@ header, footer {
 }
 
 header {
-  width: 100%;
+  min-height: 350px;
   padding-bottom: 2em;
+  position: relative;
+  width: 100%;
+
+  .wrapper {
+    position: relative;
+
+    h1 {
+      padding: 30% 0 0;
+    }
+  }
+
+  .backdrop {
+    background: #000;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: .75;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 article {
