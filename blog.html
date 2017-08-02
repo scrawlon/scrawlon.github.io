@@ -2,16 +2,14 @@
 layout: page
 title: "Scrawlon: Blog"
 heading: "Blog"
+tags: []
 ---
 
-
-<ul class="articles">
+<ul class="blog-list">
   {% for post in site.posts %}
     <li>
-      <time datetime="{{ post.date | date_to_xmlschema }}">
-        {{ post.date | date: "%m/%d/%y" }}
-      </time>
-      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></article>
+      <span class='date'>{{ post.date | date: "%m/%d/%y" }}</span>
+      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>

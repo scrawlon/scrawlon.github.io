@@ -227,14 +227,17 @@ aside {
   }
 }
 
-.articles {
-  width: 95%;
+.blog-list {
   margin: 1em auto;
-  white-space: nowrap;
 
   li {
     list-style-type: none;
     margin-bottom: 0.5em;
+
+    .date {
+      margin-right: 20px;
+      display: block;
+    }
   }
 
   time {
@@ -257,14 +260,17 @@ $large-desktop: "(min-width: 90em)";
   body {
     @include font-size(1.6);
 
-    .articles {
-      width: 90%;
+    .blog-list {
       max-width: $readable-width;
       margin: 2em auto;
 
       li {
         list-style-type: none;
         margin-bottom: 1em;
+
+        .date {
+          display: inline;
+        }
       }
 
       time {
@@ -287,8 +293,7 @@ $large-desktop: "(min-width: 90em)";
       width: 100%;
     }
 
-    .articles {
-      width: 90%;
+    .blog-list {
       max-width: $readable-width * 2;
     }
   }
