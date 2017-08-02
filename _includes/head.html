@@ -26,7 +26,7 @@
     {% if page.heading or page.title %}
       <header
         {% if page.image %}
-          style="background-image:url({{ site.url }}/images/{{ page.image }})"
+          style="background-image:url({{ site.url }}/images/{{ page.image.file }})"
         {% endif %}>
         <div class="backdrop">
         </div>
@@ -53,5 +53,19 @@
             </div>
           {% endif %}
         </div>
+        {% if page.image.caption %}
+          <figcaption>
+            PHOTO CREDIT:
+            <a href="{{ page.image.caption.url }}" title="{{ page.image.caption.title}}">
+              "{{ page.image.caption.title }}"
+            </a> by
+            <a href="{{ page.image.caption.credit.url }}" title="{{ page.image.caption.credit.name }}">
+              {{ page.image.caption.credit.name }}
+            </a> on {{ page.image.caption.source }}
+            <a href="{{ page.image.caption.license.url }}" title="{{ page.image.caption.license.type}}">
+              ({{ page.image.caption.license.type}})
+            </a>
+          </figcaption>
+        {% endif %}
       </header>
     {% endif %}

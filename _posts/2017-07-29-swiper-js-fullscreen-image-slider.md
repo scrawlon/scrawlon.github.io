@@ -1,7 +1,18 @@
 ---
 ID: 1724
 author: Scott McGrath
-image: swiper-js-fullscreen-image-slider.png
+image:
+  file: swiper-js-polaroids.jpg
+  caption:
+    credit:
+      name: Virginia rm
+      url: https://www.flickr.com/photos/virgirm/
+    license:
+      type: Creative Commons
+      url: https://creativecommons.org/licenses/by/2.0/
+    source: Flickr
+    title: Polaroid photos
+    url: https://www.flickr.com/photos/virgirm/3787704589/in/faves-151359080@N04/
 layout: post
 post_date: 2017-07-29 18:22:47
 post_excerpt: >
