@@ -40,6 +40,11 @@ $readable-width: 35em;
 $base-font-size: 16px;
 $padding: 0.9em;
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   font-size: 66.5%;
 }
