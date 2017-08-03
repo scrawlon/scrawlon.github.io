@@ -23,10 +23,13 @@
     {{ content }}
     <nav>
       {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}"><< previous</a>
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">< previous page</a>
+        {% if page.next %}
+          --
+        {% endif %}
       {% endif %}
       {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">next >></a>
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">next page ></a>
       {% endif %}
     </nav><!-- /.pagination -->
   </div>

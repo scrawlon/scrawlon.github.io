@@ -56,15 +56,28 @@
         {% if page.image.caption %}
           <figcaption>
             PHOTO CREDIT:
-            <a href="{{ page.image.caption.url }}" title="{{ page.image.caption.title}}" target="_blank">
+            {% if page.image.caption.url %}
+              <a href="{{ page.image.caption.url }}" title="{{ page.image.caption.title}}" target="_blank">
+                "{{ page.image.caption.title }}"
+              </a>
+            {% else %}
               "{{ page.image.caption.title }}"
-            </a> by
-            <a href="{{ page.image.caption.credit.url }}" title="{{ page.image.caption.credit.name }}" target="_blank">
-              {{ page.image.caption.credit.name }}
-            </a> on {{ page.image.caption.source }}
-            <a href="{{ page.image.caption.license.url }}" title="{{ page.image.caption.license.type}}" target="_blank">
-              ({{ page.image.caption.license.type}})
-            </a>
+            {% endif %}
+            {% if page.image.caption.credit.url %}
+              <a href="{{ page.image.caption.credit.url }}" title="{{ page.image.caption.credit.name }}" target="_blank">
+                by {{ page.image.caption.credit.name }}
+              </a>
+            {% else %}
+              by {{ page.image.caption.credit.name }}
+            {% endif %}
+            {% if page.image.caption.source %}
+              on {{ page.image.caption.source }}
+            {% endif %}
+            {% if page.image.caption.license.type %}
+              <a href="{{ page.image.caption.license.url }}" title="{{ page.image.caption.license.type}}" target="_blank">
+                ({{ page.image.caption.license.type}})
+              </a>
+            {% endif %}
           </figcaption>
         {% endif %}
       </header>

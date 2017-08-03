@@ -52,8 +52,9 @@ html {
 body {
   @include font-size(1.5);
 
-  font-family: 'Muli', serif;
   color: black;
+  font-family: 'Muli', serif;
+  position: relative;
 }
 
 // include h1-h6
@@ -156,6 +157,12 @@ header, footer {
   a {
     color: white;
   }
+}
+
+footer {
+  font-size: 1.5rem;
+  min-height: 13vh;
+  padding: 1em;
 }
 
 header {

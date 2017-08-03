@@ -2,6 +2,18 @@
 ID: 74
 post_title: Writing On Glass
 author: smcgrath
+image:
+  file: tablet-pen-collage.jpg
+  caption:
+    credit:
+      name: Scott McGrath
+      url:
+    license:
+      type:
+      url:
+    source:
+    title: Windows Tablet Computers
+    url:
 post_date: 2015-07-06 07:34:46
 post_excerpt: 'Pen tablets, Windows 8.1 and note taking apps: My search for a usable device for writing and maintaining handwritten notes.'
 layout: post
