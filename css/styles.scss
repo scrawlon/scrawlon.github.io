@@ -160,14 +160,14 @@ header, footer {
 }
 
 footer {
-  font-size: 1.5rem;
-  min-height: 13vh;
+  font-size: 1.3rem;
+  min-height: 10vh;
   padding: 1em;
 }
 
 header {
   background-size: cover;
-  height: 70vh;
+  height: 80vh;
   min-height: 450px;
   padding-bottom: 2em;
   position: relative;
@@ -203,7 +203,6 @@ header {
 
 article {
   width: 100%;
-  margin-bottom: 2em;
 }
 
 aside {
@@ -227,7 +226,7 @@ aside {
 .wrapper {
   width: 90%;
   max-width: $readable-width;
-  margin: 0 auto 20px;
+  margin: 0 auto;
 
   p {
     width: 100%;
