@@ -81,8 +81,6 @@ a {
 }
 
 p {
-  width: 90%;
-  max-width: $readable-width;
   margin: 1.25em auto;
 }
 
@@ -223,6 +221,7 @@ aside {
   float: right;
 }
 
+
 .wrapper {
   width: 90%;
   max-width: $readable-width;
@@ -265,25 +264,29 @@ $large-desktop: "(min-width: 90em)";
 @media only screen and #{$tablet} {
   body {
     @include font-size(1.6);
+  }
 
-    .blog-list {
-      max-width: $readable-width;
-      margin: 2em auto;
+  .blog-list {
+    margin: 2em auto;
 
-      li {
-        list-style-type: none;
-        margin-bottom: 1em;
+    li {
+      list-style-type: none;
+      margin-bottom: 1em;
 
-        .date {
-          display: inline;
-        }
-      }
-
-      time {
+      .date {
         display: inline;
-        margin-right: 0.5em;
       }
     }
+
+    time {
+      display: inline;
+      margin-right: 0.5em;
+    }
+  }
+
+  .wrapper {
+    width: 70%;
+    max-width: 70%;
   }
 }
 
@@ -298,6 +301,10 @@ $large-desktop: "(min-width: 90em)";
     @include font-size(1.8);
   }
 
+  .wrapper {
+    width: 90%;
+    max-width: $readable-width;
+  }
 
   .by-line {
     display: none;
