@@ -291,9 +291,22 @@ $large-desktop: "(min-width: 90em)";
   body {
     @include font-size(1.7);
   }
+}
+
+@media only screen and #{$desktop} {
+  body {
+    @include font-size(1.8);
+  }
+
+
+  .by-line {
+    display: none;
+  }
 
   aside {
     display: inline-block;
+    margin-left: 2em;
+    max-width: 15em;
 
     img {
       width: 100%;
@@ -302,21 +315,6 @@ $large-desktop: "(min-width: 90em)";
     .blog-list {
       max-width: $readable-width * 2;
     }
-  }
-
-  .by-line {
-    display: none;
-  }
-}
-
-@media only screen and #{$desktop} {
-  body {
-    @include font-size(1.8);
-  }
-
-  aside {
-    margin-left: 2em;
-    max-width: 15em;
   }
 }
 
