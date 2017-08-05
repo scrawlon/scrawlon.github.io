@@ -4,7 +4,7 @@
 /* test */
 @import "reset";
 @import "syntax";
-@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Muli');
+@import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Merriweather');
 
 @function calculateRem($size) {
   $remSize: $size / $base-font-size;
@@ -53,8 +53,25 @@ body {
   @include font-size(1.5);
 
   color: black;
-  font-family: 'Muli', serif;
+  font-family: 'Merriweather', serif;
   position: relative;
+}
+
+.backdrop {
+  background: #000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: .75;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-mobile-backdrop {
+  @extend .backdrop;
+  display: none;
 }
 
 // include h1-h6
@@ -72,16 +89,14 @@ h1 {
   word-spacing: .1em;
 }
 
-h1.page {
-  font-size: 8rem;
-}
-
 a {
   text-decoration: none;
 }
 
 p {
   margin: 1.25em auto;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
 }
 
 em {
@@ -124,6 +139,18 @@ code {
   background-color: #f5f5f5;
 }
 
+.nav-mobile-toggle {
+  display: block;
+  margin: .6em .5em .4em;
+  position: absolute;
+  right: .5em;
+  top: -5px;
+  background: #666;
+  padding: 2px 10px;
+  color: #fff;
+  z-index: 10;
+}
+
 nav {
   font-family: 'Oswald', sans-serif;
   font-size: 1em;
@@ -143,6 +170,34 @@ nav {
     li {
       display: inline-block;
       text-transform: uppercase;
+    }
+  }
+
+  &.nav-desktop {
+    .float-right {
+      display: none;
+    }
+  }
+
+  &.nav-mobile {
+    line-height: 2em;
+    font-size: 2em;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    z-index: 9;
+
+    ul {
+      background: #fff;
+      height: 100vh;
+      padding: 20vh 20px 20px;
+
+      li {
+        display: block;
+      }
     }
   }
 }
@@ -176,19 +231,13 @@ header {
 
     h1 {
       padding: 40% 0 0;
-    }
-  }
 
-  .backdrop {
-    background: #000;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    opacity: .75;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+      &.page {
+        font-size: 8rem;
+        border-bottom: 2px solid #FFF;
+        line-height: 1.5em;
+      }
+    }
   }
 
   figcaption {
@@ -293,6 +342,22 @@ $large-desktop: "(min-width: 90em)";
 @media only screen and #{$landscape} {
   body {
     @include font-size(1.7);
+  }
+
+  p {
+    line-height: 2.8rem;
+  }
+
+  .nav-mobile-toggle {
+    display: none;
+  }
+
+  nav {
+    &.nav-desktop {
+      .float-right {
+        display: block;
+      }
+    }
   }
 }
 
