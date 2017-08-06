@@ -1,5 +1,5 @@
 <!-- Mobile Nav Toggle -->
-<div class="nav-mobile-toggle">&#9776;</div>
+<div class="nav-mobile-toggle" id="nav-mobile-toggle">&#9776;</div>
 
 <nav class='nav-desktop'>
   <ul>
@@ -17,9 +17,7 @@
   </ul>
 </nav>
 
-<div class="nav-mobile-backdrop"></div>
-
-<nav class="nav-mobile">
+<nav class="nav-mobile" id="nav-mobile">
   <ul>
     <!-- Logo Home Link -->
     {% for home in site.home %}
@@ -32,3 +30,5 @@
     {% endfor %}
   </ul>
 </nav>
+
+<div class="nav-mobile-backdrop" id="nav-mobile-backdrop"></div>

@@ -57,6 +57,10 @@ body {
   position: relative;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .backdrop {
   background: #000;
   height: 100%;
@@ -71,7 +75,13 @@ body {
 
 .nav-mobile-backdrop {
   @extend .backdrop;
+  background: #fff;
   display: none;
+  z-index: 1;
+
+  &.visible {
+    display: block;
+  }
 }
 
 // include h1-h6
@@ -140,6 +150,7 @@ code {
 }
 
 .nav-mobile-toggle {
+  cursor: pointer;
   display: block;
   margin: .6em .5em .4em;
   position: absolute;
@@ -148,7 +159,7 @@ code {
   background: #666;
   padding: 2px 10px;
   color: #fff;
-  z-index: 10;
+  z-index: 11;
 }
 
 nav {
@@ -174,6 +185,15 @@ nav {
   }
 
   &.nav-desktop {
+    position: relative;
+    height: 42px;
+
+    ul {
+      position: absolute;
+      top: 0;
+      z-index: 10;
+    }
+
     .float-right {
       display: none;
     }
@@ -182,12 +202,14 @@ nav {
   &.nav-mobile {
     line-height: 2em;
     font-size: 2em;
+    transform: translate(100vw, 0);
     position: absolute;
-    text-align: right;
+    width: 100vw;
+    // text-align: right;
     top: 0;
-    bottom: 0;
-    left: 100%;
-    right: 0;
+    // bottom: 0;
+    // left: 100%;
+    // right: 0;
     z-index: 9;
 
     ul {

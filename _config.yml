@@ -41,5 +41,19 @@ future:       true
 markdown: kramdown
 permalink: pretty
 
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+include:
+  - .htaccess
+  - js
+exclude:
+  - lib
+  - config.rb
+  - Capfile
+  - config
+  - log
+  - Rakefile
+  - Rakefile.rb
+  - tmp
+  - package.json
+  - package-lock.json
+  - node_modules
+  - gulpfile.js
