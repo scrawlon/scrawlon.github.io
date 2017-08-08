@@ -1,3 +1,5 @@
+var webAnimationsJs = require('web-animations-js');
+var animate
 var mobileNav = document.getElementById('nav-mobile');
 var mobileNavToggle = document.getElementById('nav-mobile-toggle');
 var mobileNavBackdrop = document.getElementById('nav-mobile-backdrop');
