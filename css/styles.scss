@@ -215,7 +215,7 @@ nav {
     ul {
       background: #fff;
       height: 100vh;
-      padding: 20vh 20px 20px;
+      padding: 20vh 20px 20px 10vw;
 
       li {
         display: block;
@@ -335,6 +335,14 @@ $large-desktop: "(min-width: 90em)";
 @media only screen and #{$tablet} {
   body {
     @include font-size(1.6);
+  }
+
+  nav {
+    &.nav-mobile {
+      ul {
+        padding: 20vh 20px 20px 35vw;
+      }
+    }
   }
 
   .blog-list {

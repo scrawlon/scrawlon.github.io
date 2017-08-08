@@ -12,16 +12,31 @@ mobileNavToggle.onclick = function(e) {
 
   mobileNavBackdrop.classList.add('visible');
 
+  mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
+    duration: 300,
+    easing: 'ease-in-out',
+    fill: 'forwards'
+  });
+
   [html, body].forEach(function(el) {
     el.classList.add('no-scroll');
   });
 
   mobileNav.animate(mobileNavSlideInAnimation, {
-    duration: 200,
+    duration: 400,
     easing: 'ease-in-out',
     fill: 'forwards'
   });
 }
+
+var mobileNavBackdropAnimation = [
+  {
+    opacity: 0
+  },
+  {
+    opacity: 1
+  }
+];
 
 var mobileNavSlideInAnimation = [
   {
@@ -30,4 +45,4 @@ var mobileNavSlideInAnimation = [
   {
     transform: 'translate(0vw, 0)'
   }
-]
+];
