@@ -3,6 +3,11 @@
       <a href="http://jekyllrb.com">Powered by Jekyll</a>
     </footer>
 
-    {% include scripts.html %}
+
+    <script src="{{ site.url }}/js/app.js"></script>
+
+    {% if page.comments %}
+      {% include disqus_comments.html %}
+    {% endif %}
   </body>
 </html>

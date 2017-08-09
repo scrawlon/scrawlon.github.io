@@ -21,6 +21,8 @@ mobileNavToggle.onclick = function(e) {
     [html, body].forEach(function(el) {
       el.classList.remove('no-scroll');
     });
+
+    this.classList.remove('is-active')
   } else {
     direction = 'normal';
     mobileNavOpen = 'true';
@@ -28,6 +30,8 @@ mobileNavToggle.onclick = function(e) {
     [html, body].forEach(function(el) {
       el.classList.add('no-scroll');
     });
+
+    this.classList.add('is-active')
   }
 
   mobileNavBackdrop.classList.add('visible');
