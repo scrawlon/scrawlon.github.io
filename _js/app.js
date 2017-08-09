@@ -23,6 +23,7 @@ mobileNavToggle.onclick = function(e) {
     });
 
     this.classList.remove('is-active')
+    mobileNavBackdrop.classList.remove('visible');
   } else {
     direction = 'normal';
     mobileNavOpen = 'true';
@@ -32,9 +33,9 @@ mobileNavToggle.onclick = function(e) {
     });
 
     this.classList.add('is-active')
+    mobileNavBackdrop.classList.add('visible');
   }
 
-  mobileNavBackdrop.classList.add('visible');
 
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
