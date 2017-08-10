@@ -219,13 +219,11 @@ nav {
     z-index: 9;
 
     ul {
-      background: #fff;
-      width: 84vw;
-      padding: 4vh 6vw;
+      width: auto;
+      padding: 4vh 0 4vh 6vw;
       position: absolute;
       top: 5vh;
       left: 2vw;
-      border: 3px solid $scrawlon-blue;
       overflow: hidden;
       // padding: 20vh 20px 20px 10vw;
 
@@ -502,6 +500,8 @@ $large-desktop: "(min-width: 90em)";
         padding: 4vh 4vw;
         top: 15vh;
         left: 30vw;
+        border: 3px solid $scrawlon-blue;
+        background: #fff;
       }
     }
   }
