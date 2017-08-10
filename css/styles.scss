@@ -219,10 +219,12 @@ nav {
     z-index: 9;
 
     ul {
+      background: #fff;
       width: 100vw;
-      padding: 4vh 0 4vh 6vw;
+      height: 100vh;
+      padding: 10vh 0 4vh 6vw;
       position: absolute;
-      top: 5vh;
+      top: 0;
       left: 0;
       overflow: hidden;
       text-align: center;
@@ -354,11 +356,11 @@ $large-desktop: "(min-width: 90em)";
     &.nav-mobile {
       ul {
         width: 30vh;
+        height: auto;
         padding: 4vh 2vw 4vh 8vw;
         top: 15vh;
         left: 30vw;
         border: 3px solid $scrawlon-blue;
-        background: #fff;
         text-align: left;
 
         li {
