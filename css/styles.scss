@@ -189,6 +189,7 @@ nav {
     li {
       display: inline-block;
       text-transform: uppercase;
+      margin-bottom: 15px;
     }
   }
 
@@ -558,8 +559,23 @@ $large-desktop: "(min-width: 90em)";
     line-height: 2.8rem;
   }
 
+  .no-scroll {
+    overflow: auto;
+    height: auto;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
   .nav-mobile-toggle {
     display: none;
+  }
+
+  .nav-mobile-backdrop {
+    &.visible {
+      display: none;
+    }
   }
 
   nav {
@@ -568,6 +584,14 @@ $large-desktop: "(min-width: 90em)";
     &.nav-desktop {
       .float-right {
         display: block;
+        a {
+          background: #fff;
+          border-left: 7px solid #000;
+          color: #000;
+          opacity: 0.75;
+          padding: 0 2px 0 10px;
+          margin-right: 15px;
+        }
       }
     }
   }

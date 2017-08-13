@@ -14,9 +14,9 @@ console.log('mobile nav toggle', mobileNavToggle);
 mobileNavToggle.onclick = function(e) {
   console.log('click');
 
-  if ( mobileNavOpen === 'true' ) {
+  if ( mobileNavOpen ) {
     direction = 'reverse';
-    mobileNavOpen = 'false';
+    mobileNavOpen = false;
 
     [html, body].forEach(function(el) {
       el.classList.remove('no-scroll');
@@ -26,7 +26,7 @@ mobileNavToggle.onclick = function(e) {
     mobileNavBackdrop.classList.remove('visible');
   } else {
     direction = 'normal';
-    mobileNavOpen = 'true';
+    mobileNavOpen = true;
 
     [html, body].forEach(function(el) {
       el.classList.add('no-scroll');
@@ -35,7 +35,6 @@ mobileNavToggle.onclick = function(e) {
     this.classList.add('is-active')
     mobileNavBackdrop.classList.add('visible');
   }
-
 
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
