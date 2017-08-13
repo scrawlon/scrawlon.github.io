@@ -21,15 +21,15 @@
 
   <div class="wrapper">
     {{ content }}
-    <nav>
+    <nav class="pagination float-right">
       {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">< last page</a>
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">< previous post</a>
         {% if page.next %}
-          --
+          |
         {% endif %}
       {% endif %}
       {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">next page ></a>
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">next post ></a>
       {% endif %}
     </nav><!-- /.pagination -->
   </div>

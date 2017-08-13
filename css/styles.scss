@@ -71,6 +71,12 @@ body {
   height: 100vh;
 }
 
+.by-line {
+  margin: 20px 0 0;
+  font-size: .8em;
+  word-spacing: .3em;
+}
+
 .backdrop {
   background: #000;
   height: 100%;
@@ -157,6 +163,12 @@ blockquote {
 
 code {
   background-color: #f5f5f5;
+}
+
+.pagination {
+  font-size: .8em;
+  letter-spacing: .1em;
+  margin: 40px 0;
 }
 
 .nav-mobile-toggle {
@@ -283,6 +295,12 @@ header {
         font-size: 8rem;
         border-bottom: 2px solid #FFF;
         line-height: 1.5em;
+      }
+    }
+
+    h2 {
+      &.subheading {
+        padding: 5px 0;
       }
     }
   }

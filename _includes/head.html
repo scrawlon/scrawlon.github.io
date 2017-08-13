@@ -38,11 +38,11 @@
               {{ page.title }}
             {% endif %}
           </h1>
-          <h4>
-            {% if page.subheading %}
+          {% if page.subheading %}
+            <h2 class="subheading">
               {{ page.subheading }}
-            {% endif %}
-          </h4>
+            </h2>
+          {% endif %}
 
           {% if page.author %}
             <div class="by-line">
