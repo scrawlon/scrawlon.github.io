@@ -37,7 +37,7 @@ mobileNavToggle.onclick = function(e) {
 function animatedMenu(direction) {
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
-    duration: 200,
+    duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
   });
