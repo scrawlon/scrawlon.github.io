@@ -1,13 +1,14 @@
 ---
+author: Scott McGrath
 layout: post
 title: "Installing Vagrant on Windows 8"
 description: ""
-category: 
+category:
 tags: []
 comments: true
 published: true
 ---
-*** __Disclaimer__ ** I make no guarantees that the following instructions will work for you. 
+*** __Disclaimer__ ** I make no guarantees that the following instructions will work for you.
 Proceed at your own risk.*
 
 I just bought a used Windows 8 tablet, and I need to get a working development environment on it.
@@ -30,8 +31,8 @@ Installation
 
 * Run this command after running Rails Installer to make ssh work:   
 `setx PATH "%PATH%;C:\RailsInstaller\Git\bin"`   
-_You have to exit and reopen your command prompt to make windows see the new path._ 
- 
+_You have to exit and reopen your command prompt to make windows see the new path._
+
 _Versions listed were the latest at the time of this post_
 
 Create your first Vagrant box
@@ -42,14 +43,14 @@ guide at [Vagrantup.com](http://vagrantup.com)
 1. If you installed Ruby from the link above you should have a _'Command Prompt with Ruby on Rails'_ shortcut
 on your desktop. Start by opening your command prompt.
 
-2. Create a new directory for your first Vagrant virtual machine. For example: 
+2. Create a new directory for your first Vagrant virtual machine. For example:
 `C:\vagrant_test` and change to that directory.
- 
-2. Next, we'll initialize this directory and download a Vagrant box. 
+
+2. Next, we'll initialize this directory and download a Vagrant box.
 `vagrant init precise32 http://files.vagrantup.com/precise32.box`  
 This step could take an hour or more, depending on you connection speed. Luckily, you only need to download the 'precise32' image once.
 
-3. Now we can start Vagrant and connect to our new virtual machine. 
+3. Now we can start Vagrant and connect to our new virtual machine.
 `vagrant up`  
 `vagrant ssh`  
 
@@ -57,5 +58,5 @@ If everything worked, you should see a prompt like this:
 `vagrant@precise32: $` If so, congrats! You've got a real Ubuntu environment running in Windows.
 Your shared folder is in the "/vagrant" directory of your virtual machine.
 
-To get back to your normal prompt, just type "exit". To stop the Vagrant virtual machine, 
+To get back to your normal prompt, just type "exit". To stop the Vagrant virtual machine,
 type "vagrant halt" from your normal prompt. To delete a Vagrant virtual machine, type "vagrant destroy".

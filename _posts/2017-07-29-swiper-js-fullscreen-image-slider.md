@@ -14,7 +14,6 @@ image:
     title: Polaroid photos
     url: https://www.flickr.com/photos/virgirm/3787704589/in/faves-151359080@N04/
 layout: post
-post_date: 2017-07-29 18:22:47
 post_excerpt: >
   Create an image slider with a fullscreen
   view.

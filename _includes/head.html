@@ -31,7 +31,7 @@
         <div class="backdrop">
         </div>
         <div class="wrapper">
-          <h1 {% if page.heading %} class="page" {% endif %}>
+          <h1 {% if page.layout == "page" %} class="page" {% endif %}>
             {% if page.heading %}
               {{ page.heading }}
             {% else %}
@@ -46,9 +46,9 @@
 
           {% if page.author %}
             <div class="by-line">
-              By {{ page.author }}
+              By {{ page.author }} -
               {% if page.date %}
-                <time datetime="{{ page.post_date | date_to_xmlschema }}">{{ page.post_date | date: "%B %d, %Y" }}</time>
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
               {% endif %}
             </div>
           {% endif %}

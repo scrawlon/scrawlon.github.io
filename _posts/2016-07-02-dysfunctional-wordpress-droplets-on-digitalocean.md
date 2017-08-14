@@ -16,7 +16,6 @@ image:
     source: Flickr
     title: Splash!
     url: https://flic.kr/p/68JcTw
-post_date: 2016-07-02 05:08:22
 post_excerpt: "Problems with DigitalOcean's WordPress One-Click Install"
 layout: post
 published: true

@@ -1,7 +1,8 @@
 ---
+author: Scott McGrath
 layout: post
 title: "FatSecret OmniAuth: A Quick Intro - Part 1"
-heading: "FatSecret OmniAuth:"
+heading: "FatSecret OmniAuth"
 subheading: "A Quick Intro - Part 1"
 description: ""
 category:

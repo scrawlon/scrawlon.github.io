@@ -16,7 +16,6 @@ image:
     source: Flickr
     title: ICONS
     url: https://flic.kr/p/bMfE34
-post_date: 2015-09-21 23:08:57
 post_excerpt: "A tutorial on the Divi theme's pluggable functions, focused on extending the header/foooter social media options."
 layout: post
 published: true
