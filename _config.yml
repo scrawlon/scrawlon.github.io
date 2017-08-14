@@ -29,11 +29,11 @@ home:
     url: /
 links:
   - title: About
-    url: /about
+    url: /about/
   - title: Blog
-    url: /blog
+    url: /blog/
   - title: Portfolio
-    url: /
+    url: /portfolio/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:     America/New_York
