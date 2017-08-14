@@ -8,12 +8,7 @@ var body = document.querySelector('body');
 var mobileNavOpen = false;
 var direction = 'normal';
 
-console.log('mobile nav', mobileNav);
-console.log('mobile nav toggle', mobileNavToggle);
-
 mobileNavToggle.onclick = function(e) {
-  console.log('click');
-
   if ( mobileNavOpen ) {
     direction = 'reverse';
     mobileNavOpen = false;
@@ -22,8 +17,9 @@ mobileNavToggle.onclick = function(e) {
       el.classList.remove('no-scroll');
     });
 
-    this.classList.remove('is-active')
+    animatedMenu(direction);
     mobileNavBackdrop.classList.remove('visible');
+    this.classList.remove('is-active')
   } else {
     direction = 'normal';
     mobileNavOpen = true;
@@ -32,13 +28,16 @@ mobileNavToggle.onclick = function(e) {
       el.classList.add('no-scroll');
     });
 
-    this.classList.add('is-active')
+    animatedMenu(direction);
     mobileNavBackdrop.classList.add('visible');
+    this.classList.add('is-active')
   }
+}
 
+function animatedMenu(direction) {
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
-    duration: 300,
+    duration: 200,
     easing: 'ease-in-out',
     fill: 'forwards'
   });
