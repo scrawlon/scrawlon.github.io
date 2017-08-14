@@ -36,14 +36,14 @@ function animatedMenuIn(direction) {
   mobileNavBackdrop.classList.add('visible');
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
-    duration: 300,
+    duration: 600,
     easing: 'ease-in-out',
     fill: 'forwards'
   });
 
   mobileNav.animate(mobileNavSlideInAnimation, {
     direction: direction,
-    duration: 400,
+    duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
   });
@@ -52,20 +52,18 @@ function animatedMenuIn(direction) {
 function animatedMenuOut(direction) {
   mobileNav.animate(mobileNavSlideInAnimation, {
     direction: direction,
-    duration: 400,
+    duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
   });
 
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
-    duration: 400,
+    duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
-  });
-
-  mobileNavBackdrop.onfinish = function() {
-    this.classList.remove('visible');
+  }).onfinish = function() {
+    mobileNavBackdrop.classList.remove('visible');
   }
 }
 
