@@ -17,8 +17,7 @@ mobileNavToggle.onclick = function(e) {
       el.classList.remove('no-scroll');
     });
 
-    animatedMenu(direction);
-    mobileNavBackdrop.classList.remove('visible');
+    animatedMenuOut(direction);
     this.classList.remove('is-active')
   } else {
     direction = 'normal';
@@ -28,13 +27,13 @@ mobileNavToggle.onclick = function(e) {
       el.classList.add('no-scroll');
     });
 
-    animatedMenu(direction);
-    mobileNavBackdrop.classList.add('visible');
+    animatedMenuIn(direction);
     this.classList.add('is-active')
   }
 }
 
-function animatedMenu(direction) {
+function animatedMenuIn(direction) {
+  mobileNavBackdrop.classList.add('visible');
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
     duration: 300,
@@ -48,6 +47,26 @@ function animatedMenu(direction) {
     easing: 'ease-in-out',
     fill: 'forwards'
   });
+}
+
+function animatedMenuOut(direction) {
+  mobileNav.animate(mobileNavSlideInAnimation, {
+    direction: direction,
+    duration: 400,
+    easing: 'ease-in-out',
+    fill: 'forwards'
+  });
+
+  mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
+    direction: direction,
+    duration: 400,
+    easing: 'ease-in-out',
+    fill: 'forwards'
+  });
+
+  mobileNavBackdrop.onfinish = function() {
+    this.classList.remove('visible');
+  }
 }
 
 var mobileNavBackdropAnimation = [
