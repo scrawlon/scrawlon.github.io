@@ -224,6 +224,10 @@ nav {
         &:hover, &.active {
           color: #EF6C00;
         }
+
+        &.active {
+          cursor: default;
+        }
       }
     }
   }
@@ -409,9 +413,10 @@ nav {
             longShadow(-142),
             longShadow(-143);
 
-          &:hover, &.active {
+          &.active {
             opacity: 0.75;
             color: #EF6C00;
+            cursor: default;
           }
         }
       }
@@ -550,7 +555,13 @@ $large-desktop: "(min-width: 90em)";
         text-align: left;
 
         li {
+          margin-bottom: 45px;
+
           a {
+            &:hover {
+              opacity: 0.75;
+              color: #EF6C00;
+            }
           }
         }
       }
