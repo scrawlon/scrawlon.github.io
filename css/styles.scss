@@ -81,14 +81,14 @@ body {
   background: midnightblue;
   background-image:
     repeating-radial-gradient(
-      circle at 0 0,
+      circle at 70% 70%,
       midnightblue,
       black
     );
   height: 100%;
   width: 100%;
   position: absolute;
-  opacity: .85;
+  opacity: .75;
   top: 0;
   bottom: 0;
   left: 0;
@@ -449,7 +449,7 @@ footer {
 }
 
 header {
-  background-size: cover;
+  // background-size: cover;
   height: 80vh;
   min-height: 450px;
   padding-bottom: 2em;
