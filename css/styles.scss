@@ -518,6 +518,10 @@ aside {
   }
 }
 
+#disqus_thread {
+  @extend .wrapper;
+}
+
 .blog-list {
   margin: 1em auto;
 
