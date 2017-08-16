@@ -5,17 +5,17 @@ post_title: >
   JavaScript
 author: Scott McGrath
 image:
-  file: html-js-webcam.jpg
+  file: webcam1.jpg
   caption:
     credit:
-      name: Scott McGrath
-      url:
+      name: Dan Zen
+      url: https://www.flickr.com/photos/danzen/
     license:
-      type:
-      url:
-    source:
-    title: Webcam
-    url:
+      type: Creative Commons
+      url: https://creativecommons.org/licenses/by/2.0/
+    source: Flickr
+    title: Focuso Cam
+    url: https://flic.kr/p/4b1s3E
 post_excerpt: "In this short tutorial you'll learn how to take control of your computer's web cam, using HTML and JavaScript."
 layout: post
 published: true
