@@ -7,6 +7,7 @@
 @import "hamburgers-settings";
 @import "./hamburgers/hamburgers";
 @import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Merriweather');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 @function calculateRem($size) {
   $remSize: $size / $base-font-size;
@@ -149,6 +150,24 @@ small {
 
 ul {
   list-style-type: disc;
+
+  &.social-icons {
+    font-size: 3rem;
+    text-decoration: none;
+    width: 96vw;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 0;
+      margin: 0 .5em;
+      float: right;
+    }
+  }
 }
 
 ol {
@@ -437,6 +456,7 @@ header, footer {
   background-color: black;
   color: white;
   width: 100%;
+  position: relative;
 
   a {
     color: white;
@@ -444,7 +464,7 @@ header, footer {
 }
 
 footer {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   min-height: 10vh;
   padding: 1em;
 }
@@ -581,6 +601,15 @@ $large-desktop: "(min-width: 90em)";
     }
   }
 
+  ul {
+    &.social-icons {
+      width: 50vw;
+      position: absolute;
+      right: 2vw;
+      bottom: 1vh;
+    }
+  }
+
   .blog-list {
     margin: 2em auto;
 
@@ -648,6 +677,12 @@ $large-desktop: "(min-width: 90em)";
           margin-right: 15px;
         }
       }
+    }
+  }
+
+  ul {
+    &.social-icons {
+      width: 30vw;
     }
   }
 }
