@@ -248,12 +248,17 @@ nav {
       display: none;
 
       a {
-        &:hover, &.active {
+        &:hover, &.active, &.active-blog-post {
           color: #EF6C00;
         }
 
         &.active {
           cursor: default;
+          border-left: 7px solid #EF6C00;
+        }
+
+        &.active-blog-post {
+          cursor: pointer;
           border-left: 7px solid #EF6C00;
         }
       }
@@ -296,6 +301,11 @@ nav {
             color: #EF6C00;
             cursor: default;
             border-left: 10px solid #EF6C00;
+          }
+
+          &.active-blog-post {
+            @extend .active;
+            cursor: pointer;
 
             &:after {
               content: " *";
@@ -448,7 +458,7 @@ $large-desktop: "(min-width: 90em)";
             }
 
             &.active:hover {
-              border-left: 10px solid #EF6C00; 
+              border-left: 10px solid #EF6C00;
             }
           }
         }

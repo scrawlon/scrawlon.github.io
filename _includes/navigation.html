@@ -9,9 +9,19 @@
 
     <!-- Desktop Nav -->
     {% for link in site.links reversed %}
+      {% assign nav_link = link.url %}
+      {% assign nav_class = "" %}
+      {% if link.url == page.url %}
+        {% assign nav_link = page.url %}
+        {% assign nav_class = "active" %}
+      {% elsif link.title == "Blog" and page.layout == "post" %}
+        {% assign nav_class = "active-blog-post" %}
+      {% endif %}
+
 	    <li class="float-right">
-        <a href="{{ site.url }}{{ link.url }}"
-          {% if link.url == page.url %} class="active" {% endif %}>{{ link.title }}</a>
+        <a href="{{ site.url }}{{ nav_link }}" class="{{ nav_class }}" title="{{ link.title }}">
+          {{ link.title }}
+        </a>
       </li>
     {% endfor %}
 
@@ -35,13 +45,14 @@
     </li>
 
     <!-- Mobile Nav -->
-    {% assign mobile_links = site.links | concat:site.home %}
-    {% for link in mobile_links %}
+    {% for link in site.links %}
       {% assign nav_link = link.url %}
       {% assign nav_class = "" %}
       {% if link.url == page.url %}
         {% assign nav_link = page.url %}
         {% assign nav_class = "active" %}
+      {% elsif link.title == "Blog" and page.layout == "post" %}
+        {% assign nav_class = "active-blog-post" %}
       {% endif %}
 
 	    <li>
