@@ -1,5 +1,4 @@
 <!-- Mobile Nav Toggle -->
-<!-- <div class="nav-mobile-toggle" id="nav-mobile-toggle">&#9776;</div> -->
 <div class="hamburger hamburger--slider nav-mobile-toggle" id="nav-mobile-toggle">
   <div class="hamburger-box">
     <div class="hamburger-inner"></div>
@@ -27,18 +26,28 @@
 <nav class="nav-mobile" id="nav-mobile">
   <ul>
     <!-- Logo Home Link -->
-    {% for home in site.home %}
-	    <li>
-        <a href="{{ site.url }}{{ home.url }}"
-          {% if home.url == page.url %} class="active" {% endif %}>Home</a>
-      </li>
-    {% endfor %}
+    {% assign home = site.home | first %}
+    <li>
+      <a href="{{ site.url }}{{ home.url }}"
+        {% if home.url == page.url %} class="active" {% endif %} title="Home">
+        Home
+      </a>
+    </li>
 
     <!-- Mobile Nav -->
-    {% for link in site.links %}
+    {% assign mobile_links = site.links | concat:site.home %}
+    {% for link in mobile_links %}
+      {% assign nav_link = link.url %}
+      {% assign nav_class = "" %}
+      {% if link.url == page.url %}
+        {% assign nav_link = page.url %}
+        {% assign nav_class = "active" %}
+      {% endif %}
+
 	    <li>
-        <a href="{{ site.url }}{{ link.url }}"
-          {% if link.url == page.url %} class="active" {% endif %}>{{ link.title }}</a>
+        <a href="{{ site.url }}{{ nav_link }}" class="{{ nav_class }}" title="{{ link.title }}">
+          {{ link.title }}
+        </a>
       </li>
     {% endfor %}
   </ul>

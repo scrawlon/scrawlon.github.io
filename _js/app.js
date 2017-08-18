@@ -8,35 +8,48 @@ var body = document.querySelector('body');
 var mobileNavOpen = false;
 var direction = 'normal';
 
-mobileNavToggle.onclick = function(e) {
-  if ( mobileNavOpen ) {
-    direction = 'reverse';
-    mobileNavOpen = false;
-
-    [html, body].forEach(function(el) {
-      el.classList.remove('no-scroll');
-    });
-
-    animatedMenuOut(direction);
-    this.classList.remove('is-active')
-  } else {
-    direction = 'normal';
-    mobileNavOpen = true;
-
-    [html, body].forEach(function(el) {
-      el.classList.add('no-scroll');
-    });
-
-    animatedMenuIn(direction);
-    this.classList.add('is-active')
+var mobileNavBackdropAnimation = [
+  {
+    opacity: 0
+  },
+  {
+    opacity: 0.8
   }
+];
+
+var mobileNavSlideInAnimation = [
+  {
+    transform: 'translate(100vw)'
+  },
+  {
+    transform: 'translate(60vw)'
+  }
+];
+
+mobileNavToggle.onclick = function() {
+  mobileMenuAnimate();
+}
+
+mobileNavBackdrop.onclick = function() {
+  mobileMenuAnimate();
+}
+
+function mobileMenuAnimate() {
+  [html, body].forEach(function(el) {
+    mobileNavOpen ? el.classList.remove('no-scroll') : el.classList.add('no-scroll');
+  });
+
+  mobileNavOpen ? animatedMenuOut('reverse') : animatedMenuIn('normal');
+  mobileNavOpen ? mobileNavToggle.classList.remove('is-active') : mobileNavToggle.classList.add('is-active');
+
+  mobileNavOpen = !mobileNavOpen;
 }
 
 function animatedMenuIn(direction) {
   mobileNavBackdrop.classList.add('visible');
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
-    duration: 600,
+    duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
   });
@@ -66,21 +79,3 @@ function animatedMenuOut(direction) {
     mobileNavBackdrop.classList.remove('visible');
   }
 }
-
-var mobileNavBackdropAnimation = [
-  {
-    opacity: 0
-  },
-  {
-    opacity: 1
-  }
-];
-
-var mobileNavSlideInAnimation = [
-  {
-    transform: 'translate(100vw, 0)'
-  },
-  {
-    transform: 'translate(0vw, 0)'
-  }
-];
