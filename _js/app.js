@@ -7,7 +7,10 @@ var html = document.querySelector('html');
 var body = document.querySelector('body');
 var mobileNavOpen = false;
 var direction = 'normal';
-var mobileNavSlideInAnimation = [];
+var mobileNavSlideInAnimation = [
+  { transform: 'translate(100vw)' },
+  { transform: 'translate(60vw)' }
+];
 var mobileNavBackdropAnimation = [
   { opacity: 0 },
   { opacity: 0.8 }
@@ -38,15 +41,9 @@ function setMobileNavAnimation() {
   var mediaQ = window.matchMedia("(min-width: 40em)");
 
   if ( mediaQ.matches ) {
-    mobileNavSlideInAnimation = [
-      { transform: 'translate(100vw)' },
-      { transform: 'translate(60vw)' }
-    ];
+    mobileNavSlideInAnimation[1] = { transform: 'translate(60vw)' };
   } else {
-    mobileNavSlideInAnimation = [
-      { transform: 'translate(100vw)' },
-      { transform: 'translate(18vw)' }
-    ];
+    mobileNavSlideInAnimation[1] = { transform: 'translate(18vw)' };
   }
 }
 
