@@ -356,17 +356,22 @@ header, footer {
 footer {
   font-size: 1.1rem;
   min-height: 10vh;
-  padding: 1em;
+
+  p {
+    padding: 13px 3vw 13px 3vw;
+    text-align: center;
+  }
 
   ul {
 
     &.social-icons {
+      display: none;
       font-size: 3rem;
       text-decoration: none;
       width: 96vw;
-      position: relative;
-      right: 0;
-      bottom: 0;
+      position: absolute;
+      right: 3vw;
+      top: 30%;
       padding: 0;
       margin: 0;
 
@@ -523,6 +528,18 @@ $large-desktop: "(min-width: 90em)";
     width: 70%;
     max-width: 70%;
   }
+
+  footer {
+    p {
+      text-align: left;
+    }
+
+    ul {
+      &.social-icons {
+        display: block;
+      }
+    }
+  }
 }
 
 @media only screen and #{$landscape} {
@@ -601,7 +618,7 @@ $large-desktop: "(min-width: 90em)";
   footer {
     ul {
       &.social-icons {
-        width: 30vw;
+
       }
     }
   }
