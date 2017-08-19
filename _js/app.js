@@ -38,9 +38,9 @@ function mobileMenuAnimate() {
 }
 
 function setMobileNavAnimation() {
-  var mediaQ = window.matchMedia("(min-width: 40em)");
+  var notMobile = window.matchMedia("(min-width: 40em)");
 
-  if ( mediaQ.matches ) {
+  if ( notMobile.matches ) {
     mobileNavSlideInAnimation[1] = { transform: 'translate(60vw)' };
   } else {
     mobileNavSlideInAnimation[1] = { transform: 'translate(18vw)' };
