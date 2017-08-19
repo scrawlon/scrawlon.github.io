@@ -1,5 +1,5 @@
 var webAnimationsJs = require('web-animations-js');
-var animate
+var animate;
 var mobileNav = document.getElementById('nav-mobile');
 var mobileNavToggle = document.getElementById('nav-mobile-toggle');
 var mobileNavBackdrop = document.getElementById('nav-mobile-backdrop');
@@ -7,23 +7,10 @@ var html = document.querySelector('html');
 var body = document.querySelector('body');
 var mobileNavOpen = false;
 var direction = 'normal';
-
+var mobileNavSlideInAnimation = [];
 var mobileNavBackdropAnimation = [
-  {
-    opacity: 0
-  },
-  {
-    opacity: 0.8
-  }
-];
-
-var mobileNavSlideInAnimation = [
-  {
-    transform: 'translate(100vw)'
-  },
-  {
-    transform: 'translate(60vw)'
-  }
+  { opacity: 0 },
+  { opacity: 0.8 }
 ];
 
 mobileNavToggle.onclick = function() {
@@ -35,6 +22,8 @@ mobileNavBackdrop.onclick = function() {
 }
 
 function mobileMenuAnimate() {
+  setMobileNavAnimation();
+
   [html, body].forEach(function(el) {
     mobileNavOpen ? el.classList.remove('no-scroll') : el.classList.add('no-scroll');
   });
@@ -43,6 +32,22 @@ function mobileMenuAnimate() {
   mobileNavOpen ? mobileNavToggle.classList.remove('is-active') : mobileNavToggle.classList.add('is-active');
 
   mobileNavOpen = !mobileNavOpen;
+}
+
+function setMobileNavAnimation() {
+  var mediaQ = window.matchMedia("(min-width: 40em)");
+
+  if ( mediaQ.matches ) {
+    mobileNavSlideInAnimation = [
+      { transform: 'translate(100vw)' },
+      { transform: 'translate(60vw)' }
+    ];
+  } else {
+    mobileNavSlideInAnimation = [
+      { transform: 'translate(100vw)' },
+      { transform: 'translate(0)' }
+    ];
+  }
 }
 
 function animatedMenuIn(direction) {
