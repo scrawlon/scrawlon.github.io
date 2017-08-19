@@ -21,7 +21,12 @@
   </head>
 
   <body>
-    {% include navigation.html %}
+    <div class="top-header">
+      {% include social_networks.html %}
+    </div>
+    <div class="main-header">
+      {% include navigation.html %}
+    </div>
 
     {% if page.heading or page.title %}
       <header

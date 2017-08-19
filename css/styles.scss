@@ -191,6 +191,10 @@ code {
   margin: 40px 0;
 }
 
+.top-header {
+  display: none;
+}
+
 .nav-mobile-toggle {
   cursor: pointer;
   display: block;
@@ -237,6 +241,7 @@ nav {
 
     .float-right {
       display: none;
+      font-size: .85em;
 
       a {
         &:hover, &.active, &.active-blog-post {
@@ -290,6 +295,7 @@ nav {
             a {
               color: #fff;
               background: rgba(0,0,0,0);
+              opacity: .75;
             }
           }
         }
@@ -532,6 +538,29 @@ $large-desktop: "(min-width: 90em)";
     height: auto;
   }
 
+  .top-header {
+    display: block;
+    background: #000;
+    color: #fff;
+
+    ul {
+      &.social-icons {
+        margin: 0 auto;
+        list-style-type: none;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin-right: 4.5em;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
   .nav-mobile {
     display: none;
   }
@@ -548,6 +577,12 @@ $large-desktop: "(min-width: 90em)";
 
   nav {
     &.nav-desktop {
+      height: 60px;
+
+      ul {
+        padding: 17px 10px 5px;
+      }
+
       .float-right {
         display: block;
         a {
