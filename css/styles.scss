@@ -452,7 +452,7 @@ aside {
 
   li {
     list-style-type: none;
-    margin-bottom: 0.5em;
+    margin-bottom: 2em;
 
     .date {
       margin-right: 20px;
@@ -509,24 +509,6 @@ $large-desktop: "(min-width: 90em)";
           }
         }
       }
-    }
-  }
-
-  .blog-list {
-    margin: 2em auto;
-
-    li {
-      list-style-type: none;
-      margin-bottom: 1em;
-
-      .date {
-        display: inline;
-      }
-    }
-
-    time {
-      display: inline;
-      margin-right: 0.5em;
     }
   }
 
@@ -587,6 +569,24 @@ $large-desktop: "(min-width: 90em)";
       &.social-icons {
         width: 30vw;
       }
+    }
+  }
+
+  .blog-list {
+    margin: 2em auto;
+
+    li {
+      list-style-type: none;
+      margin-bottom: 1em;
+
+      .date {
+        display: inline;
+      }
+    }
+
+    time {
+      display: inline;
+      margin-right: 0.5em;
     }
   }
 }
