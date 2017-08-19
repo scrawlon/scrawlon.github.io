@@ -45,7 +45,7 @@ function setMobileNavAnimation() {
   } else {
     mobileNavSlideInAnimation = [
       { transform: 'translate(100vw)' },
-      { transform: 'translate(30vw)' }
+      { transform: 'translate(14vw)' }
     ];
   }
 }
