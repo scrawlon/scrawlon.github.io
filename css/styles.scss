@@ -196,7 +196,7 @@ code {
   display: block;
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 8px;
   padding: 2px 10px;
   color: #fff;
   z-index: 11;
@@ -204,13 +204,13 @@ code {
 
 nav {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   letter-spacing: .15em;
   margin: 0 auto;
 
   ul {
     margin: 0;
-    padding: 10px 10px 5px;
+    padding: 8px 10px 5px;
 
     a, a:visited {
       color: #fff;
@@ -547,8 +547,6 @@ $large-desktop: "(min-width: 90em)";
   }
 
   nav {
-    font-size: 1em;
-
     &.nav-desktop {
       .float-right {
         display: block;
@@ -594,6 +592,10 @@ $large-desktop: "(min-width: 90em)";
 @media only screen and #{$desktop} {
   body {
     @include font-size(1.8);
+  }
+
+  nav {
+    font-size: 1.1em;
   }
 
   .wrapper {
