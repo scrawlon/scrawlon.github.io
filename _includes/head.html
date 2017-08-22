@@ -89,3 +89,9 @@
         {% endif %}
       </header>
     {% endif %}
+
+    {% if page.layout == "post" %}
+      <div class="wrapper">
+        {% include share_post.html %}
+      </div>
+    {% endif %}

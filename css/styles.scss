@@ -195,6 +195,17 @@ code {
   display: none;
 }
 
+.share-page {
+  padding: 15px 0;
+  font-size: .85em;
+
+  a {
+    margin: 0 15px;
+    font-size: 1.25em;
+    font-family: 'Pathway Gothic One', sans-serif;
+  }
+}
+
 .nav-mobile-toggle {
   cursor: pointer;
   display: block;
