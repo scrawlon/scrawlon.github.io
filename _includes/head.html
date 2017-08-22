@@ -53,9 +53,9 @@
 
           {% if page.author %}
             <div class="by-line">
-              By {{ page.author }} -
+              By {{ page.author }}
               {% if page.date %}
-                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+                <time datetime="{{ page.date | date_to_xmlschema }}"> - {{ page.date | date: "%B %d, %Y" }}</time>
               {% endif %}
             </div>
           {% endif %}

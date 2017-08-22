@@ -404,6 +404,10 @@ header {
   position: relative;
   width: 100%;
 
+  time {
+    display: none;
+  }
+
   .wrapper {
     position: relative;
 
@@ -429,6 +433,7 @@ header {
     position: absolute;
     bottom: 0;
     right: 1vw;
+    line-height: 1.45rem;
   }
 }
 
@@ -502,6 +507,12 @@ $large-desktop: "(min-width: 90em)";
 @media only screen and #{$tablet} {
   body {
     @include font-size(1.6);
+  }
+
+  header {
+    time {
+      display: inline;
+    }
   }
 
   nav {
