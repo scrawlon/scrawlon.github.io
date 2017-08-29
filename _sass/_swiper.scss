@@ -1,0 +1,18 @@
+.swiper-slide {
+  background: midnightblue;
+  background-image:
+    repeating-radial-gradient(
+      circle at 30% 41%,
+      midnightblue,
+      black,
+      black
+    );
+  padding-bottom: 30px;
+  text-align: center;
+  height: 94vh;
+  min-height: 450px;
+  max-height: 700px;
+  position: relative;
+  width: 100%;
+  color: #fff;
+}

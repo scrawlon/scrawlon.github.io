@@ -1,53 +1,16 @@
 ---
 ---
 
-/* test */
 @import "reset";
+@import "variables";
+@import "functions";
 @import "syntax";
 @import "hamburgers-settings";
 @import "./hamburgers/hamburgers";
+@import "swiper.min.css";
+@import "swiper";
 @import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Open+Sans');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
-@function calculateRem($size) {
-  $remSize: $size / $base-font-size;
-
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
-
-@mixin font-size($size: 1.6, $line: $size * 1.5) {
-  font-size: $size * 10 + px;
-  line-height: $line * 10 + px;
-  font-size: $size + rem;
-  line-height: $line + rem;
-}
-
-// create responsive h1-h6 tags
-@mixin h($percentages...) {
-  @each $percentage in $percentages {
-    $i: index($percentages, $percentage);
-
-    h#{$i} {
-      @include font-size(3);
-      font-size: $percentage;
-    }
-  }
-}
-
-$scrawlon-blue: #90CAF9;
-
-// @function longShadow($pixels) {
-//   @return midnightblue $pixels*1.5+px $pixels*-1+px;
-// }
-
-$readable-width: 35em;
-$base-font-size: 16px;
-$padding: 0.9em;
 
 html, body {
   max-width: 100%;
@@ -106,7 +69,7 @@ a {
   background: #000;
   // background: lighten($scrawlon-blue, 15%);
   display: none;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   top: 42px;
 
@@ -114,9 +77,6 @@ a {
     display: block;
   }
 }
-
-// include h1-h6
-@include h(235%, 175%, 150%, 125%, 115%, 105%);
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Pathway Gothic One', sans-serif;
@@ -429,11 +389,22 @@ header {
   }
 
   figcaption {
-    font-size: 1.2rem;
-    position: absolute;
-    bottom: 0;
-    right: 1vw;
-    line-height: 1.45rem;
+  }
+}
+
+figcaption {
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  line-height: 1.45rem;
+
+  a {
+    color: #fff;
+
+    &:visited {
+      color: #fff;
+    }
   }
 }
 
@@ -497,12 +468,6 @@ aside {
   width: 90%;
   margin: 40px auto;
 }
-
-$smartphone: "(max-width: 30em)";
-$tablet: "(min-width: 40em)";
-$landscape: "(min-width: 60em)";
-$desktop: "(min-width: 80em)";
-$large-desktop: "(min-width: 90em)";
 
 @media only screen and #{$tablet} {
   body {

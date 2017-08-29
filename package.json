@@ -24,6 +24,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "swiper": "^3.4.2",
     "web-animations-js": "^2.3.1"
   }
 }

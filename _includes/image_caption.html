@@ -1,0 +1,27 @@
+{% if include.image.caption %}
+  <figcaption>
+    PHOTO CREDIT:
+    {% if include.image.caption.url %}
+      <a href="{{ include.image.caption.url }}" title="{{ include.image.caption.title}}" target="_blank">
+        "{{ include.image.caption.title }}"
+      </a>
+    {% else %}
+      "{{ include.image.caption.title }}"
+    {% endif %}
+    {% if include.image.caption.credit.url %}
+      <a href="{{ include.image.caption.credit.url }}" title="{{ include.image.caption.credit.name }}" target="_blank">
+        by {{ include.image.caption.credit.name }}
+      </a>
+    {% else %}
+      by {{ include.image.caption.credit.name }}
+    {% endif %}
+    {% if include.image.caption.source %}
+      on {{ include.image.caption.source }}
+    {% endif %}
+    {% if include.image.caption.license.type %}
+      <a href="{{ include.image.caption.license.url }}" title="{{ include.image.caption.license.type}}" target="_blank">
+        ({{ include.image.caption.license.type}})
+      </a>
+    {% endif %}
+  </figcaption>
+{% endif %}

@@ -1,0 +1,32 @@
+@function calculateRem($size) {
+  $remSize: $size / $base-font-size;
+
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin font-size($size: 1.6, $line: $size * 1.5) {
+  font-size: $size * 10 + px;
+  line-height: $line * 10 + px;
+  font-size: $size + rem;
+  line-height: $line + rem;
+}
+
+// create responsive h1-h6 tags
+@mixin h($percentages...) {
+  @each $percentage in $percentages {
+    $i: index($percentages, $percentage);
+
+    h#{$i} {
+      @include font-size(3);
+      font-size: $percentage;
+    }
+  }
+}
+
+// include h1-h6
+@include h(235%, 175%, 150%, 125%, 115%, 105%);
