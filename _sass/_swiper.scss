@@ -1,5 +1,5 @@
 .swiper-slide {
-  background: midnightblue;
+  background: #000;
   background-image:
     repeating-radial-gradient(
       circle at 30% 41%,
@@ -15,4 +15,37 @@
   position: relative;
   width: 100%;
   color: #fff;
+  font-size: 2em;
+
+  h1, h2, h3, h4, h5, h6 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+  }
+
+  @include h(235%, 175%, 150%, 125%, 115%, 105%);
+}
+
+.slider-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(10px);
+  opacity: .25;
+}
+
+@media only screen and #{$tablet} {
+  .swiper-slide {
+    background-size: 200%;
+  }
 }

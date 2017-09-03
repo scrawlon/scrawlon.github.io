@@ -4,19 +4,20 @@
   <div class="swiper-wrapper">
     <!-- Slides -->
     {% for slide in site.slides_home %}
-      <div class="swiper-slide"
-        style="background-image:url({{ site.url }}/images/{{ slide.background-image.file }}); background-size: cover;">
-        <h1>Slide 1</h1>
-
+      <div class="swiper-slide">
+        <div class="grid-box-cover"></div>
+        <div class="slider-background"
+          {% if slide.background-image %}
+            style="background-image:
+              url({{ site.url }}/images/{{ slide.background-image.file }});"
+          {% else %}
+            style="background:{{slide.background-color}}"
+          {% endif %}>
+        </div>
+        <h1>SCRAWLON</h1>
         {% include image_caption.html image=slide.background-image %}
       </div>
     {% endfor %}
-    <div class="swiper-slide">
-      <h1>Slide 2</h1>
-    </div>
-    <div class="swiper-slide">
-      <h1>Slide 3</h1>
-    </div>
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
