@@ -29,6 +29,13 @@ owner:
     - name:       "Linkedin"
       url:        "https://linkedin.com/in/scrawlon"
       icon:       "fa-linkedin"
+  local_links:
+    - name:       "rss"
+      url:        "/feed.xml"
+      icon:       "fa-rss"
+    - name:       "Email"
+      url:        "/contact"
+      icon:       "fa-envelope"
 
 # Internal pages/posts to include in top navigation
 home:
@@ -66,6 +73,9 @@ exclude:
   - package-lock.json
   - node_modules
   - gulpfile.js
+
+plugins_dir:
+  jekyll-feed
 
 collections:
   - slides_home

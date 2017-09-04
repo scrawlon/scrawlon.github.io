@@ -39,6 +39,10 @@ a {
   height: 100vh;
 }
 
+[id^=local-links-] {
+  display: none !important;
+}
+
 .by-line {
   margin: 20px 0 0;
   font-size: .8em;
@@ -354,6 +358,10 @@ footer {
       padding: 0;
       margin: 0;
 
+      [id^=local-links-] {
+        display: inline-block !important;
+      }
+
       li {
         display: inline-block;
         float: right;
@@ -419,6 +427,7 @@ figcaption {
 
 article {
   width: 100%;
+  padding: 4em 0;
 }
 
 .float-right {
@@ -442,17 +451,17 @@ article {
 }
 
 .blog-list {
-  margin: 1em auto;
+  margin: 0 auto;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 1.3em;
   word-spacing: .15em;
   letter-spacing: .03em;
 
   a {
-    color: #333;
+    color: #EF6C00;
 
     &:hover {
-      color: #EF6C00;
+      color: midnightblue;
     }
   }
 
@@ -628,25 +637,7 @@ article {
   }
 
   .blog-list {
-    margin: 3em auto;
-
-    li {
-      list-style-type: none;
-      margin-bottom: 1em;
-      border: 1px solid;
-      padding: 10px;
-
-      .date {
-        display: inline;
-        border-right: 1px solid #000;
-        padding-right: 24px;
-      }
-    }
-
-    time {
-      display: inline;
-      margin-right: 0.5em;
-    }
+    font-size: 1.5em;
   }
 }
 
