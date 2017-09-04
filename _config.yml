@@ -75,7 +75,7 @@ exclude:
   - gulpfile.js
 
 gems:
-  - jekyll-feed
+  - github-pages
 
 collections:
   - slides_home
