@@ -19,9 +19,16 @@ owner:
   name:           Scott McGrath
   avatar:         owner-avatar.jpg
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        scrawlon
-  github:         scrawlon
-  linkedin:       scrawlon
+  social_networks:
+    - name:       "Twitter"
+      url:        "https://twitter.com/scrawlon"
+      icon:       "fa-twitter"
+    - name:       "Github"
+      url:        "https://github.com/scrawlon"
+      icon:       "fa-github"
+    - name:       "Linkedin"
+      url:        "https://linkedin.com/in/scrawlon"
+      icon:       "fa-linkedin"
 
 # Internal pages/posts to include in top navigation
 home:

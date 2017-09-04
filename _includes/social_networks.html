@@ -1,28 +1,16 @@
 <!-- include Social Networks -->
 <ul class="social-icons">
-
-  {% if site.owner.twitter %}
-    <li>
-      <a href="https://twitter.com/{{ site.owner.twitter }}" title="Twitter">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
+  {% assign social_networks = site.owner.social_networks %}
+  {% if include.reversed %}
+    {% assign social_networks = site.owner.social_networks | reverse %}
   {% endif %}
 
-  {% if site.owner.github %}
+  {% for social_network in social_networks %}
     <li>
-      <a href="https://github.com/{{ site.owner.github }}" title="Github">
-        <i class="fa fa-github"></i>
+      <a href="{{social_network.url}}" title="{{social_network.name}}">
+        <i class="fa {{social_network.icon}}"></i>
       </a>
     </li>
-  {% endif %}
-
-  {% if site.owner.linkedin %}
-    <li>
-      <a href="https://linkedin.com/in/{{ site.owner.linkedin }}" title="Linkedin">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-  {% endif %}
+  {% endfor %}
 
 </ul>
