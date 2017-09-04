@@ -337,30 +337,29 @@ header, footer {
 footer {
   font-size: 1.1rem;
   min-height: 10vh;
+  overflow: auto;
 
   p {
-    padding: 13px 3vw 13px 3vw;
+    padding: 3px 0 0 3vw;
     text-align: center;
+    font-size: 1.25em;
   }
 
   ul {
 
     &.social-icons {
-      display: none;
       font-size: 3rem;
       text-decoration: none;
-      width: 96vw;
-      position: absolute;
-      right: 3vw;
-      top: 30%;
+      width: 100%;
       padding: 0;
       margin: 0;
 
       li {
         display: inline-block;
-        margin-right: 0;
-        margin: 0 .5em;
         float: right;
+        width: 27vw;
+        margin: 0;
+        padding: 20px 0;
       }
     }
   }
@@ -533,6 +532,15 @@ article {
     ul {
       &.social-icons {
         display: block;
+        position: absolute;
+        right: 3vw;
+        top: 30%;
+
+        li {
+          width: auto;
+          margin: 0 .5em;
+          padding: 0;
+        }
       }
     }
   }
