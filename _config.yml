@@ -74,7 +74,7 @@ exclude:
   - node_modules
   - gulpfile.js
 
-plugins_dir:
+gems:
   jekyll-feed
 
 collections:
