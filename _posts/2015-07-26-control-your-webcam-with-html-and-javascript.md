@@ -9,13 +9,13 @@ image:
   caption:
     credit:
       name: Dan Zen
-      url: https://www.flickr.com/photos/danzen/
+      url: https%3A//www.flickr.com/photos/danzen/
     license:
       type: Creative Commons
-      url: https://creativecommons.org/licenses/by/2.0/
+      url: https%3A//creativecommons.org/licenses/by/2.0/
     source: Flickr
     title: Focuso Cam
-    url: https://flic.kr/p/4b1s3E
+    url: https%3A//flic.kr/p/4b1s3E
 post_excerpt: "In this short tutorial you'll learn how to take control of your computer's web cam, using HTML and JavaScript."
 layout: post
 published: true

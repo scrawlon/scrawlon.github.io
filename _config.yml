@@ -3,6 +3,8 @@ description:      A blog about programming and technology
 baseurl: ""
 url: "https://scrawlon.github.io"
 disqus_shortname: scrawlon
+plugins:
+  - 'jekyll-feed'
 sass:
     sass_dir: _sass
     style: compressed
@@ -73,9 +75,6 @@ exclude:
   - package-lock.json
   - node_modules
   - gulpfile.js
-
-gems:
-  - jekyll-feed
 
 collections:
   - slides_home
