@@ -4,7 +4,7 @@ post_title: >
   Dysfunctional WordPress Droplets on
   DigitalOcean
 author: Scott McGrath
-background_image:
+header_image:
   file: digital-ocean-droplets.jpg
   caption:
     credit:

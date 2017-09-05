@@ -1,7 +1,7 @@
 ---
 ID: 1724
 author: Scott McGrath
-backgroud_image:
+header_image:
   file: swiper-js-polaroids.jpg
   caption:
     credit:

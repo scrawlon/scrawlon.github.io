@@ -2,7 +2,7 @@
 ID: 74
 post_title: Writing On Glass
 author: Scott McGrath
-background_image:
+header_image:
   file: tablet-computers.jpg
   caption:
     credit:

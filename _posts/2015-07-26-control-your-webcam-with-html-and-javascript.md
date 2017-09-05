@@ -4,7 +4,7 @@ post_title: >
   Control Your Webcam with HTML and
   JavaScript
 author: Scott McGrath
-background_image:
+header_image:
   file: webcam1.jpg
   caption:
     credit:
