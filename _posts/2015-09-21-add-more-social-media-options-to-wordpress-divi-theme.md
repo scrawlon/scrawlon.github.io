@@ -9,13 +9,13 @@ image:
   caption:
     credit:
       name: Daniel Garrido
-      url: https%3A//www.flickr.com/photos/iloveui/
+      url: https&#58;//www.flickr.com/photos/iloveui/
     license:
       type: Creative Commons
-      url: https%3A//creativecommons.org/licenses/by/2.0/
+      url: https://creativecommons.org/licenses/by/2.0/
     source: Flickr
     title: ICONS
-    url: https%3A//flic.kr/p/bMfE34
+    url: https://flic.kr/p/bMfE34
 post_excerpt: "A tutorial on the Divi theme's pluggable functions, focused on extending the header/foooter social media options."
 layout: post
 published: true

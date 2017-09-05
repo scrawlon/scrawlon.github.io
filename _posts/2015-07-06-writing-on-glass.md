@@ -7,13 +7,13 @@ image:
   caption:
     credit:
       name: Martin Voltri
-      url: https%3A//www.flickr.com/photos/testrunbomber842/
+      url: https&#58;//www.flickr.com/photos/testrunbomber842/
     license:
       type: Creative Commons
-      url: https%3A//creativecommons.org/licenses/by/2.0/
+      url: https://creativecommons.org/licenses/by/2.0/
     source: Flickr
     title: Tablets
-    url: https%3A//flic.kr/p/gjn3St
+    url: https://flic.kr/p/gjn3St
 post_excerpt: 'Pen tablets, Windows 8.1 and note taking apps: My search for a usable device for writing and maintaining handwritten notes.'
 layout: post
 published: true

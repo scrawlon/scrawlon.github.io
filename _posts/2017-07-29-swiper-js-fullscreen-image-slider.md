@@ -6,13 +6,13 @@ image:
   caption:
     credit:
       name: Virginia rm
-      url: https%3A//www.flickr.com/photos/virgirm/
+      url: https&#58;//www.flickr.com/photos/virgirm/
     license:
       type: Creative Commons
       url: https://creativecommons.org/licenses/by/2.0/
     source: Flickr
     title: Polaroid photos
-    url: https%3A//www.flickr.com/photos/virgirm/3787704589/in/faves-151359080@N04/
+    url: https://www.flickr.com/photos/virgirm/3787704589/in/faves-151359080@N04/
 layout: post
 post_excerpt: >
   Create an image slider with a fullscreen

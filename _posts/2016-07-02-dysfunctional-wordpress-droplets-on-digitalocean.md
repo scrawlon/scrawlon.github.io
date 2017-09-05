@@ -9,13 +9,13 @@ image:
   caption:
     credit:
       name: IH
-      url: https%3A//www.flickr.com/photos/9289838@N06/
+      url: https&#58;//www.flickr.com/photos/9289838@N06/
     license:
       type: Creative Commons
-      url: https%3A//creativecommons.org/licenses/by/2.0/
+      url: https://creativecommons.org/licenses/by/2.0/
     source: Flickr
     title: Splash!
-    url: https%3A//flic.kr/p/68JcTw
+    url: https://flic.kr/p/68JcTw
 post_excerpt: "Problems with DigitalOcean's WordPress One-Click Install"
 layout: post
 published: true
