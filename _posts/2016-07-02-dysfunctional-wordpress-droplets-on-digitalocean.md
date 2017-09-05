@@ -4,12 +4,12 @@ post_title: >
   Dysfunctional WordPress Droplets on
   DigitalOcean
 author: Scott McGrath
-image:
+background_image:
   file: digital-ocean-droplets.jpg
   caption:
     credit:
       name: IH
-      url: https&#58;//www.flickr.com/photos/9289838@N06/
+      url: https://www.flickr.com/photos/9289838@N06/
     license:
       type: Creative Commons
       url: https://creativecommons.org/licenses/by/2.0/

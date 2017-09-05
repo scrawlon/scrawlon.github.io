@@ -4,12 +4,12 @@ post_title: >
   Add More Social Media Options to
   WordPress Divi Theme
 author: Scott McGrath
-image:
+background_image:
   file: divi-social-icons.jpg
   caption:
     credit:
       name: Daniel Garrido
-      url: https&#58;//www.flickr.com/photos/iloveui/
+      url: https://www.flickr.com/photos/iloveui/
     license:
       type: Creative Commons
       url: https://creativecommons.org/licenses/by/2.0/

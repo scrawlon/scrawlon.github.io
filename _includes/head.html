@@ -31,8 +31,8 @@
 
     {% if page.heading or page.title %}
       <header
-        {% if page.image %}
-          style="background-image:url({{ site.url }}/images/{{ page.image.file }}); background-size: cover;"
+        {% if page.background_image %}
+          style="background-image:url({{ site.url }}/images/{{ page.background_image.file }}); background-size: cover;"
         {% else %}
           style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2NMKL/ty4ADMIIkF3SqbsYmP+gkAayXGgfe8HOVAAAAAElFTkSuQmCC);"
         {% endif %}>

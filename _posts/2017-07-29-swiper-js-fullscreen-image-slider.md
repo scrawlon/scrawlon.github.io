@@ -1,12 +1,12 @@
 ---
 ID: 1724
 author: Scott McGrath
-image:
+backgroud_image:
   file: swiper-js-polaroids.jpg
   caption:
     credit:
       name: Virginia rm
-      url: https&#58;//www.flickr.com/photos/virgirm/
+      url: https://www.flickr.com/photos/virgirm/
     license:
       type: Creative Commons
       url: https://creativecommons.org/licenses/by/2.0/

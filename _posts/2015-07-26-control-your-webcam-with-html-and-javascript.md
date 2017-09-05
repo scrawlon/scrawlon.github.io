@@ -4,12 +4,12 @@ post_title: >
   Control Your Webcam with HTML and
   JavaScript
 author: Scott McGrath
-image:
+background_image:
   file: webcam1.jpg
   caption:
     credit:
       name: Dan Zen
-      url: https&#58;//www.flickr.com/photos/danzen/
+      url: https://www.flickr.com/photos/danzen/
     license:
       type: Creative Commons
       url: https://creativecommons.org/licenses/by/2.0/

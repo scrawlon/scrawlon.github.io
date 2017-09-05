@@ -2,12 +2,12 @@
 ID: 74
 post_title: Writing On Glass
 author: Scott McGrath
-image:
+background_image:
   file: tablet-computers.jpg
   caption:
     credit:
       name: Martin Voltri
-      url: https&#58;//www.flickr.com/photos/testrunbomber842/
+      url: https://www.flickr.com/photos/testrunbomber842/
     license:
       type: Creative Commons
       url: https://creativecommons.org/licenses/by/2.0/
