@@ -4,6 +4,11 @@ layout: json
 [{% for project in site.portfolio_projects %}
   {
     "title": {{ project.title | jsonify }},
+    "site_url": {{ project.site_url | jsonify }},
+    "page_url": {{ project.page_url | jsonify }},
+    "screenshot": {{ project.screenshot | jsonify }},
+    "employer": {{ project.employer | jsonify }},
+    "tags": {{ project.tags | jsonify }},
     "content": {{ project.content | jsonify }}
   }{% if forloop.last == false %},{% endif %}
 {% endfor %}]
