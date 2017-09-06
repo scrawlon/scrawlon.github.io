@@ -16,6 +16,11 @@ defaults:
     values:
       comments: true
 
+# Set CORS for React dev
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
+
 # Owner/author information
 owner:
   name:           Scott McGrath
