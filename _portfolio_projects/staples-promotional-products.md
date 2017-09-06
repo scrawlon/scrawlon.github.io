@@ -6,7 +6,7 @@ screenshot:
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['ecommerce']
-  - technologies: ['Laravel', 'PHP', 'JavaScript', 'BackboneJS']
+  - technologies: ['Laravel', 'PHP', 'JavaScript', 'BackboneJS', 'Amazon EC2']
 ---
 
 Color filter.

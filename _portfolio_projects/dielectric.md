@@ -5,8 +5,8 @@ page_url:
 screenshot:
 employer: Compulse Integrated Marketing
 tags:
-  - industries: ['broadcast technology supplier']
-  - technologies: ['WordPress', 'PHP', 'JavasScript']
+  - industries: ['broadcast technology']
+  - technologies: ['WordPress', 'PHP', 'JavaScript']
 ---
 
-Products. Member login. 
+Products. Member login.

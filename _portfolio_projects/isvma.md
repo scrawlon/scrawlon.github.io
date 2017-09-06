@@ -6,7 +6,7 @@ screenshot:
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['professional organization']
-  - technologies: ['WordPress', 'PHP', 'JavasScript']
+  - technologies: ['WordPress', 'PHP', 'JavaScript']
 ---
 
 CLassifieds. Payment. Authorization API.
