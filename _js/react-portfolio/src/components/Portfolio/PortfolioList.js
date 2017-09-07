@@ -8,7 +8,11 @@ class PortfolioList extends Component {
       <div>
         <ul className="portfolio-list">
           {projects.length && projects.map((project) => {
-            return <li key={project.title}>{project.title}</li>;
+            return (
+              <li key={project.title}>
+                <h1>{project.title}</h1>
+              </li>
+            );
           })}
         </ul>
       </div>

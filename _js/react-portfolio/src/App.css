@@ -48,6 +48,22 @@
 .portfolio-list {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-list li {
+  display: inline-block;
+  width: 98vw;
+  height: 300px;
+  background: #ccc;
+  padding: 20px 1vw;
+}
+
+@media only screen and (min-width: 60em) {
+  .portfolio-list li {
+    width: 48vw;
+  }
 }
 
 @keyframes App-logo-spin {
