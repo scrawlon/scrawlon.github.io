@@ -11,6 +11,19 @@ class PortfolioList extends Component {
             return (
               <li key={project.title}>
                 <h1>{project.title}</h1>
+                {project.tags.map((tag) => {
+                  const tagType = Object.keys(tag);
+
+                  if ( tagType[0] === 'technologies' ) {
+                    return (
+                      <div key={tagType[0]}>
+                        <h3>Tags: Technologies</h3> {tag[tagType[0]].join(', ')}
+                      </div>
+                    );
+                  } else {
+                    return '';
+                  }
+                })}
               </li>
             );
           })}
