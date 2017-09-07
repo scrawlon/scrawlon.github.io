@@ -27,6 +27,11 @@
   font-size: large;
 }
 
+.tag-cloud li {
+  display: inline-block;
+  margin: 5px 10px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
