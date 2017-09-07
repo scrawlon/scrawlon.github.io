@@ -27,9 +27,16 @@
   font-size: large;
 }
 
+.tag-cloud {
+  font-size: .8em;
+}
+
 .tag-cloud li {
   display: inline-block;
-  margin: 5px 10px;
+  padding: 5px 10px;
+  margin: 0 5px 10px;
+  background: darkorange;
+  color: white;
 }
 
 @keyframes App-logo-spin {

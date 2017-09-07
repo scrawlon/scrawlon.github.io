@@ -6,7 +6,7 @@ screenshot:
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['bakery']
-  - technologies: ['WordPress', 'PHP', 'HTML', 'CSS']
+  - technologies: ['WordPress', 'PHP']
 ---
 
 I was brought in on this project to create custom data fields and templates. The Schmidt Baking site has a floating submenu of breads and each bread's details page can have "nutrition facts", "heath & welness" and "FAQ" information.

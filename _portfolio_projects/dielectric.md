@@ -5,7 +5,7 @@ page_url:
 screenshot:
 employer: Compulse Integrated Marketing
 tags:
-  - industries: ['broadcast technology']
+  - industries: ['television', 'radio']
   - technologies: ['WordPress', 'PHP', 'JavaScript']
 ---
 

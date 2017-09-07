@@ -6,7 +6,7 @@ screenshot:
 employer: personal project
 tags:
   - industries: ['Amazon Alexa']
-  - technologies: ['Amazon Alexa', 'Amazon Lambda', 'JavaScript']
+  - technologies: ['Amazon Alexa', 'JavaScript', 'NodeJS']
 ---
 
 Products. Member login.

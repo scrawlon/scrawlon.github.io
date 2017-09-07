@@ -6,7 +6,7 @@ screenshot:
 employer: personal project
 tags:
   - industries: ['blog']
-  - technologies: ['Jekyll', 'JavaScript', 'React', 'Markdown', 'HTML', 'CSS', 'SASS']
+  - technologies: ['Jekyll', 'JavaScript', 'React', 'Markdown', 'SASS']
 ---
 
 Get schedule information from API and populate daily show schedule and movie guide.

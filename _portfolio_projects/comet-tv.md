@@ -6,7 +6,7 @@ screenshot:
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['television']
-  - technologies: ['Laravel', 'PHP', 'HTML', 'CSS']
+  - technologies: ['Laravel', 'PHP']
 ---
 
 Get schedule information from API and populate daily show schedule and movie guide.
