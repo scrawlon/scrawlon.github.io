@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PortfolioFilterBar from './components/PortfolioFilterBar';
+import PortfolioList from './components/PortfolioList';
 const api = require('./helpers/api.js');
 
 class App extends Component {
@@ -59,12 +61,8 @@ class Portfolio extends Component {
     return (
       !loading
         ? <div>
-            <h2>Portfolio</h2>
-            <ul>
-            {projects.length && projects.map((project) => {
-              return <li key={project.title}>{project.title}</li>;
-            })}
-            </ul>
+            <PortfolioFilterBar projects={projects} />
+            <PortfolioList projects={projects} />
           </div>
         : <h2>Loading...</h2>
     );

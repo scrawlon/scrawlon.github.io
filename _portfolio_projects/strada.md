@@ -6,7 +6,7 @@ screenshot:
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['consulting']
-  - technologies: ['WordPress', 'PHP', 'JavasScript']
+  - technologies: ['WordPress', 'PHP', 'JavaScript']
 ---
 
 Create animated site menu. Implement WordPress PHP templates.

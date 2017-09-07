@@ -6,7 +6,7 @@ screenshot:
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['lawn care']
-  - technologies: ['WordPress', 'PHP', 'JavasScript']
+  - technologies: ['WordPress', 'PHP', 'JavaScript']
 ---
 
 Instant Quote. Zillow API.
