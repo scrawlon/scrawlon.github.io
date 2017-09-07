@@ -6,11 +6,10 @@ class PortfolioList extends Component {
 
     return (
       <div>
-        <h2>Portfolio</h2>
-        <ul>
-        {projects.length && projects.map((project) => {
-          return <li key={project.title}>{project.title}</li>;
-        })}
+        <ul className="portfolio-list">
+          {projects.length && projects.map((project) => {
+            return <li key={project.title}>{project.title}</li>;
+          })}
         </ul>
       </div>
     );

@@ -29,6 +29,11 @@
 
 .tag-cloud {
   font-size: .8em;
+  padding: 0;
+}
+
+.tag-cloud h2 {
+  font-size: 1.3em;
 }
 
 .tag-cloud li {
@@ -37,6 +42,12 @@
   margin: 0 5px 10px;
   background: darkorange;
   color: white;
+  cursor: pointer;
+}
+
+.portfolio-list {
+  list-style-type: none;
+  padding: 0;
 }
 
 @keyframes App-logo-spin {

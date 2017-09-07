@@ -23,13 +23,13 @@ class PortfolioFilterBar extends Component {
     return (
       <div>
         <ul className="tag-cloud">
-          <h3>Tags: Industries</h3>
+          <h2>Tags: Industries</h2>
           {tags.industries.length && tags.industries.map((tag) => {
             return <li key={tag}>{tag}</li>;
           })}
         </ul>
         <ul className="tag-cloud">
-          <h3>Tags: Technologies</h3>
+          <h2>Tags: Technologies</h2>
           {tags.technologies.length && tags.technologies.map((tag) => {
             return <li key={tag}>{tag}</li>;
           })}

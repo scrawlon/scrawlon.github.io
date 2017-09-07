@@ -10,7 +10,7 @@ class App extends Component {
         <Portfolio />
         <div className="App-header">
           <a href="https://facebook.github.io/react/" title="React" target="_blank" rel="noopener noreferrer">
-            <h2>Built with React</h2>
+            <h3>Built with React</h3>
             <img src={logo} className="App-logo" alt="logo" />
           </a>
         </div>
