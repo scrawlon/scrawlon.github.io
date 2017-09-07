@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
+const api = require('./helpers/api.js');
 
 class App extends Component {
   render() {
@@ -26,28 +26,46 @@ class Portfolio extends Component {
       loading: false,
       projects: []
     };
+
+    this.getPortfolioProjects = this.getPortfolioProjects.bind(this);
   }
 
   componentDidMount () {
-    this.setState((prevState) => {
+    this.getPortfolioProjects();
+  }
+
+  getPortfolioProjects () {
+    this.setState(() => {
       return { loading: true };
     });
 
-    axios.get('http://localhost:4000/portfolio-projects.json')
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
+    api.getPortfolioProjects()
+      .then((res) => {
+        let data = res && res.data ? res.data : [];
+        this.setState(() => {
+          return {
+            loading: false,
+            projects: data
+          };
+        });
+        console.log('projects state', this.state.projects);
       });
   }
 
   render() {
     const loading = this.state.loading;
+    const projects = this.state.projects;
 
     return (
       !loading
-        ? <h2>Portfolio</h2>
+        ? <div>
+            <h2>Portfolio</h2>
+            <ul>
+            {projects.length && projects.map((project) => {
+              return <li key={project.title}>{project.title}</li>;
+            })}
+            </ul>
+          </div>
         : <h2>Loading...</h2>
     );
   }
