@@ -6,7 +6,8 @@ layout: json
     "title": {{ project.title | jsonify }},
     "site_url": {{ project.site_url | jsonify }},
     "page_url": {{ project.page_url | jsonify }},
-    "screenshot": {{ project.screenshot | jsonify }},
+    "screenshot": {% if project.screenshot %}{{ site.url | append: '/images/' | append: project.screenshot | jsonify }}{% else %}null{% endif %},
+    "screenshot_small": {{ project.screenshot_small | jsonify }},
     "employer": {{ project.employer | jsonify }},
     "tags": {{ project.tags | jsonify }},
     "content": {{ project.content | jsonify }}

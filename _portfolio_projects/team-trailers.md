@@ -2,7 +2,7 @@
 title: Team Trailers
 site_url: https://teamtrailersplus.com
 page_url: https://teamtrailersplus.com/trailers/
-screenshot:
+screenshot: team-trailers-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['ecommerce']

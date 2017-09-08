@@ -1,8 +1,8 @@
 ---
-title: Comet TV
+title: COMET TV
 site_url: http://www.comettv.com
-page_url: http://www.comettv.com/schedule/
-screenshot:
+page_url:
+screenshot: comet-tv-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['television']

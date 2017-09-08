@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+var array = require('../../helpers/array.js');
 
 class PortfolioFilterBar extends Component {
   render() {
@@ -11,9 +12,9 @@ class PortfolioFilterBar extends Component {
     projects.forEach((project) => {
       project.tags.forEach((tag) => {
         if ( tag.industries ) {
-          tags.industries = [...new Set(tags.industries.concat(tag.industries))].sort();
+          // tags.industries = [...new Set(tags.industries.concat(tag.industries))].sort();
         } else if ( tag.technologies ) {
-          tags.technologies = [...new Set(tags.technologies.concat(tag.technologies))].sort((a,b) => sortAlpha(a,b));
+          tags.technologies = [...new Set(tags.technologies.concat(tag.technologies))].sort((a,b) => array.sortAlpha(a,b));
         }
       });
     });
@@ -31,14 +32,6 @@ class PortfolioFilterBar extends Component {
       </div>
     );
   }
-}
-
-function sortAlpha(a,b) {
-  let aLower = a && a.toLowerCase();
-  let bLower = b && b.toLowerCase();
-  if (aLower < bLower) return -1;
-  else if (aLower > bLower) return 1;
-  return 0;
 }
 
 export default PortfolioFilterBar;

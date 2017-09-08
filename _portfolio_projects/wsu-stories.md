@@ -2,7 +2,7 @@
 title: WSU Stories
 site_url: http://www.wsustories.com/
 page_url:
-screenshot:
+screenshot: wsu-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['university']

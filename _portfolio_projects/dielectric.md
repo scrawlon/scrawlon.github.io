@@ -2,7 +2,7 @@
 title: Dielectric
 site_url: http://www.dielectric.com/
 page_url:
-screenshot:
+screenshot: dielectric-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['television', 'radio']
