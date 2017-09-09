@@ -56,20 +56,18 @@
 .portfolio-list li {
   position: relative;
   display: inline-block;
-  width: 98vw;
+  width: 98%;
   min-height: 500px;
-  padding: 20px 1vw;
+  padding: 20px 1%;
   background: white;
   background-size: cover;
   background-position: 50%;
-  border: 1px solid black;
+  border: 1px solid #666;
 }
 
 .portfolio-list li h1 {
-  margin: 10px auto 20px;
-  border-bottom: 2px solid black;
+  margin: 10px auto;
   width: 80%;
-  padding: 10px 0 5px;
 }
 
 .project-backdrop {
@@ -102,18 +100,25 @@
 }
 
 .project-details {
-  padding: 1vw;
+  padding: 1%;
   background: white;
   position: relative;
+}
+
+.project-details .tags {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 5px 10px;
+  background: darkorange;
+  color: white;
 }
 
 @media only screen and (min-width: 60em) {
   .portfolio-list li {
     min-height: 300px;
-    width: 47.5vw;
-    margin: 1vw;
+    width: 47.5%;
+    margin: 1%;
     padding: 0;
-    border: 1px solid black;
   }
 
   .project-image {

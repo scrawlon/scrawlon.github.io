@@ -21,7 +21,7 @@ class PortfolioList extends Component {
 
                     if ( tagType[0] === 'technologies' ) {
                       return (
-                        <div key={tagType[0]}>
+                        <div key={tagType[0]} className="tags">
                           {tag[tagType[0]].sort((a,b) => array.sortAlpha(a,b)).join(', ')}
                         </div>
                       );
@@ -30,7 +30,9 @@ class PortfolioList extends Component {
                     }
                   })}
 
-                  <a href={project.site_url} target="blank" rel="noopener noreferrer">View Site</a>
+                  <div>
+                    <a href={project.site_url} target="blank" rel="noopener noreferrer">View Site</a>
+                  </div>
                 </div>
               </li>
             );
