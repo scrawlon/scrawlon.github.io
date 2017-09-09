@@ -57,7 +57,6 @@
   position: relative;
   display: inline-block;
   width: 98%;
-  min-height: 500px;
   padding: 20px 1%;
   background: white;
   background-size: cover;
@@ -89,9 +88,10 @@
 }
 
 .project-image {
-  background-size: cover;
+  background-size: contain;
   background-position: 50% 0;
-  height: 400px;
+  background-repeat: no-repeat;
+  height: 200px;
 }
 
 .project-image.small {
@@ -113,9 +113,15 @@
   color: white;
 }
 
+@media only screen and (min-width: 40em) {
+  .project-image {
+    background-size: cover;
+    height: 400px;
+  }
+}
+
 @media only screen and (min-width: 60em) {
   .portfolio-list li {
-    min-height: 300px;
     width: 47.5%;
     margin: 1%;
     padding: 0;
@@ -123,6 +129,12 @@
 
   .project-image {
     height: 300px;
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .project-image {
+    height: 400px;
   }
 }
 

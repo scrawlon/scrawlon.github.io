@@ -29,10 +29,6 @@ class PortfolioList extends Component {
                       return '';
                     }
                   })}
-
-                  <div>
-                    <a href={project.site_url} target="blank" rel="noopener noreferrer">View Site</a>
-                  </div>
                 </div>
               </li>
             );
