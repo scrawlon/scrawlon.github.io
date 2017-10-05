@@ -12,7 +12,6 @@ class PortfolioList extends Component {
             const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
             return (
               <li key={project.title}>
-                <div className="project-backdrop"></div>
                 <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
                 <div className="project-details">
                   <h1>{project.title}</h1>

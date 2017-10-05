@@ -61,7 +61,7 @@
   background: white;
   background-size: cover;
   background-position: 50%;
-  border: 1px solid #666;
+  border-bottom: 10px solid black;
 }
 
 .portfolio-list li h1 {
@@ -122,9 +122,10 @@
 
 @media only screen and (min-width: 60em) {
   .portfolio-list li {
-    width: 47.5%;
-    margin: 1%;
+    width: 45.5%;
+    margin: 2%;
     padding: 0;
+    border: 1px solid #666;
   }
 
   .project-image {
@@ -133,8 +134,15 @@
 }
 
 @media only screen and (min-width: 80em) {
+  .portfolio-list li {
+    width: 29%;
+    margin: 2%;
+    padding: 0;
+    border: 1px solid #666;
+  }
+
   .project-image {
-    height: 400px;
+    height: 250px;
   }
 }
 
