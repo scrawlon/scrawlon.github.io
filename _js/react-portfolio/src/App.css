@@ -55,7 +55,7 @@
   font-size: .85em;
 }
 
-.portfolio-list li {
+.portfolio-list a {
   position: relative;
   display: inline-block;
   width: 98%;
@@ -65,9 +65,11 @@
   background-position: 50%;
   border-bottom: 10px solid black;
   box-shadow: 0 10px 6px -6px #777;
+  text-decoration: none;
+  color: #000;
 }
 
-.portfolio-list li h1 {
+.portfolio-list a h1 {
   margin: 10px auto;
   width: 80%;
 }
@@ -130,7 +132,7 @@
 }
 
 @media only screen and (min-width: 60em) {
-  .portfolio-list li {
+  .portfolio-list a {
     width: 45.5%;
     margin: 2%;
     padding: 0;
@@ -143,7 +145,7 @@
 }
 
 @media only screen and (min-width: 80em) {
-  .portfolio-list li {
+  .portfolio-list a {
     width: 29%;
     margin: 2%;
     padding: 0;

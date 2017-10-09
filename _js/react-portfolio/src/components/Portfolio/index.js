@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 import PortfolioFilterBar from './PortfolioFilterBar';
 import PortfolioList from './PortfolioList';
 const api = require('../../helpers/api.js');
@@ -44,11 +49,22 @@ class Portfolio extends Component {
       !loading
         ? <div>
             <PortfolioFilterBar projects={projects} />
-            <PortfolioList projects={projects} />
+            <Router>
+              <div>
+                <Route exact path = "/" render={()=> <PortfolioList projects={projects} />} />
+                <Route path="/:id" component={Child}/>
+              </div>
+            </Router>
           </div>
         : <h2>Loading...</h2>
     );
   }
 }
+
+const Child = ({ match }) => (
+  <div>
+    <h3>ID: {match.params.id}</h3>
+  </div>
+)
 
 export default Portfolio;

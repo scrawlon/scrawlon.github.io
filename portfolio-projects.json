@@ -3,6 +3,7 @@ layout: json
 ---
 [{% for project in site.portfolio_projects %}
   {
+    "id": {{ project.id | remove:"/portfolio_projects/" | jsonify }},
     "title": {{ project.title | jsonify }},
     "site_url": {{ project.site_url | jsonify }},
     "page_url": {{ project.page_url | jsonify }},
