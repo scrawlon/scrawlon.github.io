@@ -7,6 +7,7 @@ employer: Compulse Integrated Marketing
 tags:
   - industries: ['television', 'radio']
   - technologies: ['WordPress', 'PHP', 'JavaScript']
+  - project_types: ['website']
 ---
 
 Products. Member login.

@@ -8,6 +8,7 @@ employer: personal project
 tags:
   - industries: ['Amazon Alexa']
   - technologies: ['Amazon Alexa', 'JavaScript', 'NodeJS']
+  - project_types: ['app']
 ---
 
 Products. Member login.

@@ -7,19 +7,19 @@
   height: 80px;
 }
 
-.App-header {
+.App-footer {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-header a {
+.App-footer a {
   color: white;
   text-decoration: none;
 }
 
-.App-header a:visited {
+.App-footer a:visited {
   color: white;
 }
 
@@ -43,6 +43,8 @@
   background: darkorange;
   color: white;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 }
 
 .portfolio-list {
@@ -62,6 +64,7 @@
   background-size: cover;
   background-position: 50%;
   border-bottom: 10px solid black;
+  box-shadow: 0 10px 6px -6px #777;
 }
 
 .portfolio-list li h1 {
@@ -107,10 +110,16 @@
 
 .project-details .tags {
   display: inline-block;
-  padding: 5px 10px;
-  margin: 0 5px 10px;
-  background: darkorange;
+  padding: 3px 7px;
+  margin: 0;
+  background: #ffa726;
   color: white;
+  font-size: .85em;
+  letter-spacing: .1em;
+}
+
+.project-details h3 {
+  margin: 10px 0 8px;
 }
 
 @media only screen and (min-width: 40em) {

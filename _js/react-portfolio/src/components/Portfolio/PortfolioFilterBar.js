@@ -6,7 +6,8 @@ class PortfolioFilterBar extends Component {
     const projects = this.props.projects;
     let tags = {
       industries: [],
-      technologies: []
+      technologies: [],
+      project_types: []
     }
 
     projects.forEach((project) => {
@@ -14,7 +15,9 @@ class PortfolioFilterBar extends Component {
         if ( tag.industries ) {
           // tags.industries = [...new Set(tags.industries.concat(tag.industries))].sort();
         } else if ( tag.technologies ) {
-          tags.technologies = [...new Set(tags.technologies.concat(tag.technologies))].sort((a,b) => array.sortAlpha(a,b));
+          // tags.technologies = [...new Set(tags.technologies.concat(tag.technologies))].sort((a,b) => array.sortAlpha(a,b));
+        } else if ( tag.project_types ) {
+          tags.project_types = [...new Set(tags.project_types.concat(tag.project_types))].sort((a,b) => array.sortAlpha(a,b));
         }
       });
     });
@@ -24,8 +27,8 @@ class PortfolioFilterBar extends Component {
     return (
       <div>
         <ul className="tag-cloud">
-          <h2>Tags: Technologies</h2>
-          {tags.technologies.length && tags.technologies.map((tag) => {
+          <h2>Tags: Project Types</h2>
+          {tags.project_types.length && tags.project_types.map((tag) => {
             return <li key={tag}>{tag}</li>;
           })}
         </ul>

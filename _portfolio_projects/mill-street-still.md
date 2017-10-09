@@ -7,6 +7,7 @@ employer: Compulse Integrated Marketing
 tags:
   - industries: ['brewery']
   - technologies: ['WordPress', 'PHP', 'JavaScript']
+  - project_types: ['website']
 ---
 
 Home page animation.

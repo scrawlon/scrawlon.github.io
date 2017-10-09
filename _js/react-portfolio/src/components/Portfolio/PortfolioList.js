@@ -14,7 +14,7 @@ class PortfolioList extends Component {
               <li key={project.title}>
                 <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
                 <div className="project-details">
-                  <h1>{project.title}</h1>
+                  <h3>"{project.title}"</h3>
                   {project.tags.map((tag) => {
                     const tagType = Object.keys(tag);
 

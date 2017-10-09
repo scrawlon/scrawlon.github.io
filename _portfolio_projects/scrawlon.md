@@ -7,6 +7,7 @@ employer: personal project
 tags:
   - industries: ['blog']
   - technologies: ['Jekyll', 'JavaScript', 'React', 'Markdown', 'SASS']
+  - project_types: ['website']
 ---
 
 Get schedule information from API and populate daily show schedule and movie guide.

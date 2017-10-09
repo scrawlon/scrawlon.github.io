@@ -7,6 +7,7 @@ employer: Compulse Integrated Marketing
 tags:
   - industries: ['university']
   - technologies: ['WordPress', 'PHP', 'JavaScript']
+  - project_types: ['website']
 ---
 
 YouTube player menu. Stories imported from external feed.

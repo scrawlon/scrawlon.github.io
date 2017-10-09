@@ -7,6 +7,7 @@ employer: Compulse Integrated Marketing
 tags:
   - industries: ['ecommerce']
   - technologies: ['WordPress', 'WooCommerce', 'PHP', 'JavaScript', 'BackboneJS', 'Bootstrap', 'NodeJS']
+  - project_types: ['website']
 ---
 
 Team Trailers was a full site migration/redesign to WordPress + WooCommerce. One piece of this would be the trailers catalog page. The client wanted a frontend to their WooCommerce products with dynamic text search and filtering by category, brand, size and price range.
