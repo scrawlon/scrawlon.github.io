@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
 } from 'react-router-dom';
-import PortfolioFilterBar from './PortfolioFilterBar';
 import PortfolioList from './PortfolioList';
+import PortfolioDetails from './PortfolioDetails';
 const api = require('../../helpers/api.js');
 
 class Portfolio extends Component {
@@ -37,7 +36,7 @@ class Portfolio extends Component {
             projects: data
           };
         });
-        console.log('projects state', this.state.projects);
+        /*console.log('projects state', this.state.projects);*/
       });
   }
 
@@ -48,11 +47,10 @@ class Portfolio extends Component {
     return (
       !loading
         ? <div>
-            <PortfolioFilterBar projects={projects} />
             <Router>
               <div>
-                <Route exact path = "/" render={()=> <PortfolioList projects={projects} />} />
-                <Route path="/:id" component={Child}/>
+                <Route exact path = "/portfolio" render={(props)=> <PortfolioList {...props} projects={projects} />} />
+                <Route path="/portfolio/:id" render={(props)=> <PortfolioDetails {...props} projects={projects} />} />
               </div>
             </Router>
           </div>
@@ -60,11 +58,5 @@ class Portfolio extends Component {
     );
   }
 }
-
-const Child = ({ match }) => (
-  <div>
-    <h3>ID: {match.params.id}</h3>
-  </div>
-)
 
 export default Portfolio;

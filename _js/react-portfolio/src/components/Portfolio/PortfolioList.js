@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import {
+  Link
+} from 'react-router-dom';
+import PortfolioFilterBar from './PortfolioFilterBar';
 var array = require('../../helpers/array.js');
 
 class PortfolioList extends Component {
@@ -8,11 +11,12 @@ class PortfolioList extends Component {
 
     return (
       <div>
+        <PortfolioFilterBar projects={projects} />
         <ul className="portfolio-list">
           {projects.length && projects.map((project) => {
             const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
             return (
-              <Link to={project.id}>
+              <Link to={`${this.props.match.url}/${project.id}`} key={project.id}>
                 <li key={project.title}>
                   <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
                   <div className="project-details">

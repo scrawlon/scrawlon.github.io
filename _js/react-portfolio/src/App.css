@@ -124,6 +124,28 @@
   margin: 10px 0 8px;
 }
 
+.portfolio-details-wrapper {
+  background: #000;
+  padding: 40px 0;
+}
+.portfolio-details {
+  background: #fff;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.portfolio-details img {
+  max-width: 100%;
+  border: 1px solid #000;
+}
+
+.portfolio-details-text {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+
 @media only screen and (min-width: 40em) {
   .project-image {
     background-size: cover;
