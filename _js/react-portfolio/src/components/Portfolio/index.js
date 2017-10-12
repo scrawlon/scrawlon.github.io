@@ -51,17 +51,18 @@ class Portfolio extends Component {
         ? <div>
             <Router>
               <ScrollToTop>
-                <Route render={( {location} ) => (
+                <Route render={({ location }) => (
                   <AnimatedSwitch
-                    atEnter={{ offset: +100 }}
-                    atLeave={{ offset: 0 }}
-                    atActive={{ offset: 0 }}
+                    className="switch-wrapper"
+                    atEnter={{ offset: 100, opacity: 0 }}
+                    atLeave={{ offset: 0, opacity: 0 }}
+                    atActive={{ offset: 0, opacity: 1 }}
                     mapStyles={(styles) => ({
-                      transform: `translateX(${styles.offset}%)`,
+                      transform: `translateX(${styles.offset}%)`, opacity: `${styles.opacity}`,
                     })}
                     >
-                      <Route exact path = "/portfolio" render={(props)=> <PortfolioList {...props} projects={projects} />} />
-                      <Route path="/portfolio/:id" render={(props)=> <PortfolioDetails {...props} projects={projects} />} />
+                      <Route exact path = "/portfolio" render={(props) => <PortfolioList {...props} projects={projects} />} />
+                      <Route path="/portfolio/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
                   </AnimatedSwitch>
                 )} />
               </ScrollToTop>
