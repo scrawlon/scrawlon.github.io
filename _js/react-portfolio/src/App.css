@@ -125,8 +125,9 @@
 }
 
 .portfolio-details-wrapper {
-  background: #000;
+  background: #fff;
   padding: 40px 0;
+  min-height: 110vh;
 }
 .portfolio-details {
   background: #fff;
@@ -143,8 +144,17 @@
 .portfolio-details-text {
   max-width: 40em;
   margin: 0 auto;
+  text-align: left;
 }
 
+.switch-wrapper {
+  display: grid;
+  grid-template-areas:"MyCustomAreaName";
+}
+
+.switch-wrapper > div {
+  grid-area: MyCustomAreaName;
+}
 
 @media only screen and (min-width: 40em) {
   .project-image {

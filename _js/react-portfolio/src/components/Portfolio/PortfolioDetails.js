@@ -11,7 +11,7 @@ class PortfolioDetails extends Component {
         {project
           ?
           <div className="portfolio-details">
-            <img src={project.screenshot} alt={project.title}/>
+            <img src={project.screenshot} alt={project.title} />
             <h1>"{project.title}"</h1>
             <div className="portfolio-details-text" dangerouslySetInnerHTML={ {__html: project.content} } />
           </div>

@@ -3,6 +3,8 @@ import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
+import ScrollToTop from '../../helpers/ScrollToTop';
+import { AnimatedSwitch } from 'react-router-transition';
 import PortfolioList from './PortfolioList';
 import PortfolioDetails from './PortfolioDetails';
 const api = require('../../helpers/api.js');
@@ -48,10 +50,21 @@ class Portfolio extends Component {
       !loading
         ? <div>
             <Router>
-              <div>
-                <Route exact path = "/portfolio" render={(props)=> <PortfolioList {...props} projects={projects} />} />
-                <Route path="/portfolio/:id" render={(props)=> <PortfolioDetails {...props} projects={projects} />} />
-              </div>
+              <ScrollToTop>
+                <Route render={( {location} ) => (
+                  <AnimatedSwitch
+                    atEnter={{ offset: +100 }}
+                    atLeave={{ offset: 0 }}
+                    atActive={{ offset: 0 }}
+                    mapStyles={(styles) => ({
+                      transform: `translateX(${styles.offset}%)`,
+                    })}
+                    >
+                      <Route exact path = "/portfolio" render={(props)=> <PortfolioList {...props} projects={projects} />} />
+                      <Route path="/portfolio/:id" render={(props)=> <PortfolioDetails {...props} projects={projects} />} />
+                  </AnimatedSwitch>
+                )} />
+              </ScrollToTop>
             </Router>
           </div>
         : <h2>Loading...</h2>
