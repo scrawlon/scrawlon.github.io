@@ -22,7 +22,7 @@ class PortfolioFilterBar extends Component {
       });
     });
 
-    console.log('tags', tags);
+    /*console.log('tags', tags);*/
 
     return (
       <div>

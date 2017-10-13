@@ -4,7 +4,7 @@ import {
   Route,
 } from 'react-router-dom';
 import ScrollToTop from '../../helpers/ScrollToTop';
-import { AnimatedSwitch } from 'react-router-transition';
+import { spring, AnimatedSwitch } from 'react-router-transition';
 import PortfolioList from './PortfolioList';
 import PortfolioDetails from './PortfolioDetails';
 const api = require('../../helpers/api.js');
@@ -14,7 +14,8 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       loading: false,
-      projects: []
+      projects: [],
+      navigationBack: false
     };
 
     this.getPortfolioProjects = this.getPortfolioProjects.bind(this);
@@ -52,18 +53,18 @@ class Portfolio extends Component {
             <Router>
               <ScrollToTop>
                 <Route render={({ location }) => (
-                  <AnimatedSwitch
-                    className="switch-wrapper"
-                    atEnter={{ offset: 100, opacity: 0 }}
-                    atLeave={{ offset: 0, opacity: 0 }}
-                    atActive={{ offset: 0, opacity: 1 }}
-                    mapStyles={(styles) => ({
-                      transform: `translateX(${styles.offset}%)`, opacity: `${styles.opacity}`,
-                    })}
+                  <div>
+                    <AnimatedSwitch
+                      className="switch-wrapper"
+                      atEnter={bounceTransition.atEnter}
+                      atLeave={bounceTransition.atLeave}
+                      atActive={bounceTransition.atActive}
+                      mapStyles={mapStyles}
                     >
                       <Route exact path = "/portfolio" render={(props) => <PortfolioList {...props} projects={projects} />} />
                       <Route path="/portfolio/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
-                  </AnimatedSwitch>
+                    </AnimatedSwitch>
+                  </div>
                 )} />
               </ScrollToTop>
             </Router>
@@ -72,5 +73,39 @@ class Portfolio extends Component {
     );
   }
 }
+// we need to map the `scale` prop we define below
+// to the transform style property
+function mapStyles(styles) {
+  return {
+    opacity: styles.opacity,
+    transform: `scale(${styles.scale})`,
+  };
+}
 
+// wrap the `spring` helper to use a bouncy config
+function bounce(val) {
+  return spring(val, {
+    stiffness: 330,
+    damping: 22,
+  });
+}
+
+// child matches will...
+const bounceTransition = {
+  // start in a transparent, upscaled state
+  atEnter: {
+    opacity: 0,
+    scale: 1.2,
+  },
+  // leave in a transparent, downscaled state
+  atLeave: {
+    opacity: 0,
+    scale: bounce(0.8),
+  },
+  // and rest at an opaque, normally-scaled state
+  atActive: {
+    opacity: 1,
+    scale: bounce(1),
+  },
+};
 export default Portfolio;

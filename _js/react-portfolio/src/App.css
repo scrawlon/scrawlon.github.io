@@ -149,11 +149,11 @@
 
 .switch-wrapper {
   display: grid;
-  grid-template-areas:"MyCustomAreaName";
+  grid-template-areas: "PageTransition";
 }
 
 .switch-wrapper > div {
-  grid-area: MyCustomAreaName;
+  grid-area: PageTransition;
 }
 
 @media only screen and (min-width: 40em) {
