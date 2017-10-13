@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
-import ScrollToTop from '../../helpers/ScrollToTop';
 import { spring, AnimatedSwitch } from 'react-router-transition';
 import PortfolioList from './PortfolioList';
 import PortfolioDetails from './PortfolioDetails';
@@ -44,68 +42,55 @@ class Portfolio extends Component {
   }
 
   render() {
+    const transitionFunctions = {
+      mapStyles: (styles) => {
+        return {
+          opacity: styles.opacity,
+          transform: `scale(${styles.scale})`,
+        };
+      },
+      bounce: (val) => {
+        return spring(val, {
+          stiffness: 330,
+          damping: 22,
+        });
+      }
+    }
+
+    const bounceTransition = {
+      atEnter: {
+        opacity: 0,
+        scale: 0.5,
+      },
+      atLeave: {
+        opacity: 0,
+        scale: transitionFunctions.bounce(0.8),
+      },
+      atActive: {
+        opacity: 1,
+        scale: transitionFunctions.bounce(1),
+      },
+    };
+
     const loading = this.state.loading;
     const projects = this.state.projects;
 
     return (
       !loading
-        ? <div>
-            <Router>
-              <ScrollToTop>
-                <Route render={({ location }) => (
-                  <div>
-                    <AnimatedSwitch
-                      className="switch-wrapper"
-                      atEnter={bounceTransition.atEnter}
-                      atLeave={bounceTransition.atLeave}
-                      atActive={bounceTransition.atActive}
-                      mapStyles={mapStyles}
-                    >
-                      <Route exact path = "/portfolio" render={(props) => <PortfolioList {...props} projects={projects} />} />
-                      <Route path="/portfolio/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
-                    </AnimatedSwitch>
-                  </div>
-                )} />
-              </ScrollToTop>
-            </Router>
-          </div>
+        ?
+        <AnimatedSwitch
+          className="switch-wrapper"
+          atEnter={bounceTransition.atEnter}
+          atLeave={bounceTransition.atLeave}
+          atActive={bounceTransition.atActive}
+          mapStyles={transitionFunctions.mapStyles}
+        >
+          <Route exact path = "/portfolio" render={(props) => <PortfolioList {...props} projects={projects} />} />
+          <Route path="/portfolio/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
+        </AnimatedSwitch>
         : <h2>Loading...</h2>
     );
   }
 }
-// we need to map the `scale` prop we define below
-// to the transform style property
-function mapStyles(styles) {
-  return {
-    opacity: styles.opacity,
-    transform: `scale(${styles.scale})`,
-  };
-}
 
-// wrap the `spring` helper to use a bouncy config
-function bounce(val) {
-  return spring(val, {
-    stiffness: 330,
-    damping: 22,
-  });
-}
-
-// child matches will...
-const bounceTransition = {
-  // start in a transparent, upscaled state
-  atEnter: {
-    opacity: 0,
-    scale: 0.5,
-  },
-  // leave in a transparent, downscaled state
-  atLeave: {
-    opacity: 0,
-    scale: bounce(0.8),
-  },
-  // and rest at an opaque, normally-scaled state
-  atActive: {
-    opacity: 1,
-    scale: bounce(1),
-  },
-};
 export default Portfolio;
