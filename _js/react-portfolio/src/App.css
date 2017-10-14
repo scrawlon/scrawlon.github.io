@@ -53,7 +53,7 @@
   display: flex;
   flex-wrap: wrap;
   font-size: .85em;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -61,14 +61,9 @@
   position: relative;
   display: inline-block;
   width: 98%;
-  padding: 20px 1%;
-  background: white;
-  background-size: cover;
-  background-position: 50%;
-  border-bottom: 10px solid black;
-  box-shadow: 0 10px 6px -6px #777;
-  text-decoration: none;
-  color: #000;
+  margin: 10px 0 30px;
+  padding: 0;
+  border: 1px solid #666;
 }
 
 .portfolio-list a h1 {
@@ -95,7 +90,7 @@
 }
 
 .project-image {
-  background-size: contain;
+  background-size: cover;
   background-position: 50% 0;
   background-repeat: no-repeat;
   height: 200px;
@@ -185,7 +180,6 @@
 
 @media only screen and (min-width: 40em) {
   .project-image {
-    background-size: cover;
     height: 400px;
   }
 }
@@ -198,8 +192,6 @@
   .portfolio-list a {
     width: 45.5%;
     margin: 2%;
-    padding: 0;
-    border: 1px solid #666;
   }
 
   .project-image {
@@ -218,9 +210,6 @@
 @media only screen and (min-width: 80em) {
   .portfolio-list a {
     width: 29%;
-    margin: 2%;
-    padding: 0;
-    border: 1px solid #666;
   }
 
   .project-image {
