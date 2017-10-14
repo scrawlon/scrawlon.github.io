@@ -10,11 +10,18 @@ class PortfolioDetails extends Component {
       <div className="portfolio-details-wrapper">
         {project
           ?
-          <div className="portfolio-details">
-            <img src={project.screenshot} alt={project.title} />
-            <h1>"{project.title}"</h1>
-            <div className="portfolio-details-text" dangerouslySetInnerHTML={ {__html: project.content} } />
-          </div>
+          <article>
+            <section className="headline">
+              <h1>"{project.title}"</h1>
+              <img className="header-image" src={project.screenshot} alt={project.title} />
+            </section>
+            <section className="content">
+              <div className="portfolio-details-text" dangerouslySetInnerHTML={ {__html: project.content} } />
+            </section>
+            <aside>
+              <h1>sidebar</h1>
+            </aside>
+          </article>
           : ''
         }
       </div>

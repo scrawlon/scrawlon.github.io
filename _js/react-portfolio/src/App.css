@@ -128,15 +128,33 @@
   background: #fff;
   padding: 40px 0;
   min-height: 110vh;
-}
-.portfolio-details {
-  background: #fff;
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 40px;
+  display: flex;
+  justify-content: center;
 }
 
-.portfolio-details img {
+.portfolio-details-wrapper article {
+  background: #fff;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.portfolio-details-wrapper .headline {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 0 0 40px;
+}
+
+.portfolio-details-wrapper .headline h1 {
+  font-size: 1.7em;
+}
+
+.portfolio-details-wrapper .content {
+  max-width: 40em;
+  min-height: 32vh;
+}
+
+.portfolio-details-wrapper img {
   max-width: 100%;
   border: 1px solid #000;
 }
@@ -150,6 +168,7 @@
 .switch-wrapper {
   display: grid;
   grid-template-areas: "PageTransition";
+  overflow: hidden;
 }
 
 .switch-wrapper > div {
