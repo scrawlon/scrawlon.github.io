@@ -53,6 +53,8 @@
   display: flex;
   flex-wrap: wrap;
   font-size: .85em;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .portfolio-list a {
@@ -110,7 +112,7 @@
   position: relative;
 }
 
-.project-details .tags {
+.project-details .tags, .portfolio-details-wrapper .tags {
   display: inline-block;
   padding: 3px 7px;
   margin: 0;
@@ -134,9 +136,9 @@
 
 .portfolio-details-wrapper article {
   background: #fff;
-  max-width: 80%;
+  max-width: 90%;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }
 
 .portfolio-details-wrapper .headline {
@@ -152,6 +154,12 @@
 .portfolio-details-wrapper .content {
   max-width: 40em;
   min-height: 32vh;
+  text-align: left;
+}
+
+.portfolio-details-wrapper .content p {
+  color: #666;
+  line-height: 1.6rem;
 }
 
 .portfolio-details-wrapper img {
@@ -183,6 +191,10 @@
 }
 
 @media only screen and (min-width: 60em) {
+  .portfolio-list {
+    max-width: 100%;
+  }
+
   .portfolio-list a {
     width: 45.5%;
     margin: 2%;
@@ -192,6 +204,14 @@
 
   .project-image {
     height: 300px;
+  }
+
+  .portfolio-details-wrapper article {
+    max-width: 80%;
+  }
+
+  .portfolio-details-wrapper .content {
+    margin: 0 40px 0 0;
   }
 }
 
@@ -205,6 +225,10 @@
 
   .project-image {
     height: 250px;
+  }
+
+  .portfolio-details-wrapper article {
+    max-width: 1000px;
   }
 }
 
