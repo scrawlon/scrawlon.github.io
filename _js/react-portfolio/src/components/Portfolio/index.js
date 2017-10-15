@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import {
   Route,
 } from 'react-router-dom';
-import { spring, AnimatedSwitch } from 'react-router-transition';
+import { AnimatedSwitch } from 'react-router-transition';
 import PortfolioList from './PortfolioList';
 import PortfolioDetails from './PortfolioDetails';
+import animations from '../../helpers/animations.js';
 const api = require('../../helpers/api.js');
 
 class Portfolio extends Component {
@@ -42,36 +43,6 @@ class Portfolio extends Component {
   }
 
   render() {
-    const transitionFunctions = {
-      mapStyles: (styles) => {
-        return {
-          opacity: styles.opacity,
-          transform: `scale(${styles.scale})`,
-        };
-      },
-      bounce: (val) => {
-        return spring(val, {
-          stiffness: 330,
-          damping: 22,
-        });
-      }
-    }
-
-    const bounceTransition = {
-      atEnter: {
-        opacity: 0,
-        scale: 0.5,
-      },
-      atLeave: {
-        opacity: 0,
-        scale: transitionFunctions.bounce(0.8),
-      },
-      atActive: {
-        opacity: 1,
-        scale: transitionFunctions.bounce(1),
-      },
-    };
-
     const loading = this.state.loading;
     const projects = this.state.projects;
 
@@ -80,10 +51,10 @@ class Portfolio extends Component {
         ?
         <AnimatedSwitch
           className="switch-wrapper"
-          atEnter={bounceTransition.atEnter}
-          atLeave={bounceTransition.atLeave}
-          atActive={bounceTransition.atActive}
-          mapStyles={transitionFunctions.mapStyles}
+          atEnter={animations.bounceTransition.atEnter}
+          atLeave={animations.bounceTransition.atLeave}
+          atActive={animations.bounceTransition.atActive}
+          mapStyles={animations.transitionFunctions.mapStyles}
         >
           <Route exact path = "/portfolio" render={(props) => <PortfolioList {...props} projects={projects} />} />
           <Route path="/portfolio/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
