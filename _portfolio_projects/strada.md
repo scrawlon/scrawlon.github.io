@@ -1,7 +1,7 @@
 ---
 title: Strada
 site_url: http://stradaps.com/
-page_url:
+my_work:
 screenshot: strada-090717.jpg
 employer: Compulse Integrated Marketing
 tags:

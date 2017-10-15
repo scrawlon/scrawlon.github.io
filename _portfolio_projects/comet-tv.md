@@ -1,7 +1,7 @@
 ---
 title: COMET TV
 site_url: http://www.comettv.com
-page_url:
+my_work:
 screenshot: comet-tv-090717.jpg
 employer: Compulse Integrated Marketing
 tags:

@@ -6,7 +6,7 @@ layout: json
     "id": {{ project.id | remove:"/portfolio_projects/" | jsonify }},
     "title": {{ project.title | jsonify }},
     "site_url": {{ project.site_url | jsonify }},
-    "page_url": {{ project.page_url | jsonify }},
+    "my_work": {{ project.my_work | jsonify }},
     "screenshot": {% if project.screenshot %}{{ site.url | append: '/images/' | append: project.screenshot | jsonify }}{% else %}null{% endif %},
     "screenshot_small": {{ project.screenshot_small | jsonify }},
     "employer": {{ project.employer | jsonify }},

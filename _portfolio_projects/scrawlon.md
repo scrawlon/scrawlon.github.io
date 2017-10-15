@@ -1,7 +1,7 @@
 ---
 title: Scrawlon
 site_url: http://scrawlon.com
-page_url:
+my_work:
 screenshot:
 employer: personal project
 tags:

@@ -1,7 +1,9 @@
 ---
 title: Southern Highlands
 site_url: https://southernhighlands.com
-page_url: https://southernhighlands.com/home-finder/?price_range=0-10000000&sort=price_DESC
+my_work:
+  page_title: 'Home Finder'
+  page_url:  https://southernhighlands.com/home-finder/?price_range=0-10000000&sort=price_DESC
 screenshot: southern-highlands-090717.jpg
 employer: Compulse Integrated Marketing
 tags:

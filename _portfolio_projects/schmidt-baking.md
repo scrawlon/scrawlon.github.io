@@ -1,7 +1,9 @@
 ---
 title: Schmidt Baking
 site_url: http://schmidtbaking.com
-page_url: http://schmidtbaking.com/products/647-2/
+my_work:
+  page_title: Product Details Page
+  page_url: http://schmidtbaking.com/products/647-2/
 screenshot: schmidt-baking-090717.jpg
 employer: Compulse Integrated Marketing
 tags:

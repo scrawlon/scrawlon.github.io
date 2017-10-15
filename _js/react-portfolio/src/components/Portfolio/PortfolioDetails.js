@@ -22,8 +22,8 @@ class PortfolioDetails extends Component {
               <h2>Quick Links</h2>
               <ul>
                 <li>Project Hompage: <a href={project.site_url} alt={project.title} target="_blank">{project.title}</a></li>
-                {project.page_url
-                  ? <li>Project Subpage (my work): <a href={project.page_url} alt={project.title} target="_blank">{project.page_url}</a></li>
+                {project.my_work
+                  ? <li>My Main Contribution: <a href={project.my_work.page_url} alt={project.title + ": " + project.my_work.page_title} target="_blank">{project.title + ": " + project.my_work.page_title}</a></li>
                   : ''}
               </ul>
               <div className="portfolio-details-text" dangerouslySetInnerHTML={ {__html: project.content} } />

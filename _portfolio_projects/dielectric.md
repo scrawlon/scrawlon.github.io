@@ -1,7 +1,7 @@
 ---
 title: Dielectric
 site_url: http://www.dielectric.com/
-page_url:
+my_work:
 screenshot: dielectric-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
