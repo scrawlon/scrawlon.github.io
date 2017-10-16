@@ -30,9 +30,7 @@ class Portfolio extends Component {
   }
 
   componentWillUnmount () {
-    window.removeEventListener('resize', () => {
-      this.mediaQuery();
-    });
+    window.removeEventListener('resize', debounce( () => this.mediaQuery(), 100 ) );
   }
 
   getPortfolioProjects () {
@@ -72,16 +70,14 @@ class Portfolio extends Component {
     const projects = this.state.projects;
     const mobileView = this.state.mobileView;
 
-    console.log('mobile view?', mobileView);
-
     return (
       !loading
         ?
         <AnimatedSwitch
           className="switch-wrapper"
-          atEnter={animations.bounceTransition.atEnter}
-          atLeave={animations.bounceTransition.atLeave}
-          atActive={animations.bounceTransition.atActive}
+          atEnter={mobileView ? animations.fadeTransition.atEnter : animations.bounceTransition.atEnter}
+          atLeave={mobileView ? animations.fadeTransition.atLeave : animations.bounceTransition.atLeave}
+          atActive={mobileView ? animations.fadeTransition.atActive : animations.bounceTransition.atActive}
           mapStyles={animations.transitionFunctions.mapStyles}
         >
           <Route exact path = "/portfolio" render={(props) => <PortfolioList {...props} projects={projects} />} />

@@ -26,9 +26,22 @@ const bounceTransition = {
   },
 };
 
+const fadeTransition = {
+  atEnter: {
+    opacity: 0,
+  },
+  atLeave: {
+    opacity: 0,
+  },
+  atActive: {
+    opacity: 1,
+  },
+};
+
 const animations = {
   transitionFunctions: transitionFunctions,
-  bounceTransition: bounceTransition
+  bounceTransition: bounceTransition,
+  fadeTransition: fadeTransition
 }
 
 export default animations;
