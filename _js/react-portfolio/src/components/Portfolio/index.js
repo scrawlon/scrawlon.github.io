@@ -14,14 +14,25 @@ class Portfolio extends Component {
     this.state = {
       loading: false,
       projects: [],
-      navigationBack: false
+      navigationBack: false,
+      mobileView: false
     };
 
     this.getPortfolioProjects = this.getPortfolioProjects.bind(this);
+    this.mediaQuery = this.mediaQuery.bind(this);
   }
 
   componentDidMount () {
     this.getPortfolioProjects();
+    this.mediaQuery();
+
+    window.addEventListener('resize', debounce( () => this.mediaQuery(), 100 ) );
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', () => {
+      this.mediaQuery();
+    });
   }
 
   getPortfolioProjects () {
@@ -42,9 +53,26 @@ class Portfolio extends Component {
       });
   }
 
+  mediaQuery () {
+    let mqMobile = window.matchMedia( "(max-width: 959px)");
+
+    if ( mqMobile.matches ) {
+      this.setState(() => {
+        return { mobileView: true };
+      });
+    } else {
+      this.setState(() => {
+        return { mobileView: false };
+      });
+    }
+  }
+
   render() {
     const loading = this.state.loading;
     const projects = this.state.projects;
+    const mobileView = this.state.mobileView;
+
+    console.log('mobile view?', mobileView);
 
     return (
       !loading
@@ -62,6 +90,17 @@ class Portfolio extends Component {
         : <h2>Loading...</h2>
     );
   }
+}
+
+function debounce(fn, delay) {
+  var timer = null;
+  return function () {
+    var context = this, args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      fn.apply(context, args);
+    }, delay);
+  };
 }
 
 export default Portfolio;

@@ -1,18 +1,14 @@
 import { spring } from 'react-router-transition';
 
 const transitionFunctions = {
-  mapStyles: (styles) => {
-    return {
-      opacity: styles.opacity,
-      transform: `scale(${styles.scale})`,
-    };
-  },
-  bounce: (val) => {
-    return spring(val, {
-      stiffness: 330,
-      damping: 22,
-    });
-  }
+  mapStyles: (styles) => ({
+    opacity: styles.opacity,
+    transform: `scale(${styles.scale})`,
+  }),
+  bounce: (val) => spring(val, {
+    stiffness: 330,
+    damping: 22,
+  })
 }
 
 const bounceTransition = {
