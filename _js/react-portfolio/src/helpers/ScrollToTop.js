@@ -6,7 +6,7 @@ import {
 class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
-      setTimeout(window.scrollTo(0, 0), 1000);
+      window.scrollTo(0, 0);
     }
   }
 
