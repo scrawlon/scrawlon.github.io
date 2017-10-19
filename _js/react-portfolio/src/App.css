@@ -197,6 +197,7 @@
   .portfolio-details-wrapper .content {
     grid-column-start: 1;
     grid-column-end: 2;
+    margin-right: 40px;
   }
 
   .portfolio-details-wrapper aside {
