@@ -13,22 +13,13 @@ class Portfolio extends Component {
       loading: false,
       projects: [],
       navigationBack: false,
-      mobileView: false
     };
 
     this.getPortfolioProjects = this.getPortfolioProjects.bind(this);
-    this.mediaQuery = this.mediaQuery.bind(this);
   }
 
   componentDidMount () {
     this.getPortfolioProjects();
-    this.mediaQuery();
-
-    window.addEventListener('resize', debounce( () => this.mediaQuery(), 100 ) );
-  }
-
-  componentWillUnmount () {
-    window.removeEventListener('resize', debounce( () => this.mediaQuery(), 100 ) );
   }
 
   getPortfolioProjects () {
@@ -47,20 +38,6 @@ class Portfolio extends Component {
         });
         /*console.log('projects state', this.state.projects);*/
       });
-  }
-
-  mediaQuery () {
-    let mqMobile = window.matchMedia( "(max-width: 959px)");
-
-    if ( mqMobile.matches ) {
-      this.setState(() => {
-        return { mobileView: true };
-      });
-    } else {
-      this.setState(() => {
-        return { mobileView: false };
-      });
-    }
   }
 
   render() {
