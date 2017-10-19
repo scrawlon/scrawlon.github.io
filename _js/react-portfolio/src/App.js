@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route,
 } from 'react-router-dom';
 import ScrollMemory from 'react-router-scroll-memory';
 import Portfolio from './components/Portfolio';
@@ -11,12 +10,10 @@ import './App.css';
 const App = () => (
   <div className="App">
     <Router>
-      <Route render={({ location }) => (
-        <div>
-          <ScrollMemory />
-          <Portfolio />
-        </div>
-      )} />
+      <div>
+        <ScrollMemory />
+        <Portfolio />
+      </div>
     </Router>
     <div className="App-footer">
       <a href="https://facebook.github.io/react/" title="React" target="_blank" rel="noopener noreferrer">
