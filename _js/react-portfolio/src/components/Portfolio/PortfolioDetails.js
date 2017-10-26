@@ -26,6 +26,8 @@ class PortfolioDetails extends Component {
                   ? <li>My Main Contribution: <a href={project.my_work.page_url} alt={project.title + ": " + project.my_work.page_title} target="_blank">{project.title + ": " + project.my_work.page_title}</a></li>
                   : ''}
               </ul>
+
+              <h2>Project Notes</h2>
               <div className="portfolio-details-text" dangerouslySetInnerHTML={ {__html: project.content} } />
             </section>
 

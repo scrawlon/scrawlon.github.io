@@ -159,6 +159,12 @@
   text-align: left;
 }
 
+.portfolio-details-wrapper .content ul {
+  border-bottom: 1px solid #000;
+  max-width: 96%;
+  padding-bottom: 20px;
+}
+
 .portfolio-details-wrapper .content li {
   margin-bottom: 14px;
 }
