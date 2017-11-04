@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Route,
+  Route
 } from 'react-router-dom';
 import PortfolioList from './PortfolioList';
 import PortfolioDetails from './PortfolioDetails';
@@ -49,11 +49,16 @@ class Portfolio extends Component {
         ?
         <div>
           <Route exact path = "/" render={(props) => <PortfolioList {...props} projects={projects} />} />
-          <Route path="/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
+          <Route exact path="/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
+          <Route path="*" status="404" component={NotFound} />
         </div>
         : <h2>Loading...</h2>
     );
   }
+}
+
+function NotFound() {
+  return <div><h1>404 Not Found</h1></div>
 }
 
 export default Portfolio;
