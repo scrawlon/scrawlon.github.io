@@ -19,6 +19,12 @@
 
     <meta http-equiv="cleartype" content="on">
     {% feed_meta %}
+
+    {% include gh_pages_spa_script.html %}
+
+    {% if page.heading == 404 %}
+      {% include gh_pages_spa_404_script.html %}
+    {% endif %}
   </head>
 
   <body>
@@ -62,8 +68,6 @@
           {% endif %}
         </div>
         {% include image_caption.html image=page.header_image %}
-
-        {% include gh_pages_spa_script.html %}
       </header>
     {% endif %}
 
