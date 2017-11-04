@@ -22,7 +22,7 @@
 
   var l = window.location;
 
-  if ( l.pathname.includes('/portfolio/') ) {
+  if ( l.pathname.indexOf('/portfolio/') !== -1 ) {
     l.replace(
       l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
       l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
