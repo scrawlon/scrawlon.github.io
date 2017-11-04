@@ -48,8 +48,8 @@ class Portfolio extends Component {
       !loading
         ?
         <div>
-          <Route exact path = "/portfolio" render={(props) => <PortfolioList {...props} projects={projects} />} />
-          <Route path="/portfolio/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
+          <Route exact path = "/" render={(props) => <PortfolioList {...props} projects={projects} />} />
+          <Route path="/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
         </div>
         : <h2>Loading...</h2>
     );

@@ -9,7 +9,7 @@ import './App.css';
 
 const App = () => (
   <div className="App">
-    <Router>
+    <Router basename="/portfolio">
       <div>
         <ScrollMemory />
         <Portfolio />
