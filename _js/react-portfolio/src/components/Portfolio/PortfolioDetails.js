@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import PortfolioTags from './PortfolioTags';
+import NotFound from '../../helpers/NotFound';
 
 class PortfolioDetails extends Component {
   render () {
     const project = this.props.projects.find((project) => {
       return project.id === this.props.match.params.id;
     });
+
+    if ( !project ) { return <NotFound /> }
 
     return (
       <div className="portfolio-details-wrapper">

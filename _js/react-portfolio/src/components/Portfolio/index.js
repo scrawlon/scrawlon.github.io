@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 import PortfolioList from './PortfolioList';
 import PortfolioDetails from './PortfolioDetails';
+import NotFound from '../../helpers/NotFound';
 const api = require('../../helpers/api.js');
 
 class Portfolio extends Component {
@@ -47,18 +49,14 @@ class Portfolio extends Component {
     return (
       !loading
         ?
-        <div>
+        <Switch>
           <Route exact path = "/" render={(props) => <PortfolioList {...props} projects={projects} />} />
           <Route exact path="/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
           <Route path="*" status="404" component={NotFound} />
-        </div>
+        </Switch>
         : <h2>Loading...</h2>
     );
   }
-}
-
-function NotFound() {
-  return <div><h1>404 Not Found</h1></div>
 }
 
 export default Portfolio;
