@@ -137,13 +137,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   background: #ffa726;
   color: white;
-  font-size: .65em;
+  font-size: .6em;
   letter-spacing: 0;
   line-height: 1.2em;
 }
 
 .portfolio-details-wrapper .tags {
-  margin: 1em;
+  margin: 0 1em;
 }
 
 .project-details h3 {
@@ -185,10 +185,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-wrapper h3 {
   display: block;
-  font-size: 1.17em;
+  font-size: 1em;
   font-weight: bold;
   margin: 1em 0 5px;
   line-height: .7em;
+  padding-top: 0;
 }
 
 .portfolio-details-wrapper h3:first-of-type {
@@ -199,6 +200,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+.portfolio-details-wrapper aside {
+  border-left: none;
+  border-top: 20px solid darkorange;
 }
 
 .portfolio-details-wrapper .content {
@@ -219,8 +225,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-wrapper .content p {
   color: #666;
-  line-height: 1.6rem;
-  font-size: .8em;
+  font-size: .7em;
 }
 
 .portfolio-details-wrapper img {
@@ -259,6 +264,11 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-start: 2;
     grid-column-end: 3;
   }
+
+  .portfolio-details-wrapper aside {
+    border-left: none;
+    border-top: none;
+  }
 }
 
 @media only screen and (min-width: 60em) {
@@ -281,6 +291,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-details-wrapper .content {
     margin: 0 40px 0 0;
+  }
+
+  .portfolio-details-wrapper aside {
+    border-left: 1px solid darkorange;
   }
 }
 
