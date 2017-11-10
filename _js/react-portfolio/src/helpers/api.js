@@ -1,7 +1,7 @@
 const axios = require('axios');
 let apiUrl = 'https://scrawlon.github.io/';
 
-if ( window.location.basename ) {
+if ( window.location.hostname === 'localhost' ) {
   apiUrl = 'http://localhost:4000/';
 }
 
