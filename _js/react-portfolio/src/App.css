@@ -177,6 +177,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-wrapper h1 {
   font-size: 1.5em;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  word-spacing: inherit;  
 }
 
 .portfolio-details-wrapper h2 {
