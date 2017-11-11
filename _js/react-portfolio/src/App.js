@@ -4,7 +4,6 @@ import {
 } from 'react-router-dom';
 import ScrollMemory from 'react-router-scroll-memory';
 import Portfolio from './components/Portfolio';
-import logo from './logo.svg';
 import './App.css';
 
 const App = () => (
