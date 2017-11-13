@@ -8,6 +8,7 @@ tags:
   - industries: ['television', 'radio']
   - technologies: ['WordPress', 'PHP', 'JavaScript']
   - project_types: ['website']
+published: true
 ---
 
 Products. Member login.

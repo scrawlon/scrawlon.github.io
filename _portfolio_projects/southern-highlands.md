@@ -10,6 +10,7 @@ tags:
   - industries: ['real estate']
   - technologies: ['WordPress', 'PHP', 'JavaScript', 'jQuery', 'Google Maps API']
   - project_types: ['website']
+published: true
 ---
 
 Home Finder.

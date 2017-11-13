@@ -179,6 +179,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 90%;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  padding: 0;
 }
 
 .portfolio-details-wrapper .headline {
@@ -190,6 +191,8 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-details-wrapper h1 {
   font-size: 1.5em;
   letter-spacing: inherit;
+  line-height: 1.2em;
+  margin-bottom: .25em;
   word-spacing: inherit;
   word-spacing: inherit;
 }
@@ -220,12 +223,13 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-details-wrapper aside {
   border-left: none;
   border-top: 20px solid darkorange;
+  padding-top: 20px
 }
 
 .portfolio-details-wrapper .content {
   max-width: 40em;
-  min-height: 32vh;
   text-align: left;
+  padding-bottom: 60px;
 }
 
 .portfolio-details-wrapper .content ul {
@@ -264,6 +268,12 @@ h1, h2, h3, h4, h5, h6 {
   grid-area: PageTransition;
 }
 
+@media only screen and (min-width: 30em) {
+  .project-image {
+    height: 300px;
+  }
+}
+
 @media only screen and (min-width: 40em) {
   .project-image {
     height: 400px;
@@ -287,6 +297,7 @@ h1, h2, h3, h4, h5, h6 {
   .portfolio-details-wrapper aside {
     border-left: none;
     border-top: none;
+    padding-top: 0;
   }
 }
 

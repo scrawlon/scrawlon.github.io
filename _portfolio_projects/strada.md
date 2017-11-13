@@ -8,6 +8,7 @@ tags:
   - industries: ['consulting']
   - technologies: ['WordPress', 'PHP', 'JavaScript']
   - project_types: ['website']
+published: true
 ---
 
 Create animated site menu. Implement WordPress PHP templates.

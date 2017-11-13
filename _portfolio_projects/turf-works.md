@@ -10,6 +10,7 @@ tags:
   - industries: ['lawn care']
   - technologies: ['WordPress', 'PHP', 'JavaScript', 'jQuery', 'Zillow API']
   - project_types: ['website']
+published: true
 ---
 
 Instant Quote. Zillow API.

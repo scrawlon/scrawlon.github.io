@@ -8,6 +8,7 @@ tags:
   - industries: ['university']
   - technologies: ['WordPress', 'PHP', 'JavaScript']
   - project_types: ['website']
+published: true
 ---
 
 YouTube player menu. Stories imported from external feed.

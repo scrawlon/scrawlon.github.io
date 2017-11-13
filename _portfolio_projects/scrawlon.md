@@ -8,6 +8,7 @@ tags:
   - industries: ['blog']
   - technologies: ['Jekyll', 'JavaScript', 'React', 'Markdown', 'SASS']
   - project_types: ['website']
+published: false
 ---
 
 Get schedule information from API and populate daily show schedule and movie guide.

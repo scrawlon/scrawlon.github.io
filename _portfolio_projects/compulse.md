@@ -8,6 +8,7 @@ tags:
   - industries: ['web']
   - technologies: ['WordPress', 'PHP']
   - project_types: ['website']
+published: true
 ---
 
 Get schedule information from API and populate daily show schedule and movie guide.

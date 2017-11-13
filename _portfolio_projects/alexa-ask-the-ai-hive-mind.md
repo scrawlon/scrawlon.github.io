@@ -9,6 +9,7 @@ tags:
   - industries: ['Amazon Alexa']
   - technologies: ['Amazon Alexa', 'JavaScript', 'NodeJS']
   - project_types: ['app']
+published: true
 ---
 
 Products. Member login.

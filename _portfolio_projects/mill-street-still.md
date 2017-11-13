@@ -8,6 +8,7 @@ tags:
   - industries: ['brewery']
   - technologies: ['WordPress', 'PHP', 'JavaScript']
   - project_types: ['website']
+published: true
 ---
 
 Home page animation.

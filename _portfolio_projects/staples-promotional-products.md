@@ -8,6 +8,7 @@ tags:
   - industries: ['ecommerce']
   - technologies: ['Laravel', 'PHP', 'JavaScript', 'BackboneJS', 'Amazon AWS']
   - project_types: ['website']
+published: true
 ---
 
 Color filter.
