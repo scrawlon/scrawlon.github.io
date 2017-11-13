@@ -7,6 +7,7 @@ function setCache(key, jsonData, cacheTime) {
     timestamp: new Date().getTime() + cacheTime
   };
 
+  console.log('load live data');
   localStorage.setItem(key, JSON.stringify(record));
 }
 
@@ -17,6 +18,7 @@ function getCache(key) {
 
   if (!record){return false;}
 
+  console.log('load cached data');
   return (new Date().getTime() < record.timestamp && JSON.parse(record.value));
 }
 

@@ -9,11 +9,11 @@ if ( window.location.hostname === 'localhost' ) {
 }
 
 function getPortfolioProjects() {
-  const portfolioCache = Promise.resolve(dataCache.get('portfolio'));
+  const portfolioCache = dataCache.get('portfolio');
 
-  portfolioCache.then(function(res) {
-    return portfolioCache;
-  });
+  if ( portfolioCache ) {
+    return Promise.resolve(portfolioCache);
+  }
 
   return axios.get( apiUrl + 'portfolio-projects.json')
     .then((res) => {
