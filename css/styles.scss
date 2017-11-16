@@ -383,6 +383,10 @@ header {
   background-size: cover;
   background-position: 50% 60%;
 
+  &.full-height {
+    height: 94vh;
+  }
+
   time {
     display: none;
   }

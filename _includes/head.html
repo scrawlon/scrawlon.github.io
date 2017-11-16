@@ -37,6 +37,9 @@
 
     {% if page.heading or page.title %}
       <header
+        {% if page.title == 404 %}
+          class="full-height"
+        {% endif %}
         {% if page.header_image %}
           style="background-image:url({{ site.url }}/images/{{ page.header_image.file }}); background-size: cover;"
         {% else %}
