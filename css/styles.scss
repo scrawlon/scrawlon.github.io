@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  letter-spacing: .09em;
+  letter-spacing: .02em;
   line-height: 5.5rem;
   word-spacing: .1em;
 }
@@ -395,7 +395,7 @@ header {
     position: relative;
 
     h1 {
-      padding: 40% 0 0;
+      padding: 30% 0 0;
 
       &.page {
         font-size: 6.5rem;
@@ -504,6 +504,10 @@ article {
     @include font-size(1.6);
   }
 
+  h1 {
+    letter-spacing: .09em;
+  }
+
   header {
     time {
       display: inline;
@@ -587,13 +591,6 @@ article {
 
   header {
     height: 60vh;
-
-    .wrapper {
-
-      h1 {
-        padding: 30% 0 0;
-      }
-    }
   }
 
   .top-header {
