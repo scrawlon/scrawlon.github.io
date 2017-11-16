@@ -375,7 +375,7 @@ footer {
 }
 
 header {
-  height: 94vh;
+  height: 64vh;
   min-height: 450px;
   max-height: 700px;
   position: relative;
@@ -433,7 +433,7 @@ figcaption {
 
 article {
   width: 100%;
-  padding: 4em 0;
+  padding: 2em 0;
 }
 
 .float-right {
@@ -539,6 +539,10 @@ article {
         }
       }
     }
+  }
+
+  article {
+    padding: 4em 0;
   }
 
   .wrapper {
