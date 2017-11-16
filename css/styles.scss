@@ -375,12 +375,13 @@ footer {
 }
 
 header {
-  // background-size: cover;
   height: 94vh;
   min-height: 450px;
   max-height: 700px;
   position: relative;
   width: 100%;
+  background-size: cover;
+  background-position: 50% 60%;
 
   time {
     display: none;
@@ -574,6 +575,17 @@ article {
   .no-scroll {
     overflow: auto;
     height: auto;
+  }
+
+  header {
+    height: 60vh;
+
+    .wrapper {
+
+      h1 {
+        padding: 30% 0 0;
+      }
+    }
   }
 
   .top-header {
