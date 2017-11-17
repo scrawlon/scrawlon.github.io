@@ -11,6 +11,7 @@ class PortfolioDetails extends Component {
       background: '#000',
       color: '#FFF',
       height: 'auto',
+      maxHeight: '100px',
       padding: '5px 0',
       margin: '0 0 10px',
       textAlign: 'center'
@@ -22,11 +23,9 @@ class PortfolioDetails extends Component {
       <div>
 
         <header style={headerBackground}>
-          <div className="wrapper">
             <h1 className="page">
               Portfolio: "{project.title}"
             </h1>
-          </div>
         </header>
 
         <div className="portfolio-wrapper">
