@@ -34,6 +34,10 @@ a {
   color: midnightblue;
 }
 
+#root {
+  min-height: 1000px;
+}
+
 .no-scroll {
   overflow: hidden;
   height: 100%;
