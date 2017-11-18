@@ -263,6 +263,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Pathway Gothic One', sans-serif;
 }
 
+.portfolio-details-header {
+  background: midnightblue;
+  background-image: repeating-radial-gradient(circle at 5% 41%, #191970, #000, #000);
+  color: #FFF;
+  height: auto;
+  padding: 5px 0;
+  margin: 0 0 10px;
+}
+
+.portfolio-details-header article {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
 .switch-wrapper {
   display: grid;
   grid-template-areas: "PageTransition";

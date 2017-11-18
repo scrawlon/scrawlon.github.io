@@ -7,25 +7,18 @@ class PortfolioDetails extends Component {
     const project = this.props.projects.find((project) => {
       return project.id === this.props.match.params.id;
     });
-    const headerBackground = {
-      background: '#000',
-      color: '#FFF',
-      height: 'auto',
-      maxHeight: '100px',
-      padding: '5px 0',
-      margin: '0 0 10px',
-      textAlign: 'center'
-    };
 
     if ( !project ) { return <NotFound /> }
 
     return (
       <div>
 
-        <header style={headerBackground}>
+        <header className="portfolio-details-header">
+          <article>
             <h1 className="page">
               Portfolio: "{project.title}"
             </h1>
+          </article>
         </header>
 
         <div className="portfolio-wrapper">
