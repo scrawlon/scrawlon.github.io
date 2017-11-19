@@ -261,6 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-agency {
   font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.9rem;
 }
 
 .portfolio-details-header {
@@ -268,6 +269,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: repeating-radial-gradient(circle at 5% 41%, #191970, #000, #000);
   color: #FFF;
   height: auto;
+  min-height: 0;
   padding: 5px 0;
   margin: 0 0 10px;
 }
@@ -275,6 +277,7 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-details-header article {
   max-width: 90%;
   margin: 0 auto;
+  padding: 0;
 }
 
 .switch-wrapper {
