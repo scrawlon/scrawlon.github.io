@@ -200,6 +200,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-wrapper h2 {
   font-size: 1.3em;
+  margin-top: 2em;
+  border-left: 24px solid black;
+  padding-left: 10px;
 }
 
 .portfolio-details-wrapper h3 {
@@ -222,9 +225,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-details-wrapper aside {
-  border-left: none;
-  border-top: 20px solid darkorange;
-  padding-top: 20px
+  background: #eee;
+  padding: 20px 0;
 }
 
 .portfolio-details-wrapper .content {
@@ -234,9 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-details-wrapper .content ul {
-  border-bottom: 1px solid #000;
   max-width: 96%;
-  padding-bottom: 20px;
 }
 
 .portfolio-details-wrapper .content li {
@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-details-header {
-  background: #ffa726;
+  background: #666;
   color: #FFF;
   height: auto;
   min-height: 0;
@@ -323,7 +323,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .portfolio-details-wrapper aside {
-    border-left: none;
     border-top: none;
     padding-top: 0;
   }
@@ -352,7 +351,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .portfolio-details-wrapper aside {
-    border-left: 1px solid darkorange;
+    background: rgb(238, 238, 238);
+    padding: 20px 0px;
   }
 }
 
