@@ -203,6 +203,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
   border-left: 24px solid black;
   padding-left: 10px;
+  padding-top: 0;
 }
 
 .portfolio-details-wrapper h3 {
