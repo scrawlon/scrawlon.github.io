@@ -29,6 +29,9 @@ class PortfolioDetails extends Component {
 
                 <section className="headline">
                   <p className="portfolio-details-agency">Design Agency: {project.employer}</p>
+                </section>
+
+                <section className="headline shadow">
                   <img className="header-image" src={project.screenshot} alt={"Porfolio project: " + project.title} />
                 </section>
 

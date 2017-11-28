@@ -186,7 +186,14 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-details-wrapper .headline {
   grid-column-start: 1;
   grid-column-end: 3;
-  padding: 0 0 40px;
+  margin: 0 0 40px;
+}
+
+.portfolio-details-wrapper .shadow {
+  margin: 0 0 30px;
+  padding: 2px 0 5px;
+  border-top: 10px solid #000;
+  border-bottom: 10px solid #000;
 }
 
 .portfolio-details-wrapper h1 {
@@ -233,7 +240,9 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-details-wrapper .content {
   max-width: 40em;
   text-align: left;
+  padding: 20px;
   padding-bottom: 60px;
+  border: none;
 }
 
 .portfolio-details-wrapper .content ul {
@@ -251,7 +260,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-wrapper img {
   max-width: 100%;
-  border: 1px solid #000;
 }
 
 .portfolio-details-text {
@@ -316,6 +324,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-start: 1;
     grid-column-end: 2;
     margin-right: 40px;
+    border: 1px solid #AAA;
   }
 
   .portfolio-details-wrapper aside {
