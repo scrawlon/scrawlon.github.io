@@ -426,6 +426,7 @@ figcaption {
   bottom: 2px;
   right: 2px;
   line-height: 1.45rem;
+  color: #fff;
 
   a {
     color: #fff;
@@ -455,6 +456,11 @@ article {
     color: #666;
     width: 100%;
   }
+}
+
+.wide-wrapper {
+  width: 90%;
+  margin: 0 auto;
 }
 
 #disqus_thread {
@@ -556,6 +562,10 @@ article {
 
   .wrapper {
     width: 70%;
+  }
+
+  .wide-wrapper {
+    width: 80%;
   }
 
   footer {

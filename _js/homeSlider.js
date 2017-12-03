@@ -7,5 +7,6 @@ var homeSlider = new Swiper('#home-swiper', {
   slidesPerView: 1,
   centeredSlides: true,
   paginationClickable: true,
-  loop: true
+  loop: true,
+  parallax: true
 });
