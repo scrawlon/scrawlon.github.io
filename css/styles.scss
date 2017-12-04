@@ -10,6 +10,7 @@
 @import "swiper.min.css";
 @import "swiper";
 @import "codepen";
+@import "header";
 @import "portfolio.css";
 @import url('https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Open+Sans');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -33,6 +34,10 @@ body {
 
 a {
   color: midnightblue;
+}
+
+iframe {
+  margin: 40px auto;
 }
 
 #root {
@@ -161,10 +166,6 @@ code {
   margin: 40px 0;
 }
 
-.top-header {
-  display: none;
-}
-
 .share-page {
   padding: 15px 0;
   font-size: .85em;
@@ -186,154 +187,7 @@ code {
   right: 0;
 }
 
-.nav-mobile-toggle {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 8px;
-  padding: 2px 10px;
-  color: #fff;
-  z-index: 11;
-}
-
-nav {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1em;
-  letter-spacing: .15em;
-  margin: 0 auto;
-
-  ul {
-    margin: 0;
-    padding: 8px 10px 5px;
-
-    a, a:visited {
-      color: #fff;
-      background: #666;
-      padding: 2px 5px;
-    }
-
-    li {
-      display: inline-block;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-  }
-
-  &.nav-desktop {
-    position: relative;
-    height: 42px;
-
-    ul {
-      position: absolute;
-      top: 0;
-      z-index: 10;
-    }
-
-    .float-right {
-      display: none;
-      font-size: .85em;
-
-      a {
-        &:hover, &.active, &.active-blog-post {
-          color: #EF6C00;
-        }
-
-        &.active {
-          cursor: default;
-          border-left: 7px solid #EF6C00;
-        }
-
-        &.active-blog-post {
-          cursor: pointer;
-          border-left: 7px solid #EF6C00;
-        }
-      }
-    }
-  }
-
-  &.nav-mobile {
-    line-height: 2em;
-    font-size: 1.6em;
-    transform: translate(100vw, 0);
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: 9;
-    font-size: 2.2rem;
-
-    .social-header {
-      height: 44px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #EF6C00;
-
-      ul {
-        &.social-icons {
-          width: auto;
-          height: auto;
-          list-style-type: none;
-          background: rgba(0,0,0,0);
-          padding: 0;
-          margin-left: 10vw;
-
-          li {
-            display: inline-block;
-            margin-right: 1em;
-
-            a {
-              color: #fff;
-              background: rgba(0,0,0,0);
-              opacity: .75;
-            }
-          }
-        }
-      }
-    }
-
-    ul {
-      background: #fff;
-      width: 100vw;
-      height: 100vh;
-      padding: 74px 0 4vh 10vw;
-      position: absolute;
-      top: 0;
-      overflow: hidden;
-      // text-align: center;
-      // padding: 20vh 20px 20px 10vw;
-
-
-      li {
-        display: block;
-        a {
-          color: #000;
-          background: #fff;
-          padding: 6px 0 3px 14px;
-          opacity: 0.65;
-
-          &.active {
-            opacity: 0.75;
-            color: #EF6C00;
-            cursor: default;
-          }
-
-          &.active-blog-post {
-            @extend .active;
-            cursor: pointer;
-
-            &:after {
-              content: " *";
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-header, footer {
+footer {
   background-color: black;
   color: white;
   width: 100%;
@@ -376,49 +230,6 @@ footer {
         padding: 20px 0;
       }
     }
-  }
-}
-
-header {
-  height: 64vh;
-  min-height: 450px;
-  max-height: 700px;
-  position: relative;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-
-  &.full-height {
-    height: 94vh;
-  }
-
-  time {
-    display: none;
-  }
-
-  .wrapper {
-    position: relative;
-
-    h1 {
-      padding: 30% 0 0;
-
-      &.page {
-        font-size: 6.5rem;
-        border-bottom: 2px solid #FFF;
-        line-height: 1.5em;
-        text-align: left;
-      }
-    }
-
-    h2 {
-      &.subheading {
-        padding: 5px 0;
-      }
-    }
-  }
-
-  figcaption {
   }
 }
 
