@@ -42,6 +42,13 @@ iframe {
 
 #root {
   min-height: 1000px;
+  margin-top: 0;
+
+  @media only screen and #{$landscape} {
+    & {
+      margin-top: 58px;
+    }
+  }
 }
 
 .no-scroll {

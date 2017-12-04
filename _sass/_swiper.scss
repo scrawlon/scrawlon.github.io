@@ -1,5 +1,12 @@
 .swiper-wrapper {
   background: #000;
+  margin-top: 0;
+
+  @media only screen and #{$landscape} {
+    & {
+      margin-top: 58px;
+    }
+  }
 }
 
 .swiper-fade {
