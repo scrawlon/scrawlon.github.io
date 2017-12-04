@@ -40,7 +40,11 @@
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
+
+  &.not-ios {
+    background-attachment: fixed;
+  }
 
   h1 {
     color: #FFF;

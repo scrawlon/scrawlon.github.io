@@ -1,3 +1,24 @@
+.main-header {
+  position: fixed;
+  z-index: 9;
+  width: 100vw;
+  background: #fff;
+}
+
+.nav-mobile-backdrop {
+  @extend .backdrop;
+  background: #000 !important;
+  // background: lighten($scrawlon-blue, 15%);
+  display: none;
+  z-index: 2;
+  position: absolute;
+  top: 42px !important;
+  min-height: 100vh;
+
+  &.visible {
+    display: block;
+  }
+}
 
 header {
   height: 64vh;
@@ -93,11 +114,34 @@ nav {
   &.nav-desktop {
     position: relative;
     height: 42px;
+    border-bottom: 1px solid #000;
 
     ul {
-      position: absolute;
-      top: 0;
-      z-index: 10;
+      &.main-nav {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+      }
+
+      &.social-icons {
+        position: absolute;
+        top: 60px;
+        left: 80vw;
+        z-index: 10;
+        display: none;
+
+        a {
+          color: #fff;
+          background: none;
+          font-size: 1.4em;
+        }
+
+        @media only screen and #{$landscape} {
+          & {
+            display: block;
+          }
+        }
+      }
     }
 
     .float-right {
@@ -197,6 +241,108 @@ nav {
               content: " *";
             }
           }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and #{$tablet} {
+  header {
+    time {
+      display: inline;
+    }
+  }
+
+  nav {
+    &.nav-mobile {
+      .social-header {
+        ul {
+          &.social-icons {
+            margin-left: 4vw;
+          }
+        }
+      }
+
+      ul {
+        padding: 74px 2vw 4vh 4vw;
+        text-align: left;
+
+        li {
+          margin-bottom: 20px;
+
+          a {
+            &:hover {
+              opacity: 0.75;
+              color: #EF6C00;
+            }
+
+            &.active:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and #{$landscape} {
+  .top-header {
+    display: block;
+    background: #000;
+    color: #fff;
+
+    ul {
+      &.social-icons {
+        margin: 0 auto;
+        list-style-type: none;
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin-right: 4.5em;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .nav-mobile-toggle {
+    display: none;
+  }
+
+  .nav-mobile-backdrop {
+    &.visible {
+      display: none;
+    }
+  }
+
+  nav {
+    &.nav-desktop {
+      height: 60px;
+
+      ul {
+        padding: 17px 10px 5px;
+      }
+
+      .float-right {
+        display: block;
+        a {
+          background: #fff;
+          border-left: 7px solid #000;
+          color: #000;
+          opacity: 0.75;
+          padding: 0 2px 0 10px;
+          margin-right: 15px;
         }
       }
     }

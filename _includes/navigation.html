@@ -1,5 +1,5 @@
 <nav class='nav-desktop'>
-  <ul>
+  <ul class='main-nav'>
 
     <!-- Desktop Nav -->
     {% for link in site.links reversed %}
@@ -25,6 +25,9 @@
     {% endfor %}
 
   </ul>
+
+  {% include social_networks.html %}
+
 
   <!-- Mobile Nav Toggle -->
   <div class="hamburger hamburger--slider nav-mobile-toggle" id="nav-mobile-toggle">

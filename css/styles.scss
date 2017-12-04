@@ -79,20 +79,6 @@ iframe {
   right: 0;
 }
 
-.nav-mobile-backdrop {
-  @extend .backdrop;
-  background: #000;
-  // background: lighten($scrawlon-blue, 15%);
-  display: none;
-  z-index: 2;
-  position: absolute;
-  top: 42px;
-
-  &.visible {
-    display: block;
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Pathway Gothic One', sans-serif;
   font-weight: bold;
@@ -332,43 +318,6 @@ article {
     letter-spacing: .09em;
   }
 
-  header {
-    time {
-      display: inline;
-    }
-  }
-
-  nav {
-    &.nav-mobile {
-      .social-header {
-        ul {
-          &.social-icons {
-            margin-left: 4vw;
-          }
-        }
-      }
-
-      ul {
-        padding: 74px 2vw 4vh 4vw;
-        text-align: left;
-
-        li {
-          margin-bottom: 20px;
-
-          a {
-            &:hover {
-              opacity: 0.75;
-              color: #EF6C00;
-            }
-
-            &.active:hover {
-            }
-          }
-        }
-      }
-    }
-  }
-
   article {
     padding: 4em 0;
   }
@@ -415,69 +364,6 @@ article {
   .no-scroll {
     overflow: auto;
     height: auto;
-  }
-
-  header {
-    height: 60vh;
-  }
-
-  .top-header {
-    display: block;
-    background: #000;
-    color: #fff;
-
-    ul {
-      &.social-icons {
-        margin: 0 auto;
-        list-style-type: none;
-        text-align: center;
-
-        li {
-          display: inline-block;
-          margin-right: 4.5em;
-
-          a {
-            color: #fff;
-          }
-        }
-      }
-    }
-  }
-
-  .nav-mobile {
-    display: none;
-  }
-
-  .nav-mobile-toggle {
-    display: none;
-  }
-
-  .nav-mobile-backdrop {
-    &.visible {
-      display: none;
-    }
-  }
-
-  nav {
-    &.nav-desktop {
-      height: 60px;
-
-      ul {
-        padding: 17px 10px 5px;
-      }
-
-      .float-right {
-        display: block;
-        a {
-          background: #fff;
-          border-left: 7px solid #000;
-          color: #000;
-          opacity: 0.75;
-          padding: 0 2px 0 10px;
-          margin-right: 15px;
-        }
-      }
-    }
   }
 
   footer {
