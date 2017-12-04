@@ -385,8 +385,9 @@ header {
   max-height: 700px;
   position: relative;
   width: 100%;
-  background-size: cover;
-  background-position: 50% 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 
   &.full-height {
     height: 94vh;
