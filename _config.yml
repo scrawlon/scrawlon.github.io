@@ -35,7 +35,7 @@ owner:
       icon:       "fa-github"
     - name:       "Linkedin"
       url:        "https://linkedin.com/in/scrawlon"
-      icon:       "fa-linkedin"
+      icon:       "fa-linkedin-square"
   local_links:
     - name:       "rss"
       url:        "/feed.xml"

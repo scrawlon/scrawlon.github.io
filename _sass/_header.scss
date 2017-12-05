@@ -142,8 +142,8 @@ nav {
         z-index: 10;
         display: none;
 
-        &.hidden {
-          display: none;
+        .fa {
+          text-shadow: 3px 3px 16px #272634;
         }
 
         a {
