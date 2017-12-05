@@ -1,3 +1,4 @@
+var header = require('./header');
 var mobileMenu = require('./mobileMenu');
 var homeSlider = require('./homeSlider');
 var reactPortfolioDev = require('./portfolio');
