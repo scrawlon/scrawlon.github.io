@@ -10,10 +10,10 @@ window.addEventListener('scroll', function(e) {
 
   if (!ticking) {
     window.requestAnimationFrame(function() {
-      if ( last_known_scroll_position > 200 && !socialIconsAreHidden ) {
+      if ( last_known_scroll_position > 50 && !socialIconsAreHidden ) {
         desktopSocialIcons[0].style.display = 'none';
         socialIconsAreHidden = true;
-      } else if ( last_known_scroll_position < 200 && socialIconsAreHidden ) {
+      } else if ( last_known_scroll_position < 50 && socialIconsAreHidden ) {
         desktopSocialIcons[0].style.display = 'block';
         socialIconsAreHidden = false;
       }
