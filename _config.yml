@@ -43,6 +43,16 @@ owner:
     - name:       "Email"
       url:        "/contact"
       icon:       "fa-envelope"
+  social_share_links:
+    - name:       "Twitter"
+      url:        "https://twitter.com/intent/tweet?text=page.title&url=site.urlpage.url&via=scrawlon&related=scrawlon"
+      icon:       "fa-twitter-square"
+    - name:       "Facebook"
+      url:        "https://facebook.com/sharer.php?u=site.urlpage.url"
+      icon:       "fa-facebook-square"
+    - name:       "Linkedin"
+      url:        "http://www.linkedin.com/shareArticle?mini=true&url=site.urlpage.url&title=page.title&source=scrawlon.com"
+      icon:       "fa-linkedin-square"
 
 # Internal pages/posts to include in top navigation
 home:
