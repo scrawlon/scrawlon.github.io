@@ -9,9 +9,9 @@
     <meta name="twitter:card" content="summary_large_image">
     {% if page.header_image %}
       <meta property="og:image" content="{{ site.url }}/images/{{ page.header_image.file }}">
-      <meta name="og:image:alt" content="{{ site.url }}/images/{{ page.header_image.title }}">
+      <meta name="og:image:alt" content="{{ page.header_image.title }}">
       <meta name="twitter:image" content="{{ site.url }}/images/{{ page.header_image.file }}">
-      <meta name="twitter:image:alt" content="{{ site.url }}/images/{{ page.header_image.title }}">
+      <meta name="twitter:image:alt" content="{{ page.header_image.title }}">
     {% endif %}
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
