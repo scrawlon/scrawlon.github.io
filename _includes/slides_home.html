@@ -3,7 +3,8 @@
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
-    {% for slide in site.slides_home %}
+    {% assign slides_by_order = site.slides_home | sort: 'order' %}
+    {% for slide in slides_by_order %}
       <div class="slider-background"
         {% if slide.background-image %}
           style="background-image:
