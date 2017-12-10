@@ -31,7 +31,7 @@ class PortfolioList extends Component {
             {projects.length && projects.map((project) => {
               const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
               return (
-                <Link to={`${this.props.match.url}${project.id}`} key={project.id} title={"Read more about portfolio project, \'" + project.title + "\'"}>
+                <Link to={`${this.props.match.url}${project.id}`} key={project.id} title={"Read more about portfolio project, '" + project.title + "'"}>
                   <li key={project.title}>
                     <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
                     <div className="project-details">
