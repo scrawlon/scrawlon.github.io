@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-var array = require('../../helpers/array.js');
+/*var array = require('../../helpers/array.js');*/
 
 class PortfolioFilterBar extends Component {
   render() {
-    const projects = this.props.projects;
-    let tags = {
+    const projectTags = this.props.projectTags;
+    /*const projects = this.props.projects;*/
+    /*let tags = {
       industries: [],
       technologies: [],
       project_types: []
-    }
+    }*/
 
-    projects.forEach((project) => {
+    /*projects.forEach((project) => {
       project.tags.forEach((tag) => {
         if ( tag.industries ) {
           tags.industries = [...new Set(tags.industries.concat(tag.industries))].sort();
@@ -20,7 +21,7 @@ class PortfolioFilterBar extends Component {
           tags.project_types = [...new Set(tags.project_types.concat(tag.project_types))].sort((a,b) => array.sortAlpha(a,b));
         }
       });
-    });
+    });*/
 
     /*console.log('tags', tags);*/
 
@@ -30,12 +31,12 @@ class PortfolioFilterBar extends Component {
           <form action="">
             <h2>Filter Projects By:</h2>
             <select name="" id="">
-              {tags.industries.length && tags.industries.map((tag) => {
+              {projectTags.industries && projectTags.industries.length && projectTags.industries.map((tag) => {
                 return <option key={tag} value={tag}>{tag}</option>;
               })}
             </select>
             <select name="" id="">
-              {tags.technologies.length && tags.technologies.map((tag) => {
+              {projectTags.technologies && projectTags.technologies.length && projectTags.technologies.map((tag) => {
                 return <option key={tag} value={tag}>{tag}</option>;
               })}
             </select>

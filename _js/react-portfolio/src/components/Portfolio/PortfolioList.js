@@ -15,12 +15,7 @@ class PortfolioList extends Component {
         projectTypes: ['all'],
         technologies: ['all']
       },
-      filteredProjects: this.props.projects,
-      tags: {
-        industries: [],
-        technologies: [],
-        projectTypes: []
-      }
+      filteredProjects: this.props.projects
     }
 
     /*this.getProjectTags = this.getProjectTags.bind(this);*/
@@ -59,9 +54,12 @@ class PortfolioList extends Component {
 
   render() {
     const projects = this.state.filteredProjects;
+    const projectTags = this.props.projectTags;
     const headerBackground = {
       backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2NMKL/ty4ADMIIkF3SqbsYmP+gkAayXGgfe8HOVAAAAAElFTkSuQmCC)'
     };
+
+    console.log('portfolio list tags', projectTags);
 
 
     return (
@@ -79,7 +77,7 @@ class PortfolioList extends Component {
 
         <div className="portfolio-wrapper">
 
-          <PortfolioFilterBar projects={projects} />
+          <PortfolioFilterBar projects={projects} projectTags={projectTags} />
 
           <ul className="portfolio-list">
             {projects.length && projects.map((project) => {

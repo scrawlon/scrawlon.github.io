@@ -14,6 +14,7 @@ class Portfolio extends Component {
     this.state = {
       loading: false,
       projects: [],
+      projectTags: {},
       navigationBack: false,
     };
 
@@ -31,11 +32,13 @@ class Portfolio extends Component {
 
     api.getPortfolioProjects()
       .then((res) => {
-        let data = res && res.data ? res.data.projects : [];
+        let projects = res && res.data && res.data.projects ? res.data.projects : [];
+        let projectTags = res && res.data && res.data.projectTags ? res.data.projectTags : {};
         this.setState(() => {
           return {
             loading: false,
-            projects: data
+            projects: projects,
+            projectTags: projectTags
           };
         });
         /*console.log('projects state', this.state.projects);*/
@@ -45,12 +48,16 @@ class Portfolio extends Component {
   render() {
     const loading = this.state.loading;
     const projects = this.state.projects;
+    const projectTags = this.state.projectTags;
+
+    console.log('index', projects);
+    console.log('index', projectTags);
 
     return (
       !loading
         ?
         <Switch>
-          <Route exact path = "/" render={(props) => <PortfolioList {...props} projects={projects} />} />
+          <Route exact path = "/" render={(props) => <PortfolioList {...props} projects={projects} projectTags={projectTags} />} />
           <Route exact path="/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
           <Route path="*" status="404" component={NotFound} />
         </Switch>
