@@ -59,9 +59,6 @@ class PortfolioList extends Component {
       backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2NMKL/ty4ADMIIkF3SqbsYmP+gkAayXGgfe8HOVAAAAAElFTkSuQmCC)'
     };
 
-    console.log('portfolio list tags', projectTags);
-
-
     return (
       <div>
 

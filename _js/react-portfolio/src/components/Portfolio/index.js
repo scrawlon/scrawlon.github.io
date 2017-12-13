@@ -41,7 +41,6 @@ class Portfolio extends Component {
             projectTags: projectTags
           };
         });
-        /*console.log('projects state', this.state.projects);*/
       });
   }
 
@@ -49,9 +48,6 @@ class Portfolio extends Component {
     const loading = this.state.loading;
     const projects = this.state.projects;
     const projectTags = this.state.projectTags;
-
-    console.log('index', projects);
-    console.log('index', projectTags);
 
     return (
       !loading
