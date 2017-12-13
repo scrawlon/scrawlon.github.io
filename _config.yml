@@ -94,3 +94,5 @@ exclude:
 collections:
   - slides_home
   - portfolio_projects
+
+empty_array: []

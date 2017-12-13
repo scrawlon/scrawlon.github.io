@@ -4,13 +4,65 @@ import {
 } from 'react-router-dom';
 import PortfolioFilterBar from './PortfolioFilterBar';
 import PortfolioTags from './PortfolioTags';
+/*var array = require('../../helpers/array.js');*/
 
 class PortfolioList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filters: {
+        industries: ['all'],
+        projectTypes: ['all'],
+        technologies: ['all']
+      },
+      filteredProjects: this.props.projects,
+      tags: {
+        industries: [],
+        technologies: [],
+        projectTypes: []
+      }
+    }
+
+    /*this.getProjectTags = this.getProjectTags.bind(this);*/
+  }
+
+  componentWillMount() {
+    /*this.getProjectTags();*/
+    /*console.log('tags', this.state.tags);
+    console.log('filters', this.state.filters);
+    console.log('projects', this.state.filteredProjects);*/
+  }
+
+  /*getProjectTags = () => {
+    let tags = {
+      industries: [],
+      technologies: [],
+      projectTypes: []
+    }
+
+    this.props.projects.forEach((project) => {
+      project.tags.forEach((tag) => {
+        if ( tag.industries ) {
+          tags.industries = [...new Set(tags.industries.concat(tag.industries))].sort();
+        } else if ( tag.technologies ) {
+          tags.technologies = [...new Set(tags.technologies.concat(tag.technologies))].sort((a,b) => array.sortAlpha(a,b));
+        } else if ( tag.project_types ) {
+          tags.project_types = [...new Set(tags.projectTypes.concat(tag.project_types))].sort((a,b) => array.sortAlpha(a,b));
+        }
+      });
+    });
+
+    console.log('tags 2', tags);
+
+    this.setState({ tags: tags });
+  }*/
+
   render() {
-    const projects = this.props.projects;
+    const projects = this.state.filteredProjects;
     const headerBackground = {
       backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2NMKL/ty4ADMIIkF3SqbsYmP+gkAayXGgfe8HOVAAAAAElFTkSuQmCC)'
     };
+
 
     return (
       <div>
@@ -26,7 +78,9 @@ class PortfolioList extends Component {
         </header>
 
         <div className="portfolio-wrapper">
+
           <PortfolioFilterBar projects={projects} />
+
           <ul className="portfolio-list">
             {projects.length && projects.map((project) => {
               const imageClass = "project-image" + (project.screenshot_small ? " small" : "");

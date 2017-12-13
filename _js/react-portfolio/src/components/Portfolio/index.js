@@ -31,7 +31,7 @@ class Portfolio extends Component {
 
     api.getPortfolioProjects()
       .then((res) => {
-        let data = res && res.data ? res.data : [];
+        let data = res && res.data ? res.data.projects : [];
         this.setState(() => {
           return {
             loading: false,
