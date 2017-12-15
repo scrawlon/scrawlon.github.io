@@ -11,46 +11,52 @@ class PortfolioList extends Component {
     super(props);
     this.state = {
       filters: {
-        industries: ['all'],
-        projectTypes: ['all'],
-        technologies: ['all']
+        industries: this.props.projectTags.industries,
+        project_types: this.props.projectTags.project_types,
+        technologies: this.props.projectTags.technologies
       },
-      filteredProjects: this.props.projects
+      filteredProjects: []
     }
-
-    /*this.getProjectTags = this.getProjectTags.bind(this);*/
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    const filters = this.state.filters;
+    /*const filterKeys = Object.keys(filters);*/
+    const projects = this.props.projects;
+    const filteredProjects = projects.filter(project => {
+      let filterMatch = true;
+
+      project.tags.forEach(tagType => {
+        let filterKey = Object.keys(tagType)[0];
+        /*console.log('filter key', filterKey);
+        console.log('filters', filters);*/
+
+        if ( tagType[filterKey].every(elem => filters[filterKey].indexOf(elem) === -1) ) {
+          console.log('project removed', project);
+          filterMatch = false;
+        }
+      });
+
+      return filterMatch;
+      /*return filterKeys.forEach(function(filterKey) {
+        console.log('project tags', project.tags.industries);
+        if ( !project.tags[filterKey].every(elem => filters[filterKey].indexOf(elem) > -1) ) {
+          return false;
+        }
+      });*/
+    });
+
+    /*console.log('filters', filters);
+    console.log('projects did mount', this.props.projects);*/
+
+    this.setState({
+      filteredProjects: filteredProjects
+    });
     /*this.getProjectTags();*/
     /*console.log('tags', this.state.tags);
     console.log('filters', this.state.filters);
     console.log('projects', this.state.filteredProjects);*/
   }
-
-  /*getProjectTags = () => {
-    let tags = {
-      industries: [],
-      technologies: [],
-      projectTypes: []
-    }
-
-    this.props.projects.forEach((project) => {
-      project.tags.forEach((tag) => {
-        if ( tag.industries ) {
-          tags.industries = [...new Set(tags.industries.concat(tag.industries))].sort();
-        } else if ( tag.technologies ) {
-          tags.technologies = [...new Set(tags.technologies.concat(tag.technologies))].sort((a,b) => array.sortAlpha(a,b));
-        } else if ( tag.project_types ) {
-          tags.project_types = [...new Set(tags.projectTypes.concat(tag.project_types))].sort((a,b) => array.sortAlpha(a,b));
-        }
-      });
-    });
-
-    console.log('tags 2', tags);
-
-    this.setState({ tags: tags });
-  }*/
 
   render() {
     const projects = this.state.filteredProjects;
@@ -77,20 +83,24 @@ class PortfolioList extends Component {
           <PortfolioFilterBar projects={projects} projectTags={projectTags} />
 
           <ul className="portfolio-list">
-            {projects.length && projects.map((project) => {
-              const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
-              return (
-                <Link to={`${this.props.match.url}${project.id}`} key={project.id} title={"Read more about portfolio project, '" + project.title + "'"}>
-                  <li key={project.title}>
-                    <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
-                    <div className="project-details">
-                      <h3>"{project.title}"</h3>
-                      <PortfolioTags tags={project.tags} tagTypes={['technologies']}/>
-                    </div>
-                  </li>
-                </Link>
-              );
-            })}
+            {!projects.length
+              ? <li><h2>No projects match your query</h2></li>
+              :
+              projects.map((project) => {
+                const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
+                return (
+                  <Link to={`${this.props.match.url}${project.id}`} key={project.id} title={"Read more about portfolio project, '" + project.title + "'"}>
+                    <li key={project.title}>
+                      <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
+                      <div className="project-details">
+                        <h3>"{project.title}"</h3>
+                        <PortfolioTags tags={project.tags} tagTypes={['technologies']}/>
+                      </div>
+                    </li>
+                  </Link>
+                );
+              })
+            }
           </ul>
         </div>
       </div>
