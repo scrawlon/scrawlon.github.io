@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 
 class PortfolioFilterBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filtersVisible: {
+        industries: false,
+        project_types: false,
+        technologies: false
+      }
+    }
+  }
   render() {
     const projectTags = this.props.projectTags;
 
