@@ -15,21 +15,20 @@ class PortfolioList extends Component {
         project_types: this.props.projectTags.project_types,
         technologies: this.props.projectTags.technologies
       },
-      filteredProjects: []
+      filteredProjects: this.props.projects
     }
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidMount() {
+  handleChange() {
     const filters = this.state.filters;
-    /*const filterKeys = Object.keys(filters);*/
     const projects = this.props.projects;
     const filteredProjects = projects.filter(project => {
       let filterMatch = true;
 
       project.tags.forEach(tagType => {
         let filterKey = Object.keys(tagType)[0];
-        /*console.log('filter key', filterKey);
-        console.log('filters', filters);*/
 
         if ( tagType[filterKey].every(elem => filters[filterKey].indexOf(elem) === -1) ) {
           console.log('project removed', project);
@@ -38,24 +37,11 @@ class PortfolioList extends Component {
       });
 
       return filterMatch;
-      /*return filterKeys.forEach(function(filterKey) {
-        console.log('project tags', project.tags.industries);
-        if ( !project.tags[filterKey].every(elem => filters[filterKey].indexOf(elem) > -1) ) {
-          return false;
-        }
-      });*/
     });
-
-    /*console.log('filters', filters);
-    console.log('projects did mount', this.props.projects);*/
 
     this.setState({
       filteredProjects: filteredProjects
     });
-    /*this.getProjectTags();*/
-    /*console.log('tags', this.state.tags);
-    console.log('filters', this.state.filters);
-    console.log('projects', this.state.filteredProjects);*/
   }
 
   render() {
