@@ -45,7 +45,7 @@ class PortfolioFilterBar extends Component {
       <div>
         <ul className="tag-cloud">
           <form action="">
-            <h2>Filter Projects By:</h2>
+            <h2>Project Filters</h2>
 
             <ul>
               {!projectTags
@@ -70,26 +70,25 @@ class PortfolioFilterBar extends Component {
               }
             </ul>
 
-            <label htmlFor="tags-industries">Types</label>
-            <select name="tags-project-types" multiple>
-              {projectTags.project_types && projectTags.project_types.length && projectTags.project_types.map((tag) => {
-                return <option key={tag} value={tag}>{tag}</option>;
-              })}
-            </select>
-
-            <label htmlFor="tags-industries">Industries</label>
-            <select name="tags-industries" multiple>
-              {projectTags.industries && projectTags.industries.length && projectTags.industries.map((tag) => {
-                return <option key={tag} value={tag}>{tag}</option>;
-              })}
-            </select>
-
-            <label htmlFor="tags-technologies">Technologies</label>
-            <select name="tags-technologies" multiple>
-              {projectTags.technologies && projectTags.technologies.length && projectTags.technologies.map((tag) => {
-                return <option key={tag} value={tag}>{tag}</option>;
-              })}
-            </select>
+            {!projectTags
+              ? ''
+              :
+              projectFilters.map((tagType) => {
+                if ( this.state.filtersVisible[tagType] ) {
+                  return (
+                    <div key={tagType}>
+                      <select name={"tags-" + tagType} multiple>
+                        {projectTags[tagType] && projectTags[tagType].length && projectTags[tagType].map((tag) => {
+                          return <option key={tag} value={tag}>{tag}</option>;
+                        })}
+                      </select>
+                    </div>
+                  );
+                } else {
+                  return '';
+                }
+              })
+            }
           </form>
         </ul>
       </div>
