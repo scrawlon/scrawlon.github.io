@@ -11,14 +11,20 @@ class PortfolioList extends Component {
     super(props);
     this.state = {
       filters: {
-        industries: this.props.projectTags.industries,
         project_types: this.props.projectTags.project_types,
-        technologies: this.props.projectTags.technologies
+        technologies: this.props.projectTags.technologies,
+        industries: this.props.projectTags.industries
+      },
+      filtersVisible: {
+        project_types: false,
+        technologies: false,
+        industries: false
       },
       filteredProjects: this.props.projects
     }
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleFilterSelect = this.handleFilterSelect.bind(this);
   }
 
   handleChange() {
@@ -44,8 +50,30 @@ class PortfolioList extends Component {
     });
   }
 
+  handleFilterSelect(event) {
+    const projectFilters = Object.keys(this.state.filtersVisible);
+    const filtersVisible = this.state.filtersVisible;
+    const filterChange = event.target.value;
+
+    projectFilters.forEach((tagType) => {
+      if ( tagType === filterChange ) {
+        filtersVisible[tagType] = !this.state.filtersVisible[tagType];
+      } else {
+        filtersVisible[tagType] = false;
+      }
+    });
+
+
+    this.setState({
+      filterVisible: filtersVisible
+    });
+
+    console.log('handle filter select', this.state.filtersVisible);
+  }
+
   render() {
     const projects = this.state.filteredProjects;
+    const filtersVisible = this.state.filtersVisible;
     const projectTags = this.props.projectTags;
     const headerBackground = {
       backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2NMKL/ty4ADMIIkF3SqbsYmP+gkAayXGgfe8HOVAAAAAElFTkSuQmCC)'
@@ -66,7 +94,7 @@ class PortfolioList extends Component {
 
         <div className="portfolio-wrapper">
 
-          <PortfolioFilterBar projects={projects} projectTags={projectTags} />
+          <PortfolioFilterBar projects={projects} projectTags={projectTags} filtersVisible={filtersVisible} handleFilterSelect={this.handleFilterSelect}/>
 
           <ul className="portfolio-list">
             {!projects.length

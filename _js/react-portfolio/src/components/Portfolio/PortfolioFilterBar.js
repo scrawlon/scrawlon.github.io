@@ -1,45 +1,9 @@
 import React, { Component } from 'react';
 
 class PortfolioFilterBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      filtersVisible: {
-        industries: false,
-        project_types: false,
-        technologies: false
-      }
-    }
-
-    this.handleFilterSelect = this.handleFilterSelect.bind(this);
-  }
-
-  handleFilterSelect(event) {
-    const projectFilters = Object.keys(this.state.filtersVisible);
-    const filtersVisible = this.state.filtersVisible;
-    const filterChange = event.target.value;
-
-    projectFilters.forEach((tagType) => {
-      if ( tagType === filterChange ) {
-        filtersVisible[tagType] = !this.state.filtersVisible[tagType];
-      } else {
-        filtersVisible[tagType] = false;
-      }
-    });
-
-
-    this.setState({
-      filterVisible: filtersVisible
-    });
-
-    console.log('handle filter select', this.state.filtersVisible);
-  }
-
   render() {
     const projectTags = this.props.projectTags;
-    const projectFilters = Object.keys(this.state.filtersVisible);
-
-    console.log('project filters', projectFilters);
+    const projectFilters = Object.keys(this.props.filtersVisible);
 
     return (
       <div>
@@ -53,7 +17,7 @@ class PortfolioFilterBar extends Component {
                 :
                 projectFilters.map((tagType, i) => {
                   const tagLabel = tagType.replace('_', ' ').toUpperCase();
-                  const checked = this.state.filtersVisible[tagType];
+                  const checked = this.props.filtersVisible[tagType];
 
                   return (
                     <li key={tagType}>
@@ -62,7 +26,7 @@ class PortfolioFilterBar extends Component {
                         name={"filter-type" + (i + 1)}
                         value={tagType}
                         checked={checked ? 'checked' : ''}
-                        onChange={this.handleFilterSelect}/>
+                        onChange={this.props.handleFilterSelect}/>
                       <label htmlFor="filter-type">{tagLabel}</label>
                     </li>
                   );
@@ -74,7 +38,7 @@ class PortfolioFilterBar extends Component {
               ? ''
               :
               projectFilters.map((tagType) => {
-                if ( this.state.filtersVisible[tagType] ) {
+                if ( this.props.filtersVisible[tagType] ) {
                   return (
                     <div key={tagType}>
                       <select name={"tags-" + tagType} multiple>
