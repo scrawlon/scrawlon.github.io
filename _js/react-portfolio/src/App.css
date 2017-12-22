@@ -312,10 +312,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 40em) {
-  .project-image {
-    height: 400px;
-  }
-
   .project-details {
     display: block;
   }
@@ -367,12 +363,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 80em) {
-  .portfolio-list a {
-    width: 29%;
-  }
-
   .project-image {
-    height: 250px;
+    height: 400px;
   }
 
   .portfolio-details-wrapper article {
@@ -380,7 +372,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@media only screen and (min-width: 90em) {
+  .portfolio-list a {
+    width: 26%;
+    margin: 0 3.5% 4em;
+  }
+
+  .project-image {
+    height: 250px;
+  }
 }

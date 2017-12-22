@@ -106,10 +106,6 @@ class PortfolioList extends Component {
                   <Link to={`${this.props.match.url}${project.id}`} key={project.id} title={"Read more about portfolio project, '" + project.title + "'"}>
                     <li key={project.title}>
                       <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
-                      <div className="project-details">
-                        <h3>"{project.title}"</h3>
-                        <PortfolioTags tags={project.tags} tagTypes={['technologies']}/>
-                      </div>
                     </li>
                   </Link>
                 );

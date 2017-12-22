@@ -16,7 +16,7 @@ class PortfolioDetails extends Component {
         <header className="portfolio-details-header">
           <article>
             <h1 className="page">
-              Portfolio: "{project.title}"
+              Project: "{project.title}"
             </h1>
           </article>
         </header>
