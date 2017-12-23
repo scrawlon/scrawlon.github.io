@@ -7,11 +7,11 @@ class PortfolioFilterBar extends Component {
 
     return (
       <div>
-        <ul className="tag-cloud">
           <form action="">
-            <h2>Project Filters</h2>
 
-            <ul>
+            <ul className="tag-cloud">
+              <li><h2>Project Filters</h2></li>
+
               {!projectTags
                 ? ''
                 :
@@ -23,11 +23,12 @@ class PortfolioFilterBar extends Component {
                     <li key={tagType}>
                       <input
                         type="radio"
+                        id={"filter-type" + (i + 1)}
                         name={"filter-type" + (i + 1)}
                         value={tagType}
                         checked={checked ? 'checked' : ''}
                         onChange={this.props.handleFilterSelect}/>
-                      <label htmlFor="filter-type">{tagLabel}</label>
+                      <label htmlFor={"filter-type" + (i + 1)}>{tagLabel}</label>
                     </li>
                   );
                 })
@@ -54,7 +55,6 @@ class PortfolioFilterBar extends Component {
               })
             }
           </form>
-        </ul>
       </div>
     );
   }
