@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: .9em;
 }
 
-.tag-cloud li input[type=radio] {
+.tag-cloud li input[type=radio], .tag-filters li input[type=checkbox] {
   margin-top: -1px;
   vertical-align: middle;
 }
@@ -78,8 +78,24 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 5px;
 }
 
+.tag-cloud li input[type=radio] + label:hover {
+  cursor: pointer;
+}
+
 .tag-cloud li input[type=radio]:checked + label {
   font-weight: bold;
+}
+
+.tag-filters ul {
+  max-width: 30em;
+  margin: 0 auto 40px;
+}
+
+.tag-filters li {
+  display: inline-block;
+  text-align: left;
+  font-size: .6em;
+  margin-right: 10px;
 }
 
 .portfolio-list {

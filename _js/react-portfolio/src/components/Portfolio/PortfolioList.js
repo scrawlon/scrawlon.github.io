@@ -3,7 +3,7 @@ import {
   Link
 } from 'react-router-dom';
 import PortfolioFilterBar from './PortfolioFilterBar';
-import PortfolioTags from './PortfolioTags';
+/*import PortfolioTags from './PortfolioTags';*/
 /*var array = require('../../helpers/array.js');*/
 
 class PortfolioList extends Component {
@@ -19,6 +19,11 @@ class PortfolioList extends Component {
         project_types: false,
         technologies: false,
         industries: false
+      },
+      filtersActive: {
+        project_types: this.props.projectTags.project_types,
+        technologies: this.props.projectTags.technologies,
+        industries: this.props.projectTags.industries
       },
       filteredProjects: this.props.projects
     }

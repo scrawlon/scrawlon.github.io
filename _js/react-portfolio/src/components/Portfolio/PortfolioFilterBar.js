@@ -7,54 +7,57 @@ class PortfolioFilterBar extends Component {
 
     return (
       <div>
-          <form action="">
+        <form action="">
 
-            <ul className="tag-cloud">
-              <li><h2>Project Filters</h2></li>
+          <ul className="tag-cloud">
+            {!projectTags
+              ? ''
+              :
+              projectFilters.map((tagType, i) => {
+                const tagLabel = tagType.replace('_', ' ').toUpperCase();
+                const checked = this.props.filtersVisible[tagType];
 
-              {!projectTags
-                ? ''
-                :
-                projectFilters.map((tagType, i) => {
-                  const tagLabel = tagType.replace('_', ' ').toUpperCase();
-                  const checked = this.props.filtersVisible[tagType];
+                return (
+                  <li key={tagType}>
+                    <input
+                      type="radio"
+                      id={"filter-type" + (i + 1)}
+                      name={"filter-type" + (i + 1)}
+                      value={tagType}
+                      checked={checked ? 'checked' : ''}
+                      onChange={this.props.handleFilterSelect}/>
+                    <label htmlFor={"filter-type" + (i + 1)}>{tagLabel}</label>
+                  </li>
+                );
+              })
+            }
+          </ul>
 
-                  return (
-                    <li key={tagType}>
-                      <input
-                        type="radio"
-                        id={"filter-type" + (i + 1)}
-                        name={"filter-type" + (i + 1)}
-                        value={tagType}
-                        checked={checked ? 'checked' : ''}
-                        onChange={this.props.handleFilterSelect}/>
-                      <label htmlFor={"filter-type" + (i + 1)}>{tagLabel}</label>
-                    </li>
-                  );
-                })
-              }
-            </ul>
-
+          <div className="tag-filters">
             {!projectTags
               ? ''
               :
               projectFilters.map((tagType) => {
                 if ( this.props.filtersVisible[tagType] ) {
                   return (
-                    <div key={tagType}>
-                      <select name={"tags-" + tagType} multiple>
-                        {projectTags[tagType] && projectTags[tagType].length && projectTags[tagType].map((tag) => {
-                          return <option key={tag} value={tag}>{tag}</option>;
-                        })}
-                      </select>
-                    </div>
+                    <ul key={tagType}>
+                      {projectTags[tagType] && projectTags[tagType].length && projectTags[tagType].map((tag) => {
+                        return (
+                          <li key={tag}>
+                            <input type="checkbox" id={tag} name={tag} value={tag} />
+                            <label htmlFor={tag}>{tag}</label>
+                          </li>
+                        );
+                      })}
+                    </ul>
                   );
                 } else {
                   return '';
                 }
               })
             }
-          </form>
+          </div>
+        </form>
       </div>
     );
   }
