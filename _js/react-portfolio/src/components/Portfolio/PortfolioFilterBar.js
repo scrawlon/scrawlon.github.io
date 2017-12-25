@@ -18,7 +18,7 @@ class PortfolioFilterBar extends Component {
                 const checked = this.props.filtersVisible[tagType];
 
                 return (
-                  <li key={tagType}>
+                  <li key={tagType} className={checked ? 'checked' : ''}>
                     <input
                       type="radio"
                       id={"filter-type" + (i + 1)}
