@@ -52,7 +52,8 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   font-size: .8em;
   padding: 0;
-  background: lightblue;
+  background: midnightblue;
+  background-image: repeating-radial-gradient(circle at 30% 41%, #191970, #000, #000);
 }
 
 .tag-cloud h2 {
@@ -67,6 +68,16 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-size: .9em;
   line-height: .9em;
+  border-right: 2px solid #fff;
+  background: lightblue;
+}
+
+.tag-cloud li:first-of-type {
+  border-left: 2px solid #fff;
+}
+
+.tag-cloud li:last-of-type {
+  border-right: 2px solid #fff;
 }
 
 .tag-cloud li input[type=radio], .tag-filters li input[type=checkbox] {

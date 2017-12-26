@@ -21,15 +21,45 @@ class PortfolioList extends Component {
         industries: false
       },
       filtersActive: {
-        project_types: this.props.projectTags.project_types,
-        technologies: this.props.projectTags.technologies,
-        industries: this.props.projectTags.industries
+        project_types: {},
+        technologies: {},
+        industries: {}
       },
       filteredProjects: this.props.projects
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleFilterSelect = this.handleFilterSelect.bind(this);
+    this.setActiveFilters = this.setActiveFilters.bind(this);
+    this.getActiveFilter = this.getActiveFilter.bind(this);
+  }
+
+  componentWillMount() {
+    this.setActiveFilters();
+  }
+
+  setActiveFilters() {
+    const filterTypes = Object.keys(this.state.filtersVisible);
+    let allFilterSettings = {};
+
+    filterTypes.forEach((filterType) => {
+      allFilterSettings[filterType] = this.getActiveFilter(filterType);
+    });
+
+    this.setState({
+      filtersActive: allFilterSettings
+    });
+  }
+
+  getActiveFilter(filterType) {
+    const filters = this.state.filters[filterType];
+    let filterSettings = {};
+
+    filters && filters.forEach((filter) => {
+      filterSettings[filter] = true;
+    });
+
+    return filterSettings;
   }
 
   handleChange() {
@@ -79,10 +109,13 @@ class PortfolioList extends Component {
   render() {
     const projects = this.state.filteredProjects;
     const filtersVisible = this.state.filtersVisible;
+    const filtersActive = this.state.filtersActive;
     const projectTags = this.props.projectTags;
     const headerBackground = {
       backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2NMKL/ty4ADMIIkF3SqbsYmP+gkAayXGgfe8HOVAAAAAElFTkSuQmCC)'
     };
+
+    console.log('active filter state', this.state.filtersActive);
 
     return (
       <div>
@@ -99,7 +132,13 @@ class PortfolioList extends Component {
 
         <div className="portfolio-wrapper">
 
-          <PortfolioFilterBar projects={projects} projectTags={projectTags} filtersVisible={filtersVisible} handleFilterSelect={this.handleFilterSelect}/>
+          <PortfolioFilterBar
+            projects={projects}
+            projectTags={projectTags}
+            filtersVisible={filtersVisible}
+            filtersActive={filtersActive}
+            handleFilterSelect={this.handleFilterSelect}
+          />
 
           <ul className="portfolio-list">
             {!projects.length
