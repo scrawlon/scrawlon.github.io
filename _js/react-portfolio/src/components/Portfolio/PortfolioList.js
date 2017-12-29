@@ -33,10 +33,26 @@ class PortfolioList extends Component {
     this.setActiveFilter = this.setActiveFilter.bind(this);
     this.initActiveFilter = this.initActiveFilter.bind(this);
     this.getFilteredProjects = this.getFilteredProjects.bind(this);
+    this.cacheState = this.cacheState.bind(this);
   }
 
   componentWillMount() {
-    this.setActiveFilters();
+    const cachedState = sessionStorage.getItem('state');
+
+    if ( cachedState ) {
+      this.state = JSON.parse(cachedState);
+    } else {
+      this.setActiveFilters();
+    }
+
+    console.log('cached state', JSON.parse(cachedState));
+    /*browserHistory.push({ pathname: '/portfolio', state: this.state });
+
+    console.log('browser history', browserHistory);*/
+  }
+
+  cacheState() {
+    sessionStorage.setItem('state', JSON.stringify(this.state));
   }
 
   setActiveFilters(event) {
@@ -162,6 +178,8 @@ class PortfolioList extends Component {
       backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2NMKL/ty4ADMIIkF3SqbsYmP+gkAayXGgfe8HOVAAAAAElFTkSuQmCC)'
     };
 
+    this.cacheState();
+
     /*console.log('active filter state', this.state.filtersActive);*/
 
     return (
@@ -195,7 +213,12 @@ class PortfolioList extends Component {
               projects.map((project) => {
                 const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
                 return (
-                  <Link to={`${this.props.match.url}${project.id}`} key={project.id} title={"Read more about portfolio project, '" + project.title + "'"}>
+                  <Link
+                    to={`${this.props.match.url}${project.id}`}
+                    key={project.id}
+                    title={"Read more about portfolio project, '" + project.title + "'"}
+                    onClick={this.cacheState}
+                  >
                     <li key={project.title}>
                       <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
                     </li>
