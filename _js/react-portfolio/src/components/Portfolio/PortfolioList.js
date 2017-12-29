@@ -28,22 +28,26 @@ class PortfolioList extends Component {
       filteredProjects: this.props.projects
     }
 
-    this.handleChange = this.handleChange.bind(this);
     this.handleFilterSelect = this.handleFilterSelect.bind(this);
     this.setActiveFilters = this.setActiveFilters.bind(this);
-    this.getActiveFilter = this.getActiveFilter.bind(this);
+    this.setActiveFilter = this.setActiveFilter.bind(this);
+    this.initActiveFilter = this.initActiveFilter.bind(this);
   }
 
   componentWillMount() {
     this.setActiveFilters();
   }
 
-  setActiveFilters() {
+  setActiveFilters(event) {
     const filterTypes = Object.keys(this.state.filtersVisible);
     let allFilterSettings = {};
 
+    console.log('set active filters tag type', event && event.target.dataset.tagType);
+    console.log('set active filters value', event && event.target.value);
+    console.log('set active filters checked', event && event.target.checked);
+
     filterTypes.forEach((filterType) => {
-      allFilterSettings[filterType] = this.getActiveFilter(filterType);
+      allFilterSettings[filterType] = this.initActiveFilter(filterType, event);
     });
 
     this.setState({
@@ -51,38 +55,37 @@ class PortfolioList extends Component {
     });
   }
 
-  getActiveFilter(filterType) {
+  setActiveFilter(event) {
+    const filtersActive = this.state.filtersActive;
+    const filterType = event.target.dataset.tagType;
+    const filter = event.target.value;
+    const filterChecked = event.target.checked;
+
+    console.log('set active filters tag type', event && event.target.dataset.tagType);
+    console.log('set active filters value', event && event.target.value);
+    console.log('set active filters checked', event && event.target.checked);
+
+    filtersActive[filterType][filter] = filterChecked;
+
+    this.setState({
+      filtersActive: filtersActive
+    });
+  }
+
+  initActiveFilter(filterType, event) {
     const filters = this.state.filters[filterType];
     let filterSettings = {};
 
     filters && filters.forEach((filter) => {
-      filterSettings[filter] = true;
+
+      if ( event && filterType === event.target.dataset.tagType && filter === event.target.value ) {
+        filterSettings[filter] = event.target.checked;
+      } else {
+        filterSettings[filter] = true;
+      }
     });
 
     return filterSettings;
-  }
-
-  handleChange() {
-    const filters = this.state.filters;
-    const projects = this.props.projects;
-    const filteredProjects = projects.filter(project => {
-      let filterMatch = true;
-
-      project.tags.forEach(tagType => {
-        let filterKey = Object.keys(tagType)[0];
-
-        if ( tagType[filterKey].every(elem => filters[filterKey].indexOf(elem) === -1) ) {
-          console.log('project removed', project);
-          filterMatch = false;
-        }
-      });
-
-      return filterMatch;
-    });
-
-    this.setState({
-      filteredProjects: filteredProjects
-    });
   }
 
   handleFilterSelect(event) {
@@ -102,8 +105,6 @@ class PortfolioList extends Component {
     this.setState({
       filterVisible: filtersVisible
     });
-
-    console.log('handle filter select', this.state.filtersVisible);
   }
 
   render() {
@@ -138,6 +139,7 @@ class PortfolioList extends Component {
             filtersVisible={filtersVisible}
             filtersActive={filtersActive}
             handleFilterSelect={this.handleFilterSelect}
+            setActiveFilter={this.setActiveFilter}
           />
 
           <ul className="portfolio-list">

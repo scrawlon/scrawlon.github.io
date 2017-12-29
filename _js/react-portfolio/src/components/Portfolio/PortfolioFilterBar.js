@@ -25,7 +25,8 @@ class PortfolioFilterBar extends Component {
                       name={"filter-type" + (i + 1)}
                       value={tagType}
                       checked={checked ? 'checked' : ''}
-                      onChange={this.props.handleFilterSelect}/>
+                      onChange={this.props.handleFilterSelect}
+                    />
                     <label htmlFor={"filter-type" + (i + 1)}>{tagLabel}</label>
                   </li>
                 );
@@ -43,10 +44,18 @@ class PortfolioFilterBar extends Component {
                     <ul key={tagType}>
                       {projectTags[tagType] && projectTags[tagType].length && projectTags[tagType].map((tag) => {
                         const checked = this.props.filtersActive[tagType][tag];
-                        
+
                         return (
                           <li key={tag}>
-                            <input type="checkbox" id={tag} name={tag} value={tag} checked={checked ? 'checked' : ''} />
+                            <input
+                              type="checkbox"
+                              id={tag}
+                              name={tag}
+                              value={tag}
+                              checked={checked ? 'checked' : ''}
+                              onChange={this.props.setActiveFilter}
+                              data-tag-type={tagType}
+                            />
                             <label htmlFor={tag}>{tag}</label>
                           </li>
                         );
