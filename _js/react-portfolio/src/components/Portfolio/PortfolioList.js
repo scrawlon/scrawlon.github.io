@@ -16,7 +16,7 @@ class PortfolioList extends Component {
         industries: this.props.projectTags.industries
       },
       filtersVisible: {
-        project_types: false,
+        project_types: true,
         technologies: false,
         industries: false
       },
@@ -85,7 +85,7 @@ class PortfolioList extends Component {
       filtersActive[filterType].splice(filtersActiveValue, 1);
     }
 
-    console.log('filters active', filtersActive[filterType]);
+    /*console.log('filters active', filtersActive[filterType]);*/
 
     this.setState({
       filtersActive: filtersActive,
@@ -105,18 +105,18 @@ class PortfolioList extends Component {
       filterTypes.forEach((filterType) => {
         const filtersActiveByType = filtersActive[filterType];
 
-        console.log('filtersActive', filtersActiveByType);
+        /*console.log('filtersActive', filtersActiveByType);*/
         /*console.log('projectTags', projectTags);*/
 
         projectTags.forEach((tags) => {
           const tagKey = Object.keys(tags)[0];
           if ( tagKey === filterType ) {
-            console.log('project tags', tags[tagKey]);
-            tags[tagKey].forEach((tag) => {
-              if ( !filtersActiveByType.includes(tag) ) {
-                filterMatch = false;
-              }
+            /*console.log('project tags', tags[tagKey]);*/
+            const filterTypeMatch = tags[tagKey].some((tag) => {
+              return filtersActiveByType.includes(tag);
             });
+
+            if ( !filterTypeMatch ) { filterMatch = false; }
           }
         });
 
@@ -127,7 +127,7 @@ class PortfolioList extends Component {
 
     });
 
-    console.log('new filteredProjects', filteredProjects);
+    /*console.log('new filteredProjects', filteredProjects);*/
 
     this.setState({
       filteredProjects: filteredProjects
