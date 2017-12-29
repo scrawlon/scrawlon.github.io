@@ -21,9 +21,9 @@ class PortfolioList extends Component {
         industries: false
       },
       filtersActive: {
-        project_types: {},
-        technologies: {},
-        industries: {}
+        project_types: [],
+        technologies: [],
+        industries: []
       },
       filteredProjects: this.props.projects
     }
@@ -32,6 +32,7 @@ class PortfolioList extends Component {
     this.setActiveFilters = this.setActiveFilters.bind(this);
     this.setActiveFilter = this.setActiveFilter.bind(this);
     this.initActiveFilter = this.initActiveFilter.bind(this);
+    this.getFilteredProjects = this.getFilteredProjects.bind(this);
   }
 
   componentWillMount() {
@@ -42,9 +43,9 @@ class PortfolioList extends Component {
     const filterTypes = Object.keys(this.state.filtersVisible);
     let allFilterSettings = {};
 
-    console.log('set active filters tag type', event && event.target.dataset.tagType);
-    console.log('set active filters value', event && event.target.value);
-    console.log('set active filters checked', event && event.target.checked);
+    /*console.log('set active filters tag type', event && event.target.dataset.tagType);*/
+    /*console.log('set active filters value', event && event.target.value);*/
+    /*console.log('set active filters checked', event && event.target.checked);*/
 
     filterTypes.forEach((filterType) => {
       allFilterSettings[filterType] = this.initActiveFilter(filterType, event);
@@ -55,37 +56,77 @@ class PortfolioList extends Component {
     });
   }
 
+  initActiveFilter(filterType, event) {
+    const filters = this.state.filters[filterType];
+    let filterSettings = [];
+
+    filters && filters.forEach((filter) => {
+
+      if ( event && filterType === event.target.dataset.tagType && filter === event.target.value ) {
+        filterSettings.push(event.target.value);
+      } else {
+        filterSettings.push(filter);
+      }
+    });
+
+    return filterSettings;
+  }
+
   setActiveFilter(event) {
     const filtersActive = this.state.filtersActive;
     const filterType = event.target.dataset.tagType;
     const filter = event.target.value;
     const filterChecked = event.target.checked;
+    const filtersActiveValue = filtersActive[filterType].indexOf(filter);
 
-    console.log('set active filters tag type', event && event.target.dataset.tagType);
-    console.log('set active filters value', event && event.target.value);
-    console.log('set active filters checked', event && event.target.checked);
+    if ( filterChecked && filtersActiveValue === -1 ) {
+      filtersActive[filterType].push(filter);
+    } else if ( !filterChecked && filtersActiveValue !== -1 ) {
+      filtersActive[filterType].splice(filtersActiveValue, 1);
+    }
 
-    filtersActive[filterType][filter] = filterChecked;
+    console.log('filters active', filtersActive[filterType]);
 
     this.setState({
-      filtersActive: filtersActive
+      filtersActive: filtersActive,
     });
+
+    this.getFilteredProjects(filterType);
   }
 
-  initActiveFilter(filterType, event) {
-    const filters = this.state.filters[filterType];
-    let filterSettings = {};
+  getFilteredProjects(filterType) {
+    const filtersActive = this.state.filtersActive[filterType];
+    const projects = this.props.projects;
+    /*const filterTypes = Object.keys(filtersActive);*/
+    let filteredProjects = projects.filter((project) => {
+      const projectTags = project.tags;
+      let filterMatch = false;
 
-    filters && filters.forEach((filter) => {
+      console.log('filtersActive', filtersActive);
+      /*console.log('projectTags', projectTags);*/
 
-      if ( event && filterType === event.target.dataset.tagType && filter === event.target.value ) {
-        filterSettings[filter] = event.target.checked;
-      } else {
-        filterSettings[filter] = true;
-      }
+      projectTags.forEach((tags) => {
+        const tagKey = Object.keys(tags)[0];
+        if ( tagKey === filterType ) {
+          console.log('project tags', tags[tagKey]);
+          tags[tagKey].forEach((tag) => {
+            if ( filtersActive.includes(tag) ) {
+              filterMatch = true;
+            }
+          });
+        }
+      });
+
+      return filterMatch;
+      /*return filtersActive.includes(projectTags);*/
+
     });
 
-    return filterSettings;
+    console.log('new filteredProjects', filteredProjects);
+
+    this.setState({
+      filteredProjects: filteredProjects
+    });
   }
 
   handleFilterSelect(event) {
@@ -116,7 +157,7 @@ class PortfolioList extends Component {
       backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2NMKL/ty4ADMIIkF3SqbsYmP+gkAayXGgfe8HOVAAAAAElFTkSuQmCC)'
     };
 
-    console.log('active filter state', this.state.filtersActive);
+    /*console.log('active filter state', this.state.filtersActive);*/
 
     return (
       <div>

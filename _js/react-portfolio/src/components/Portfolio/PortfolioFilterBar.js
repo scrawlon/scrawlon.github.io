@@ -43,7 +43,7 @@ class PortfolioFilterBar extends Component {
                   return (
                     <ul key={tagType}>
                       {projectTags[tagType] && projectTags[tagType].length && projectTags[tagType].map((tag) => {
-                        const checked = this.props.filtersActive[tagType][tag];
+                        const checked = this.props.filtersActive[tagType].includes(tag);
 
                         return (
                           <li key={tag}>
