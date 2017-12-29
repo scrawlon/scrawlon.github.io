@@ -95,26 +95,31 @@ class PortfolioList extends Component {
   }
 
   getFilteredProjects(filterType) {
-    const filtersActive = this.state.filtersActive[filterType];
+    const filtersActive = this.state.filtersActive;
     const projects = this.props.projects;
-    /*const filterTypes = Object.keys(filtersActive);*/
+    const filterTypes = Object.keys(filtersActive);
     let filteredProjects = projects.filter((project) => {
       const projectTags = project.tags;
-      let filterMatch = false;
+      let filterMatch = true;
 
-      console.log('filtersActive', filtersActive);
-      /*console.log('projectTags', projectTags);*/
+      filterTypes.forEach((filterType) => {
+        const filtersActiveByType = filtersActive[filterType];
 
-      projectTags.forEach((tags) => {
-        const tagKey = Object.keys(tags)[0];
-        if ( tagKey === filterType ) {
-          console.log('project tags', tags[tagKey]);
-          tags[tagKey].forEach((tag) => {
-            if ( filtersActive.includes(tag) ) {
-              filterMatch = true;
-            }
-          });
-        }
+        console.log('filtersActive', filtersActiveByType);
+        /*console.log('projectTags', projectTags);*/
+
+        projectTags.forEach((tags) => {
+          const tagKey = Object.keys(tags)[0];
+          if ( tagKey === filterType ) {
+            console.log('project tags', tags[tagKey]);
+            tags[tagKey].forEach((tag) => {
+              if ( !filtersActiveByType.includes(tag) ) {
+                filterMatch = false;
+              }
+            });
+          }
+        });
+
       });
 
       return filterMatch;
