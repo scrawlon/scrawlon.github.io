@@ -11,19 +11,19 @@ class PortfolioList extends Component {
     super(props);
     this.state = {
       filtersVisible: {
-        project_types: true,
+        industries: true,
         technologies: false,
-        industries: false
+        project_types: false
       },
       filtersActive: {
-        project_types: [],
+        industries: [],
         technologies: [],
-        industries: []
+        project_types: []
       },
       filtersActiveAll: {
-        project_types: true,
+        industries: true,
         technologies: true,
-        industries: true
+        project_types: true
       },
       filteredProjects: this.props.projects
     }
@@ -181,6 +181,8 @@ class PortfolioList extends Component {
   }
 
   handleFilterSelect(event) {
+    const filtersActive = this.state.filtersActive;
+    const filtersActiveAll = this.state.filtersActiveAll;
     const projectFilters = Object.keys(this.state.filtersVisible);
     const filtersVisible = this.state.filtersVisible;
     const filterChange = event.target.value;
@@ -190,13 +192,19 @@ class PortfolioList extends Component {
         filtersVisible[tagType] = !this.state.filtersVisible[tagType];
       } else {
         filtersVisible[tagType] = false;
+        filtersActive[tagType] = this.initActiveFilter(tagType);
+        filtersActiveAll[tagType] = true;
       }
     });
 
 
     this.setState({
-      filterVisible: filtersVisible
+      filtersVisible: filtersVisible,
+      filtersActive: filtersActive,
+      filterActiveAll: filtersActiveAll
     });
+
+    this.getFilteredProjects();
   }
 
   render() {
