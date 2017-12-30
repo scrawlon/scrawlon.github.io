@@ -1,6 +1,6 @@
 ---
 title: Staples Promotional Products (mobile)
-site_url: https://m.staplespromotionalproducts.com/
+site_url: 
 my_work:
 screenshot: staples-promotional-products-090717.jpg
 employer: Compulse Integrated Marketing

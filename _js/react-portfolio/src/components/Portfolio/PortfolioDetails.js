@@ -39,10 +39,16 @@ class PortfolioDetails extends Component {
 
                   <h2>Quick Links</h2>
                   <ul>
-                    <li>Project Hompage: <a href={project.site_url} alt={project.title} target="_blank">{project.title}</a></li>
+
+                    {project.site_url
+                      ? <li>Project Hompage:<a href={project.site_url} alt={project.title} target="_blank">{project.title}</a></li>
+                      : "site currently offline"
+                    }
+
                     {project.my_work
                       ? <li>My Main Contribution: <a href={project.my_work.page_url} alt={project.title + ": " + project.my_work.page_title} target="_blank">{project.title + ": " + project.my_work.page_title}</a></li>
-                      : ''}
+                      : ''
+                    }
                   </ul>
 
                   <h2>Project Notes</h2>

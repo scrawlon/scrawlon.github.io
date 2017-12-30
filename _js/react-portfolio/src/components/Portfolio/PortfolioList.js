@@ -121,8 +121,6 @@ class PortfolioList extends Component {
       filtersActive[filterType].splice(filtersActiveValue, 1);
     }
 
-    console.log('filters active', filtersActive[filterType]);
-
     this.setState({
       filtersActive: filtersActive,
     });
