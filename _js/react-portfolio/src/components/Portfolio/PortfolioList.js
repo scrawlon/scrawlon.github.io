@@ -50,7 +50,7 @@ class PortfolioList extends Component {
       this.setActiveFilters();
     }
 
-    console.log('cached state', cachedState);
+    /*console.log('cached state', cachedState);*/
   }
 
   cacheState() {
@@ -92,15 +92,12 @@ class PortfolioList extends Component {
     const filterType = event.target.dataset.tagType;
     const filterChecked = event.target.checked ? true : false;
 
-    console.log('filter checked', filterChecked);
-
     if ( filterChecked ) {
       filtersActive[filterType] = this.initActiveFilter(filterType);
     } else {
       filtersActive[filterType] = [];
     }
 
-    console.log('filters active by type', filtersActive[filterType]);
     filtersActiveAll[filterType] = filterChecked;
 
     this.setState({
@@ -172,6 +169,10 @@ class PortfolioList extends Component {
     const projectFilters = Object.keys(this.state.filtersVisible);
     const filtersVisible = this.state.filtersVisible;
     const filterChange = event.target.value;
+
+    if ( filtersVisible[filterChange] === true ) {
+      return;
+    }
 
     projectFilters.forEach((tagType) => {
       if ( tagType === filterChange ) {
