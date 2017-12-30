@@ -197,13 +197,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-details .tags, .portfolio-details-wrapper .tags {
   display: inline-block;
-  padding: 3px 7px;
   margin: 0;
-  background: #ffa726;
-  color: white;
   font-size: .6em;
   letter-spacing: 0;
-  line-height: 1.2em;
 }
 
 .portfolio-details-wrapper .tags {
@@ -242,9 +238,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-wrapper .shadow {
   margin: 0 0 30px;
-  padding: 2px 0 5px;
-  border-top: 10px solid #000;
-  border-bottom: 10px solid #000;
+  padding: 5px;
+  border-radius: .5rem;
+  box-shadow: 0 5px 5px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
 }
 
 .portfolio-details-wrapper h1 {
@@ -266,15 +262,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-wrapper h3 {
   display: block;
-  font-size: 1em;
-  font-weight: bold;
+  font-size: .8em;
+  font-weight: normal;
   margin: 1em 0 5px;
-  line-height: .7em;
+  line-height: 1.2em;
+  letter-spacing: .05em;
   padding-top: 0;
+  text-transform: uppercase;
 }
 
 .portfolio-details-wrapper h3:first-of-type {
-  margin: 1em 0 5px;
+  margin: 0 0 5px;
 }
 
 .portfolio-details-wrapper .content, .portfolio-details-wrapper aside {
@@ -283,8 +281,8 @@ h1, h2, h3, h4, h5, h6 {
   grid-column-end: 3;
 }
 
-.portfolio-details-wrapper aside {
-  background: #eee;
+.portfolio-details-wrapper aside .portfolio-tags-wrapper {
+  background: rgb(238, 238, 238);
   padding: 20px 0;
 }
 
@@ -293,7 +291,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   padding: 20px;
   padding-bottom: 60px;
-  border: none;
 }
 
 .portfolio-details-wrapper .content ul {
@@ -309,8 +306,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .7em;
 }
 
+.portfolio-details-wrapper .content a {
+  text-decoration: none;
+}
+
 .portfolio-details-wrapper img {
   max-width: 100%;
+  border-radius: .5rem;
 }
 
 .portfolio-details-text {
@@ -375,7 +377,6 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-start: 1;
     grid-column-end: 2;
     margin-right: 40px;
-    border: 1px solid #AAA;
   }
 
   .portfolio-details-wrapper aside {
@@ -409,11 +410,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-details-wrapper .content {
     margin: 0 40px 0 0;
-  }
-
-  .portfolio-details-wrapper aside {
-    background: rgb(238, 238, 238);
-    padding: 20px 0px;
   }
 }
 

@@ -41,8 +41,8 @@ class PortfolioDetails extends Component {
                   <ul>
 
                     {project.site_url
-                      ? <li>Project Hompage:<a href={project.site_url} alt={project.title} target="_blank">{project.title}</a></li>
-                      : "site currently offline"
+                      ? <li>Project Hompage: <a href={project.site_url} alt={project.title} target="_blank">{project.title}</a></li>
+                      : <li>site currently offline</li>
                     }
 
                     {project.my_work
@@ -56,14 +56,16 @@ class PortfolioDetails extends Component {
                 </section>
 
                 <aside>
-                  <h3>Project Types</h3>
-                  <PortfolioTags tags={project.tags} tagTypes={['project_types']}/>
+                  <div className="portfolio-tags-wrapper">
+                    <h3>Project Types</h3>
+                    <PortfolioTags tags={project.tags} tagTypes={['project_types']}/>
 
-                  <h3>Technologies</h3>
-                  <PortfolioTags tags={project.tags} tagTypes={['technologies']}/>
+                    <h3>Technologies</h3>
+                    <PortfolioTags tags={project.tags} tagTypes={['technologies']}/>
 
-                  <h3>Industries</h3>
-                  <PortfolioTags tags={project.tags} tagTypes={['industries']}/>
+                    <h3>Industries</h3>
+                    <PortfolioTags tags={project.tags} tagTypes={['industries']}/>
+                  </div>
                 </aside>
 
               </article>
