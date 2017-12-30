@@ -40,8 +40,20 @@ class PortfolioFilterBar extends Component {
               :
               projectFilters.map((tagType) => {
                 if ( this.props.filtersVisible[tagType] ) {
+                  const checkedAll = this.props.filtersActiveAll[tagType];
                   return (
                     <ul key={tagType}>
+                      <li>
+                        <input
+                          type="checkbox"
+                          id={"check-all-" + tagType}
+                          name={"check-all-" + tagType}
+                          data-tag-type={tagType}
+                          checked={checkedAll ? 'checked' : ''}
+                          onChange={this.props.toggleActiveFilter}
+                        />
+                        <label htmlFor={"check-all-" + tagType}>all</label>
+                      </li>
                       {projectTags[tagType] && projectTags[tagType].length && projectTags[tagType].map((tag) => {
                         const checked = this.props.filtersActive[tagType].includes(tag);
 

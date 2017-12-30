@@ -10,11 +10,6 @@ class PortfolioList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filters: {
-        project_types: this.props.projectTags.project_types,
-        technologies: this.props.projectTags.technologies,
-        industries: this.props.projectTags.industries
-      },
       filtersVisible: {
         project_types: true,
         technologies: false,
@@ -25,6 +20,11 @@ class PortfolioList extends Component {
         technologies: [],
         industries: []
       },
+      filtersActiveAll: {
+        project_types: true,
+        technologies: true,
+        industries: true
+      },
       filteredProjects: this.props.projects
     }
 
@@ -32,20 +32,25 @@ class PortfolioList extends Component {
     this.setActiveFilters = this.setActiveFilters.bind(this);
     this.setActiveFilter = this.setActiveFilter.bind(this);
     this.initActiveFilter = this.initActiveFilter.bind(this);
+    this.toggleActiveFilter = this.toggleActiveFilter.bind(this);
     this.getFilteredProjects = this.getFilteredProjects.bind(this);
     this.cacheState = this.cacheState.bind(this);
   }
 
   componentWillMount() {
-    const cachedState = sessionStorage.getItem('state');
+    /*sessionStorage.removeItem('state');*/
+    const cachedState = JSON.parse(sessionStorage.getItem('state'));
 
-    if ( cachedState ) {
-      this.state = JSON.parse(cachedState);
+    /* Disable cache for testing */
+    /*const cachedState = false;*/
+
+    if ( cachedState && cachedState.filteredProjects.length ) {
+      this.state = cachedState;
     } else {
       this.setActiveFilters();
     }
 
-    console.log('cached state', JSON.parse(cachedState));
+    console.log('cached state', cachedState);
     /*browserHistory.push({ pathname: '/portfolio', state: this.state });
 
     console.log('browser history', browserHistory);*/
@@ -73,12 +78,12 @@ class PortfolioList extends Component {
   }
 
   initActiveFilter(filterType, event) {
-    const filters = this.state.filters[filterType];
+    const filters = this.props.projectTags[filterType];
     let filterSettings = [];
 
     filters && filters.forEach((filter) => {
 
-      if ( event && filterType === event.target.dataset.tagType && filter === event.target.value ) {
+      if ( event && event.target.value && filter === event.target.value && filterType === event.target.dataset.tagType ) {
         filterSettings.push(event.target.value);
       } else {
         filterSettings.push(filter);
@@ -86,6 +91,31 @@ class PortfolioList extends Component {
     });
 
     return filterSettings;
+  }
+
+  toggleActiveFilter(event) {
+    const filtersActive = this.state.filtersActive;
+    const filtersActiveAll = this.state.filtersActiveAll;
+    const filterType = event.target.dataset.tagType;
+    const filterChecked = event.target.checked ? true : false;
+
+    console.log('filter checked', filterChecked);
+
+    if ( filterChecked ) {
+      filtersActive[filterType] = this.initActiveFilter(filterType);
+    } else {
+      filtersActive[filterType] = [];
+    }
+
+    console.log('filters active by type', filtersActive[filterType]);
+    filtersActiveAll[filterType] = filterChecked;
+
+    this.setState({
+      filtersActive: filtersActive,
+      filterActiveAll: filtersActiveAll
+    });
+
+    this.getFilteredProjects(filterType);
   }
 
   setActiveFilter(event) {
@@ -101,7 +131,7 @@ class PortfolioList extends Component {
       filtersActive[filterType].splice(filtersActiveValue, 1);
     }
 
-    /*console.log('filters active', filtersActive[filterType]);*/
+    console.log('filters active', filtersActive[filterType]);
 
     this.setState({
       filtersActive: filtersActive,
@@ -171,14 +201,17 @@ class PortfolioList extends Component {
 
   render() {
     const projects = this.state.filteredProjects;
+    const projectTags = this.props.projectTags;
     const filtersVisible = this.state.filtersVisible;
     const filtersActive = this.state.filtersActive;
-    const projectTags = this.props.projectTags;
+    const filtersActiveAll = this.state.filtersActiveAll;
     const headerBackground = {
       backgroundImage: 'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQYV2NMKL/ty4ADMIIkF3SqbsYmP+gkAayXGgfe8HOVAAAAAElFTkSuQmCC)'
     };
 
-    this.cacheState();
+    if ( projects.length ) {
+      this.cacheState();
+    }
 
     /*console.log('active filter state', this.state.filtersActive);*/
 
@@ -202,8 +235,10 @@ class PortfolioList extends Component {
             projectTags={projectTags}
             filtersVisible={filtersVisible}
             filtersActive={filtersActive}
-            handleFilterSelect={this.handleFilterSelect}
+            filtersActiveAll={filtersActiveAll}
             setActiveFilter={this.setActiveFilter}
+            handleFilterSelect={this.handleFilterSelect}
+            toggleActiveFilter={this.toggleActiveFilter}
           />
 
           <ul className="portfolio-list">
