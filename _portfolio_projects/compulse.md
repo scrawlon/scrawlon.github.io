@@ -6,7 +6,7 @@ screenshot: compulse-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['web']
-  - technologies: ['WordPress', 'PHP']
+  - technologies: ['WordPress', 'jQuery']
   - project_types: ['website']
 published: true
 ---

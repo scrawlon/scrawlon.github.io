@@ -6,7 +6,7 @@ screenshot: dielectric-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['television', 'radio']
-  - technologies: ['WordPress', 'PHP', 'JavaScript']
+  - technologies: ['WordPress', 'jQuery']
   - project_types: ['website']
 published: true
 ---

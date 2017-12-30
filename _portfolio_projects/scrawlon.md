@@ -6,7 +6,7 @@ screenshot:
 employer: personal project
 tags:
   - industries: ['blog']
-  - technologies: ['Jekyll', 'JavaScript', 'React', 'Markdown', 'SASS']
+  - technologies: ['Jekyll', 'React', 'Markdown', 'SASS']
   - project_types: ['website']
 published: false
 ---

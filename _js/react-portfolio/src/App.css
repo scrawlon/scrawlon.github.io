@@ -264,7 +264,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   font-size: .8em;
   font-weight: normal;
-  margin: 1em 0 5px;
+  margin: 1.5em 0 5px;
   line-height: 1.2em;
   letter-spacing: .05em;
   padding-top: 0;
@@ -378,16 +378,6 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-end: 2;
     margin-right: 40px;
   }
-
-  .portfolio-details-wrapper aside {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
-  .portfolio-details-wrapper aside {
-    border-top: none;
-    padding-top: 0;
-  }
 }
 
 @media only screen and (min-width: 60em) {
@@ -410,6 +400,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-details-wrapper .content {
     margin: 0 40px 0 0;
+  }
+
+  .portfolio-details-wrapper aside {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-top: none;
+    padding-top: 0;
   }
 }
 

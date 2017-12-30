@@ -8,7 +8,7 @@ screenshot: turf-works-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['lawn care']
-  - technologies: ['WordPress', 'PHP', 'JavaScript', 'jQuery', 'Zillow API']
+  - technologies: ['WordPress', 'jQuery', 'Zillow API']
   - project_types: ['website']
 published: true
 ---

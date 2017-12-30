@@ -6,7 +6,7 @@ screenshot: wsu-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['university']
-  - technologies: ['WordPress', 'PHP', 'JavaScript']
+  - technologies: ['WordPress', 'jQuery']
   - project_types: ['website']
 published: true
 ---

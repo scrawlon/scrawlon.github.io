@@ -8,7 +8,7 @@ screenshot: southern-highlands-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['real estate']
-  - technologies: ['WordPress', 'PHP', 'JavaScript', 'jQuery', 'Google Maps API']
+  - technologies: ['WordPress', 'jQuery', 'Google Maps API']
   - project_types: ['website']
 published: true
 ---

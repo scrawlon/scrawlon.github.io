@@ -8,7 +8,7 @@ screenshot: schmidt-baking-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['bakery']
-  - technologies: ['WordPress', 'PHP']
+  - technologies: ['WordPress', 'jQuery']
   - project_types: ['website']
 published: true
 ---
