@@ -51,9 +51,6 @@ class PortfolioList extends Component {
     }
 
     console.log('cached state', cachedState);
-    /*browserHistory.push({ pathname: '/portfolio', state: this.state });
-
-    console.log('browser history', browserHistory);*/
   }
 
   cacheState() {
@@ -63,10 +60,6 @@ class PortfolioList extends Component {
   setActiveFilters(event) {
     const filterTypes = Object.keys(this.state.filtersVisible);
     let allFilterSettings = {};
-
-    /*console.log('set active filters tag type', event && event.target.dataset.tagType);*/
-    /*console.log('set active filters value', event && event.target.value);*/
-    /*console.log('set active filters checked', event && event.target.checked);*/
 
     filterTypes.forEach((filterType) => {
       allFilterSettings[filterType] = this.initActiveFilter(filterType, event);
@@ -151,9 +144,6 @@ class PortfolioList extends Component {
       filterTypes.forEach((filterType) => {
         const filtersActiveByType = filtersActive[filterType];
 
-        /*console.log('filtersActive', filtersActiveByType);*/
-        /*console.log('projectTags', projectTags);*/
-
         projectTags.forEach((tags) => {
           const tagKey = Object.keys(tags)[0];
           if ( tagKey === filterType ) {
@@ -169,11 +159,7 @@ class PortfolioList extends Component {
       });
 
       return filterMatch;
-      /*return filtersActive.includes(projectTags);*/
-
     });
-
-    /*console.log('new filteredProjects', filteredProjects);*/
 
     this.setState({
       filteredProjects: filteredProjects
@@ -220,8 +206,6 @@ class PortfolioList extends Component {
     if ( projects.length ) {
       this.cacheState();
     }
-
-    /*console.log('active filter state', this.state.filtersActive);*/
 
     return (
       <div>
