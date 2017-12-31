@@ -28,6 +28,7 @@ I ask "will I" to hear back "you will". If I ask "are my friends" to hear
 "they are".
 
 During testing, I also experimented with
-<a href="https://developer.amazon.com/blogs/alexa/post/5c631c3c-0d35-483f-b226-83dd98def117/new-ssml-features-give-alexa-a-wider-range-of-natural-expression" title="the Speech Synthesis Markup Language (SSML)">the Speech Synthesis Markup Language (SSML)</a>
+<a href="https://developer.amazon.com/blogs/alexa/post/5c631c3c-0d35-483f-b226-83dd98def117/new-ssml-features-give-alexa-a-wider-range-of-natural-expression"
+title="the Speech Synthesis Markup Language (SSML)" target="\_blank">the Speech Synthesis Markup Language (SSML)</a>
 to give Alexa different voices and personalities. There's a lot of room to explore,
 and I look forward to working on more Alexa voice UI projects in the near future.
