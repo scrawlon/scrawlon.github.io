@@ -12,7 +12,6 @@ class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false,
       projects: [],
       projectTags: {},
       navigationBack: false,
@@ -45,7 +44,6 @@ class Portfolio extends Component {
   }
 
   render() {
-    const loading = this.state.loading;
     const projects = this.state.projects;
     const projectTags = this.state.projectTags;
 
