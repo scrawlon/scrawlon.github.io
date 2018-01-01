@@ -8,9 +8,11 @@ screenshot: southern-highlands-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['real estate']
-  - technologies: ['WordPress', 'jQuery', 'Google Maps API']
+  - technologies: ['WordPress', 'jQuery', 'Google Maps API', 'iHomefinder IDX API', 'UnderscoreJS']
   - project_types: ['website']
 published: true
 ---
+
+My main contribution to this web site was the 'Home Finder' page.
 
 Home Finder.

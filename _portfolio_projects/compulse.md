@@ -32,6 +32,6 @@ title="Compulse Events pages" target="\_blank">Compulse Events pages</a>,
 as well as creating custom Wordpress templates, plugins, post types for the site.
 
 Several designers independently created the page mockups and collected the
-functional requirements from management. I used that to created that actual pages
-and push that code to the live site. This is the typical designer/developer workflow
+functional requirements from management. I used that to created the actual pages
+and put the code up on the live site. This is the typical designer/developer workflow
 at Compulse.
