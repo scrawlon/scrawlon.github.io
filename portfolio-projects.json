@@ -34,8 +34,8 @@ layout: json
       {% endif %}
     {% endfor %}],
   "projectTags": {
-    "industries": {{ tags_industries | compact | uniq | sort | jsonify }},
-    "technologies": {{ tags_technologies | compact | uniq | sort | jsonify }},
-    "project_types": {{ tags_project_types | compact | uniq | sort | jsonify }}
+    "industries": {{ tags_industries | compact | uniq | sort_natural | jsonify }},
+    "technologies": {{ tags_technologies | compact | uniq | sort_natural | jsonify }},
+    "project_types": {{ tags_project_types | compact | uniq | sort_natural | jsonify }}
   }
 }
