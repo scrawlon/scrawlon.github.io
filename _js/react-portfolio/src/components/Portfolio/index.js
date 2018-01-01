@@ -50,14 +50,11 @@ class Portfolio extends Component {
     const projectTags = this.state.projectTags;
 
     return (
-      !loading
-        ?
-        <Switch>
-          <Route exact path = "/" render={(props) => <PortfolioList {...props} projects={projects} projectTags={projectTags} />} />
-          <Route exact path="/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
-          <Route path="*" status="404" component={NotFound} />
-        </Switch>
-        : <h2>Loading...</h2>
+      <Switch>
+        <Route exact path = "/" render={(props) => <PortfolioList {...props} projects={projects} projectTags={projectTags} />} />
+        <Route exact path="/:id" render={(props) => <PortfolioDetails {...props} projects={projects} />} />
+        <Route path="*" status="404" component={NotFound} />
+      </Switch>
     );
   }
 }
