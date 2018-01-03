@@ -29,7 +29,7 @@ title="Blog pages"
 target="\_blank">Blog pages</a> and
 <a href="http://events.compulse.com/"
 title="Compulse Events pages" target="\_blank">Compulse Events pages</a>,
-as well as creating custom Wordpress templates, plugins, post types for the site.
+as well as creating custom Wordpress templates, plugins and post types for the site.
 
 Several designers independently created the page mockups and collected the
 functional requirements from management. I used that to created the actual pages

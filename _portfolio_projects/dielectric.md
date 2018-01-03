@@ -12,14 +12,14 @@ published: true
 ---
 
 Dielectric is one of Compulse's longest running web client's. In fact,
-the site was once hosted as static html pages on our old servers at
+the site was once hosted as static html pages on servers at
 <a
 href="http://sbgi.net/compulse/"
-title="Sinclair Digital Solutions" target="\_blank">Sinclair Digital Solutions before
-Compulse Integrated Marketing existed as separate entity.</a>
-Sinclair hosted hundreds of local network television affiliate landing pages on
-those servers as well. A couple years ago they made the decision to take those servers
-offline and move all those sites.
+title="Sinclair Digital Solutions" target="\_blank">Sinclair Digital Solutions</a>
+before Compulse Integrated Marketing existed as separate entity.
+Sinclair had also hosted most of their local network television affiliate
+web sites on those servers as well. A couple years ago they decided
+to take those servers offline and move all those sites.
 
 It's a rare occasion that time and resources are extended to make improvements
 in a large corporate ecosystem. Since the content needed to be moved, and that
