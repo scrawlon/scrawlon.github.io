@@ -11,12 +11,13 @@ tags:
 published: true
 ---
 
-The client on this project requested a special floating navigation for the site.
-On page load, the navigation links would be at the bottom of the screen. Scrolling
-down would move the navigation up until it hit the top of the page where it would
-stop. Once the navigation was at the top, the content below would flow under as
-the user continued to scroll. The process would reverse if the user scrolled
-back up again.
+For this project, I was asked to create a floating navigation menu.
+On page load, the navigation menu would appear at the bottom of the screen.
+If a user scrolled
+down the menu would move float up to the top of the page and stay there.
+The content below would flow under as the user continued to scroll.
+If the user then scrolls back down, the process would reverse until the menu was
+at the bottom of the screen again.
 
-It took some time to work through the implementation on paper, but in the end,
-I was able to make it work with a few lines of jQuery.
+I spent most of my development time working out the implementation on paper.
+In the end, I wrote a jQuery script to make it work.
