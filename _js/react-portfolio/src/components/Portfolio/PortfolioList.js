@@ -234,7 +234,7 @@ class PortfolioList extends Component {
 
           <ul className="portfolio-list">
             {!projects.length
-              ? <li><h2>No projects match your query</h2></li>
+              ? <h2>(no projects match your query)</h2>
               :
               projects.map((project) => {
                 const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
