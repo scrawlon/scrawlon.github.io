@@ -52,8 +52,6 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   font-size: .8em;
   padding: 0;
-  background: midnightblue;
-  background-image: repeating-radial-gradient(circle at 30% 41%, #191970, #000, #000);
 }
 
 .tag-cloud h2 {
@@ -69,7 +67,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .9em;
   line-height: .9em;
   border-right: 2px solid #fff;
-  background: lightblue;
+  background: #fff;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #000;
 }
 
 .tag-cloud li:first-of-type {
@@ -85,20 +87,40 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
 }
 
+.tag-cloud li input[type=radio] {
+  display: none;
+}
+
 .tag-cloud li input[type=radio] + label {
-  margin-left: 5px;
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #888;
+  border: 1px solid transparent;
+  background: #eee;
 }
 
 .tag-cloud li input[type=radio] + label:hover {
+  color: #555;
   cursor: pointer;
 }
 
 .tag-cloud li.checked {
-  background: #fff;
+  border-left: 1px solid #000;
+  border-top: 2px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #fff;
+}
+
+.tag-cloud li.checked input[type=radio] + label {
+  color: #333;
 }
 
 .tag-cloud li input[type=radio]:checked + label {
   font-weight: bold;
+  background: #fff;
 }
 
 .tag-filters ul {
