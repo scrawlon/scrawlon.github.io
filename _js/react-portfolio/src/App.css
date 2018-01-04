@@ -52,6 +52,8 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   font-size: .8em;
   padding: 0;
+  margin-right: 0;
+  margin-bottom: 1.5em;
 }
 
 .tag-cloud h2 {
@@ -72,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid #fff;
   border-right: 1px solid #fff;
   border-bottom: 1px solid #000;
+  margin-right: 0;
 }
 
 .tag-cloud li:first-of-type {
@@ -125,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .tag-filters ul {
   max-width: 30em;
-  margin: 0 auto 40px;
+  margin: 0 auto 2.5em;
 }
 
 .tag-filters li {
@@ -287,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-wrapper h3 {
   display: block;
-  font-size: .8em;
+  font-size: .9em;
   font-weight: normal;
   margin: 1.5em 0 5px;
   line-height: 1.2em;
@@ -350,8 +353,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-details-agency {
-  font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }
 
 .portfolio-details-header {
@@ -374,6 +376,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
   padding-top: 0;
   line-height: 4rem;
+}
+
+.portfolio-tags-wrapper {
+  font-size: 1.4em;
 }
 
 .switch-wrapper {
@@ -442,6 +448,10 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-end: 3;
     border-top: none;
     padding-top: 0;
+  }
+
+  .portfolio-tags-wrapper {
+    font-size: 1.1em;
   }
 }
 
