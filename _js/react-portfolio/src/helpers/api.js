@@ -17,7 +17,7 @@ function getPortfolioProjects() {
 
   return axios.get( apiUrl + 'portfolio-projects.json')
     .then((res) => {
-      console.log('api response', res);
+      /*console.log('api response', res);*/
       dataCache.set('portfolio', res, cacheTime);
       return res;
     })

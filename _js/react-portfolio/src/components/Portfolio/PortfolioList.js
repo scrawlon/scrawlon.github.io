@@ -74,11 +74,15 @@ class PortfolioList extends Component {
     const filters = this.props.projectTags[filterType];
     let filterSettings = [];
 
+    /*console.log('filter variable empty?', filters, filterType, this.props.projectTags);*/
+
     filters && filters.forEach((filter) => {
 
       if ( event && event.target.value && filter === event.target.value && filterType === event.target.dataset.tagType ) {
+        /*console.log('wrong filter');*/
         filterSettings.push(event.target.value);
       } else {
+        console.log('filter');
         filterSettings.push(filter);
       }
     });
