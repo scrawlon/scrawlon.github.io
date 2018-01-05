@@ -48,8 +48,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: large;
 }
 
-.tag-cloud {
+.tag-filter-menu {
   display: none;
+}
+
+.tag-cloud {
   font-size: .8em;
   padding: 0;
   margin-right: 0;
@@ -152,7 +155,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: inline-block;
   width: 98%;
-  margin: 0 0 3em;
+  max-width: 450px;
+  margin: 0 auto 3em;
   padding: 0;
   text-decoration: none;
   color: #000;
@@ -399,18 +403,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 40em) {
-  .tag-cloud {
-    display: block;
-  }
-
   .project-details {
     display: block;
   }
 }
 
 @media only screen and (min-width: 60em) {
+  .tag-filter-menu {
+    display: block;
+  }
+
   .portfolio-list {
-    max-width: 100%;
+    width: 100%;
+    max-width: 1000px;
   }
 
   .portfolio-list a {
@@ -456,8 +461,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 80em) {
+  .portfolio-list {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  .portfolio-list a {
+    width: 31%;
+    margin: 0 1% 4em;
+  }
+
   .project-image {
-    height: 400px;
+    height: 250px;
   }
 
   .portfolio-details-wrapper article {
@@ -466,6 +481,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 90em) {
+  .portfolio-list {
+    width: 100%;
+    max-width: 1600px;
+  }
+
   .portfolio-list a {
     width: 26%;
     margin: 0 3.5% 4em;

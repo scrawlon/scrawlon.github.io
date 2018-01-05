@@ -7,7 +7,7 @@ class PortfolioFilterBar extends Component {
 
     return (
       <div>
-        <form action="">
+        <form className="tag-filter-menu">
 
           <ul className="tag-cloud">
             {!projectTags
