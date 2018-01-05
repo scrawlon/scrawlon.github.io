@@ -82,7 +82,7 @@ class PortfolioList extends Component {
         /*console.log('wrong filter');*/
         filterSettings.push(event.target.value);
       } else {
-        console.log('filter');
+        /*console.log('filter');*/
         filterSettings.push(filter);
       }
     });
