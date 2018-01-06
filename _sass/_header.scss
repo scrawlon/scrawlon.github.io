@@ -353,7 +353,7 @@ nav {
 
       .float-right {
         display: block;
-        a {
+        a, .current-page-link {
           background: #fff;
           border-left: 7px solid #000;
           color: #000;
@@ -361,6 +361,12 @@ nav {
           padding: 0 2px 0 10px;
           margin-right: 15px;
         }
+
+        .current-page-link {
+          color: #EF6C00;
+          border-left: 7px solid #EF6C00;
+        }
+
       }
     }
   }

@@ -3,19 +3,14 @@
 
     <!-- Desktop Nav -->
     {% for link in site.links reversed %}
-      {% assign nav_link = link.url %}
-      {% assign nav_class = "" %}
-      {% if link.url == page.url %}
-        {% assign nav_link = page.url %}
-        {% assign nav_class = "active" %}
-      {% elsif link.title == "Blog" and page.layout == "post" %}
-        {% assign nav_class = "active-blog-post" %}
-      {% endif %}
-
 	    <li class="float-right">
-        <a href="{{ site.url }}{{ nav_link }}" class="{{ nav_class }}" title="{{ link.title }}">
-          {{ link.title }}
-        </a>
+        {% if page.url == link.url or link.title == "Blog" and page.layout == "post" %}
+          <span class="current-page-link">{{ link.title }}</span>
+        {% else %}
+          <a href="{{ site.url }}{{ link.url }}" class="{{ nav_class }}" title="{{ link.title }}">
+            {{ link.title }}
+          </a>
+        {% endif %}
       </li>
     {% endfor %}
 
