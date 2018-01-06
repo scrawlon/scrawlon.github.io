@@ -23,6 +23,18 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 1600px;
 }
 
+.portfolio-intro {
+  font-size: 0.6em;
+  text-align: left;
+  max-width: 600px;
+  margin: 40px auto 20px;
+  padding: 10px 6%
+}
+
+.portfolio-intro p {
+  line-height: 1.1em;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
