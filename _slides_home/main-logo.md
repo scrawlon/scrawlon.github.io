@@ -1,6 +1,6 @@
 ---
 order: 1
-background-image:
+<!-- background-image:
   file: notebook.jpg
   caption:
     credit:
@@ -11,7 +11,7 @@ background-image:
       url: https://creativecommons.org/licenses/by/2.0/
     source: Flickr
     title: Large Leuchtturm Notebook Open to Reveal Gray Pages with Whitelines
-    url: https://flic.kr/p/qhqJjk
+    url: https://flic.kr/p/qhqJjk -->
 ---
 <section id="main-logo">
   <div class="wide-wrapper">
