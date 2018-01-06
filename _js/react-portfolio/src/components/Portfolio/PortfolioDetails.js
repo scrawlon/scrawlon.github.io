@@ -15,8 +15,10 @@ class PortfolioDetails extends Component {
 
         <header className="portfolio-details-header">
           <article>
-            <h1 className="page">
-              Project: "{project.title}"
+            <h1>
+              <span className="title-type">
+                <a href="/portfolio">Portfolio</a>
+              </span> {project.title}
             </h1>
           </article>
         </header>
@@ -28,7 +30,9 @@ class PortfolioDetails extends Component {
               <article>
 
                 <section className="headline">
-                  <p className="portfolio-details-agency">Design Agency: {project.employer}</p>
+                  <p className="portfolio-details-agency">
+                    <span className="title-type">Design Agency</span> {project.employer}
+                  </p>
                 </section>
 
                 <section className="headline shadow">
@@ -41,12 +45,12 @@ class PortfolioDetails extends Component {
                   <ul>
 
                     {project.site_url
-                      ? <li>Project Homepage: <a href={project.site_url} title={project.title + ": Homepage"} target="_blank">{project.title}</a></li>
+                      ? <li><span className="title-type">Project Homepage</span> <a href={project.site_url} title={project.title + ": Homepage"} target="_blank">{project.title}</a></li>
                       : <li>site currently offline</li>
                     }
 
                     {project.my_work
-                      ? <li>My Main Contribution: <a href={project.my_work.page_url} title={project.title + ": " + project.my_work.page_title} target="_blank">{project.title + ": " + project.my_work.page_title}</a></li>
+                      ? <li><span className="title-type">My Main Contribution</span> <a href={project.my_work.page_url} title={project.title + ": " + project.my_work.page_title} target="_blank">{project.title + ": " + project.my_work.page_title}</a></li>
                       : ''
                     }
                   </ul>

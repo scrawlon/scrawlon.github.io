@@ -226,13 +226,14 @@ class PortfolioList extends Component {
         <div className="portfolio-wrapper">
           <div className="portfolio-intro">
             <p>
-              I've written a lot of code for a lot of projects for the little
-              time I've been a professional developer. These are my best.
+              I've written a lot of code, for a lot of projects, in my little
+              time as a web developer. These are the best examples of that work.
             </p>
             <p>
               Click on the screenshots below for project notes and web links.
             </p>
           </div>
+
           <PortfolioFilterBar
             projects={projects}
             projectTags={projectTags}
