@@ -238,26 +238,18 @@ nav {
 
       li {
         display: block;
+
+        .current-page-link {
+          color: #EF6C00;
+          opacity: 0.75;
+          padding: 6px 0 3px 14px;
+        }
+
         a {
           color: #000;
           background: #fff;
           padding: 6px 0 3px 14px;
           opacity: 0.65;
-
-          &.active {
-            opacity: 0.75;
-            color: #EF6C00;
-            cursor: default;
-          }
-
-          &.active-blog-post {
-            @extend .active;
-            cursor: pointer;
-
-            &:after {
-              content: " *";
-            }
-          }
         }
       }
     }
