@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: inline-block;
   width: 98%;
-  max-width: 450px;
+  max-width: 100%;
   margin: 0 auto 3em;
   padding: 0;
   text-decoration: none;
@@ -442,6 +442,16 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (min-width: 40em) {
   .project-details {
     display: block;
+  }
+
+  .portfolio-list a {
+    width: 47%;
+    margin: 0 1.5% 2em;
+    max-width: 450px;
+  }
+
+  .project-image {
+    height: 200px;
   }
 
   .portfolio-details-wrapper .content li {
