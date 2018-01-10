@@ -1,5 +1,18 @@
 ---
 order: 1
+background-image:
+  file: whatever-happened-to-baby-jane.jpg
+  caption:
+    credit:
+      name: Doug Bowman
+      url: https://www.flickr.com/photos/bistrosavage/
+    license:
+      type: Creative Commons
+      url: https://creativecommons.org/licenses/by/2.0/
+    source: Flickr
+    title: Whatever Happened to Baby Jane?
+    url: https://flic.kr/p/kkVZ
+
 ---
 <section id="main-logo">
   <div class="wide-wrapper">
