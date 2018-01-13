@@ -21,7 +21,6 @@ background-image:
       <defs>
         <linearGradient id="slf-bg-gradient" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop id="slf-bg-one" stop-opacity="0" stop-color="#000000" offset="0"/>
-          <stop id="slf-bg-two" stop-opacity="0" stop-color="#000000" offset="0.40"/>
           <stop id="slf-bg-three" stop-opacity="0" stop-color="#191970" offset="1"/>
         </linearGradient>
       </defs>

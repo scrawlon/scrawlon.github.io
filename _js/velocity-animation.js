@@ -5,7 +5,7 @@ console.log('velocity-animation', 3);
 (function() {
   var svgScrawlonLogoFull = document.getElementsByClassName('scrawlon-logo-full');
   var svgScrawlonLogoFullGradientOne = document.getElementById('slf-bg-one');
-  var svgScrawlonLogoFullGradientTwo = document.getElementById('slf-bg-two');
+  /*var svgScrawlonLogoFullGradientTwo = document.getElementById('slf-bg-two');*/
   var svgScrawlonLogoFullGradientThree = document.getElementById('slf-bg-three');
   var svgSo = document.getElementsByClassName('logo-so');
   var svgScrawlon = document.getElementsByClassName('logo-scrawlon');
@@ -17,6 +17,7 @@ console.log('velocity-animation', 3);
   drawLogoFrame();
   drawLogoSO();
   fadeInLogoGradient();
+  drawLogoScrawlon();
 
   function fadeInBackground() {
     Velocity(sliderBackground, { opacity: 1 }, { duration: 2000, delay: 500 });
@@ -32,18 +33,22 @@ console.log('velocity-animation', 3);
   function drawLogoSO() {
     Velocity(svgSo, { strokeOpacity: 1 }, { duration: 800, delay: 2000 });
     Velocity(svgSo, { strokeOpacity: 0, fillOpacity: 1 }, { duration: 1600, delay: 0 }, 'easeInOutSine');
-    Velocity(svgScrawlon, { fillOpacity: 1 }, { duration: 1300, delay: 2800 });
   }
 
   function fadeInLogoGradient() {
-    Velocity(svgScrawlonLogoFullGradientOne, { stopOpacity: .8 }, { duration: 1200, delay: 2800 }, 'easeInOutSine');
-    Velocity(svgScrawlonLogoFullGradientTwo, { stopOpacity: .8 }, { duration: 1200, delay: 2800 }, 'easeInOutSine');
-    Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .8 }, { duration: 1200, delay: 2800 }, 'easeInOutSine');
+    Velocity(svgScrawlonLogoFullGradientOne, { stopOpacity: .6 }, { duration: 2100, delay: 3900 }, 'easeInOutSine');
+    /*Velocity(svgScrawlonLogoFullGradientTwo, { stopOpacity: .8 }, { duration: 2100, delay: 3900 }, 'easeInOutSine');*/
+    Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .9 }, { duration: 2100, delay: 3900 }, 'easeInOutSine');
+    /*Velocity(svgScrawlonLogoFullGradientTwo, { offset: 0 }, { duration: 1000, delay: 1300 }, 'easeInOutSine');*/
     /*Velocity(svgScrawlonLogoFullGradientOne, { stopOpacity: .8 }, { duration: 100, delay: 100 }, 'easeInOutSine');
     Velocity(svgScrawlonLogoFullGradientTwo, { stopOpacity: .8 }, { duration: 100, delay: 100 }, 'easeInOutSine');
     Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .8, stopColor: "#191970" }, { duration: 100, delay: 100 }, 'easeInOutSine');*/
     /* sop color #191970 */
     /*Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .8 }, { duration: 400, delay: 1800 }, 'easeInOutSine');*/
+  }
+
+  function drawLogoScrawlon() {
+    Velocity(svgScrawlon, { fillOpacity: .5 }, { duration: 1000, delay: 5200 });
   }
   /*Velocity(svgScrawlonLogoFull, { opacity: 0 }, { duration: 1000, delay: 1500 });*/
 })();
