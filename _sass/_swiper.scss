@@ -72,6 +72,7 @@
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
+  opacity: 0;
 
   &.not-ios {
     background-attachment: fixed;
