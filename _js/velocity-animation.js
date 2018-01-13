@@ -7,6 +7,8 @@ console.log('velocity-animation', 2);
   var svgScrawlonLogoFullGradientOne = document.getElementById('slf-bg-one');
   var svgScrawlonLogoFullGradientTwo = document.getElementById('slf-bg-two');
   var svgScrawlonLogoFullGradientThree = document.getElementById('slf-bg-three');
+  var svgSo = document.getElementsByClassName('logo-so');
+  var svgScrawlon = document.getElementsByClassName('logo-scrawlon');
   var svgLogoFrame = document.getElementsByClassName('logo-frame');
   var swiperFade = document.getElementsByClassName('swiper-fade');
   var sliderBackground = document.getElementsByClassName('slider-background');
@@ -16,8 +18,11 @@ console.log('velocity-animation', 2);
   Velocity(sliderBackground, { opacity: 1 }, { duration: 1000, delay: 500 });
   /*Velocity(swiperFade, { opacity: .5 }, { duration: 5000, delay: 500 });*/
   Velocity(svgLogoFrame, { 'stroke-dasharray': 494 }, { duration: 1000, delay: 900 }, 'easeInOutSine');
-  Velocity(svgScrawlonLogoFullGradientOne, { stopOpacity: .6 }, { duration: 1500, delay: 1850 });
-  Velocity(svgScrawlonLogoFullGradientTwo, { stopOpacity: .6 }, { duration: 1500, delay: 1850 });
-  Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .8 }, { duration: 1500, delay: 1850 });
+  Velocity(svgScrawlonLogoFullGradientOne, { stopOpacity: .6 }, { duration: 1300, delay: 1700 }, 'easeInOutSine');
+  Velocity(svgScrawlonLogoFullGradientTwo, { stopOpacity: .6 }, { duration: 1300, delay: 1700 }, 'easeInOutSine');
+  Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .8 }, { duration: 1300, delay: 1700 }, 'easeInOutSine');
+  Velocity(svgSo, { strokeOpacity: 1 }, { duration: 500, delay: 1500 });
+  Velocity(svgSo, { strokeOpacity: 0, fillOpacity: 1 }, { duration: 900, delay: 200 }, 'easeInOutSine');
+  Velocity(svgScrawlon, { fillOpacity: 1 }, { duration: 800, delay: 2200 });
   /*Velocity(svgScrawlonLogoFull, { opacity: 0 }, { duration: 1000, delay: 1500 });*/
 })();
