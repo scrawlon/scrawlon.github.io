@@ -35,6 +35,11 @@
   background: linear-gradient(to bottom, transparent, rgba(25, 25, 112, 0.6));
 }
 
+.swiper-color-frame {
+  @extend .swiper-fade;
+  background: #000;
+}
+
 .swiper-slide {
   background: #000;
   padding-bottom: 30px;
@@ -66,7 +71,6 @@
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
-  opacity: 0;
 
   &.not-ios {
     background-attachment: fixed;
@@ -74,6 +78,10 @@
 
   h1 {
     color: #FFF;
+  }
+
+  #main-logo {
+    position: relative;
   }
 }
 

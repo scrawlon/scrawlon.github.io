@@ -13,6 +13,7 @@
         {% else if slide.background-color %}
           style="background:{{slide.background-color}}"
         {% endif %}>
+        <div class="swiper-color-frame"></div>
         <div class="swiper-fade"></div>
         {{slide.content}}
         {% include image_caption.html image=slide.background-image %}

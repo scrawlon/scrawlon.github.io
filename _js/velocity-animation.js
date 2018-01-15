@@ -1,11 +1,8 @@
 var Velocity = require('velocity-animate');
 
-console.log('velocity-animation', 3);
-
 (function() {
   var svgScrawlonLogoFull = document.getElementsByClassName('scrawlon-logo-full');
   var svgScrawlonLogoFullGradientOne = document.getElementById('slf-bg-one');
-  /*var svgScrawlonLogoFullGradientTwo = document.getElementById('slf-bg-two');*/
   var svgScrawlonLogoFullGradientThree = document.getElementById('slf-bg-three');
   var svgSo = document.getElementsByClassName('logo-so');
   var svgScrawlon = document.getElementsByClassName('logo-scrawlon');
@@ -13,42 +10,83 @@ console.log('velocity-animation', 3);
   var swiperFade = document.getElementsByClassName('swiper-fade');
   var sliderBackground = document.getElementsByClassName('slider-background');
 
-  fadeInBackground();
-  drawLogoFrame();
-  drawLogoSO();
-  fadeInLogoGradient();
-  drawLogoScrawlon();
+  var velocityTimeline = [
+    /* sliderBackground */
+    /*{
+      animation: fadeInBackground,
+      startAt: 500,
+      endAt: 2500
+    },*/
 
-  function fadeInBackground() {
-    Velocity(sliderBackground, { opacity: 1 }, { duration: 2000, delay: 500 });
-  }
-  /*Velocity(swiperFade, { background: "linearGradient(to bottom, transparent, rgba(25,25,112,1))" });*/
-  /*Velocity(swiperFade, { background: "linearGradient(to bottom, transparent, rgba(25,25,112,0.6))" }, { duration: 2000, delay: 1000 });*/
-  /*Velocity(swiperFade, { opacity: .5 }, { duration: 5000, delay: 500 });*/
+    /* svgLogoFrame */
+    {
+      animation: fadeInsScrawlonLogoFull,
+      startAt: 500,
+      endAt: 2500
+    },
+    {
+      animation: drawLogoFrame,
+      startAt: 900,
+      endAt: 2900
+    },
 
-  function drawLogoFrame() {
-    Velocity(svgLogoFrame, { 'stroke-dasharray': 494 }, { duration: 2000, delay: 900 }, 'easeInOutSine');
+    /* svgSo */
+    {
+      animation: drawLogoSoOutline,
+      startAt: 2000,
+      endAt: 2800
+    },
+    {
+      animation: drawLogoSoFill,
+      startAt: 0,
+      endAt: 1600
+    },
+
+    /* logo gradients */
+    {
+      animation: fadeInLogoGradient,
+      startAt: 3900,
+      endAt: 5000
+    },
+
+    /* svgScrawlon */
+    {
+      animation: drawLogoScrawlon,
+      startAt: 5200,
+      endAt: 6200
+    }
+  ];
+
+  velocityTimeline.forEach(function(timeline) {
+    timeline.animation(timeline.startAt, timeline.endAt);
+  });
+
+  /*function fadeInBackground(startAt, endAt) {
+    Velocity(sliderBackground, { opacity: 1 }, { duration: endAt - startAt, delay: startAt });
+  }*/
+
+  function fadeInsScrawlonLogoFull(startAt, endAt) {
+    Velocity(svgScrawlonLogoFull, { opacity: 1 }, { duration: endAt - startAt, delay: startAt });
   }
 
-  function drawLogoSO() {
-    Velocity(svgSo, { strokeOpacity: 1 }, { duration: 800, delay: 2000 });
-    Velocity(svgSo, { strokeOpacity: 0, fillOpacity: 1 }, { duration: 1600, delay: 0 }, 'easeInOutSine');
+  function drawLogoFrame(startAt, endAt) {
+    Velocity(svgLogoFrame, { 'stroke-dasharray': 494 }, { duration: endAt - startAt, delay: startAt }, 'easeInOutSine');
   }
 
-  function fadeInLogoGradient() {
-    Velocity(svgScrawlonLogoFullGradientOne, { stopOpacity: .6 }, { duration: 2100, delay: 3900 }, 'easeInOutSine');
-    /*Velocity(svgScrawlonLogoFullGradientTwo, { stopOpacity: .8 }, { duration: 2100, delay: 3900 }, 'easeInOutSine');*/
-    Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .9 }, { duration: 2100, delay: 3900 }, 'easeInOutSine');
-    /*Velocity(svgScrawlonLogoFullGradientTwo, { offset: 0 }, { duration: 1000, delay: 1300 }, 'easeInOutSine');*/
-    /*Velocity(svgScrawlonLogoFullGradientOne, { stopOpacity: .8 }, { duration: 100, delay: 100 }, 'easeInOutSine');
-    Velocity(svgScrawlonLogoFullGradientTwo, { stopOpacity: .8 }, { duration: 100, delay: 100 }, 'easeInOutSine');
-    Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .8, stopColor: "#191970" }, { duration: 100, delay: 100 }, 'easeInOutSine');*/
-    /* sop color #191970 */
-    /*Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .8 }, { duration: 400, delay: 1800 }, 'easeInOutSine');*/
+  function drawLogoSoOutline(startAt, endAt) {
+    Velocity(svgSo, { strokeOpacity: 1 }, { duration: endAt - startAt, delay: startAt });
   }
 
-  function drawLogoScrawlon() {
-    Velocity(svgScrawlon, { fillOpacity: .5 }, { duration: 1000, delay: 5200 });
+  function drawLogoSoFill(startAt, endAt) {
+    Velocity(svgSo, { strokeOpacity: 0, fillOpacity: 1 }, { duration: endAt - startAt, delay: startAt }, 'easeInOutSine');
   }
-  /*Velocity(svgScrawlonLogoFull, { opacity: 0 }, { duration: 1000, delay: 1500 });*/
+
+  function fadeInLogoGradient(startAt, endAt) {
+    Velocity(svgScrawlonLogoFullGradientOne, { stopOpacity: .6 }, { duration: endAt - startAt, delay: startAt }, 'easeInOutSine');
+    Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .9 }, { duration: endAt - startAt, delay: startAt }, 'easeInOutSine');
+  }
+
+  function drawLogoScrawlon(startAt, endAt) {
+    Velocity(svgScrawlon, { fillOpacity: .5 }, { duration: endAt - startAt, delay: startAt });
+  }
 })();
