@@ -19,5 +19,5 @@ gulp.task('browserify', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['./_js/*.js', 'portfolio-projects.json'], ['browserify']);
+  gulp.watch(['./_js/*.js', './_js/velocity-animations/*.js', 'portfolio-projects.json'], ['browserify']);
 });
