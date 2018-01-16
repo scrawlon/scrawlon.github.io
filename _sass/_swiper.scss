@@ -86,7 +86,7 @@
     p {
       color: #fff;
       top: 30vh;
-      font-size: 6em;
+      font-size: 3em;
       text-align: center;
       position: absolute;
       left: 0;
@@ -95,6 +95,7 @@
       opacity: 0;
       line-height: 1.2em;
       white-space: nowrap;
+      text-shadow: #000 0 0 40px;
 
       span {
         font-size: 1em;

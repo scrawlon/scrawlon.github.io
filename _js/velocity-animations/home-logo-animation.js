@@ -28,7 +28,7 @@ var velocityTimeline = [
   /* Swiper Color Frame */
   {
     animation: fadeOutSwiperColorFrame,
-    startAt: 6500,
+    startAt: 3500,
     endAt: 10500
   },
 
@@ -87,22 +87,22 @@ function wordArt(startAt, endAt) {
     var thisStart = startAt + (individualDuration * i);
     /*var thisDuration = (individualDuration * (i + 1)) - fadeDuration;*/
 
-    Velocity(sentence, { opacity: 1, translateY: [0, -100], fontSize: '3em' }, { duration: fadeDuration, delay: thisStart });
+    Velocity(sentence, { opacity: 1, translateY: [0, -50], fontSize: '3em' }, { duration: fadeDuration, delay: thisStart });
 
     if ( spans.length ) {
       var spanDuration = individualDuration / spans.length;
       spans.forEach(function(span, i) {
-        Velocity(span, { opacity: 1, fontSize: '1em' }, { duration: fadeDuration, delay: thisStart + (spanDuration * i) });
-        Velocity(span, { opacity: 0 }, { duration: fadeDuration, delay: spanDuration - fadeDuration });
+        Velocity(span, { opacity: 1, fontSize: '1em' }, { duration: fadeDuration, delay: thisStart + sentencePause + (spanDuration * i) });
+        Velocity(span, { opacity: 0 }, { duration: fadeDuration, delay: spanDuration });
       });
     }
 
-    Velocity(sentence, 'reverse', { duration: fadeDuration, delay: ( individualDuration - (fadeDuration * 2) ) + sentencePause });
+    Velocity(sentence, { opacity: 0, translateY: '+=50' }, { duration: fadeDuration / 2, delay: ( individualDuration - (fadeDuration * 2) ) + sentencePause });
   })
 }
 
 function fadeOutSwiperColorFrame(startAt, endAt) {
-  Velocity(swiperColorFrame, { opacity: .55 }, { duration: endAt - startAt, delay: startAt });
+  Velocity(swiperColorFrame, { opacity: .45 }, { duration: endAt - startAt, delay: startAt });
 }
 
 function fadeInsScrawlonLogoFull(startAt, endAt) {
