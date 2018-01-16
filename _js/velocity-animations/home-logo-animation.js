@@ -35,20 +35,20 @@ var velocityTimeline = [
   /* svgLogoFrame */
   {
     animation: fadeInsScrawlonLogoFull,
-    startAt: 8500,
-    endAt: 10500
+    startAt: 6500,
+    endAt: 8500
   },
   {
     animation: drawLogoFrame,
-    startAt: 8900,
-    endAt: 10900
+    startAt: 6900,
+    endAt: 8900
   },
 
   /* svgSo */
   {
     animation: drawLogoSoOutline,
-    startAt: 10000,
-    endAt: 10800
+    startAt: 8000,
+    endAt: 8800
   },
   {
     animation: drawLogoSoFill,
@@ -59,15 +59,15 @@ var velocityTimeline = [
   /* logo gradients */
   {
     animation: fadeInLogoGradient,
-    startAt: 11900,
-    endAt: 13000
+    startAt: 9900,
+    endAt: 11000
   },
 
   /* svgScrawlon */
   {
     animation: drawLogoScrawlon,
-    startAt: 13200,
-    endAt: 14200
+    startAt: 11200,
+    endAt: 12200
   }
 ];
 
