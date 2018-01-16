@@ -22,14 +22,14 @@ var velocityTimeline = [
   {
     animation: wordArt,
     startAt: 500,
-    endAt: 8500
+    endAt: 6500
   },
 
   /* Swiper Color Frame */
   {
     animation: fadeOutSwiperColorFrame,
-    startAt: 2500,
-    endAt: 6500
+    startAt: 6500,
+    endAt: 10500
   },
 
   /* svgLogoFrame */
@@ -78,6 +78,7 @@ var velocityTimeline = [
 function wordArt(startAt, endAt) {
   var sentences = document.querySelectorAll('.slide-header p');
   var totalDuration = endAt - startAt;
+  var sentencePause = 500;
   var individualDuration = totalDuration / sentences.length;
   var fadeDuration = 500;
 
@@ -96,7 +97,7 @@ function wordArt(startAt, endAt) {
       });
     }
 
-    Velocity(sentence, 'reverse', { duration: fadeDuration, delay: individualDuration - (fadeDuration * 2) });
+    Velocity(sentence, 'reverse', { duration: fadeDuration, delay: ( individualDuration - (fadeDuration * 2) ) + sentencePause });
   })
 }
 
