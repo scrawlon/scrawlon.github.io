@@ -22,7 +22,7 @@ var velocityTimeline = [
   {
     animation: wordArt,
     startAt: 500,
-    endAt: 6500
+    endAt: 7500
   },
 
   /* Swiper Color Frame */
@@ -86,6 +86,10 @@ function wordArt(startAt, endAt) {
     var spans = sentence.querySelectorAll('span');
     var thisStart = startAt + (individualDuration * i);
     /*var thisDuration = (individualDuration * (i + 1)) - fadeDuration;*/
+
+    if ( i === sentences.length ) {
+      individualDuration += 2000;
+    }
 
     Velocity(sentence, { opacity: 1, translateY: [0, -50], fontSize: '3em' }, { duration: fadeDuration, delay: thisStart });
 
