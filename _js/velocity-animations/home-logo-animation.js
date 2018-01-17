@@ -113,7 +113,7 @@ function wordArt(startAt, endAt) {
 }
 
 function fadeOutSwiperColorFrame(startAt, endAt) {
-  Velocity(swiperColorFrame, { opacity: .45 }, { duration: endAt - startAt, delay: startAt });
+  Velocity(swiperColorFrame, { opacity: .25 }, { duration: endAt - startAt, delay: startAt });
 }
 
 function fadeInsScrawlonLogoFull(startAt, endAt) {
