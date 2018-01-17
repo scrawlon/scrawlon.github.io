@@ -22,7 +22,7 @@ var velocityTimeline = [
   {
     animation: wordArt,
     startAt: 500,
-    endAt: 7500
+    endAt: 6500
   },
 
   /* Swiper Color Frame */
@@ -32,23 +32,30 @@ var velocityTimeline = [
     endAt: 10500
   },
 
-  /* svgLogoFrame */
+  /* scrawlon logo Full */
   {
     animation: fadeInsScrawlonLogoFull,
-    startAt: 6500,
-    endAt: 8500
+    startAt: 5500,
+    endAt: 7000
   },
   {
+    animation: zoomOutScrawlonLogoFull,
+    startAt: 0,
+    endAt: 1000
+  },
+
+  /* svgLogoFrame */
+  {
     animation: drawLogoFrame,
-    startAt: 6900,
-    endAt: 8900
+    startAt: 5900,
+    endAt: 7900
   },
 
   /* svgSo */
   {
     animation: drawLogoSoOutline,
-    startAt: 8000,
-    endAt: 8800
+    startAt: 7000,
+    endAt: 7800
   },
   {
     animation: drawLogoSoFill,
@@ -59,15 +66,15 @@ var velocityTimeline = [
   /* logo gradients */
   {
     animation: fadeInLogoGradient,
-    startAt: 9900,
-    endAt: 11000
+    startAt: 7800,
+    endAt: 8800
   },
 
   /* svgScrawlon */
   {
     animation: drawLogoScrawlon,
-    startAt: 11200,
-    endAt: 12200
+    startAt: 8500,
+    endAt: 9500
   }
 ];
 
@@ -91,12 +98,12 @@ function wordArt(startAt, endAt) {
       individualDuration += 2000;
     }
 
-    Velocity(sentence, { opacity: 1, translateY: [0, -50], fontSize: '3em' }, { duration: fadeDuration, delay: thisStart });
+    Velocity(sentence, { opacity: 1, translateY: [0, -50] }, { duration: fadeDuration, delay: thisStart });
 
     if ( spans.length ) {
       var spanDuration = individualDuration / spans.length;
       spans.forEach(function(span, i) {
-        Velocity(span, { opacity: 1, fontSize: '1em' }, { duration: fadeDuration, delay: thisStart + sentencePause + (spanDuration * i) });
+        Velocity(span, { opacity: 1 }, { duration: fadeDuration, delay: thisStart + sentencePause + (spanDuration * i) });
         Velocity(span, { opacity: 0 }, { duration: fadeDuration, delay: spanDuration });
       });
     }
@@ -110,7 +117,11 @@ function fadeOutSwiperColorFrame(startAt, endAt) {
 }
 
 function fadeInsScrawlonLogoFull(startAt, endAt) {
-  Velocity(svgScrawlonLogoFull, { opacity: 1 }, { duration: endAt - startAt, delay: startAt });
+  Velocity(svgScrawlonLogoFull, { opacity: 1, scale: 1 }, { duration: endAt - startAt, delay: startAt }, 'easeInElastic');
+}
+
+function zoomOutScrawlonLogoFull(startAt, endAt) {
+  Velocity(svgScrawlonLogoFull, { scale: .8 }, { duration: endAt - startAt, delay: startAt });
 }
 
 function drawLogoFrame(startAt, endAt) {
