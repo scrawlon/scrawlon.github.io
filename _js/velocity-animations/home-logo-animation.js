@@ -28,8 +28,8 @@ var velocityTimeline = [
   /* Swiper Color Frame */
   {
     animation: fadeOutSwiperColorFrame,
-    startAt: 3500,
-    endAt: 10500
+    startAt: 7800,
+    endAt: 8800
   },
 
   /* scrawlon logo Full */
