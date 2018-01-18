@@ -1,18 +1,17 @@
 ---
 order: 1
 background-image:
-  file: whatever-happened-to-baby-jane.jpg
+  file: blue-blast.jpg
   caption:
     credit:
-      name: Doug Bowman
-      url: https://www.flickr.com/photos/bistrosavage/
+      name: Eric Sonstroem
+      url: https://www.flickr.com/photos/sonstroem/
     license:
       type: Creative Commons
       url: https://creativecommons.org/licenses/by/2.0/
     source: Flickr
-    title: Whatever Happened to Baby Jane?
-    url: https://flic.kr/p/kkVZ
-
+    title: Blue blast
+    url: https://flic.kr/p/Kgfvw5
 ---
 <section id="main-logo">
   <div class="wide-wrapper">
