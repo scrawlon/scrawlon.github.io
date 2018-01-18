@@ -9,6 +9,7 @@ var svgLogoFrame = document.getElementsByClassName('logo-frame');
 var swiperColorFrame = document.getElementsByClassName('swiper-color-frame');
 var swiperFade = document.getElementsByClassName('swiper-fade');
 var sliderBackground = document.getElementsByClassName('slider-background');
+var sliderBackgroundCaption = document.getElementsByTagName('figcaption');
 
 var velocityTimeline = [
   /* sliderBackground */
@@ -114,6 +115,7 @@ function wordArt(startAt, endAt) {
 
 function fadeOutSwiperColorFrame(startAt, endAt) {
   Velocity(swiperColorFrame, { opacity: .25 }, { duration: endAt - startAt, delay: startAt });
+  Velocity(sliderBackgroundCaption, { opacity: 1 }, { duration: endAt - startAt, delay: startAt });
 }
 
 function fadeInsScrawlonLogoFull(startAt, endAt) {
