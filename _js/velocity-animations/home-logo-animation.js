@@ -129,7 +129,7 @@ function fadeInsScrawlonLogoFull(startAt, endAt) {
 }
 
 function zoomOutScrawlonLogoFull(startAt, endAt) {
-  Velocity(svgScrawlonLogoFull, { scale: .8 }, { duration: endAt - startAt, delay: startAt });
+  Velocity(svgScrawlonLogoFull, { scale: .8}, { duration: endAt - startAt, delay: startAt });
 }
 
 function drawLogoFrame(startAt, endAt) {
