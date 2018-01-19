@@ -80,7 +80,7 @@ if ( sliderBackgroundWidth > 650 ) {
     {
       animation: wordArt,
       startAt: 500,
-      endAt: 6500
+      endAt: 6450
     }
   );
 }
