@@ -1,7 +1,12 @@
 var homeLogoAnimation = require('./velocity-animations/home-logo-animation.js');
+var homeLogoReplay = document.getElementsByClassName('homeLogoReplay');
 
 (function() {
-  homeLogoAnimation.velocityTimeline.forEach(function(timeline) {
-    timeline.animation(timeline.startAt, timeline.endAt);
-  });
+  function homeLogoAnimationPlay() {
+    homeLogoAnimation.velocityTimeline.forEach(function(timeline) {
+      timeline.animation(timeline.startAt, timeline.endAt, false);
+    });
+  }
+
+  homeLogoAnimationPlay();
 })();

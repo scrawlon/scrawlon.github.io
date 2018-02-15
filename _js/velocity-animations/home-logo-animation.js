@@ -16,21 +16,12 @@ var swiperColorFrame = document.getElementsByClassName('swiper-color-frame');
 var swiperFade = document.getElementsByClassName('swiper-fade');
 var animationStartOffset = 5000;
 
-if ( sliderBackgroundWidth > 650 ) {
-  animationStartOffset = 0;
-}
-
 var velocityTimeline = [
   /* scrawlon logo Full */
   {
     animation: fadeInsScrawlonLogoFull,
     startAt: 5500 - animationStartOffset,
     endAt: 7000 - animationStartOffset
-  },
-  {
-    animation: zoomOutScrawlonLogoFull,
-    startAt: 0,
-    endAt: 1000
   },
 
   /* Swiper Color Frame */
@@ -53,11 +44,6 @@ var velocityTimeline = [
     startAt: 7000 - animationStartOffset,
     endAt: 7800 - animationStartOffset
   },
-  {
-    animation: drawLogoSoFill,
-    startAt: 0,
-    endAt: 1600
-  },
 
   /* logo gradients */
   {
@@ -74,82 +60,55 @@ var velocityTimeline = [
   }
 ];
 
-if ( sliderBackgroundWidth > 650 ) {
-  velocityTimeline.push(
-    /* word art */
-    {
-      animation: wordArt,
-      startAt: 500,
-      endAt: 6450
-    }
-  );
-}
-
-/*function fadeInBackground(startAt, endAt) {
-  Velocity(sliderBackground, { opacity: 1 }, { duration: endAt - startAt, delay: startAt });
-}*/
-
-function wordArt(startAt, endAt) {
-  var sentences = document.querySelectorAll('.slide-header p');
-  var totalDuration = endAt - startAt;
-  var sentencePause = 500;
-  var individualDuration = totalDuration / sentences.length;
-  var fadeDuration = 500;
-
-  sentences.forEach(function(sentence, i) {
-    var spans = sentence.querySelectorAll('span');
-    var thisStart = startAt + (individualDuration * i);
-    /*var thisDuration = (individualDuration * (i + 1)) - fadeDuration;*/
-
-    if ( i === sentences.length ) {
-      individualDuration += 2000;
-    }
-
-    Velocity(sentence, { opacity: 1, translateY: [0, -50] }, { duration: fadeDuration, delay: thisStart });
-
-    if ( spans.length ) {
-      var spanDuration = individualDuration / spans.length;
-      spans.forEach(function(span, i) {
-        Velocity(span, { opacity: 1 }, { duration: fadeDuration, delay: thisStart + sentencePause + (spanDuration * i) });
-        Velocity(span, { opacity: 0 }, { duration: fadeDuration, delay: spanDuration });
-      });
-    }
-
-    Velocity(sentence, { opacity: 0, translateY: '+=50' }, { duration: fadeDuration / 2, delay: ( individualDuration - (fadeDuration * 2) ) + sentencePause });
-  })
-}
-
-function fadeOutSwiperColorFrame(startAt, endAt) {
+function fadeOutSwiperColorFrame(startAt, endAt, reverse) {
+  if ( reverse ) {
+    reverseAnimation([swiperColorFrame, sliderBackgroundCaption]);
+    return;
+  }
   Velocity(swiperColorFrame, { opacity: .25 }, { duration: endAt - startAt, delay: startAt });
   Velocity(sliderBackgroundCaption, { opacity: 1 }, { duration: endAt - startAt, delay: startAt });
 }
 
-function fadeInsScrawlonLogoFull(startAt, endAt) {
+function fadeInsScrawlonLogoFull(startAt, endAt, reverse) {
+  if ( reverse ) {
+    reverseAnimation([svgScrawlonLogoFull]);
+    return;
+  }
   Velocity(svgScrawlonLogoFull, { opacity: 1, scale: 1 }, { duration: endAt - startAt, delay: startAt }, 'easeInElastic');
+  Velocity(svgScrawlonLogoFull, { scale: .8}, { duration: 1000, delay: 0 });
 }
 
-function zoomOutScrawlonLogoFull(startAt, endAt) {
-  Velocity(svgScrawlonLogoFull, { scale: .8}, { duration: endAt - startAt, delay: startAt });
-}
-
-function drawLogoFrame(startAt, endAt) {
+function drawLogoFrame(startAt, endAt, reverse) {
+  if ( reverse ) {
+    reverseAnimation([svgLogoFrame]);
+    return;
+  }
   Velocity(svgLogoFrame, { 'stroke-dasharray': 494 }, { duration: endAt - startAt, delay: startAt }, 'easeInOutSine');
 }
 
-function drawLogoSoOutline(startAt, endAt) {
+function drawLogoSoOutline(startAt, endAt, reverse) {
+  if ( reverse ) {
+    reverseAnimation([svgSo]);
+    return;
+  }
   Velocity(svgSo, { strokeOpacity: 1 }, { duration: endAt - startAt, delay: startAt });
+  Velocity(svgSo, { strokeOpacity: 0, fillOpacity: 1 }, { duration: 1600, delay: 0 }, 'easeInOutSine');
 }
 
-function drawLogoSoFill(startAt, endAt) {
-  Velocity(svgSo, { strokeOpacity: 0, fillOpacity: 1 }, { duration: endAt - startAt, delay: startAt }, 'easeInOutSine');
-}
-
-function fadeInLogoGradient(startAt, endAt) {
+function fadeInLogoGradient(startAt, endAt, reverse) {
+  if ( reverse ) {
+    reverseAnimation([svgScrawlonLogoFullGradientOne, svgScrawlonLogoFullGradientThree]);
+    return;
+  }
   Velocity(svgScrawlonLogoFullGradientOne, { stopOpacity: .6 }, { duration: endAt - startAt, delay: startAt }, 'easeInOutSine');
   Velocity(svgScrawlonLogoFullGradientThree, { stopOpacity: .9 }, { duration: endAt - startAt, delay: startAt }, 'easeInOutSine');
 }
 
-function drawLogoScrawlon(startAt, endAt) {
+function drawLogoScrawlon(startAt, endAt, reverse) {
+  if ( reverse ) {
+    reverseAnimation([svgScrawlon]);
+    return;
+  }
   Velocity(svgScrawlon, { fillOpacity: .5 }, { duration: endAt - startAt, delay: startAt });
 }
 

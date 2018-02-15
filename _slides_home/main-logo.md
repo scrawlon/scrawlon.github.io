@@ -30,7 +30,13 @@ background-image:
       <p>CODE <span>connects us.</span></p>
     </div>
 
-    <div class="full-width"></div>
+    <div class="full-width">
+    </div>
+
+    <div class="slide-content">
+      <ul id="homeLogoAnimation">
+      </ul>
+    </div>
 
   </div>  
 </section>

@@ -27,13 +27,20 @@
 
   .slide-content {
     @extend .slide-header;
-    background: rgba(0, 0, 0, 0.2);
     color: #fff;
-    padding: 10px 40px 40px;
-    letter-spacing: .05em;
-    word-spacing: .35em;
-    border-radius: 10px;
-    box-shadow: -2px 2px 40px #fff, -1px 3px #000;
+    width: 100%;
+
+    #homeLogoAnimation {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+    }
   }
 
   @media only screen and #{$landscape} {
