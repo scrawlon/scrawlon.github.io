@@ -34,8 +34,12 @@ background-image:
     </div>
 
     <div class="slide-content">
-      <ul id="homeLogoAnimation">
-      </ul>
+      <div class="scroll-arrow home-arrow" data-destination="article" data-destination-speed="1000">
+      	<svg height="70" width="70">
+      		<circle cx="35" cy="35" r="30" stroke="#fff" stroke-width="2" fill="none" />
+      		<polyline points="15,30 35,50 55,30" stroke="#fff" stroke-width="4" fill="none"/>
+      	</svg>
+      </div>
     </div>
 
   </div>  

@@ -61,4 +61,12 @@ span.svg {
   @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
   @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
   @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+  &.home-arrow {
+    margin: 30px auto 0;
+
+    -webkit-animation-duration:6s;
+    -moz-animation-duration:6s;
+    animation-duration:6s;
+  }
 }
