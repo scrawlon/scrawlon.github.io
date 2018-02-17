@@ -3,9 +3,6 @@ var Velocity = require('velocity-animate');
 var sliderBackground = document.getElementsByClassName('slider-background');
 var sliderBackgroundCaption = document.getElementsByTagName('figcaption');
 var sliderBackgroundWidth = sliderBackground.length ? sliderBackground[0].offsetWidth : 0;
-
-if ( !sliderBackgroundWidth ) { return; }
-
 var svgScrawlonLogoFull = document.getElementsByClassName('scrawlon-logo-full');
 var svgScrawlonLogoFullGradientOne = document.getElementById('slf-bg-one');
 var svgScrawlonLogoFullGradientThree = document.getElementById('slf-bg-three');
