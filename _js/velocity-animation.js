@@ -12,11 +12,11 @@ var scrollToElement = require('./velocity-animations/scroll-to-element.js');
         timeline.animation(timeline.startAt, timeline.endAt);
       });
     },
-    scrollAnimationPlay: function() {
+    /*scrollAnimationPlay: function() {
       scrollAnimation.velocityTimeline.forEach(function(timeline) {
         timeline.animation(timeline.startAt, timeline.endAt);
       });
-    },
+    },*/
     scrollToElementPlay: function() {
       scrollToElement.velocityTimeline.forEach(function(timeline) {
         timeline.animation();
@@ -29,7 +29,7 @@ var scrollToElement = require('./velocity-animations/scroll-to-element.js');
   }
 
   if ( svgScrollArrow.length ) {
-    animations.scrollAnimationPlay();
+    /*animations.scrollAnimationPlay();*/
 
     for ( var i=0; i < svgScrollArrow.length; i++ ) {
       svgScrollArrow[i].onclick = function(event) {

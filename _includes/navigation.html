@@ -4,7 +4,7 @@
     <!-- Desktop Nav -->
     {% for link in site.links reversed %}
 	    <li class="float-right">
-        {% if page.url == link.url or link.title == "Blog" and page.layout == "post" %}
+        {% if page.url == link.url %}
           <span class="current-page-link">{{ link.title }}</span>
         {% else %}
           <a href="{{ site.url }}{{ link.url }}" class="{{ nav_class }}" title="{{ link.title }}">
@@ -61,7 +61,7 @@
     <!-- Mobile Nav -->
     {% for link in site.links %}
 	    <li>
-        {% if page.url == link.url or link.title == "Blog" and page.layout == "post" %}
+        {% if page.url == link.url %}
           <span class="current-page-link">{{ link.title }}</span>
         {% else %}
           <a href="{{ site.url }}{{ link.url }}" class="{{ nav_class }}" title="{{ link.title }}">
