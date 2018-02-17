@@ -1,12 +1,23 @@
 var homeLogoAnimation = require('./velocity-animations/home-logo-animation.js');
-var homeLogoReplay = document.getElementsByClassName('homeLogoReplay');
+var scollAnimation = require('./velocity-animations/scroll-animation.js');
 
 (function() {
-  function homeLogoAnimationPlay() {
-    homeLogoAnimation.velocityTimeline.forEach(function(timeline) {
-      timeline.animation(timeline.startAt, timeline.endAt, false);
-    });
+  var svgScrawlonLogoFull = document.getElementsByClassName('scrawlon-logo-full');
+
+  var animations = {
+    homeLogoAnimationPlay: function() {
+      homeLogoAnimation.velocityTimeline.forEach(function(timeline) {
+        timeline.animation(timeline.startAt, timeline.endAt, false);
+      });
+    },
+    scrollAnimationPlay: function() {
+      scrollAnimation.velocityTimeline.foreach(function(timeline) {
+        timeline.animation(timeline.startAt, timeline.endAt, false);
+      });
+    }
   }
 
-  homeLogoAnimationPlay();
+  if ( svgScrawlonLogoFull.length ) {
+    animations.homeLogoAnimationPlay();
+  }
 })();
