@@ -8,8 +8,8 @@ var body = document.querySelector('body');
 var mobileNavOpen = false;
 var direction = 'normal';
 var mobileNavSlideInAnimation = [
-  { transform: 'translate(100vw)' },
-  { transform: 'translate(60vw)' }
+  { opacity: 0 },
+  { opacity: 1 }
 ];
 var mobileNavBackdropAnimation = [
   { opacity: 0 },
@@ -25,7 +25,7 @@ mobileNavBackdrop.onclick = function() {
 }
 
 function mobileMenuAnimate() {
-  setMobileNavAnimation();
+  /*setMobileNavAnimation();*/
 
   [html, body].forEach(function(el) {
     mobileNavOpen ? el.classList.remove('no-scroll') : el.classList.add('no-scroll');
@@ -37,7 +37,7 @@ function mobileMenuAnimate() {
   mobileNavOpen = !mobileNavOpen;
 }
 
-function setMobileNavAnimation() {
+/*function setMobileNavAnimation() {
   var notMobile = window.matchMedia("(min-width: 40em)");
 
   if ( notMobile.matches ) {
@@ -45,7 +45,7 @@ function setMobileNavAnimation() {
   } else {
     mobileNavSlideInAnimation[1] = { transform: 'translate(18vw)' };
   }
-}
+}*/
 
 function animatedMenuIn(direction) {
   mobileNavBackdrop.classList.add('visible');
@@ -56,6 +56,7 @@ function animatedMenuIn(direction) {
     fill: 'forwards'
   });
 
+  mobileNav.classList.add('visible');
   mobileNav.animate(mobileNavSlideInAnimation, {
     direction: direction,
     duration: 300,
@@ -70,7 +71,9 @@ function animatedMenuOut(direction) {
     duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
-  });
+    }).onfinish = function() {
+      mobileNav.classList.remove('visible');
+    }
 
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,

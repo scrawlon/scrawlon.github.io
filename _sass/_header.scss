@@ -15,7 +15,6 @@
   // background: lighten($scrawlon-blue, 15%);
   display: none;
   z-index: 2;
-  position: absolute;
   top: 42px !important;
   min-height: 100vh;
 
@@ -202,20 +201,27 @@ nav {
   &.nav-mobile {
     line-height: 2em;
     font-size: 1.6em;
-    transform: translate(100vw, 0);
+    transform: translate(0, 0);
     position: absolute;
     height: 100vh;
     width: 100vw;
     z-index: 9;
     font-size: 2.2rem;
+    display: none;
+    @include scanlines(#000, 1px, 0deg, 0.3);
+    background-size: 300%;
+    background-position: 50%;
+
+    &.visible {
+      display: block;
+    }
 
     .social-header {
-      height: 44px;
+      height: 30vh;
       position: absolute;
-      top: 0;
+      top: 70vh;
       left: 0;
       right: 0;
-      background: #EF6C00;
 
       ul {
         &.social-icons {
@@ -224,7 +230,7 @@ nav {
           list-style-type: none;
           background: rgba(0,0,0,0);
           padding: 0;
-          margin-left: 10vw;
+          margin-left: 22vw;
 
           li {
             display: inline-block;
@@ -241,15 +247,15 @@ nav {
     }
 
     ul {
-      background: #fff;
       width: 100vw;
       height: 100vh;
-      padding: 74px 0 4vh 10vw;
+      padding: 8vh 0 4vh 22vw;
       position: absolute;
       top: 0;
       overflow: hidden;
       // text-align: center;
       // padding: 20vh 20px 20px 10vw;
+      z-index: 5;
 
 
       li {
@@ -258,14 +264,19 @@ nav {
         .current-page-link {
           color: #EF6C00;
           opacity: 0.75;
-          padding: 6px 0 3px 14px;
+          padding: 6px 6px 3px 14px;
+          background: #fff;
         }
 
         a {
           color: #000;
           background: #fff;
-          padding: 6px 0 3px 14px;
-          opacity: 0.65;
+          padding: 6px 6px 3px 14px;
+          opacity: 0.85;
+
+          &:hover {
+            padding: 10px 10px 10px 14px;
+          }
         }
       }
     }
@@ -282,16 +293,18 @@ nav {
 
   nav {
     &.nav-mobile {
+      background-size: 200%;
+
       .social-header {
         ul {
           &.social-icons {
-            margin-left: 4vw;
+            margin-left: 36vw;
           }
         }
       }
 
       ul {
-        padding: 74px 2vw 4vh 4vw;
+        padding: 8vh 2vw 4vh 36vw;
         text-align: left;
 
         li {
