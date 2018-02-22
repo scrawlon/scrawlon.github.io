@@ -212,6 +212,17 @@ nav {
     background-size: 300%;
     background-position: 50%;
 
+    figcaption {
+      font-size: .7rem;
+      position: absolute;
+      line-height: 1.45rem;
+      color: #fff;
+      z-index: 23;
+      top: 90vh;
+      width: 100%;
+      text-align: center;
+    }
+
     &.visible {
       display: block;
     }
