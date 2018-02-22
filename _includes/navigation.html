@@ -47,7 +47,8 @@
   </div>
 </nav>
 
-<nav class="nav-mobile" id="nav-mobile" style="background-image: linear-gradient(to bottom, rgba(25, 57, 102, 0.1), rgba(25, 57, 102, 0.5)), url(http://localhost:4000/images/blue-blast.jpg)">
+{% assign mobile_nav_background = site.mobile_nav.background-image.file %}
+<nav class="nav-mobile" id="nav-mobile" style="background-image: linear-gradient(to bottom, rgba(25, 57, 102, 0.1), rgba(25, 57, 102, 0.5)), url({{ site.url }}/images/{{ mobile_nav_background }})">
   <ul>
     <!-- Logo Home Link -->
     {% assign home = site.home | first %}
@@ -72,7 +73,7 @@
     {% endfor %}
 
   </ul>
-  
+
   <div class="swiper-color-frame"></div>
   <div class="swiper-fade"></div>
 
