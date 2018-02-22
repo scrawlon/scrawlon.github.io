@@ -1,8 +1,10 @@
 var webAnimationsJs = require('web-animations-js');
 var animate;
 var mobileNav = document.getElementById('nav-mobile');
+var mobileNavMenu = mobileNav ? mobileNav.getElementsByTagName('ul') : [];
+var mobileNavLinks = mobileNavMenu.length ? mobileNavMenu[0].getElementsByTagName('li') : [];
 var mobileNavToggle = document.getElementById('nav-mobile-toggle');
-var mobileNavBackdrop = document.getElementById('nav-mobile-backdrop');
+/*var mobileNavBackdrop = document.getElementById('nav-mobile-backdrop');*/
 var html = document.querySelector('html');
 var body = document.querySelector('body');
 var mobileNavOpen = false;
@@ -11,18 +13,26 @@ var mobileNavSlideInAnimation = [
   { opacity: 0 },
   { opacity: 1 }
 ];
-var mobileNavBackdropAnimation = [
+var mobileNavLinksAnimation = [
+  { opacity: 0 },
+  { opacity: 1 }
+];
+var mobileNavLinksAnimationReverse = [
+  { opacity: 1 },
+  { opacity: 0 }
+];
+/*var mobileNavBackdropAnimation = [
   { opacity: 0 },
   { opacity: 0.8 }
-];
+];*/
 
 mobileNavToggle.onclick = function() {
   mobileMenuAnimate();
 }
 
-mobileNavBackdrop.onclick = function() {
+/*mobileNavBackdrop.onclick = function() {
   mobileMenuAnimate();
-}
+}*/
 
 function mobileMenuAnimate() {
   /*setMobileNavAnimation();*/
@@ -48,13 +58,13 @@ function mobileMenuAnimate() {
 }*/
 
 function animatedMenuIn(direction) {
-  mobileNavBackdrop.classList.add('visible');
+  /*mobileNavBackdrop.classList.add('visible');
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
     duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
-  });
+  });*/
 
   mobileNav.classList.add('visible');
   mobileNav.animate(mobileNavSlideInAnimation, {
@@ -63,26 +73,49 @@ function animatedMenuIn(direction) {
     easing: 'ease-in-out',
     fill: 'forwards'
   });
+
+  for ( var i=0; i < mobileNavLinks.length; i++ ) {
+    (function(i) {
+      setTimeout(function () {
+        mobileNavLinks[i].animate(mobileNavLinksAnimation, {
+          direction: direction,
+          duration: 300,
+          easing: 'ease-in-out',
+          fill: 'forwards',
+          delay: 150
+        });
+      }, i * 150);
+    })(i);
+  }
 }
 
 function animatedMenuOut(direction) {
+  for ( var i=0; i < mobileNavLinks.length; i++ ) {
+    mobileNavLinks[i].animate(mobileNavLinksAnimationReverse, {
+      direction: direction,
+      duration: 300,
+      easing: 'ease-in-out',
+      fill: 'forwards'
+    });
+  }
+
   mobileNav.animate(mobileNavSlideInAnimation, {
     direction: direction,
     duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
-    }).onfinish = function() {
-      mobileNav.classList.remove('visible');
-    }
+  }).onfinish = function() {
+    mobileNav.classList.remove('visible');
+  }
 
-  mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
+  /*mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
     duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
   }).onfinish = function() {
     mobileNavBackdrop.classList.remove('visible');
-  }
+  }*/
 }
 
 /* requestAnimationFrame + customEvent

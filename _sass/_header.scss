@@ -246,6 +246,7 @@ nav {
           li {
             display: inline-block;
             margin-right: 1em;
+            opacity: 1;
 
             a {
               color: #fff;
@@ -264,13 +265,12 @@ nav {
       position: absolute;
       top: 0;
       overflow: hidden;
-      // text-align: center;
-      // padding: 20vh 20px 20px 10vw;
       z-index: 5;
 
 
       li {
         display: block;
+        opacity: 0;
 
         .current-page-link {
           color: #EF6C00;
