@@ -220,42 +220,49 @@ class PortfolioList extends Component {
             <h1 className="page">
               Portfolio
             </h1>
+            <div className="scroll-arrow" data-destination="article" data-destination-speed="1000">
+              <svg height="70" width="70">
+                <polyline points="15,30 35,50 55,30" stroke="#fff" strokeWidth="4" fill="none"/>
+              </svg>
+            </div>
           </div>
         </header>
 
         <div className="portfolio-wrapper">
-          <PortfolioFilterBar
-            projects={projects}
-            projectTags={projectTags}
-            filtersVisible={filtersVisible}
-            filtersActive={filtersActive}
-            filtersActiveAll={filtersActiveAll}
-            setActiveFilter={this.setActiveFilter}
-            handleFilterSelect={this.handleFilterSelect}
-            toggleActiveFilter={this.toggleActiveFilter}
-          />
+          <article>
+            <PortfolioFilterBar
+              projects={projects}
+              projectTags={projectTags}
+              filtersVisible={filtersVisible}
+              filtersActive={filtersActive}
+              filtersActiveAll={filtersActiveAll}
+              setActiveFilter={this.setActiveFilter}
+              handleFilterSelect={this.handleFilterSelect}
+              toggleActiveFilter={this.toggleActiveFilter}
+            />
 
-          <ul className="portfolio-list">
-            {!projects.length
-              ? <h2>(no projects match your query)</h2>
-              :
-              projects.map((project) => {
-                const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
-                return (
-                  <Link
-                    to={`${this.props.match.url}${project.id}`}
-                    key={project.id}
-                    title={"Read more about portfolio project, '" + project.title + "'"}
-                    onClick={this.cacheState}
-                  >
-                    <li key={project.title}>
-                      <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
-                    </li>
-                  </Link>
-                );
-              })
-            }
-          </ul>
+            <ul className="portfolio-list">
+              {!projects.length
+                ? <h2>(no projects match your query)</h2>
+                :
+                projects.map((project) => {
+                  const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
+                  return (
+                    <Link
+                      to={`${this.props.match.url}${project.id}`}
+                      key={project.id}
+                      title={"Read more about portfolio project, '" + project.title + "'"}
+                      onClick={this.cacheState}
+                    >
+                      <li key={project.title}>
+                        <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
+                      </li>
+                    </Link>
+                  );
+                })
+              }
+            </ul>
+          </article>
         </div>
       </div>
     );

@@ -2,4 +2,7 @@ require('./header');
 require('./mobileMenu');
 require('./homeSlider');
 require('./portfolio');
-require('./velocity-animation');
+
+window.onload = function() {
+  require('./velocity-animation');
+}
