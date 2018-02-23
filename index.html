@@ -5,7 +5,20 @@ tags: [code ruby javascipt programming]
 ---
 
 <article>
-
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <ul>
+    {% for project in site.portfolio_projects %}
+      <li>
+        <a href="{{ project.url | replace: '/portfolio_projects/', '/portfolio/' }}">{{ project.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
   <h1>Home Test</h1>
   <h1>Home Test</h1>
   <h1>Home Test</h1>
