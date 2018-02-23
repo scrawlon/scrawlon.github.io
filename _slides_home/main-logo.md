@@ -35,10 +35,7 @@ background-image:
 
     <div class="slide-content">
       <div class="scroll-arrow home-arrow" data-destination="article" data-destination-speed="1000">
-      	<svg height="70" width="70">
-      		<circle cx="35" cy="35" r="30" stroke="#fff" stroke-width="2" fill="none" />
-      		<polyline points="15,30 35,50 55,30" stroke="#fff" stroke-width="4" fill="none"/>
-      	</svg>
+        {% include scroll_arrow.html %}
       </div>
     </div>
 
