@@ -17,10 +17,6 @@ var mobileNavLinksAnimation = [
   { opacity: 0 },
   { opacity: 1 }
 ];
-var mobileNavLinksAnimationReverse = [
-  { opacity: 1 },
-  { opacity: 0 }
-];
 /*var mobileNavBackdropAnimation = [
   { opacity: 0 },
   { opacity: 0.8 }
@@ -91,7 +87,7 @@ function animatedMenuIn(direction) {
 
 function animatedMenuOut(direction) {
   for ( var i=0; i < mobileNavLinks.length; i++ ) {
-    mobileNavLinks[i].animate(mobileNavLinksAnimationReverse, {
+    mobileNavLinks[i].animate(mobileNavLinksAnimation, {
       direction: direction,
       duration: 300,
       easing: 'ease-in-out',
