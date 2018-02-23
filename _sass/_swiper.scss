@@ -118,6 +118,14 @@
     position: relative;
     z-index: 4;
 
+    .scroll-arrow {
+      margin: -30px auto 0;
+
+      -webkit-animation-duration:6s;
+      -moz-animation-duration:6s;
+      animation-duration:6s;
+    }
+
     @media only screen and #{$tablet} {
       p {
         font-size: 1em;

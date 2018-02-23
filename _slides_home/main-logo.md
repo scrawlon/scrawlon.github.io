@@ -34,9 +34,7 @@ background-image:
     </div>
 
     <div class="slide-content">
-      <div class="scroll-arrow home-arrow" data-destination="article" data-destination-speed="1000">
-        {% include scroll_arrow.html %}
-      </div>
+      {% include scroll_arrow.html %}
     </div>
 
   </div>  
