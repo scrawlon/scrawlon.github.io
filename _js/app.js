@@ -1,3 +1,4 @@
+var Velocity = require('velocity-animate');
 require('./header');
 require('./mobileMenu');
 require('./homeSlider');
