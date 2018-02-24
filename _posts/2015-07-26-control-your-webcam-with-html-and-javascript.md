@@ -1,8 +1,6 @@
 ---
 ID: 123
-post_title: >
-  Control Your Webcam with HTML and
-  JavaScript
+title: Control Your Webcam with HTML and JavaScript
 author: Scott McGrath
 header_image:
   file: webcam1.jpg

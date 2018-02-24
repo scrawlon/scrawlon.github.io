@@ -1,8 +1,8 @@
 ---
 author: Scott McGrath
 layout: post
-title: "Installing Vagrant on Windows 8"
-description: ""
+title: Installing Vagrant on Windows 8
+description: 
 category:
 tags: []
 comments: true

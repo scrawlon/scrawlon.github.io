@@ -1,8 +1,6 @@
 ---
 ID: 222
-post_title: >
-  Add More Social Media Options to
-  WordPress Divi Theme
+title: Add More Social Media Options to WordPress Divi Theme
 author: Scott McGrath
 header_image:
   file: divi-social-icons.jpg

@@ -4,22 +4,46 @@ description: "Scrawlon: A programming blog by Scott McGrath"
 tags: [code ruby javascipt programming]
 ---
 
-<article class="fullwidth-content">
+<article>
 
-  <ul>
-    {% for post in site.posts limit:2 %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="home-intro">
+    <h1>Scrawlon.com news:</h1>
+    <p>
+      It's 2018 and we've done a full re-design/re-launch of the website!
+      On top of that, we switched webhosts (DigitalOcean to Github pages) and
+      web frameworks (WordPress to Jekyll).
+    </p>
+    <p>
+      We'll do a full writeup on these changes soon.
+    </p>
+  </div>
 
-  <ul>
-    {% for project in site.portfolio_projects limit:2 %}
-      <li>
-        <a href="{{ project.url | replace: '/portfolio_projects/', '/portfolio/' }}">{{ project.title }}</a>
-      </li>
+  <div class="block-wrapper">
+    {% for post in site.posts limit:3 %}
+      <div class="block"
+      {% if post.header_image %}
+        style="background-image:url({{ site.url }}/images/{{ post.header_image.file }}); background-size: cover;"
+      {% endif %}
+      >
+        <div class="backdrop"></div>
+        <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+
+      </div>
     {% endfor %}
-  </ul>
+  </div>
+
+  <div class="block-wrapper">
+    {% for project in site.portfolio_projects limit:3 %}
+      <div class="block-portfolio"
+      {% if project.screenshot %}
+        style="background-image:url({{ site.url }}/images/{{ project.screenshot }}); background-size: cover;"
+      {% endif %}
+      >
+        <a href="{{ project.url | replace: '/portfolio_projects/', '/portfolio/' }}">
+          <h2>{{ project.title }}</h2>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 
 </article>

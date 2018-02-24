@@ -1,8 +1,8 @@
 ---
 author: Scott McGrath
 layout: post
-title: "I Begin Here"
-description: ""
+title: I Begin Here
+description: 
 category:
 tags: []
 comments: true

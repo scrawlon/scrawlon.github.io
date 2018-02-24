@@ -1,8 +1,6 @@
 ---
 ID: 673
-post_title: >
-  Dysfunctional WordPress Droplets on
-  DigitalOcean
+title: Dysfunctional WordPress Droplets on DigitalOcean
 author: Scott McGrath
 header_image:
   file: digital-ocean-droplets.jpg

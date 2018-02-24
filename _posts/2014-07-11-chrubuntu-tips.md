@@ -1,9 +1,9 @@
 ---
 author: Scott McGrath
 layout: post
-title: "ChrUbuntu + Acer C720"
-subheading: "Collected Tips and Fixes"
-description: ""
+title: ChrUbuntu + Acer C720
+subheading: Collected Tips and Fixes
+description: 
 category:
 tags: []
 comments: true

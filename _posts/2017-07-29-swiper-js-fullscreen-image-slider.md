@@ -1,5 +1,6 @@
 ---
 ID: 1724
+title: Swiper JS Fullscreen Image Slider
 author: Scott McGrath
 header_image:
   file: swiper-js-polaroids.jpg
@@ -17,7 +18,6 @@ layout: post
 post_excerpt: >
   Create an image slider with a fullscreen
   view.
-post_title: Swiper JS Fullscreen Image Slider
 published: true
 ---
 
