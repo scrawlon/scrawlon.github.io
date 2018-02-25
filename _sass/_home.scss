@@ -1,6 +1,10 @@
 .home-intro {
   @extend .wrapper;
-  padding: 0 2em 2em;
+  padding: 0 0 2em;
+
+  @media only screen and #{$tablet} {
+    padding: 0 2em 2em;
+  }
 
   h1 {
     padding-top: 0;
