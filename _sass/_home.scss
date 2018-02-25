@@ -59,10 +59,21 @@
     position: relative;
     float:left;
 
+    &:nth-of-type(1) {
+      .backdrop {
+        background: #000;
+      }
+    }
+
+    &:nth-of-type(4) {
+      .backdrop {
+        background: #000;
+        opacity: 1;
+      }
+    }
+
     &:hover .backdrop {
-      opacity: .75;
-      word-spacing: .4em;
-      background: #000;
+      opacity: .9;
     }
 
     // &:hover h2 {
@@ -71,7 +82,7 @@
 
     .backdrop {
       background-image: none;
-      opacity: .5;
+      opacity: .75;
       z-index: 2;
     }
   }
