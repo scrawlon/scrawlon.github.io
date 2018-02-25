@@ -58,10 +58,14 @@
       text-transform: uppercase;
       letter-spacing: 0;
       word-spacing: .25rem;
-      font-size: 3.75rem;
       line-height: 5.5rem;
       border-left: 10px solid #fff;
       padding: 0 0 0 .5em;
+      font-size: 3rem;
+
+      @media only screen and #{$tablet} {
+        font-size: 3.75rem;
+      }
     }
   }
 
