@@ -16,21 +16,31 @@
   }
 }
 
+@mixin preview-block() {
+  display: inline-block;
+  background: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  position: relative;
+  float:left;
+}
+
 .block-header {
   padding: 1em;
-  margin: 2em 0 0;
+  margin: 2em 0 1em;
   text-align: center;
   background: midnightblue;
   text-transform: uppercase;
-  font-size: 6rem;
+  font-size: 4.5rem;
   color: #fff;
 }
 
 .block-wrapper {
   padding: 0;
-  clear: both;
-  margin: 2em 0;
   background: none;
+  height: auto;
+  overflow: auto;
 
   a {
     color: #fff;
@@ -54,16 +64,10 @@
   }
 
   .block {
-    width: 50%;
-    display: inline-block;
-    background: #fff;
-    margin: 0;
+    @include preview-block();
+    width: 48%;
+    margin: 1%;
     height: 450px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    position: relative;
-    float:left;
 
     &:nth-of-type(1) {
       .backdrop {
@@ -94,20 +98,35 @@
   }
 
   .block-portfolio {
-    @extend .block;
-    background: #fff;
-    width: 33.333%;
-    height: auto;
+    @include preview-block();
     background: none;
+    height: auto;
+    width: 100%;
+    margin: 2em 0 1em;
+
+    @media only screen and #{$tablet} {
+      width: 60%;
+      margin: 1em 20%;
+    }
+
+    @media only screen and #{$landscape} {
+      width: 33.333%;
+      margin: 0;
+    }
 
     a {
       top: 10%;
       position: inherit;
       padding: 0;
-      width: 80%;
-      max-width: 80%;
       display: block;
       margin: 0 auto;
+      width: 96%;
+      max-width: 96%;
+
+      @media only screen and #{$tablet} {
+        width: 90%;
+        max-width: 90%;
+      }
     }
 
     h2 {
@@ -131,13 +150,38 @@
 }
 
 .block-link {
-  @extend .block-portfolio;
-  width: 100% !important;
-  height: 100px !important;
-  margin: 1em 0 4em !important;
+  @include preview-block();
+  width: 100%;
+  height: 100px;
+  margin: 1em 0 4em;
+  text-align: center;
+
+  @media only screen and #{$landscape} {
+    text-align: left;
+  }
 
   a {
-    width: 93% !important;
-    max-width: 93% !important;
+    width: 93%;
+    max-width: 93%;
+    padding: 0;
+    position: inherit;
+
+    h2 {
+      border-left: none;
+      color: #000;
+      padding: 0;
+
+      @media only screen and #{$tablet} {
+        padding: 0 0 0 .5em;
+      }
+
+      &:after {
+        content: "";
+
+        @media only screen and #{$tablet} {
+          content: "...";
+        }
+      }
+    }
   }
 }
