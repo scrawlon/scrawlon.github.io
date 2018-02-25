@@ -18,6 +18,20 @@ tags: [code ruby javascipt programming]
     </p>
   </div>
 
+  <h1 class="block-header">Recent Projects</h1>
+  <div class="block-wrapper">
+    {% for project in site.portfolio_projects limit:3 %}
+      <div class="block-portfolio">
+        <a href="{{ project.url | replace: '/portfolio_projects/', '/portfolio/' }}">
+          <img src="{{ site.url }}/images/{{ project.screenshot }}" alt="{{ project.title }}">
+        </a>
+      </div>
+    {% endfor %}
+    <div class="block-link">
+      <a href="/portfolio"><h2>View More Projects...</h2></a>
+    </div>
+  </div>
+
   <div class="block-wrapper">
     {% for post in site.posts limit:3 %}
       <div class="block"
@@ -33,19 +47,6 @@ tags: [code ruby javascipt programming]
     <div class="block">
       <div class="backdrop"></div>
       <a href="/blog"><h2>Read more posts...</h2></a>
-    </div>
-  </div>
-
-  <div class="block-wrapper">
-    {% for project in site.portfolio_projects limit:3 %}
-      <div class="block-portfolio">
-        <a href="{{ project.url | replace: '/portfolio_projects/', '/portfolio/' }}">
-          <img src="{{ site.url }}/images/{{ project.screenshot }}" alt="{{ project.title }}">
-        </a>
-      </div>
-    {% endfor %}
-    <div class="block-portfolio">
-      <a href="/portfolio"><h2>View More Projects...</h2></a>
     </div>
   </div>
 
