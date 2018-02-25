@@ -17,7 +17,6 @@
 }
 
 .block-wrapper {
-  background: #000;
   padding: 4em 0;
   clear: both;
   margin: 2em 0;
@@ -89,7 +88,30 @@
 
   .block-portfolio {
     @extend .block;
-    background-size: 90% !important;
-    background-color: #000;
+    background: #fff;
+    width: 33%;
+
+    a {
+      text-align: center;
+      top: 10%;
+      position: inherit;
+    }
+
+    h2 {
+      color: #000;
+      text-align: left;
+      width: 80%;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 80%;
+      max-width: 80%;
+      border-radius: .28571429rem;
+      border: 1px solid black;
+      display: block;
+      margin: 0 auto;
+    }
   }
 }

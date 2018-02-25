@@ -38,16 +38,15 @@ tags: [code ruby javascipt programming]
 
   <div class="block-wrapper">
     {% for project in site.portfolio_projects limit:3 %}
-      <div class="block-portfolio"
-      {% if project.screenshot %}
-        style="background-image:url({{ site.url }}/images/{{ project.screenshot }}); background-size: cover;"
-      {% endif %}
-      >
+      <div class="block-portfolio">
         <a href="{{ project.url | replace: '/portfolio_projects/', '/portfolio/' }}">
-          <h2>{{ project.title }}</h2>
+          <img src="{{ site.url }}/images/{{ project.screenshot }}" alt="{{ project.title }}">
         </a>
       </div>
     {% endfor %}
+    <div class="block-portfolio">
+      <a href="/portfolio"><h2>View More Projects...</h2></a>
+    </div>
   </div>
 
 </article>
