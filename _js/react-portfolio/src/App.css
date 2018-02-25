@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: sans-serif;
   font-family: 'Open Sans', sans-serif;
   min-height: 1600px;
-  padding-top: 2em;
+  padding-top: 0;
 }
 
 .portfolio-wrapper article {
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-wrap: wrap;
   font-size: .85em;
-  max-width: 90%;
+  max-width: 96%;
   margin: 0 auto;
 }
 
@@ -232,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   height: 200px;
   border-radius: .28571429rem;
-  margin: 5px;
+  margin: 2px;
 }
 
 .project-image.small {
@@ -288,11 +288,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 10px;
 }
 
+.portfolio-details-wrapper .portfolio-details-agency {
+  display: none;
+}
+
 .portfolio-details-wrapper .shadow {
   margin: 0 0 30px;
-  padding: 5px;
-  border-radius: .5rem;
-  box-shadow: 0 5px 5px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .portfolio-details-wrapper h1 {
@@ -318,7 +322,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin: 1.5em 0 5px;
   line-height: 1.2em;
-  letter-spacing: .05em;
   padding-top: 0;
   text-transform: uppercase;
 }
@@ -372,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-details-wrapper img {
   max-width: 100%;
-  border-radius: .5rem;
+  border-radius: 0;
 }
 
 .portfolio-details-text {
@@ -405,7 +408,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .title-type {
   font-weight: normal;
-  letter-spacing: .2em;
   display: block;
 }
 
@@ -471,6 +473,14 @@ h1, h2, h3, h4, h5, h6 {
   .portfolio-details-wrapper .content li {
     margin-bottom: 10px;
   }
+
+  .title-type {
+    display: inline-block;
+  }
+
+  .title-type::after {
+    content: " / "
+  }
 }
 
 @media only screen and (min-width: 60em) {
@@ -522,12 +532,18 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
   }
 
-  .title-type {
-    display: inline-block;
+  .portfolio-details-wrapper .portfolio-details-agency {
+    display: block;
   }
 
-  .title-type::after {
-    content: " / "
+  .portfolio-details-wrapper .shadow {
+    padding: 5px;
+    border-radius: .5rem;
+    box-shadow: 0 5px 5px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  }
+
+  .portfolio-details-wrapper img {
+    border-radius: .5rem;
   }
 
   .portfolio-tags-wrapper {

@@ -45,12 +45,20 @@ class PortfolioDetails extends Component {
                   <ul>
 
                     {project.site_url
-                      ? <li><span className="title-type">Project Homepage</span> <a href={project.site_url} title={project.title + ": Homepage"} target="_blank">{project.title}</a></li>
+                      ? <li>
+                          <a href={project.site_url} title={project.title + ": Homepage"} target="_blank">
+                            <span className="title-type">Project Homepage</span> {project.title}
+                          </a>
+                        </li>
                       : <li>site currently offline</li>
                     }
 
                     {project.my_work
-                      ? <li><span className="title-type">My Main Contribution</span> <a href={project.my_work.page_url} title={project.title + ": " + project.my_work.page_title} target="_blank">{project.title + ": " + project.my_work.page_title}</a></li>
+                      ? <li>
+                          <a href={project.my_work.page_url} title={project.title + ": " + project.my_work.page_title} target="_blank">
+                            <span className="title-type">My Main Contribution</span> {project.title + ": " + project.my_work.page_title}
+                          </a>
+                        </li>
                       : ''
                     }
                   </ul>

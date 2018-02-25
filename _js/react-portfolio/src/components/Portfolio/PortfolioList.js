@@ -251,7 +251,7 @@ class PortfolioList extends Component {
                     <Link
                       to={`${this.props.match.url}${project.id}`}
                       key={project.id}
-                      title={"Read more about portfolio project, '" + project.title + "'"}
+                      title={"Portfolio Project: '" + project.title + "'"}
                       onClick={this.cacheState}
                     >
                       <li key={project.title}>
