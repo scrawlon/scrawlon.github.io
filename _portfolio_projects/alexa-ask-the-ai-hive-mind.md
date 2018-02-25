@@ -3,7 +3,6 @@ title: Alexa - Ask the A.I. Hive Mind
 site_url: https://www.amazon.com/Ask-the-A-I-Hive-Mind/dp/B073GQ57R8
 my_work:
 screenshot: alexa-echo-dot-022418.jpg
-screenshot_small: true
 employer: Scrawl On
 tags:
   - industries: ['Amazon Alexa']
