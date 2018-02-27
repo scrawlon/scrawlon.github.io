@@ -11,6 +11,7 @@ tags:
   - technologies: ['WordPress', 'jQuery', 'Google Maps API', 'iHomefinder IDX API', 'UnderscoreJS']
   - project_types: ['website']
 published: true
+featured: true
 ---
 
 When we won this project, I already had some experience working

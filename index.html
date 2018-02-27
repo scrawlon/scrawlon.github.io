@@ -18,9 +18,10 @@ tags: [code ruby javascipt programming]
     </p>
   </div>
 
-  <h1 class="block-header">Recent Projects</h1>
+  <h1 class="block-header">Featured Projects</h1>
   <div class="block-wrapper">
-    {% for project in site.portfolio_projects limit:3 %}
+    {% assign projects_featured = site.portfolio_projects | where: 'featured', 'true' %}
+    {% for project in projects_featured limit:3 %}
       <div class="block-portfolio">
         <a href="{{ project.url | replace: '/portfolio_projects/', '/portfolio/' }}">
           <img src="{{ site.url }}/images/{{ project.screenshot }}" alt="{{ project.title }}">

@@ -11,6 +11,7 @@ tags:
   - technologies: ['WordPress', 'jQuery']
   - project_types: ['website']
 published: true
+featured: true
 ---
 
 For this project, I was asked to work on the product pages. The lead
