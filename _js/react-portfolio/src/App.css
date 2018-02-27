@@ -297,6 +297,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   border-radius: 0;
   box-shadow: none;
+  border: 1px solid #d4d4d5;
 }
 
 .portfolio-details-wrapper h1 {
@@ -391,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-details-header {
-  background: #666;
+  background: midnightblue;
   color: #FFF;
   height: auto;
   min-height: 0;
@@ -409,6 +410,7 @@ h1, h2, h3, h4, h5, h6 {
 .title-type {
   font-weight: normal;
   display: block;
+  text-transform: uppercase;
 }
 
 .title-type a {
@@ -424,6 +426,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
   padding-top: 0;
   line-height: 4rem;
+  font-weight: normal;
 }
 
 .portfolio-tags-wrapper {
@@ -479,7 +482,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .title-type::after {
-    content: " / "
+    content: " : "
   }
 }
 
@@ -540,6 +543,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px;
     border-radius: .5rem;
     box-shadow: 0 5px 5px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    border: none;
   }
 
   .portfolio-details-wrapper img {
