@@ -20,7 +20,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.5rem;
   font-family: sans-serif;
   font-family: 'Open Sans', sans-serif;
-  min-height: 1600px;
   padding-top: 0;
 }
 
@@ -285,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-details-wrapper .headline {
   grid-column-start: 1;
   grid-column-end: 3;
-  margin: 0 0 10px;
+  margin: 0;
 }
 
 .portfolio-details-wrapper .portfolio-details-agency {
@@ -386,9 +385,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-details-agency {
-  font-size: 1.7rem;
-  font-weight: bold;
-  color: #aaa;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: midnightblue;
+  margin: 5px 0 10px;
 }
 
 .portfolio-details-header {
@@ -396,7 +396,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFF;
   height: auto;
   min-height: 0;
-  padding: 10px 0;
+  padding: 5px 0;
   margin: 0 0 10px;
   text-align: center;
 }
@@ -423,9 +423,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-details-header h1 {
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding-top: 0;
-  line-height: 4rem;
+  line-height: 3rem;
   font-weight: normal;
 }
 
