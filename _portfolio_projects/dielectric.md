@@ -8,7 +8,7 @@ tags:
   - industries: ['television', 'radio']
   - technologies: ['WordPress', 'jQuery']
   - project_types: ['website']
-published: true
+published: false
 ---
 
 Dielectric is one of Compulse's longest running web client's. In fact,

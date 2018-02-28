@@ -246,7 +246,7 @@ class PortfolioList extends Component {
                 ? <h2>(no projects match your query)</h2>
                 :
                 projects.map((project) => {
-                  const imageClass = "project-image" + (project.screenshot_small ? " small" : "");
+                  const imageClass = "project-image";
                   return (
                     <Link
                       to={`${this.props.match.url}${project.id}`}

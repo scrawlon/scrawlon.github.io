@@ -31,7 +31,9 @@ class Portfolio extends Component {
 
     api.getPortfolioProjects()
       .then((res) => {
-        let projects = res && res.data && res.data.projects ? res.data.projects : [];
+        let projects = res && res.data && res.data.projects
+          ? res.data.projects.filter((project) => project.published === true )
+          : [];
         let projectTags = res && res.data && res.data.projectTags ? res.data.projectTags : {};
         this.setState(() => {
           return {

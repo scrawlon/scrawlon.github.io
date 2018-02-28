@@ -26,10 +26,10 @@ layout: json
           "site_url": {{ project.site_url | jsonify }},
           "my_work": {{ project.my_work | jsonify }},
           "screenshot": {% if project.screenshot %}{{ site.url | append: '/images/' | append: project.screenshot | jsonify }}{% else %}null{% endif %},
-          "screenshot_small": {{ project.screenshot_small | jsonify }},
           "employer": {{ project.employer | jsonify }},
           "tags": {{ project.tags | jsonify }},
-          "content": {{ project.content | jsonify }}
+          "content": {{ project.content | jsonify }},
+          "published": {{ project.published | jsonify }}
         }{% if forloop.last == false %},{% endif %}
       {% endif %}
     {% endfor %}],

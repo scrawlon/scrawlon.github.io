@@ -8,7 +8,7 @@ tags:
   - industries: ['ecommerce']
   - technologies: ['Laravel', 'jQuery', 'UnderscoreJS', 'BackboneJS', 'Amazon AWS']
   - project_types: ['website']
-published: true
+published: false
 ---
 
 Obviously, Staples is a big client to win, so it was decided that
