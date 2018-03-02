@@ -25,7 +25,7 @@
 
 header {
   height: 50vh;
-  min-height: 450px;
+  min-height: 350px;
   max-height: 700px;
   position: relative;
   width: 100%;
@@ -36,10 +36,11 @@ header {
   color: white;
   margin-top: 0;
 
+  @media only screen and #{$tablet} {
+    min-height: 450px;
+  }
   @media only screen and #{$landscape} {
-    & {
-      margin-top: 58px;
-    }
+    margin-top: 58px;
   }
 
 

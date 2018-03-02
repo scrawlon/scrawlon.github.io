@@ -41,7 +41,7 @@ span.svg {
 }
 
 .scroll-arrow {
-  margin: 60px auto 0;
+  margin: 0 auto;
   width: 70px;
   height: 70px;
   opacity: 0;
@@ -61,6 +61,10 @@ span.svg {
   @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
   @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
   @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+  @media only screen and #{$landscape} {
+    margin: 60px auto 0;
+  }
 
   &.home-arrow {
     margin: -30px auto 0;
