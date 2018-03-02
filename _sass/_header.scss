@@ -24,7 +24,7 @@
 }
 
 header {
-  height: 64vh;
+  height: 50vh;
   min-height: 450px;
   max-height: 700px;
   position: relative;
@@ -77,15 +77,22 @@ header {
       -moz-animation-duration:2s;
       animation-duration:2s;
 
+      @media only screen and #{$landscape} {
+        padding: 20% 0 0;
+      }
+
       &.page {
-        font-size: 6.5rem;
+        font-size: 7rem;
         font-weight: normal;
+        letter-spacing: .05em;
         line-height: 1.5em;
         text-align: center;
+        text-transform: uppercase;
         border-bottom: none;
 
         @media only screen and #{$landscape} {
           text-align: left;
+          text-transform: none;
           border-bottom: 2px solid #FFF;
         }
       }
