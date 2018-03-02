@@ -69,13 +69,6 @@ iframe {
 
 .backdrop {
   background: midnightblue;
-  background-image:
-    repeating-radial-gradient(
-      circle at 30% 41%,
-      midnightblue,
-      black,
-      black
-    );
   height: 100%;
   width: 100%;
   position: absolute;

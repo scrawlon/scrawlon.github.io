@@ -79,10 +79,15 @@ header {
 
       &.page {
         font-size: 6.5rem;
-        border-bottom: 2px solid #FFF;
-        line-height: 1.5em;
-        text-align: left;
         font-weight: normal;
+        line-height: 1.5em;
+        text-align: center;
+        border-bottom: none;
+
+        @media only screen and #{$landscape} {
+          text-align: left;
+          border-bottom: 2px solid #FFF;
+        }
       }
 
       @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
