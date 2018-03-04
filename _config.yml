@@ -4,7 +4,8 @@ baseurl: ""
 url: "https://scrawlon.github.io"
 disqus_shortname: scrawlon
 plugins:
-  - 'jekyll-feed'
+  - jekyll-feed
+  - jekyll-sitemap
 sass:
     sass_dir: _sass
     style: compressed
