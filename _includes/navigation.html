@@ -19,7 +19,7 @@
 	    <li>
         <a href="{{ site.url }}{{ home.url }}">
           <span class="svg">
-            <svg class="scrawlon-logo-small" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 128 128">
+            <svg class="scrawlon-logo-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
               <defs>
                 <linearGradient id="slf-small-bg-gradient" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="0%" y2="100%">
                   <stop id="slf-small-bg-one" stop-opacity=".6" stop-color="#000000" offset="0"/>
@@ -62,13 +62,9 @@
     <!-- Mobile Nav -->
     {% for link in site.links %}
 	    <li>
-        {% if page.url == link.url %}
-          <span class="current-page-link">{{ link.title }}</span>
-        {% else %}
-          <a href="{{ site.url }}{{ link.url }}" class="{{ nav_class }}" title="{{ link.title }}">
-            {{ link.title }}
-          </a>
-        {% endif %}
+        <a href="{{ site.url }}{{ link.url }}" class="{{ nav_class }}" title="{{ link.title }}">
+          {{ link.title }}
+        </a>
       </li>
     {% endfor %}
 
