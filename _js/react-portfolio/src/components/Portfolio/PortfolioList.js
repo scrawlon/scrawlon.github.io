@@ -243,7 +243,7 @@ class PortfolioList extends Component {
 
             <ul className="portfolio-list">
               {!projects.length
-                ? <h2>(no projects match your query)</h2>
+                ? <h2>no filters selected</h2>
                 :
                 projects.map((project) => {
                   const imageClass = "project-image";

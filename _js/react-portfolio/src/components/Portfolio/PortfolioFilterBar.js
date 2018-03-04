@@ -43,7 +43,7 @@ class PortfolioFilterBar extends Component {
                   const checkedAll = this.props.filtersActiveAll[tagType];
                   return (
                     <ul key={tagType}>
-                      <li>
+                      <li className={checkedAll ? 'checked' : ''}>
                         <input
                           type="checkbox"
                           id={"check-all-" + tagType}
@@ -58,7 +58,7 @@ class PortfolioFilterBar extends Component {
                         const checked = this.props.filtersActive[tagType].includes(tag);
 
                         return (
-                          <li key={tag}>
+                          <li key={tag} className={checked ? 'checked' : ''}>
                             <input
                               type="checkbox"
                               id={tag}

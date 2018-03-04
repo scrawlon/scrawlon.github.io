@@ -72,9 +72,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .tag-cloud {
   font-size: .8em;
-  padding: 0;
-  margin-right: 0;
-  margin-bottom: 1.5em;
+  border-bottom: 1px solid midnightblue;
+  padding: 0 0;
+  margin: 0 0 6px;
 }
 
 .tag-cloud h2 {
@@ -87,64 +87,40 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2px;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: .9em;
+  font-size: .75em;
   line-height: .9em;
-  border-right: 2px solid #fff;
-  background: #fff;
-  border-left: 0 solid #fff;
-  border-top: 0 solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 1px solid #000;
   margin-right: 0;
 }
 
 .tag-cloud li:first-of-type {
-  border-left: 2px solid #fff;
 }
 
 .tag-cloud li:last-of-type {
-  border-right: 2px solid #fff;
 }
 
 .tag-cloud li input[type=radio], .tag-filters li input[type=checkbox] {
-  margin-top: -1px;
   vertical-align: middle;
-}
-
-.tag-cloud li input[type=radio] {
-  display: none;
+  opacity: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .tag-cloud li input[type=radio] + label {
   display: inline-block;
   margin: 0 0 -1px;
-  padding: 15px 25px;
-  font-weight: 600;
+  padding: 10px 20px;
   text-align: center;
-  color: #888;
-  border: 1px solid transparent;
-  background: #eee;
+  letter-spacing: .075em;
 }
 
-.tag-cloud li input[type=radio] + label:hover {
-  color: #555;
+.tag-cloud li label:hover {
   cursor: pointer;
 }
 
 .tag-cloud li.checked {
-  border-left: 1px solid #000;
-  border-top: 4px solid #000;
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #fff;
-}
-
-.tag-cloud li.checked input[type=radio] + label {
-  color: #333;
-}
-
-.tag-cloud li input[type=radio]:checked + label {
-  font-weight: bold;
-  background: #fff;
+  color: #fff;
+  background: midnightblue;
 }
 
 .tag-filters ul {
@@ -155,8 +131,27 @@ h1, h2, h3, h4, h5, h6 {
 .tag-filters li {
   display: inline-block;
   text-align: left;
-  font-size: .6em;
-  margin-right: 10px;
+  font-size: .5em;
+  margin: 0 10px 4px 0;
+  background: #FFF;
+  color: midnightblue;
+  padding: 0;
+  border-radius: 6px;
+  letter-spacing: .05em;
+  line-height: 0;
+}
+
+.tag-filters li.checked {
+  background: #BBDEFB;
+}
+
+.tag-filters li label {
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+.tag-filters li label:hover {
+  cursor: pointer;
 }
 
 .portfolio-list {
@@ -205,6 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-list h2 {
   width: 100%;
+  text-transform: uppercase;
 }
 
 .project-backdrop {
