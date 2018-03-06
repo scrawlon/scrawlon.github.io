@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tag-filters ul {
-  max-width: 30em;
+  max-width: 24em;
   margin: 0 auto 30px;
 }
 
@@ -335,6 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-details-wrapper aside .portfolio-tags-wrapper {
   background: rgb(238, 238, 238);
   padding: 20px 0;
+  display: none;
 }
 
 .portfolio-details-wrapper .content {
@@ -407,11 +408,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   display: block;
   text-transform: uppercase;
+  margin: 6px 0 10px;
+  font-size: .65em;
 }
 
 .title-type a {
   text-decoration: none;
-  color: #fff;
+  color: midnightblue;
+  background: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 14px;
+  padding: 3px 10px;
+}
+
+.title-type a::before {
+  content: "back to "
 }
 
 .title-type::after {
@@ -454,6 +465,10 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 
+  .portfolio-details-wrapper aside .portfolio-tags-wrapper {
+    display: block;
+  }
+
   .tag-filter-menu {
     display: block;
   }
@@ -474,6 +489,20 @@ h1, h2, h3, h4, h5, h6 {
 
   .title-type {
     display: inline-block;
+    margin: 0;
+    font-size: 1em;
+  }
+
+  .title-type a {
+    color: #FFF;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .title-type a::before {
+    content: ""
   }
 
   .title-type::after {
