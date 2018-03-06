@@ -351,7 +351,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 0;
   -webkit-padding-start: 0;
   text-align: center;
-  font-weight: bold;
 }
 
 .portfolio-details-wrapper .content li {
@@ -359,6 +358,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #666;
   line-height: 1.5em;
   margin-bottom: 20px;
+}
+
+.portfolio-details-wrapper .content li .title-type {
+  font-weight: bold;
 }
 
 .portfolio-details-wrapper .content p {
@@ -408,17 +411,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   display: block;
   text-transform: uppercase;
-  margin: 6px 0 10px;
 }
 
 .title-type a {
-  text-decoration: none;
-  color: midnightblue;
-  background: #FFF;
-  border: 1px solid #FFF;
-  border-radius: 14px;
-  padding: 3px 10px;
+  color: #FFF;
   font-size: .45em;
+  text-decoration: underline;
 }
 
 .title-type a::before {
@@ -433,6 +431,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.75em;
   padding-top: 0;
   line-height: 3rem;
+  margin: 23px 0 22px;
+}
+
+.portfolio-details-header h1 .title-type {
+  margin: -5px 0 10px;
 }
 
 .portfolio-tags-wrapper {
@@ -475,6 +478,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-details-header h1 {
     font-size: 1.5em;
+    /*margin: 16px 0;*/
   }
 
   .tag-filter-menu {
@@ -497,12 +501,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .title-type a {
-    color: #FFF;
-    background: none;
-    border: none;
-    border-radius: 0;
-    padding: 0;
     font-size: 1em;
+    text-decoration: none;
   }
 
   .title-type a::before {
