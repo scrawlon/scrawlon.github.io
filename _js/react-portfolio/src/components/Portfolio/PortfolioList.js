@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PortfolioFilterBar from './PortfolioFilterBar';
 /*import PortfolioTags from './PortfolioTags';*/
 /*var array = require('../../helpers/array.js');*/

@@ -15,6 +15,33 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 0;
 }
 
+.btn-wrapper {
+  width: 100%;
+  text-align: center;
+  margin: 4em 0 0;
+}
+
+.btn {
+  border-radius: 18px;
+  padding: 10px 20px;
+}
+
+.btn-blue, .btn-white:hover {
+  border: none;
+  background: midnightblue;
+  color: #FFF;
+}
+
+.btn-white, .btn-blue:hover {
+  border: 1px solid midnightblue;
+  background: #FFF;
+  color: midnightblue;
+}
+
+.btn-mobile {
+  display: initial;
+}
+
 .portfolio-wrapper {
   text-align: center;
   font-size: 2.5rem;
@@ -419,10 +446,6 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-.title-type a::before {
-  content: "back to "
-}
-
 .title-type::after {
   content: ""
 }
@@ -435,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio-details-header h1 .title-type {
-  margin: -5px 0 10px;
+  display: none;
 }
 
 .portfolio-tags-wrapper {
@@ -464,6 +487,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 40em) {
+  .btn-mobile {
+    display: none;
+  }
+
   .project-details {
     display: block;
   }
@@ -478,7 +505,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-details-header h1 {
     font-size: 1.5em;
-    /*margin: 16px 0;*/
   }
 
   .tag-filter-menu {
@@ -505,12 +531,8 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
   }
 
-  .title-type a::before {
-    content: ""
-  }
-
-  .title-type::after {
-    content: " : "
+  .portfolio-details-header h1 .title-type {
+    display: block;
   }
 }
 
@@ -580,6 +602,14 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-tags-wrapper {
     font-size: 1.1em;
+  }
+
+  .title-type::after {
+    content: " : "
+  }
+
+  .portfolio-details-header h1 .title-type {
+    display: inline-block;
   }
 }
 

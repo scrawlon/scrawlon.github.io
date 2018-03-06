@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PortfolioTags from './PortfolioTags';
 import NotFound from '../../helpers/NotFound';
 
@@ -65,6 +66,18 @@ class PortfolioDetails extends Component {
 
                   <h2>Project Notes</h2>
                   <div className="portfolio-details-text" dangerouslySetInnerHTML={ {__html: project.content} } />
+
+                  <p className="btn-wrapper">
+                    <Link
+                      to="/"
+                      key={project.id}
+                      title={"back to Portfolio page"}
+                      onClick={this.cacheState}
+                      className="btn btn-white btn-mobile"
+                    >
+                      back to portfolio
+                    </Link>
+                  </p>
                 </section>
 
                 <aside>
