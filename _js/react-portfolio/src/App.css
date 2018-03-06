@@ -505,6 +505,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-details-header h1 {
     font-size: 1.5em;
+    margin: 0;
   }
 
   .tag-filter-menu {
@@ -531,8 +532,12 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
   }
 
+  .title-type::after {
+    content: " : "
+  }
+
   .portfolio-details-header h1 .title-type {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -602,14 +607,6 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-tags-wrapper {
     font-size: 1.1em;
-  }
-
-  .title-type::after {
-    content: " : "
-  }
-
-  .portfolio-details-header h1 .title-type {
-    display: inline-block;
   }
 }
 
