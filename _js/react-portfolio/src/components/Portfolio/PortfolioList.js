@@ -146,7 +146,7 @@ class PortfolioList extends Component {
           if ( tagKey === filterType ) {
             /*console.log('project tags', tags[tagKey]);*/
             const filterTypeMatch = tags[tagKey].some((tag) => {
-              return filtersActiveByType.includes(tag);
+              return filtersActiveByType.indexOf(tag) > -1;
             });
 
             if ( !filterTypeMatch ) { filterMatch = false; }

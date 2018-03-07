@@ -11,7 +11,7 @@ class PortfolioTags extends Component {
         {tags.map((tag) => {
           const tagType = Object.keys(tag)[0];
 
-          if ( tagTypes.includes(tagType) ) {
+          if ( tagTypes.indexOf(tagType) > -1 ) {
             return (
               <div key={tagType} className="tags">
                 {tag[tagType].sort((a,b) => array.sortAlpha(a,b)).join(', ')}

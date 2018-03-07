@@ -32,10 +32,14 @@ span.svg {
   position: absolute;
   top: 0;
   left: 0;
+  height: 42px;
 
+  @media only screen and #{$landscape} {
+    height: 60px;
+  }
+  
   .scrawlon-logo-small {
-    height: 42px;
-    background: #000;
+      height: 42px;
 
     @media only screen and #{$landscape} {
       height: 60px;

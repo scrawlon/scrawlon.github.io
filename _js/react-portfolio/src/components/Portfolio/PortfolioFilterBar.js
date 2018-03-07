@@ -56,7 +56,7 @@ class PortfolioFilterBar extends Component {
                         <label htmlFor={"check-all-" + tagType}>all</label>
                       </li>
                       {projectTags[tagType] && projectTags[tagType].length && projectTags[tagType].map((tag) => {
-                        const checked = this.props.filtersActive[tagType].includes(tag);
+                        const checked = this.props.filtersActive[tagType].indexOf(tag) > -1;
 
                         return (
                           <li key={tag} className={checked ? 'checked' : ''}>
