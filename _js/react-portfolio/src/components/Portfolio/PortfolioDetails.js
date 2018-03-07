@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PortfolioTags from './PortfolioTags';
 import NotFound from '../../helpers/NotFound';
+require('../../helpers/arrayFindPolyfill');
 
 class PortfolioDetails extends Component {
   render () {
