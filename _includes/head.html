@@ -37,6 +37,10 @@
       {% include gh_pages_spa_404_script.html %}
     {% endif %}
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico" >
+
+    <link rel="preload" href="{{ site.url }}/css/styles.css" as="style">
+    <link rel="preload" href="{{ site.url }}/js/app.js" as="script">
+
     <link rel="stylesheet" href="{{ site.url }}/css/styles.css">
   </head>
 
