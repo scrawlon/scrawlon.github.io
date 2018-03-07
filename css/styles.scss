@@ -152,8 +152,15 @@ code {
 .pagination {
   font-size: .8em;
   font-weight: bold;
-  letter-spacing: .1em;
   margin: 40px 0;
+  width: 100%;
+  letter-spacing: 0;
+  text-align: center;
+
+  @media only screen and #{$tablet} {
+    letter-spacing: .1em;
+    text-align: right;
+  }
 }
 
 .share-page {
