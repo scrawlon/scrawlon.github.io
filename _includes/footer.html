@@ -11,6 +11,13 @@
       {% include social_networks.html reversed=true %}
     </footer>
 
+      <style type="text/css">
+        {% capture include_to_scssify %}
+          {% include css/inline.scss %}
+        {% endcapture %}
+        {{ include_to_scssify | scssify }}
+      </style>
+
     <script async src="{{ site.url }}/js/app.js"></script>
   </body>
 </html>

@@ -2,13 +2,14 @@
 @import "reset";
 @import "variables";
 @import "functions";
+@import "home";
+@import "header";
 @import "hamburgers-settings";
 @import "./hamburgers/hamburgers";
-@import "header";
+@import "swiper.min";
 @import "swiper";
-@import "home";
-@import "portfolio";
 @import "svg";
+@import "portfolio";
 
 html, body {
   max-width: 100%;

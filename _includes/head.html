@@ -37,15 +37,7 @@
       {% include gh_pages_spa_404_script.html %}
     {% endif %}
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico" >
-    <link rel="preload" href="{{ site.url }}/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ site.url }}/css/styles.css"></noscript>
-
-    <style type="text/css">
-      {% capture include_to_scssify %}
-        {% include css/inline.scss %}
-      {% endcapture %}
-      {{ include_to_scssify | scssify }}
-    </style>
+    <link rel="stylesheet" href="{{ site.url }}/css/styles.css">
   </head>
 
   <body>
