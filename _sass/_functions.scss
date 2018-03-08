@@ -30,3 +30,21 @@
 
 // include h1-h6
 @include h(235%, 175%, 150%, 125%, 115%, 105%);
+
+// Video Scanline effect
+@mixin scanlines($color, $height: 1px, $angle: 0, $opacity: 0.2) {
+    position: relative;
+    &:after {
+      background-image: repeating-linear-gradient(to bottom, transparent 0 ,transparent $height, $color $height, $color $height * 2);
+      background-size: 100% $height * 2, cover;
+      transform-origin: 50% 50%;
+      transform: rotate($angle);
+      content: '';
+      opacity: $opacity;
+      position: absolute;
+      top: 0;
+      left: -150%;
+      right: -150%;
+      bottom: -150%;
+    }
+}

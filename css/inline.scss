@@ -1,53 +1,11 @@
-
+// Critical
 @import "reset";
 @import "variables";
 @import "functions";
-// @import "syntax";
 @import "hamburgers-settings";
 @import "./hamburgers/hamburgers";
-@import "swiper.min";
-@import "swiper";
-@import "codepen";
 @import "header";
-@import "portfolio";
-@import "svg";
 @import "home";
-
-$fa-font-path:"./css/fonts";
-@import "./font-awesome/font-awesome";
-// @import "../node_modules/font-awesome/scss/font-awesome";
-.icon-user {
-  @extend .fa;
-  @extend .fa-user;
-}
-
-/* pathway-gothic-one-regular - latin */
-@font-face {
-  font-family: 'Pathway Gothic One';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./css/fonts/pathway-gothic-one-v6-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Pathway Gothic One Regular'), local('PathwayGothicOne-Regular'),
-       url('./css/fonts/pathway-gothic-one-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./css/fonts/pathway-gothic-one-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./css/fonts/pathway-gothic-one-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./css/fonts/pathway-gothic-one-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./css/fonts/pathway-gothic-one-v6-latin-regular.svg#PathwayGothicOne') format('svg'); /* Legacy iOS */
-}
-
-/* open-sans-regular - latin */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./css/fonts/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-       url('./css/fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./css/fonts/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./css/fonts/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./css/fonts/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./css/fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
-}
 
 html, body {
   max-width: 100%;

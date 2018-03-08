@@ -33,6 +33,6 @@ gulp.task('fontawesome-sass', function() {
 });
 
 gulp.task('inline-css', function() {
-  return gulp.src('css/*')
+  return gulp.src('css/inline.scss')
     .pipe(gulp.dest('_includes/css'));
 });
