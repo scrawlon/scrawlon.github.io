@@ -15,6 +15,13 @@
 @import "svg";
 @import "home";
 
+$fa-font-path:"./fonts";
+@import "../node_modules/font-awesome/scss/font-awesome";
+.icon-user {
+  @extend .fa;
+  @extend .fa-user;
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
