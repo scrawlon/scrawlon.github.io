@@ -31,3 +31,8 @@ gulp.task('fontawesome-sass', function() {
   return gulp.src('node_modules/font-awesome/scss/*')
     .pipe(gulp.dest('_sass/font-awesome'));
 });
+
+gulp.task('inline-css', function() {
+  return gulp.src('css/*')
+    .pipe(gulp.dest('_includes/css'));
+});
