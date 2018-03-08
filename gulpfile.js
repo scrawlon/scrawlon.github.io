@@ -22,7 +22,12 @@ gulp.task('watch', function() {
   gulp.watch(['./_js/*.js', './_js/velocity-animations/*.js', 'portfolio-projects.json'], ['browserify']);
 });
 
-gulp.task('fonts', function() {
+gulp.task('fontawesome-fonts', function() {
   return gulp.src('node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest('css/fonts'))
-})
+    .pipe(gulp.dest('css/fonts'));
+});
+
+gulp.task('fontawesome-sass', function() {
+  return gulp.src('node_modules/font-awesome/scss/*')
+    .pipe(gulp.dest('_sass/font-awesome'));
+});

@@ -16,7 +16,8 @@
 @import "home";
 
 $fa-font-path:"./fonts";
-@import "../node_modules/font-awesome/scss/font-awesome";
+@import "./font-awesome/font-awesome";
+// @import "../node_modules/font-awesome/scss/font-awesome";
 .icon-user {
   @extend .fa;
   @extend .fa-user;
