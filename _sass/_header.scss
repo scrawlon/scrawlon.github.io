@@ -306,7 +306,8 @@ nav {
         a {
           color: #000;
           background: #fff;
-          padding: 3px 0 1px;
+          padding: 10px 0 6px;
+          line-height: 1em;
           opacity: 0.85;
           display: block;
           margin: 0 auto;
@@ -345,6 +346,7 @@ nav {
         li {
           margin-bottom: 20px;
           width: 100%;
+          margin: 30px auto;
 
           a {
             width: 24%;
