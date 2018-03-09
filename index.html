@@ -6,7 +6,7 @@ tags: [code ruby javascipt programming]
 <article>
 
   <div class="home-intro">
-    <h1>Scrawlon news:</h1>
+    <h2>Scrawlon news:</h2>
     <p>
       It's 2018 and we've done a full re-design/re-launch of the website!
       On top of that, we switched webhosts (DigitalOcean to Github pages) and
@@ -17,7 +17,7 @@ tags: [code ruby javascipt programming]
     </p>
   </div>
 
-  <h1 class="block-header">Featured Projects</h1>
+  <h2 class="block-header">Featured Projects</h2>
   <div class="block-wrapper">
     {% assign projects_featured = site.portfolio_projects | where: 'featured', 'true' %}
     {% for project in projects_featured limit:3 %}
@@ -32,7 +32,7 @@ tags: [code ruby javascipt programming]
     </div>
   </div>
 
-  <h1 class="block-header">Latest Posts</h1>
+  <h2 class="block-header">Latest Posts</h2>
   <div class="block-wrapper project-preview-header">
     {% for post in site.posts limit:3 %}
       <div class="block"
