@@ -244,7 +244,7 @@ nav {
     .social-header {
       height: 30vh;
       position: absolute;
-      top: 70vh;
+      top: 65vh;
       left: 0;
       right: 0;
 
@@ -366,6 +366,9 @@ nav {
         ul {
           &.social-icons {
             // margin-left: 36vw;
+            li {
+              margin-right: 2em;
+            }
           }
 
           li {
