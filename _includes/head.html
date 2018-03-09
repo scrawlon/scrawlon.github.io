@@ -36,6 +36,14 @@
     {% if page.heading == 404 %}
       {% include gh_pages_spa_404_script.html %}
     {% endif %}
+
+    <style type="text/css">
+      {% capture include_to_scssify %}
+        {% include css/inline.scss %}
+      {% endcapture %}
+      {{ include_to_scssify | scssify }}
+    </style>
+
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico" >
     <link rel="stylesheet" href="{{ site.url }}/css/styles.css">
   </head>
