@@ -255,17 +255,23 @@ nav {
           list-style-type: none;
           background: rgba(0,0,0,0);
           padding: 0;
-          margin-left: 22vw;
+          position: relative;
 
           li {
             display: inline-block;
             margin-right: 1em;
             opacity: 1;
 
+            &:last-of-type {
+              margin-right: 0;
+            }
+
             a {
               color: #fff;
               background: rgba(0,0,0,0);
               opacity: .75;
+              width: auto;
+              min-width: 25px;
             }
           }
         }
@@ -275,11 +281,12 @@ nav {
     ul {
       width: 100vw;
       height: 100vh;
-      padding: 8vh 0 4vh 22vw;
+      // padding: 8vh 0 4vh 22vw;
       position: absolute;
       top: 0;
       overflow: hidden;
       z-index: 5;
+      text-align: center;
 
 
       li {
@@ -289,18 +296,23 @@ nav {
         .current-page-link {
           color: #EF6C00;
           opacity: 0.75;
-          padding: 6px 6px 3px 14px;
+          padding: 3px 0 1px;
           background: #fff;
         }
 
         a {
           color: #000;
           background: #fff;
-          padding: 6px 6px 3px 14px;
+          padding: 3px 0 1px;
           opacity: 0.85;
+          display: block;
+          margin: 0 auto;
+          width: 70%;
+          min-width: 250px;
+          max-width: 300px;
 
           &:hover {
-            padding: 10px 10px 10px 14px;
+            // padding: 0px 10px 0px 14px;
           }
         }
       }
@@ -320,23 +332,20 @@ nav {
     &.nav-mobile {
       background-size: 200%;
 
-      .social-header {
-        ul {
-          &.social-icons {
-            margin-left: 36vw;
-          }
-        }
-      }
-
       ul {
-        padding: 8vh 2vw 4vh 36vw;
-        text-align: left;
-        width: 28vw;
+        padding: 10vh 0;
+        width: 100%;
+        // padding: 8vh 2vw 4vh 36vw;
+        // text-align: left;
+        // width: 28vw;
 
         li {
           margin-bottom: 20px;
+          width: 100%;
 
           a {
+            width: 24%;
+
             &:hover {
               opacity: 0.75;
               color: #EF6C00;
@@ -344,6 +353,18 @@ nav {
 
             &.active:hover {
             }
+          }
+        }
+      }
+
+      .social-header {
+        ul {
+          &.social-icons {
+            // margin-left: 36vw;
+          }
+
+          li {
+            width: auto;
           }
         }
       }
