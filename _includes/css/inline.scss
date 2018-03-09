@@ -207,6 +207,7 @@ footer {
     &.social-icons {
       font-size: 3rem;
       text-decoration: none;
+      text-align: right;
       width: 100%;
       padding: 0;
       margin: 0;
@@ -217,7 +218,6 @@ footer {
 
       li {
         display: inline-block;
-        float: right;
         width: 27vw;
         margin: 0;
         padding: 20px 0;

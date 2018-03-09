@@ -1,5 +1,5 @@
 title:            Scrawlon
-description:      A blog about programming and technology
+description:      Web Developer, Scott McGrath's, professional blog and portfolio.
 baseurl: ""
 url: "https://scrawlon.github.io"
 disqus_shortname: scrawlon
@@ -38,12 +38,12 @@ owner:
       url:        "https://linkedin.com/in/scrawlon"
       icon:       "fa-linkedin-square"
   local_links:
-    - name:       "rss"
-      url:        "/feed.xml"
-      icon:       "fa-rss"
     - name:       "Email"
       url:        "/contact"
       icon:       "fa-envelope"
+    - name:       "rss"
+      url:        "/feed.xml"
+      icon:       "fa-rss"
   social_share_links:
     - name:       "Twitter"
       url:        "https://twitter.com/intent/tweet?text=page.title&url=site.urlpage.url&via=scrawlon&related=scrawlon"

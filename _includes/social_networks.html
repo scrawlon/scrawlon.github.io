@@ -1,24 +1,20 @@
 <!-- include Social Networks -->
 <ul class="social-icons">
   {% assign social_networks = site.owner.social_networks %}
-  {% if include.reversed %}
-    {% assign social_networks = site.owner.social_networks | reverse %}
-  {% endif %}
-
   {% assign local_links = site.owner.local_links %}
-
-  {% for local_link in local_links %}
-    <li id='local-links-{{local_link.name}}'>
-      <a href="{{local_link.url}}" title="{{local_link.name}}">
-        <i class="fa {{local_link.icon}}"></i>
-      </a>
-    </li>
-  {% endfor %}
 
   {% for social_network in social_networks %}
     <li>
       <a href="{{social_network.url}}" title="{{social_network.name}}" target="_blank" rel="noopener noreferrer">
         <i class="fa {{social_network.icon}}"></i>
+      </a>
+    </li>
+  {% endfor %}
+
+  {% for local_link in local_links %}
+    <li class='local-links-{{local_link.name}}'>
+      <a href="{{local_link.url}}" title="{{local_link.name}}">
+        <i class="fa {{local_link.icon}}"></i>
       </a>
     </li>
   {% endfor %}

@@ -15,20 +15,28 @@
     {% endif %}
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <title>
+      {% if page.title %}
+        {{ page.title }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+
+      {% if page.description %}
+        : {{ page.description }}
+      {% else %}
+        : {{ site.description }}
+      {% endif %}
+    </title>
     {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
 
     <!-- Webmaster Tools verfication -->
     {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
     {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
-
-    <link rel="canonical" href="{{ canonical }}">
     {% if site.owner.google_plus %}<link rel="author" href="{{ site.owner.google_plus }}?rel=author">{% endif %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta http-equiv="cleartype" content="on">
     {% feed_meta %}
 
     {% include gh_pages_spa_script.html %}
@@ -37,7 +45,7 @@
       {% include gh_pages_spa_404_script.html %}
     {% endif %}
 
-    <style type="text/css">
+    <style>
       {% capture include_to_scssify %}
         {% include css/inline.scss %}
       {% endcapture %}

@@ -166,8 +166,9 @@ nav {
       &.social-icons {
         position: absolute;
         top: 54px;
-        left: 80vw;
+        right: 0;
         z-index: 10;
+        text-align: right;
         display: none;
 
         .fa {
