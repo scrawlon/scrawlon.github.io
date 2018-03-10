@@ -33,8 +33,7 @@ footer {
 
       li {
         display: inline-block;
-        float: right;
-        width: 20vw;
+        width: 18vw;
         margin: 0;
         padding: 20px 0;
       }
@@ -48,10 +47,8 @@ footer {
 
     ul {
       &.social-icons {
-        display: block;
-        position: absolute;
-        right: 3vw;
-        top: 30%;
+        text-align: right;
+
 
         li {
           width: auto;
