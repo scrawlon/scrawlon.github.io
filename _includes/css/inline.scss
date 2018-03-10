@@ -4,11 +4,12 @@
 @import "functions";
 @import "hamburgers-settings";
 @import "./hamburgers/hamburgers";
-@import "home";
 @import "header";
 @import "swiper.min";
 @import "swiper";
 @import "svg";
+@import "home";
+@import "about";
 @import "portfolio";
 
 html, body {
@@ -180,52 +181,6 @@ code {
   right: 0;
 }
 
-footer {
-  background-color: black;
-  color: white;
-  width: 100%;
-  position: relative;
-
-  a {
-    color: white;
-  }
-}
-
-footer {
-  font-size: 1.1rem;
-  min-height: 10vh;
-  overflow: auto;
-
-  p {
-    padding: 3px 0 0 3vw;
-    text-align: center;
-    font-size: 1.25em;
-  }
-
-  ul {
-
-    &.social-icons {
-      font-size: 3rem;
-      text-decoration: none;
-      text-align: right;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-
-      [id^=local-links-] {
-        display: inline-block !important;
-      }
-
-      li {
-        display: inline-block;
-        width: 27vw;
-        margin: 0;
-        padding: 20px 0;
-      }
-    }
-  }
-}
-
 figcaption {
   font-size: 1.1rem;
   position: absolute;
@@ -341,27 +296,6 @@ article {
   .wide-wrapper {
     width: 80%;
   }
-
-  footer {
-    p {
-      text-align: left;
-    }
-
-    ul {
-      &.social-icons {
-        display: block;
-        position: absolute;
-        right: 3vw;
-        top: 30%;
-
-        li {
-          width: auto;
-          margin: 0 .5em;
-          padding: 0;
-        }
-      }
-    }
-  }
 }
 
 @media only screen and #{$landscape} {
@@ -376,14 +310,6 @@ article {
   .no-scroll {
     overflow: auto;
     height: auto;
-  }
-
-  footer {
-    ul {
-      &.social-icons {
-
-      }
-    }
   }
 
   .blog-list {

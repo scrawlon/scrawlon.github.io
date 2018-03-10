@@ -19,24 +19,20 @@ tags: []
   short notes that could be searched later on - kind of a cross between
   Twitter and Evernote. The app never fully materialized, but I liked the name so
   much that I've taken it as my online moniker.
-  <ul>
-    <li>
-      <a href="https://github.com/scrawlon" title="Github" target="_blank">
-        github.com/scrawlon
-      </a>
-    </li>
-    <li>
-      <a href="https://twitter.com/scrawlon" title="Twitter" target="_blank">
-        twitter.com/scrawlon
-      </a>
-    </li>
-    <li>
-      <a href="https://linkedin.com/in/scrawlon" title="Linkedin" target="_blank">
-        linkedin.com/in/scrawlon
-      </a>
-    </li>
-  </ul>
 </p>
+
+<ul class="social-networks">
+  {% assign social_networks = site.owner.social_networks %}
+
+  {% for social_network in social_networks %}
+    <li>
+      <a href="{{social_network.url}}" title="{{social_network.name}}" target="_blank" rel="noopener noreferrer">
+        <i class="fa {{social_network.icon}}"></i>
+        / scrawlon
+      </a>
+    </li>
+  {% endfor %}
+</ul>
 
 <h2>Hire Me!</h2>
 <p>
@@ -46,4 +42,8 @@ tags: []
   about your project, technologies used and salary range. Let's talk.
 </p>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXYKdrcLVpqNcBc8qzpL851MQeqd_Q7te0BAu-u_kY8-yerw/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<iframe
+  src="https://docs.google.com/forms/d/e/1FAIpQLSeXYKdrcLVpqNcBc8qzpL851MQeqd_Q7te0BAu-u_kY8-yerw/viewform?embedded=true"
+  style="width:100%;height:1200px;frameborder:0;marginheight:0;marginwidth:0;"
+>
+</iframe>
