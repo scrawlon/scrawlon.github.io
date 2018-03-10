@@ -329,7 +329,7 @@ nav {
             width: 50%;
             font-size: 1.95rem;
 
-            &:hover {
+            &:hover, &:active {
               opacity: 1;
               border: 2px solid #EF6C00;
             }
@@ -379,7 +379,7 @@ nav {
               font-size: 2rem;
               border: 4px solid #fff;
 
-              &:hover {
+              &:hover, &:active {
                 border: 4px solid #EF6C00;
               }
             }
