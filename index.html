@@ -23,7 +23,7 @@ tags: [code ruby javascipt programming]
     {% for project in projects_featured limit:3 %}
       <div class="block-portfolio">
         <a href="{{ project.url | replace: '/portfolio_projects/', '/portfolio/' }}">
-          <img src="{{ site.url }}/images/{{ project.screenshot }}" alt="{{ project.title }}">
+          <img src="{{ site.url }}/images/thumbnails/{{ project.screenshot }}" alt="{{ project.title }}">
         </a>
       </div>
     {% endfor %}
