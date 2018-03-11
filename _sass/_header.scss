@@ -97,9 +97,18 @@ header {
         }
       }
 
-      @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-      @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-      @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+      @-webkit-keyframes fadeIn {
+        0% { opacity:0; }
+        100% { opacity:1; }
+      }
+      @-moz-keyframes fadeIn {
+        0% { opacity:0; }
+        100% { opacity:1; }
+      }
+      @keyframes fadeIn {
+        0% { opacity:0; }
+        100% { opacity:1; } 
+      }
     }
 
     h2 {
@@ -215,7 +224,11 @@ nav {
   &.nav-mobile {
     line-height: 2em;
     font-size: 1.6em;
-    transform: translate(0, 0);
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
     position: absolute;
     height: 100vh;
     width: 100vw;
