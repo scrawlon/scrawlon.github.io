@@ -37,7 +37,7 @@ tags: [code ruby javascipt programming]
     {% for post in site.posts limit:3 %}
       <div class="block"
       {% if post.header_image %}
-        style="background-image:url({{ site.url }}/images/{{ post.header_image.file }}); background-size: cover;"
+        style="background-image:url({{ site.url }}/images/thumbnails/{{ post.header_image.file }}); background-size: cover;"
       {% endif %}
       >
         <div class="backdrop"></div>
