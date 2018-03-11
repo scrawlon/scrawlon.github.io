@@ -8,7 +8,7 @@ footer {
   overflow: auto;
 
   p {
-    padding: 3px 0 0 3vw;
+    padding: 3px 0 0 3vh;
     text-align: center;
     font-size: 1.25em;
   }
@@ -26,6 +26,7 @@ footer {
       padding: 0;
       margin: 0;
       text-align: center;
+      position: relative;
 
       [id^=local-links-] {
         display: inline-block !important;
@@ -49,7 +50,9 @@ footer {
     ul {
       &.social-icons {
         text-align: right;
-
+        position: absolute;
+        bottom: 3vh;
+        right: 0;
 
         li {
           width: auto;
