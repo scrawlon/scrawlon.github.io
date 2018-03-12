@@ -4,7 +4,6 @@ var scrollToElement = require('./velocity-animations/scroll-to-element.js');
 
 (function() {
   var svgScrawlonLogoFull = document.getElementsByClassName('scrawlon-logo-full');
-  var svgScrollArrow = document.getElementsByClassName('scroll-arrow');
 
   var animations = {
     homeLogoAnimationPlay: function() {
@@ -12,33 +11,37 @@ var scrollToElement = require('./velocity-animations/scroll-to-element.js');
         timeline.animation(timeline.startAt, timeline.endAt);
       });
     },
-    /*scrollAnimationPlay: function() {
-      scrollAnimation.velocityTimeline.forEach(function(timeline) {
-        timeline.animation(timeline.startAt, timeline.endAt);
-      });
-    },*/
-    scrollToElementPlay: function() {
-      scrollToElement.velocityTimeline.forEach(function(timeline) {
-        timeline.animation();
-      });
-    }
   }
 
   if ( svgScrawlonLogoFull.length ) {
     animations.homeLogoAnimationPlay();
   }
 
-  if ( svgScrollArrow.length ) {
-    /*animations.scrollAnimationPlay();*/
+  svgScrollArrowAnimation();
 
+  window.onpopstate = function(event) {
+    svgScrollArrowAnimation();
+  }  
+})();
+
+
+function svgScrollArrowAnimation() {
+  var svgScrollArrow = document.getElementsByClassName('scroll-arrow');
+  var article = document.getElementsByTagName('article');
+
+  function scrollToElementPlay() {
+    scrollToElement.velocityTimeline.forEach(function(timeline) {
+      timeline.animation();
+    });
+  }
+
+  if ( svgScrollArrow.length ) {
     for ( var i=0; i < svgScrollArrow.length; i++ ) {
       svgScrollArrow[i].onclick = function(event) {
-        var article = document.getElementsByTagName('article');
-
         if ( article.length ) {
-          animations.scrollToElementPlay();
+          scrollToElementPlay();
         }
       }
     }
   }
-})();
+}
