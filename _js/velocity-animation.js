@@ -18,10 +18,6 @@ var scrollToElement = require('./velocity-animations/scroll-to-element.js');
   }
 
   svgScrollArrowAnimation();
-
-  window.onpopstate = function(event) {
-    svgScrollArrowAnimation();
-  }  
 })();
 
 
@@ -44,4 +40,25 @@ function svgScrollArrowAnimation() {
       }
     }
   }
+}
+
+MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+var observer = new MutationObserver(function(mutations, observer) {
+    // fired when a mutation occurs
+    svgScrollArrowAnimation();
+    /* console.log(mutations, observer); */
+    // ...
+});
+
+var reactRoot = document.getElementById('root');
+
+// define what element should be observed by the observer
+// and what types of mutations trigger the callback
+if ( reactRoot ) {
+  observer.observe(reactRoot, {
+    subtree: true,
+    attributes: true
+    //...
+  });
 }
