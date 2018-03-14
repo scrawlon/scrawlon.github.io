@@ -2,7 +2,7 @@
 function setCache(key, jsonData, cacheTime) {
   if (typeof (Storage) === "undefined") { return false; }
 
-  var record = {
+  let record = {
     value: JSON.stringify(jsonData),
     timestamp: new Date().getTime() + cacheTime
   };
@@ -14,12 +14,11 @@ function setCache(key, jsonData, cacheTime) {
 function getCache(key) {
   if (typeof (Storage) === "undefined") { return false; }
 
-  var record = JSON.parse(localStorage.getItem(key));
-
-  if (!record){return false;}
+  let cachedRecord = localStorage.getItem(key);
+  let record = cachedRecord && JSON.parse(localStorage.getItem(key));
 
   /*console.log('load cached data');*/
-  return (new Date().getTime() < record.timestamp && JSON.parse(record.value));
+  return (record && new Date().getTime() < record.timestamp && JSON.parse(record.value));
 }
 
 module.exports = {

@@ -245,6 +245,7 @@ class PortfolioList extends Component {
                 :
                 projects.map((project) => {
                   const imageClass = "project-image";
+
                   return (
                     <Link
                       to={`${this.props.match.url}${project.id}`}
@@ -253,7 +254,7 @@ class PortfolioList extends Component {
                       onClick={this.cacheState}
                     >
                       <li key={project.title}>
-                        <div className={imageClass} style={{backgroundImage: 'url(' + project.screenshot + ')'}}></div>
+                        <div className={imageClass} style={{backgroundImage: 'url(' + project.thumbnail + ')'}}></div>
                       </li>
                     </Link>
                   );

@@ -1,7 +1,7 @@
 const axios = require('axios');
 const dataCache = require('./dataCache.js');
-let apiUrl = 'https://scrawlon.github.io/';
-let cacheTime = 1000 * 60 * 30; // milliseconds * seconds * minutes
+var apiUrl = 'https://scrawlon.github.io/';
+var cacheTime = 1000 * 60 * 30; // milliseconds * seconds * minutes
 
 if ( window.location.hostname === 'localhost' ) {
   apiUrl = 'http://localhost:4000/';
@@ -17,7 +17,7 @@ function getPortfolioProjects() {
 
   return axios.get( apiUrl + 'portfolio-projects.json')
     .then((res) => {
-      /*console.log('api response', res);*/
+      /* console.log('api response', res); */
       dataCache.set('portfolio', res, cacheTime);
       return res;
     })
