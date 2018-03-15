@@ -6,20 +6,16 @@
     {{ content }}
     <nav class="pagination">
       {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">< previous</a>
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">&lt; prev post</a>
         {% if page.next %}
           |
         {% endif %}
       {% endif %}
       {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">next ></a>
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">next post &gt;</a>
       {% endif %}
     </nav><!-- /.pagination -->
   </div>
-
-  {% if page.comments %}
-    <div id="disqus_thread"></div><!-- /#disqus_thread -->
-  {% endif %}
 
 </article>
 
