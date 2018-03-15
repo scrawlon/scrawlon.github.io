@@ -11,16 +11,21 @@
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="twitter:card" content="summary_large_image">
     {% if page.header_image %}
       <meta property="og:image" content="{{ site.url }}/images/{{ page.header_image.file }}">
       <meta property="og:image:alt" content="{{ page.header_image.caption.title }}">
-      <meta property="twitter:image" content="{{ site.url }}/images/{{ page.header_image.file }}">
-      <meta property="twitter:image:alt" content="{{ page.header_image.caption.title }}">
     {% endif %}
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+    <meta name="twitter:site" content="@scrawlon">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.header_image %}
+      <meta name="twitter:image" content="{{ site.url }}/images/{{ page.header_image.file }}">
+      <meta name="twitter:image:alt" content="{{ page.header_image.caption.title }}">
+    {% endif %}
 
     <!-- Webmaster Tools verfication -->
     {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
