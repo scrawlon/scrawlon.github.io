@@ -2,7 +2,7 @@
 author: Scott McGrath
 layout: post
 title: How to Resize a VirtualBox VM
-description: 
+description: "How to Resize a VirtualBox VM"
 category:
 tags: []
 comments: true

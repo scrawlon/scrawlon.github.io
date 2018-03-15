@@ -2,6 +2,7 @@
 author: Scott McGrath
 layout: post
 title: "FatSecret OmniAuth: A Quick Intro - Part 1"
+description: "Introduction to the FatSecret OmniAuth gem - Part 1"
 heading: "FatSecret OmniAuth"
 subheading: "A Quick Intro - Part 1"
 description: ""

@@ -2,7 +2,7 @@
 author: Scott McGrath
 layout: post
 title: I Begin Here
-description: 
+description: "Learn why I started this blog about programming and web development" 
 category:
 tags: []
 comments: true
