@@ -1,5 +1,6 @@
 title:            Scrawlon
-description:      Web Developer, Scott McGrath's, professional blog and portfolio.
+description: "Programming blog and professional portfolio of Baltimore-area
+web developer, Scott McGrath"
 baseurl: ""
 url: "https://scrawlon.github.io"
 disqus_shortname: scrawlon
