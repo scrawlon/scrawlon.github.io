@@ -77,36 +77,44 @@
 .slider-background {
   height: 94vh;
   min-height: 450px;
-  max-height: 700px;
+  max-height: 630px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
-  // background-size: cover;
+  background-size: cover;
   @include scanlines(#000, 1px, 0deg, 0.3);
   z-index: 1;
-  -webkit-animation: imagebulger 30s forwards;
-  -moz-animation: imagebulger 30s forwards;
-  -o-animation: imagebulger 30s forwards;
-  animation: imagebulger 30s forwards;
-  /* from http://jsfiddle.net/e2tt2mao/703/ */
 
-  @-o-keyframes imagebulger {
-    0% { background-size: 140% auto; }
-    14% { background-size: 100% auto; }
-    100% { background-size: 100% auto; }
+  @media only screen and #{$landscape} {
+    -webkit-animation: imagebulger 30s forwards;
+    -moz-animation: imagebulger 30s forwards;
+    -o-animation: imagebulger 30s forwards;
+    animation: imagebulger 30s forwards;
+    /* from http://jsfiddle.net/e2tt2mao/703/ */
+
+    @-o-keyframes imagebulger {
+      0% { background-size: 140% auto; }
+      14% { background-size: 100% auto; }
+      100% { background-size: 100% auto; }
+    }
+
+    @-moz-keyframes imagebulger {
+      0% { background-size: 140% auto; }
+      14% { background-size: 100% auto; }
+      100% { background-size: 100% auto; }
+    }
+
+    @-webkit-keyframes imagebulger {
+      0% { background-size: 140% auto; }
+      14% { background-size: 100% auto; }
+      100% { background-size: 100% auto; }
+    }
   }
 
-  @-moz-keyframes imagebulger {
-    0% { background-size: 140% auto; }
-    14% { background-size: 100% auto; }
-    100% { background-size: 100% auto; }
-  }
-
-  @-webkit-keyframes imagebulger {
-    0% { background-size: 140% auto; }
-    14% { background-size: 100% auto; }
-    100% { background-size: 100% auto; }
+  /* Portrait */
+  @media only screen and (orientation: portrait) {
+    background-size: cover;
   }
 
   &.not-ios {
