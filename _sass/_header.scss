@@ -107,7 +107,7 @@ header {
       }
       @keyframes fadeIn {
         0% { opacity:0; }
-        100% { opacity:1; } 
+        100% { opacity:1; }
       }
     }
 
@@ -236,7 +236,7 @@ nav {
     font-size: 2.2rem;
     display: none;
     @include scanlines(#000, 1px, 0deg, 0.3);
-    background-size: 300%;
+    background-size: cover;
     background-position: 50%;
 
     figcaption {
@@ -303,6 +303,10 @@ nav {
       margin: 0;
       padding: 0;
 
+      @media only screen and #{$tablet} and (orientation: portrait) {
+        top: 4vh;
+      }
+
       li {
         display: block;
         opacity: 0;
@@ -363,7 +367,7 @@ nav {
 
   nav {
     &.nav-mobile {
-      background-size: 200%;
+      // background-size: 200%;
 
       ul {
         padding: 10vh 0;
