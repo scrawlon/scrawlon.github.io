@@ -112,9 +112,34 @@
     }
   }
 
-  /* Portrait */
   @media only screen and (orientation: portrait) {
     background-size: cover;
+  }
+
+  @media only screen and #{$landscape} and (orientation: portrait) {
+    -webkit-animation: imagebulger 30s forwards;
+    -moz-animation: imagebulger 30s forwards;
+    -o-animation: imagebulger 30s forwards;
+    animation: imagebulger 30s forwards;
+    /* from http://jsfiddle.net/e2tt2mao/703/ */
+
+    @-o-keyframes imagebulger {
+      0% { background-size: 240% auto; }
+      14% { background-size: 200% auto; }
+      100% { background-size: 200% auto; }
+    }
+
+    @-moz-keyframes imagebulger {
+      0% { background-size: 240% auto; }
+      14% { background-size: 200% auto; }
+      100% { background-size: 200% auto; }
+    }
+
+    @-webkit-keyframes imagebulger {
+      0% { background-size: 240% auto; }
+      14% { background-size: 200% auto; }
+      100% { background-size: 200% auto; }
+    }
   }
 
   &.not-ios {
