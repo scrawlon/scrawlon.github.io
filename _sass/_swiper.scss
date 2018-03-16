@@ -87,27 +87,29 @@
   z-index: 1;
 
   @media only screen and #{$tablet} and (orientation: portrait) {
-    -webkit-animation: imagebulger 30s forwards;
-    -moz-animation: imagebulger 30s forwards;
-    -o-animation: imagebulger 30s forwards;
-    animation: imagebulger 30s forwards;
+    -webkit-animation: imagebulger 4.2s ease-out forwards;
+    -moz-animation: imagebulger 4.2s ease-out forwards;
+    -o-animation: imagebulger 4.2s ease-out forwards;
+    animation: imagebulger 4.2s ease-out forwards;
     /* from http://jsfiddle.net/e2tt2mao/703/ */
 
     @-o-keyframes imagebulger {
-      0% { background-size: 200% auto; }
-      14% { background-size: 160% auto; }
+      0% { background-size: 220% auto; }
       100% { background-size: 160% auto; }
     }
 
     @-moz-keyframes imagebulger {
-      0% { background-size: 200% auto; }
-      14% { background-size: 160% auto; }
+      0% { background-size: 220% auto; }
       100% { background-size: 160% auto; }
     }
 
     @-webkit-keyframes imagebulger {
-      0% { background-size: 200% auto; }
-      14% { background-size: 160% auto; }
+      0% { background-size: 220% auto; }
+      100% { background-size: 160% auto; }
+    }
+
+    @keyframes imagebulger {
+      0% { background-size: 220% auto; }
       100% { background-size: 160% auto; }
     }
   }
