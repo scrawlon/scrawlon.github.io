@@ -4,7 +4,7 @@ var mobileNav = document.getElementById('nav-mobile');
 var mobileNavMenu = mobileNav ? mobileNav.getElementsByTagName('ul') : [];
 var mobileNavLinks = mobileNavMenu.length ? mobileNavMenu[0].getElementsByTagName('li') : [];
 var mobileNavToggle = document.getElementById('nav-mobile-toggle');
-/*var mobileNavBackdrop = document.getElementById('nav-mobile-backdrop');*/
+var mobileNavBackdrop = document.getElementById('nav-mobile-backdrop');
 var html = document.querySelector('html');
 var body = document.querySelector('body');
 var mobileNavOpen = false;
@@ -21,10 +21,10 @@ var mobileNavLinksAnimation = [
   { opacity: 0 },
   { opacity: 1 }
 ];
-/*var mobileNavBackdropAnimation = [
+var mobileNavBackdropAnimation = [
   { opacity: 0 },
-  { opacity: 0.8 }
-];*/
+  { opacity: 1 }
+];
 
 mobileNavToggle.onclick = function() {
   mobileMenuAnimate();
@@ -58,13 +58,13 @@ function mobileMenuAnimate() {
 }*/
 
 function animatedMenuIn(direction) {
-  /*mobileNavBackdrop.classList.add('visible');
+  mobileNavBackdrop.classList.add('visible');
   mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
     duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
-  });*/
+  });
 
   mobileNav.classList.add('visible');
 
@@ -129,14 +129,14 @@ function animatedMenuOut(direction) {
     mobileNav.classList.remove('visible');
   }
 
-  /*mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
+  mobileNavBackdrop.animate(mobileNavBackdropAnimation, {
     direction: direction,
     duration: 300,
     easing: 'ease-in-out',
     fill: 'forwards'
   }).onfinish = function() {
     mobileNavBackdrop.classList.remove('visible');
-  }*/
+  }
 }
 
 /* requestAnimationFrame + customEvent
