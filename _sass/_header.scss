@@ -347,15 +347,16 @@ nav {
         li {
           a {
             color: #fff;
-            padding: 14px 0 10px;
-            border: 2px solid #fff;
+            padding: 10px 0 14px;
+            border-bottom: 6px solid #EF6C00;
+            // border: 2px solid #fff;
             border-radius: 12px;
             width: 50%;
             font-size: 1.95rem;
 
             &:hover, &:active {
               opacity: 1;
-              border: 2px solid #EF6C00;
+              // border: 2px solid #EF6C00;
             }
           }
         }
@@ -401,10 +402,9 @@ nav {
           li {
             a {
               font-size: 2rem;
-              border: 4px solid #fff;
 
               &:hover, &:active {
-                border: 4px solid #EF6C00;
+                // border: 4px solid #EF6C00;
               }
             }
           }
