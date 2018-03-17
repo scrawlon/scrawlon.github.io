@@ -9,9 +9,13 @@ var html = document.querySelector('html');
 var body = document.querySelector('body');
 var mobileNavOpen = false;
 var direction = 'normal';
+var mobileNavFadeInAnimation = [
+  { opacity: 0, height: '0' },
+  { opacity: 1, height: '5vh' }
+];
 var mobileNavSlideInAnimation = [
-  { opacity: 0 },
-  { opacity: 1 }
+  { right: '15px', height: '5vh', width: '5vw', borderRadius: '50%' },
+  { right: '0', height: '100vh', width: '100vw', borderRadius: '0' }
 ];
 var mobileNavLinksAnimation = [
   { opacity: 0 },
@@ -63,12 +67,24 @@ function animatedMenuIn(direction) {
   });*/
 
   mobileNav.classList.add('visible');
-  mobileNav.animate(mobileNavSlideInAnimation, {
-    direction: direction,
-    duration: 300,
-    easing: 'ease-in-out',
-    fill: 'forwards'
-  });
+
+  mobileNav
+    .animate(mobileNavFadeInAnimation, {
+      direction: direction,
+      duration: 200,
+      easing: 'ease-in',
+      fill: 'forwards'
+    });
+
+  mobileNav
+    .animate(mobileNavSlideInAnimation, {
+      delay: 200,
+      direction: direction,
+      duration: 100,
+      easing: 'ease-in-out',
+      fill: 'forwards',
+      composite: 'add'
+    });
 
   for ( var i=0; i < mobileNavLinks.length; i++ ) {
     (function(i) {
@@ -89,17 +105,27 @@ function animatedMenuOut(direction) {
   for ( var i=0; i < mobileNavLinks.length; i++ ) {
     mobileNavLinks[i].animate(mobileNavLinksAnimation, {
       direction: direction,
-      duration: 300,
-      easing: 'ease-in-out',
+      duration: 50,
+      easing: 'linear',
       fill: 'forwards'
     });
   }
 
-  mobileNav.animate(mobileNavSlideInAnimation, {
-    direction: direction,
-    duration: 300,
-    easing: 'ease-in-out',
-    fill: 'forwards'
+  mobileNav
+    .animate(mobileNavSlideInAnimation, {
+      direction: direction,
+      duration: 200,
+      easing: 'ease-in-out',
+      fill: 'forwards'
+    });
+
+  mobileNav
+    .animate(mobileNavFadeInAnimation, {
+      delay: 200,
+      direction: direction,
+      duration: 100,
+      easing: 'ease-in',
+      fill: 'forwards'
   }).onfinish = function() {
     mobileNav.classList.remove('visible');
   }
