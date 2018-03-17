@@ -74,30 +74,44 @@
         <div class="backdrop">
         </div>
         <div class="wrapper">
-          <h1 {% if page.layout == "page" %} class="page" {% endif %}>
-            {% if page.heading %}
-              {{ page.heading }}
-            {% else %}
-              {{ page.title }}
-            {% endif %}
-          </h1>
-          {% if page.subheading %}
-            <h2 class="subheading">
-              {{ page.subheading }}
-            </h2>
-          {% endif %}
 
-          {% if page.author %}
-            <div class="by-line">
-              By {{ page.author }}
-              {% if page.date %}
-                <time datetime="{{ page.date | date_to_xmlschema }}"> - {{ page.date | date: "%B %d, %Y" }}</time>
+          {% if page.layout == "page" %}
+            <div class="page-heading-wrapper">
+              <h1 class="page">
+                {% if page.heading %}
+                  {{ page.heading }}
+                {% else %}
+                  {{ page.title }}
+                {% endif %}
+              </h1>
+              <hr class="page-header-underline">
+
+              {% if page.heading != 404 %}
+                {% include scroll_arrow.html %}
               {% endif %}
             </div>
-          {% endif %}
+          {% else %}
+            <h1>
+              {% if page.heading %}
+                {{ page.heading }}
+              {% else %}
+                {{ page.title }}
+              {% endif %}
+            </h1>
+            {% if page.subheading %}
+              <h2 class="subheading">
+                {{ page.subheading }}
+              </h2>
+            {% endif %}
 
-          {% if page.layout != "post" and page.heading != 404 %}
-            {% include scroll_arrow.html %}
+            {% if page.author %}
+              <div class="by-line">
+                By {{ page.author }}
+                {% if page.date %}
+                  <time datetime="{{ page.date | date_to_xmlschema }}"> - {{ page.date | date: "%B %d, %Y" }}</time>
+                {% endif %}
+              </div>
+            {% endif %}
           {% endif %}
 
         </div>

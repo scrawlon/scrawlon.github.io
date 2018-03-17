@@ -67,58 +67,117 @@ header {
   .wrapper {
     position: relative;
 
+    .page-heading-wrapper {
+      position: absolute;
+      top: 21vh;
+      width: 100%;
+    }
+
     h1 {
       padding: 30% 0 0;
-      opacity: 0;
-      -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-      -moz-animation:fadeIn ease-in 1;
-      animation:fadeIn ease-in 1;
-
-      -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-      -moz-animation-fill-mode:forwards;
-      animation-fill-mode:forwards;
-
-      -webkit-animation-duration:2s;
-      -moz-animation-duration:2s;
-      animation-duration:2s;
+      // opacity: 0;
+      // -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+      // -moz-animation:fadeIn ease-in 1;
+      // animation:fadeIn ease-in 1;
+      //
+      // -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      // -moz-animation-fill-mode:forwards;
+      // animation-fill-mode:forwards;
+      //
+      // -webkit-animation-duration:2s;
+      // -moz-animation-duration:2s;
+      // animation-duration:2s;
 
       @media only screen and #{$landscape} {
         padding: 20% 0 0;
       }
 
       &.page {
+        background: transparent;
         font-size: 6rem;
         font-weight: normal;
-        line-height: 1.5em;
-        text-align: center;
+        line-height: 1em;
+        // text-align: center;
         text-transform: uppercase;
         border-bottom: none;
+        padding: 0 0 0 6px;
+        position: absolute;
 
         @media only screen and #{$landscape} {
           text-align: left;
-          text-transform: none;
-          border-bottom: 2px solid #FFF;
+          // text-transform: none;
+          // border-bottom: 2px solid #FFF;
+          /* typewriter effect: https://css-tricks.com/snippets/css/typewriter-effect/ */
+          overflow: hidden; /* Ensures the content is not revealed until the animation */
+          white-space: nowrap; /* Keeps the content on a single line */
+          // letter-spacing: .15em; /* Adjust as needed */
+          color: #f19057;
+          border-right: .1em solid #f19057; /* The typwriter cursor */
+          background: transparent;
+          animation:
+            typing 3.5s steps(44) 1s 1 normal both,
+            blink-caret .75s step-end infinite;
+
+          /* The typing effect */
+          @-webkit-keyframes typing {
+            0% { max-width: 0; background: transparent }
+            10% { background: #fff }
+            100% { max-width: $readable-width; background: #fff }
+          }
+          @-moz-keyframes typing {
+            0% { max-width: 0; background: transparent }
+            10% { background: #fff }
+            100% { max-width: $readable-width; background: #fff }
+          }
+          @keyframes typing {
+            0% { max-width: 0; background: transparent }
+            10% { background: #fff }
+            100% { max-width: $readable-width; background: #fff }
+          }
+
+          /* The typewriter cursor effect */
+          @-webkit-keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #f19057; }
+          }
+          @-moz-keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #f19057; }
+          }
+          @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #f19057; }
+          }
         }
       }
 
-      @-webkit-keyframes fadeIn {
-        0% { opacity:0; }
-        100% { opacity:1; }
-      }
-      @-moz-keyframes fadeIn {
-        0% { opacity:0; }
-        100% { opacity:1; }
-      }
-      @keyframes fadeIn {
-        0% { opacity:0; }
-        100% { opacity:1; }
-      }
+      // @-webkit-keyframes fadeIn {
+      //   0% { opacity:0; }
+      //   100% { opacity:1; }
+      // }
+      // @-moz-keyframes fadeIn {
+      //   0% { opacity:0; }
+      //   100% { opacity:1; }
+      // }
+      // @keyframes fadeIn {
+      //   0% { opacity:0; }
+      //   100% { opacity:1; }
+      // }
     }
 
     h2 {
       &.subheading {
         padding: 5px 0;
       }
+    }
+
+    .page-header-underline {
+      height: 2px;
+      color: #FFF;
+      background: #FFF;
+      border: 0;
+      font-size: 0;
+      margin: 9vh 0 0;
     }
   }
 
