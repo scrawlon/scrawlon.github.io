@@ -24,8 +24,8 @@
 }
 
 header {
-  height: 50vh;
-  min-height: 350px;
+  height: 38vh;
+  min-height: 300px;
   max-height: 700px;
   position: relative;
   width: 100%;
@@ -37,9 +37,11 @@ header {
   margin-top: 0;
 
   @media only screen and #{$tablet} {
-    min-height: 450px;
+    height: 40vh;
+    min-height: 350px;
   }
   @media only screen and #{$landscape} {
+    height: 50vh;
     margin-top: 58px;
   }
 
@@ -69,8 +71,16 @@ header {
 
     .page-heading-wrapper {
       position: absolute;
-      top: 150px;
+      top: 88px;
       width: 100%;
+
+      @media only screen and #{$tablet} {
+        top: 115px;
+      }
+
+      @media only screen and #{$landscape} {
+        top: 150px;
+      }
     }
 
     h1 {
