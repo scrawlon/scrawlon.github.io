@@ -71,14 +71,14 @@ function animatedMenuIn(direction) {
   mobileNav
     .animate(mobileNavFadeInAnimation, {
       direction: direction,
-      duration: 100,
+      duration: 150,
       easing: 'ease-in',
       fill: 'forwards'
     });
 
   mobileNav
     .animate(mobileNavSlideInAnimation, {
-      delay: 100,
+      delay: 150,
       direction: direction,
       duration: 100,
       easing: 'ease-in',
@@ -87,6 +87,15 @@ function animatedMenuIn(direction) {
     });
 
   for ( var i=0; i < mobileNavLinks.length; i++ ) {
+    mobileNavLinks[i].animate(mobileNavLinksAnimation, {
+      direction: direction,
+      duration: 50,
+      easing: 'ease-in',
+      fill: 'forwards'
+    });
+  }
+
+  /* for ( var i=0; i < mobileNavLinks.length; i++ ) {
     (function(i) {
       setTimeout(function () {
         mobileNavLinks[i].animate(mobileNavLinksAnimation, {
@@ -97,7 +106,7 @@ function animatedMenuIn(direction) {
         });
       }, i * 60);
     })(i);
-  }
+  } */
 }
 
 function animatedMenuOut(direction) {
@@ -122,9 +131,10 @@ function animatedMenuOut(direction) {
     .animate(mobileNavFadeInAnimation, {
       delay: 100,
       direction: direction,
-      duration: 100,
+      duration: 150,
       easing: 'ease-in',
-      fill: 'forwards'
+      fill: 'forwards',
+      composite: 'add'
   }).onfinish = function() {
     mobileNav.classList.remove('visible');
   }
