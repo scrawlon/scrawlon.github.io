@@ -215,13 +215,16 @@ class PortfolioList extends Component {
           <div className="backdrop">
           </div>
           <div className="wrapper">
-            <h1 className="page">
-              Portfolio
-            </h1>
-            <div className="scroll-arrow" data-destination="article" data-destination-speed="1000">
-              <svg height="70" width="70">
-                <polyline points="15,30 35,50 55,30" stroke="#fff" strokeWidth="4" fill="none"/>
-              </svg>
+            <div className="page-heading-wrapper">
+              <h1 className="page">
+                Portfolio
+              </h1>
+              <hr className="page-header-underline" />
+              <div className="scroll-arrow" data-destination="article" data-destination-speed="1000">
+                <svg height="70" width="70">
+                  <polyline points="15,30 35,50 55,30" stroke="#fff" strokeWidth="4" fill="none"/>
+                </svg>
+              </div>
             </div>
           </div>
         </header>
