@@ -69,12 +69,8 @@ header {
 
     .page-heading-wrapper {
       position: absolute;
-      top: 15vh;
+      top: 150px;
       width: 100%;
-
-      @media only screen and #{$landscape} {
-        top: 21vh;
-      }
     }
 
     h1 {
@@ -187,7 +183,7 @@ header {
       background: #FFF;
       border: 0;
       font-size: 0;
-      margin: 9vh 0 0;
+      margin: 72px 0 0;
 
         @media only screen and #{$landscape} {
           height: 2px;
