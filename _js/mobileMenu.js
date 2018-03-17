@@ -14,7 +14,7 @@ var mobileNavFadeInAnimation = [
   { opacity: 1, height: '5vh' }
 ];
 var mobileNavSlideInAnimation = [
-  { right: '15px', height: '5vh', width: '5vw', borderRadius: '50%' },
+  { right: '22px', height: '5vh', width: '30px', borderRadius: '50%' },
   { right: '0', height: '100vh', width: '100vw', borderRadius: '0' }
 ];
 var mobileNavLinksAnimation = [
@@ -71,17 +71,17 @@ function animatedMenuIn(direction) {
   mobileNav
     .animate(mobileNavFadeInAnimation, {
       direction: direction,
-      duration: 200,
+      duration: 100,
       easing: 'ease-in',
       fill: 'forwards'
     });
 
   mobileNav
     .animate(mobileNavSlideInAnimation, {
-      delay: 200,
+      delay: 100,
       direction: direction,
       duration: 100,
-      easing: 'ease-in-out',
+      easing: 'ease-in',
       fill: 'forwards',
       composite: 'add'
     });
@@ -91,12 +91,11 @@ function animatedMenuIn(direction) {
       setTimeout(function () {
         mobileNavLinks[i].animate(mobileNavLinksAnimation, {
           direction: direction,
-          duration: 300,
-          easing: 'ease-in-out',
+          duration: 60,
+          easing: 'ease-in',
           fill: 'forwards',
-          delay: 150
         });
-      }, i * 150);
+      }, i * 60);
     })(i);
   }
 }
@@ -106,7 +105,7 @@ function animatedMenuOut(direction) {
     mobileNavLinks[i].animate(mobileNavLinksAnimation, {
       direction: direction,
       duration: 50,
-      easing: 'linear',
+      easing: 'ease-in',
       fill: 'forwards'
     });
   }
@@ -114,14 +113,14 @@ function animatedMenuOut(direction) {
   mobileNav
     .animate(mobileNavSlideInAnimation, {
       direction: direction,
-      duration: 200,
-      easing: 'ease-in-out',
+      duration: 100,
+      easing: 'ease-in',
       fill: 'forwards'
     });
 
   mobileNav
     .animate(mobileNavFadeInAnimation, {
-      delay: 200,
+      delay: 100,
       direction: direction,
       duration: 100,
       easing: 'ease-in',
