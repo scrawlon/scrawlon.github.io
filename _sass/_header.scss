@@ -50,6 +50,10 @@ header {
 
   &.full-height {
     height: 94vh;
+
+    @media only screen and #{$tablet} {
+      height: 68vh;
+    }
   }
 
   a {
