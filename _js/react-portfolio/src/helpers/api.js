@@ -1,6 +1,6 @@
 const axios = require('axios');
 const dataCache = require('./dataCache.js');
-var apiUrl = 'https://scrawlon.github.io/';
+var apiUrl = 'https://scrawlon.com/';
 var cacheTime = 1000 * 60 * 30; // milliseconds * seconds * minutes
 
 if ( window.location.hostname === 'localhost' ) {
