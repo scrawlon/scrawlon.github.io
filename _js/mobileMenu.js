@@ -83,7 +83,7 @@ function animatedMenuIn(direction) {
       duration: 100,
       easing: 'ease-in',
       fill: 'forwards',
-      composite: 'add'
+      /* composite: 'add' */
     });
 
   for ( var i=0; i < mobileNavLinks.length; i++ ) {
@@ -134,7 +134,7 @@ function animatedMenuOut(direction) {
       duration: 150,
       easing: 'ease-in',
       fill: 'forwards',
-      composite: 'add'
+      /* composite: 'add' */
   }).onfinish = function() {
     mobileNav.classList.remove('visible');
   }
