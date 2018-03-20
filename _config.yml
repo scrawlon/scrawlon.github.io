@@ -2,7 +2,7 @@ title:            Scrawlon
 description: "Programming blog and professional portfolio of Baltimore-area
 web developer, Scott McGrath"
 baseurl: ""
-url: "https://scrawlon.github.io"
+url: "https://scrawlon.com"
 disqus_shortname: scrawlon
 plugins:
   - jekyll-feed
