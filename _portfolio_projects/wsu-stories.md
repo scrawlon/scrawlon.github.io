@@ -11,4 +11,6 @@ tags:
 published: true
 ---
 
-YouTube player menu. Stories imported from external feed.
+WSU Stories, aka WSU 125, lists 125 stories and videos from
+Washington State University. It's a clean simple design that just works --
+easy to maintain and update -- easy to read. 

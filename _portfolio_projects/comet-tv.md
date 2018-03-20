@@ -13,8 +13,10 @@ tags:
 published: true
 ---
 
-This site's main focus is to provide info on Comet's movies and television shows.
-Early on in the development, I worked on integrating the programming data API,
-caching the data and mapping it to fields in Laravel templates. The site now
-displays a daily programming schedule with show times, show titles, episode names,
-episode descriptions, photos, cast info and links to full show episode guides.
+COMET TV, a new science fiction television network, needed a website to inform
+and strengthen their branding. Founded in 2015, COMET is using the web to
+reach new audiences. CometTV.com displays a daily programming schedule with
+times, show/movie titles, descriptions, photos and cast info. There's even a
+[live video stream][1]{:target="\_blank"}{:rel="noopener noreferrer"}
+
+[1]: https://www.comettv.com/watch-live/

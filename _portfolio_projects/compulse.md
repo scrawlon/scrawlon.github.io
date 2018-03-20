@@ -13,25 +13,12 @@ tags:
 published: true
 ---
 
-Quite a few designers, developers, copywriters and SEO specialists
-have collaborated on this web site.
-It seems that everyone who has worked at Compulse has made some contribution to
-the company web site, and it may be the most important example our work.
-This is the page that contains the
-<a href="http://compulse.com/our-work/"
-title="Compulse portfolio page" target="\_blank">Compulse portfolio page</a>,
-so oddly enough, this design matters more than the sites in the portfolio.
+Creating a website, for a company that creates websites,
+demands an extra effort. Compulse.com needed to be an example of their
+best work. It had to be even better than
+[the sites in their own portfolio][1]{:target="\_blank"}{:rel="noopener noreferrer"}.
+Compulse offers many web-related services. They tapped the skills of their
+most talented staff to make Compulse.com a top-notch
+sales/promotional tool for driving future business.
 
-For my part, I worked on the
-<a
-href="http://compulse.com/category/blog/"
-title="Blog pages"
-target="\_blank">Blog pages</a> and
-<a href="http://events.compulse.com/"
-title="Compulse Events pages" target="\_blank">Compulse Events pages</a>,
-as well as creating custom Wordpress templates, plugins and post types for the site.
-
-Several designers independently created the page mockups and collected the
-functional requirements from management. I used that to created the actual pages
-and put the code up on the live site. This is the typical designer/developer workflow
-at Compulse.
+[1]: https://compulse.com/our-work/

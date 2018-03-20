@@ -8,7 +8,7 @@ tags:
   - industries: ['brewery']
   - technologies: ['WordPress', 'jQuery']
   - project_types: ['website']
-published: true
+published: false
 ---
 
 For this project, I was asked to create a floating navigation menu.
