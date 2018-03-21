@@ -11,6 +11,6 @@
       {% include social_networks.html %}
     </footer>
 
-    <script async src="{{ site.url }}/js/app.js"></script>
+    <script async src="{{ site.url }}/js/app.js?{{site.time | date: '%s%N'}}"></script>
   </body>
 </html>
