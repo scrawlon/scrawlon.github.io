@@ -7,6 +7,20 @@ tags: []
 
 <h2>Get in touch</h2>
 <p>
-  Have question or concern? Need to get in touch with me ASAP? 
+  Have a question or concern? Send us a message in the form below.
+  You can also reach us on social media.
 </p>
+
+<ul class="social-networks">
+  {% assign social_networks = site.owner.social_networks %}
+
+  {% for social_network in social_networks %}
+    <li>
+      <a href="{{social_network.url}}" title="{{social_network.name}}" target="_blank" rel="noopener noreferrer">
+        <i class="fa {{social_network.icon}}"></i> {{social_network.name}}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
 {% include contact_form.html %}

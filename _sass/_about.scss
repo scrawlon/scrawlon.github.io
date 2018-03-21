@@ -2,13 +2,15 @@ ul {
   &.social-networks {
     list-style-type: none;
     margin: 14px 0;
+    padding: 0;
+    text-align: center;
 
     li {
       display: inline-block;
       margin: 10px 20px;
 
       a {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
         text-transform: uppercase;
         font-family: 'Pathway Gothic One', sans-serif;
         letter-spacing: .06em;
