@@ -1,9 +1,9 @@
 ---
 title: Team Trailers
-site_url: https://teamtrailersplus.com
+site_url: http://teamtrailersplus.com
 my_work:
   page_title: Trailers Catalog
-  page_url: https://teamtrailersplus.com/trailers/categories
+  page_url: http://teamtrailersplus.com/trailers/categories
 screenshot: team-trailers-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
@@ -13,6 +13,8 @@ tags:
 published: true
 featured: true
 ---
+
+**_UPDATE 5/8/18_** -- Company has rebranded as "Huntley Motor World"
 
 Team Trailers sells auto trailers in Nevada. The new teamtrailersplus.com
 provides access to inventory info and financing, as well a
