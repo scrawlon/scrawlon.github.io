@@ -8,7 +8,7 @@ tags:
   - industries: ['Amazon Alexa']
   - technologies: ['Amazon AWS']
   - project_types: ['app']
-published: true
+published: false
 ---
 
 Amazon Alexa is an amazing technology. Once I got my hands on an Echo, I had to
