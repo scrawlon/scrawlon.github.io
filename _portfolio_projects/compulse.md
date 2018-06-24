@@ -2,8 +2,6 @@
 title: Compulse Integrated Marketing
 site_url: http://www.compulse.com
 my_work:
-  page_title: Blog
-  page_url: http://compulse.com/category/blog/
 screenshot: compulse-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
