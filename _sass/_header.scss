@@ -120,8 +120,8 @@ header {
           white-space: nowrap; /* Keeps the content on a single line */
           width: auto;
           padding: 0 0 0 6px;
-          color: #f19057;
-          border-right: .1em solid #f19057; /* The typwriter cursor */
+          color: #fff;
+          border-right: .1em solid #fff; /* The typwriter cursor */
           background: transparent;
           /* typewriter effect: https://css-tricks.com/snippets/css/typewriter-effect/ */
           -webkit-animation:
@@ -137,32 +137,32 @@ header {
           /* The typing effect */
           @-webkit-keyframes typing {
             0% { max-width: 0; background: transparent }
-            10% { background: #fff }
-            100% { max-width: $readable-width; background: #fff }
+            10% { background: #000 }
+            100% { max-width: $readable-width; background: #000 }
           }
           @-moz-keyframes typing {
             0% { max-width: 0; background: transparent }
-            10% { background: #fff }
-            100% { max-width: $readable-width; background: #fff }
+            10% { background: #000 }
+            100% { max-width: $readable-width; background: #000 }
           }
           @keyframes typing {
             0% { max-width: 0; background: transparent }
-            10% { background: #fff }
-            100% { max-width: $readable-width; background: #fff }
+            10% { background: #000 }
+            100% { max-width: $readable-width; background: #000 }
           }
 
           /* The typewriter cursor effect */
           @-webkit-keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: #f19057; }
+            50% { border-color: #fff; }
           }
           @-moz-keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: #f19057; }
+            50% { border-color: #fff; }
           }
           @keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: #f19057; }
+            50% { border-color: #fff; }
           }
         }
       }
