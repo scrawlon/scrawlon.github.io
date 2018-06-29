@@ -73,6 +73,9 @@ header {
       position: absolute;
       top: 88px;
       width: 100%;
+      // background: #000;
+      // padding: 10px;
+      // border-radius: 10px;
 
       @media only screen and #{$tablet} {
         top: 115px;
@@ -110,7 +113,7 @@ header {
         text-align: center;
         text-transform: uppercase;
         border-bottom: none;
-        padding: 0;
+        padding: 0 0 0 10px;
         width: 100%;
         position: absolute;
 
@@ -119,19 +122,18 @@ header {
           overflow: hidden; /* Ensures the content is not revealed until the animation */
           white-space: nowrap; /* Keeps the content on a single line */
           width: auto;
-          padding: 0 0 0 6px;
           color: #fff;
-          border-right: .1em solid #1c0055; /* The typwriter cursor */
+          border-right: .1em solid #000; /* The typwriter cursor */
           background: transparent;
           /* typewriter effect: https://css-tricks.com/snippets/css/typewriter-effect/ */
           -webkit-animation:
-            typing 5.5s steps(44) 1s 1 normal both,
+            typing 5s steps(44) 1s 1 normal both,
             blink-caret .95s step-end 4;
           -moz-animation:
-            typing 5.5s steps(44) 1s 1 normal both,
+            typing 5s steps(44) 1s 1 normal both,
             blink-caret .95s step-end 4;
           animation:
-            typing 5.5s steps(44) 1s 1 normal both,
+            typing 5s steps(44) 1s 1 normal both,
             blink-caret .95s step-end 4;
 
           /* The typing effect */
