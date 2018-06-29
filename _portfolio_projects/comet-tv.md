@@ -2,8 +2,6 @@
 title: COMET TV
 site_url: http://www.comettv.com
 my_work:
-  page_title: Programming Schedule
-  page_url: http://www.comettv.com/schedule/
 screenshot: comet-tv-090717.jpg
 employer: Compulse Integrated Marketing
 tags:

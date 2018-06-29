@@ -2,8 +2,6 @@
 title: Team Trailers
 site_url: http://teamtrailersplus.com
 my_work:
-  page_title: Trailers Catalog
-  page_url: http://teamtrailersplus.com/trailers/categories
 screenshot: team-trailers-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
