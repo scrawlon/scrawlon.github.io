@@ -121,18 +121,18 @@ header {
           width: auto;
           padding: 0 0 0 6px;
           color: #fff;
-          border-right: .1em solid #fff; /* The typwriter cursor */
+          border-right: .1em solid #1c0055; /* The typwriter cursor */
           background: transparent;
           /* typewriter effect: https://css-tricks.com/snippets/css/typewriter-effect/ */
           -webkit-animation:
-            typing 3.5s steps(44) 1s 1 normal both,
-            blink-caret .75s step-end 3;
+            typing 5.5s steps(44) 1s 1 normal both,
+            blink-caret .95s step-end 4;
           -moz-animation:
-            typing 3.5s steps(44) 1s 1 normal both,
-            blink-caret .75s step-end 3;
+            typing 5.5s steps(44) 1s 1 normal both,
+            blink-caret .95s step-end 4;
           animation:
-            typing 3.5s steps(44) 1s 1 normal both,
-            blink-caret .75s step-end 3;
+            typing 5.5s steps(44) 1s 1 normal both,
+            blink-caret .95s step-end 4;
 
           /* The typing effect */
           @-webkit-keyframes typing {
@@ -153,15 +153,15 @@ header {
 
           /* The typewriter cursor effect */
           @-webkit-keyframes blink-caret {
-            from, to { border-color: transparent }
+            from, to { border-color: #1c0055 }
             50% { border-color: #fff; }
           }
           @-moz-keyframes blink-caret {
-            from, to { border-color: transparent }
+            from, to { border-color: #1c0055 }
             50% { border-color: #fff; }
           }
           @keyframes blink-caret {
-            from, to { border-color: transparent }
+            from, to { border-color: #1c0055 }
             50% { border-color: #fff; }
           }
         }
