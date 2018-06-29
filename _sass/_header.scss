@@ -126,13 +126,13 @@ header {
           /* typewriter effect: https://css-tricks.com/snippets/css/typewriter-effect/ */
           -webkit-animation:
             typing 3.5s steps(44) 1s 1 normal both,
-            blink-caret .75s step-end infinite;
+            blink-caret .75s step-end 3;
           -moz-animation:
             typing 3.5s steps(44) 1s 1 normal both,
-            blink-caret .75s step-end infinite;
+            blink-caret .75s step-end 3;
           animation:
             typing 3.5s steps(44) 1s 1 normal both,
-            blink-caret .75s step-end infinite;
+            blink-caret .75s step-end 3;
 
           /* The typing effect */
           @-webkit-keyframes typing {
