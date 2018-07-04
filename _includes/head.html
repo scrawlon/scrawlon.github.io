@@ -40,6 +40,50 @@
       {% include gh_pages_spa_404_script.html %}
     {% endif %}
 
+    <style>
+
+      /* pathway-gothic-one-regular - latin */
+      @font-face {
+        font-family: 'Pathway Gothic One';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{ site.url }}/css/fonts/pathway-gothic-one-v6-latin-regular.eot'); /* IE9 Compat Modes */
+        src: local('Pathway Gothic One Regular'), local('PathwayGothicOne-Regular'),
+             url('{{ site.url }}/css/fonts/pathway-gothic-one-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url('{{ site.url }}/css/fonts/pathway-gothic-one-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+             url('{{ site.url }}/css/fonts/pathway-gothic-one-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+             url('{{ site.url }}/css/fonts/pathway-gothic-one-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+             url('{{ site.url }}/css/fonts/pathway-gothic-one-v6-latin-regular.svg#PathwayGothicOne') format('svg'); /* Legacy iOS */
+      }
+
+      /* open-sans-regular - latin */
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{ site.url }}/css/fonts/open-sans-v15-latin-regular.eot'); /* IE9 Compat Modes */
+        src: local('Open Sans Regular'), local('OpenSans-Regular'),
+             url('{{ site.url }}/css/fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+             url('{{ site.url }}/css/fonts/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+             url('{{ site.url }}/css/fonts/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+             url('{{ site.url }}/css/fonts/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+             url('{{ site.url }}/css/fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+      }
+
+      @font-face {
+        font-family: 'FontAwesome';
+        src: url('{{ site.url }}/css/fonts/fontawesome-webfont.eot?v=#{$fa-version}');
+        src: url('{{ site.url }}/css/fonts/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+          url('{{ site.url }}/css/fonts/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'),
+          url('{{ site.url }}/css/fonts/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
+          url('{{ site.url }}/css/fonts/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
+          url('{{ site.url }}/css/fonts/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+    </style>
+
     {% if site.url == "http://localhost:4000" %}
       <link rel="stylesheet" href="{{ site.url }}/css/inline.css?{{site.time | date: '%s%N'}}">
     {% else %}
