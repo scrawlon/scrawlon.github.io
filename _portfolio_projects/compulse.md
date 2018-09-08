@@ -5,7 +5,7 @@ my_work:
 screenshot: compulse-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
-  - industries: ['web']
+  - industries: ['web services']
   - technologies: ['WordPress', 'jQuery']
   - project_types: ['website']
 published: true

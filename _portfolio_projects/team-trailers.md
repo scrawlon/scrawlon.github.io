@@ -6,7 +6,7 @@ screenshot: team-trailers-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['ecommerce']
-  - technologies: ['WordPress', 'UnderscoreJS', 'jQuery', 'BackboneJS', 'Bootstrap']
+  - technologies: ['WordPress', 'UnderscoreJS', 'JavaScript', 'BackboneJS', 'Bootstrap']
   - project_types: ['website']
 published: true
 featured: true

@@ -6,7 +6,7 @@ screenshot: staples-promotional-products-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['ecommerce']
-  - technologies: ['Laravel', 'jQuery', 'UnderscoreJS', 'BackboneJS', 'Amazon AWS']
+  - technologies: ['Laravel', 'JavaScript', 'UnderscoreJS', 'BackboneJS', 'Amazon AWS']
   - project_types: ['website']
 published: false
 ---

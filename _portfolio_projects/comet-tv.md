@@ -5,7 +5,7 @@ my_work:
 screenshot: comet-tv-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
-  - industries: ['television']
+  - industries: ['broadcasting']
   - technologies: ['Laravel']
   - project_types: ['website']
 published: true

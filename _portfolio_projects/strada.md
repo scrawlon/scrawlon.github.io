@@ -6,7 +6,7 @@ screenshot: strada-090717.jpg
 employer: Compulse Integrated Marketing
 tags:
   - industries: ['consulting']
-  - technologies: ['WordPress', 'BackboneJS', 'UnderscoreJS', 'jQuery']
+  - technologies: ['WordPress', 'BackboneJS', 'UnderscoreJS', 'JavaScript']
   - project_types: ['website']
 published: true
 ---
