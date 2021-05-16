@@ -2,7 +2,6 @@
   position: inherit;
   z-index: 9;
   width: 100vw;
-  background: #fff;
 
   @media only screen and #{$landscape} {
     position: fixed;
@@ -248,7 +247,6 @@ nav {
   &.nav-desktop {
     position: relative;
     height: 42px;
-    border-bottom: 1px solid #000;
 
     ul {
       &.main-nav {
