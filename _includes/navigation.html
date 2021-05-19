@@ -3,7 +3,7 @@
 
     <!-- Desktop Nav -->
     {% for link in site.links reversed %}
-	    <li class="float-right">
+	    <li>
         {% if page.url == link.url %}
           <span class="current-page-link">{{ link.title }}</span>
         {% else %}

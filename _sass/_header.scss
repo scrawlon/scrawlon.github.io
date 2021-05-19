@@ -2,9 +2,10 @@
   position: inherit;
   z-index: 9;
   width: 100vw;
+  height: 0;
 
   @media only screen and #{$landscape} {
-    position: fixed;
+    // position: fixed;
   }
 }
 
@@ -229,7 +230,7 @@ nav {
 
   ul {
     margin: 0;
-    padding: 8px 10px 5px;
+    padding: .5em;
 
     // a, a:visited {
     //   color: #fff;
@@ -238,7 +239,6 @@ nav {
     // }
 
     li {
-      display: inline-block;
       text-transform: uppercase;
       margin-bottom: 15px;
     }
@@ -252,7 +252,9 @@ nav {
       &.main-nav {
         position: absolute;
         top: 0;
+        right: 0;
         z-index: 10;
+        text-align: right;
       }
 
       &.social-icons {
@@ -289,17 +291,18 @@ nav {
 
       a {
         &:hover, &.active, &.active-blog-post {
-          color: #EF6C00;
+          font-weight: bold;
+          // color: #EF6C00;
         }
 
         &.active {
           cursor: default;
-          border-left: 7px solid #EF6C00;
+          // border-left: 7px solid #EF6C00;
         }
 
         &.active-blog-post {
           cursor: pointer;
-          border-left: 7px solid #EF6C00;
+          // border-left: 7px solid #EF6C00;
         }
       }
     }
@@ -559,19 +562,19 @@ nav {
 
       .float-right {
         display: block;
-        a, .current-page-link {
-          background: #fff;
-          border-left: 7px solid #000;
-          color: #000;
-          opacity: 0.75;
-          padding: 0 2px 0 10px;
-          margin-right: 15px;
-        }
+        // a, .current-page-link {
+        //   background: #fff;
+        //   border-left: 7px solid #000;
+        //   color: #000;
+        //   opacity: 0.75;
+        //   padding: 0 2px 0 10px;
+        //   margin-right: 15px;
+        // }
 
-        .current-page-link {
-          color: #EF6C00;
-          border-left: 7px solid #EF6C00;
-        }
+        // .current-page-link {
+        //   color: #EF6C00;
+        //   border-left: 7px solid #EF6C00;
+        // }
 
       }
     }

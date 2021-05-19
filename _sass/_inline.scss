@@ -36,7 +36,11 @@ body {
 }
 
 a {
-  color: #F19057;
+  color: #FFF;
+
+  &:hover, &:active, &:visited {
+    color: #FFF;
+  }
 }
 
 iframe {
@@ -190,8 +194,8 @@ code {
 figcaption {
   font-size: 1.1rem;
   position: absolute;
-  bottom: 2px;
-  right: 2px;
+  bottom: .5em;
+  right: .5em;
   line-height: 1.45rem;
   color: #fff;
 

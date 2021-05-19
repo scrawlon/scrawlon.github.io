@@ -1,7 +1,7 @@
 // var Velocity = require('velocity-animate');
 var urlPath = window.location.pathname;
 
-require('./header');
+// require('./header');
 require('./mobileMenu');
 require('./homeSlider');
 require('fg-loadcss');
