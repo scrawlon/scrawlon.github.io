@@ -158,15 +158,12 @@ code {
 
 .pagination {
   font-size: .8em;
-  font-weight: bold;
   margin: 40px 0;
   width: 100%;
   letter-spacing: 0;
-  text-align: center;
 
   @media only screen and #{$tablet} {
     letter-spacing: .1em;
-    text-align: right;
   }
 }
 
@@ -244,7 +241,7 @@ article {
 }
 
 .blog-list {
-  margin: 0 40%;
+  margin: 0 0 0 40%;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 1.3em;
   word-spacing: .15em;

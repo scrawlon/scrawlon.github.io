@@ -7,6 +7,7 @@ disqus_shortname: scrawlon
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate
 sass:
     sass_dir: _sass
     style: compressed
@@ -63,10 +64,11 @@ home:
 links:
   - title: Home
     url: /
-  - title: Blog
-    url: /blog/
   - title: About
     url: /about/
+
+paginate: 5
+paginate_path: "/page:num/"
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:     America/New_York
