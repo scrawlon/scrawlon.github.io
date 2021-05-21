@@ -16,7 +16,9 @@ background-image:
 <section id="main-logo">
   <div class="wide-wrapper">
     <div class="slide-header">
-      {% include logo.html %}
+      <a href="/">
+        {% include logo.html %}
+      </a>
     </div>
 
     <div class="full-width">

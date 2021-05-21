@@ -29,7 +29,7 @@ html {
 
 body {
   @include font-size(1.8);
-
+  background: lightblue;
   color: black;
   font-family: 'Open Sans', sans-serif;
   position: relative;
@@ -189,7 +189,7 @@ code {
 }
 
 figcaption {
-  font-size: 1.1rem;
+  font-size: .9rem;
   position: absolute;
   bottom: .5em;
   right: .5em;
@@ -207,7 +207,6 @@ figcaption {
 
 article {
   width: 100%;
-  padding: 2em 0;
 }
 
 .float-right {
@@ -241,7 +240,9 @@ article {
 }
 
 .blog-list {
-  margin: 0 0 0 40%;
+  background: #fff;
+  margin: 0 0 0 35%;
+  padding: 2em;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 1.3em;
   word-spacing: .15em;
@@ -290,10 +291,6 @@ article {
 
   h1 {
     letter-spacing: .09em;
-  }
-
-  article {
-    padding: 4em 0;
   }
 
   .wrapper {
