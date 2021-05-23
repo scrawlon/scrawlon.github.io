@@ -1,46 +1,17 @@
-<nav class='nav-desktop'>
-  <ul class='main-nav'>
+<nav class='navbar navbar-expand navbar-dark bg-dark'>
+  <ul class='navbar-nav mr-auto text-right'>
 
-    <!-- Desktop Nav -->
-    {% for link in site.links reversed %}
-	    <li>
-        {% if page.url == link.url %}
-          <span class="current-page-link">{{ link.title }}</span>
-        {% else %}
-          <a href="{{ site.url }}{{ link.url }}" class="{{ nav_class }}" title="{{ link.title }}">
-            {{ link.title }}
-          </a>
-        {% endif %}
-      </li>
-    {% endfor %}
-
-  </ul>
-</nav>
-
-{% assign mobile_nav_background = site.mobile_nav.background-image.file %}
-<nav class="nav-mobile" id="nav-mobile">
-  <ul class='nav-mobile-links'>
-    <!-- Logo Home Link -->
-    {% assign home = site.home | first %}
-    <li>
-      <a href="{{ site.url }}{{ home.url }}"
-        {% if home.url == page.url %} class="active" {% endif %} title="Home">
-        Home
-      </a>
-    </li>
-
-    <!-- Mobile Nav -->
     {% for link in site.links %}
-	    <li>
-        <a href="{{ site.url }}{{ link.url }}" class="{{ nav_class }}" title="{{ link.title }}">
+      {% assign nav_item_link_class = '' %}
+      {% if page.url == link.url %}
+        {% assign nav_item_link_class = 'disabled' %}
+      {% endif %}
+      <li class="nav-item">
+        <a href="{{ site.url }}{{ link.url }}" class="nav-link {{ nav_item_link_class }}" title="{{ link.title }}">
           {{ link.title }}
         </a>
       </li>
     {% endfor %}
 
   </ul>
-
-  <div class="swiper-fade"></div>
 </nav>
-
-<div class="nav-mobile-backdrop" id="nav-mobile-backdrop"></div>

@@ -1,16 +1,18 @@
-    {% if page.comments %}
-      {% include disqus_comments.html %}
-    {% endif %}
+      {% if page.comments %}
+        {% include disqus_comments.html %}
+      {% endif %}
 
-    <footer>
-      <p>
-        Created by {{ site.owner.name }} &copy;{{ site.time | date: '%Y' }} <br />
-        <a href="http://jekyllrb.com" title="Jekyll" target="_blank" rel="noopener noreferrer">Powered by Jekyll</a>
-      </p>
+      <footer>
+        <p>
+          Created by {{ site.owner.name }} &copy;{{ site.time | date: '%Y' }} <br />
+          <a href="http://jekyllrb.com" title="Jekyll" target="_blank" rel="noopener noreferrer">Powered by Jekyll</a>
+        </p>
 
-      {% include social_networks.html %}
-    </footer>
+        {% include social_networks.html %}
+      </footer>
 
-    <script async src="{{ site.url }}/js/app.js?{{site.time | date: '%s%N'}}"></script>
+      <script async src="{{ site.url }}/js/app.js?{{site.time | date: '%s%N'}}"></script>
+      
+    </div>
   </body>
 </html>
