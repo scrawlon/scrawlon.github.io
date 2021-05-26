@@ -93,14 +93,20 @@
   </head>
 
   <body>
-    <div class="container-fluid">
+    <div class="container-xxl">
 
       {% include navigation.html %}
 
       {% if page.heading or page.title %}
-        <div class="so-bg-mask p-5 text-center bg-image" style="background-image:url({{ site.url }}/images/{{ page.header_image.file }});">
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="text-white">
+        <div class="so-bg-mask p-5 bg-image" style="background-image:url({{ site.url }}/images/{{ page.header_image.file }});">
+          <div class="row h-100">
+            <div class="col">
+              <a href="/">
+                {% include logo.html %}
+              </a>
+            </div>
+
+            <div class="col-8 text-white">
 
               {% if page.layout == "page" %}
                 <div class="page-heading-wrapper">
@@ -114,7 +120,7 @@
                   <hr class="page-header-underline" />
                 </div>
               {% else %}
-                <h1>
+                <h1 class="fs-1 fw-bold p-4 bg-dark">
                   {% if page.heading %}
                     {{ page.heading }}
                   {% else %}
@@ -122,13 +128,13 @@
                   {% endif %}
                 </h1>
                 {% if page.subheading %}
-                  <h2 class="subheading">
+                  <h2 class="subheading p-4 bg-dark">
                     {{ page.subheading }}
                   </h2>
                 {% endif %}
 
                 {% if page.author %}
-                  <div class="by-line">
+                  <div class="by-line p-4 bg-dark">
                     By {{ page.author }}
                     {% if page.date %}
                       <time datetime="{{ page.date | date_to_xmlschema }}"> - {{ page.date | date: "%B %d, %Y" }}</time>
