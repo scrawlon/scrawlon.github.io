@@ -98,60 +98,54 @@
       {% include navigation.html %}
 
       {% if page.heading or page.title %}
-        <header
-          {% if page.title == 404 or page.layout == 'post' %}
-            class="full-height"
-          {% endif %}
-          {% if page.header_image %}
-            style="background-image:url({{ site.url }}/images/{{ page.header_image.file }}); background-size: cover;"
-            title="{{ page.header_image.caption.title }}"
-          {% endif %}>
-          <div class="backdrop">
-          </div>
-          <div class="wrapper">
+        <div class="so-bg-mask p-5 text-center bg-image" style="background-image:url({{ site.url }}/images/{{ page.header_image.file }});">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
 
-            {% if page.layout == "page" %}
-              <div class="page-heading-wrapper">
-                <h1 class="page">
+              {% if page.layout == "page" %}
+                <div class="page-heading-wrapper">
+                  <h1 class="page">
+                    {% if page.heading %}
+                      {{ page.heading }}
+                    {% else %}
+                      {{ page.title }}
+                    {% endif %}
+                  </h1>
+                  <hr class="page-header-underline" />
+                </div>
+              {% else %}
+                <h1>
                   {% if page.heading %}
                     {{ page.heading }}
                   {% else %}
                     {{ page.title }}
                   {% endif %}
                 </h1>
-                <hr class="page-header-underline" />
-              </div>
-            {% else %}
-              <h1>
-                {% if page.heading %}
-                  {{ page.heading }}
-                {% else %}
-                  {{ page.title }}
+                {% if page.subheading %}
+                  <h2 class="subheading">
+                    {{ page.subheading }}
+                  </h2>
                 {% endif %}
-              </h1>
-              {% if page.subheading %}
-                <h2 class="subheading">
-                  {{ page.subheading }}
-                </h2>
+
+                {% if page.author %}
+                  <div class="by-line">
+                    By {{ page.author }}
+                    {% if page.date %}
+                      <time datetime="{{ page.date | date_to_xmlschema }}"> - {{ page.date | date: "%B %d, %Y" }}</time>
+                    {% endif %}
+                  </div>
+                {% endif %}
               {% endif %}
 
-              {% if page.author %}
-                <div class="by-line">
-                  By {{ page.author }}
-                  {% if page.date %}
-                    <time datetime="{{ page.date | date_to_xmlschema }}"> - {{ page.date | date: "%B %d, %Y" }}</time>
-                  {% endif %}
-                </div>
-              {% endif %}
-            {% endif %}
+            </div>
 
-          </div>
           {% include image_caption.html image=page.header_image %}
-        </header>
+          </div>
+        </div>
       {% endif %}
 
       {% if page.layout == "post" %}
-        <div class="wrapper">
+        
           {% include share_post.html %}
-        </div>
+        
       {% endif %}
