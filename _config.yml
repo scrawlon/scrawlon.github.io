@@ -67,7 +67,7 @@ links:
   - title: About
     url: /about/
 
-paginate: 5
+paginate: 10
 paginate_path: "/page:num/"
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones

@@ -1,22 +1,10 @@
 {% include head.html %}
 
-<article>
-
-  <div class="wrapper">
+<div class="row justify-content-md-center">
+  <div class="col-lg-8 col-md-9">
+    {% include share_post.html %}
     {{ content }}
-    <nav class="pagination">
-      {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">&lt; prev post</a>
-        {% if page.next %}
-          |
-        {% endif %}
-      {% endif %}
-      {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">next post &gt;</a>
-      {% endif %}
-    </nav><!-- /.pagination -->
   </div>
-
-</article>
+</div>
 
 {% include footer.html %}
