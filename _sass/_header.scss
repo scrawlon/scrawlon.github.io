@@ -4,7 +4,7 @@
   background-position: center center;
   background-size: cover; 
   height: 400px;
-  box-shadow: 0 0 186px 60px midnightblue inset;
+  box-shadow: 0 0 180px 20px midnightblue inset;
 
   &::before {
     z-index: 1;
@@ -36,7 +36,7 @@
     opacity: .95;
     z-index: 2;
     mix-blend-mode: overlay;
-    animation: flash 15s forwards;
+    animation: flash 10s forwards;
   }
 
   @keyframes flash {

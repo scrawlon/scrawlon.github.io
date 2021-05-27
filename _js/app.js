@@ -1,5 +1,5 @@
 // var Velocity = require('velocity-animate');
-var urlPath = window.location.pathname;
+// var urlPath = window.location.pathname;
 
 // require('./header');
 // require('./mobileMenu');

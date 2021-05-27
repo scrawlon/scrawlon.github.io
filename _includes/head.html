@@ -100,13 +100,13 @@
       {% if page.heading or page.title %}
         <div class="so-bg-mask p-5 bg-image" style="background-image:url({{ site.url }}/images/{{ page.header_image.file }});">
           <div class="row h-100">
-            <div class="col">
+            <div class="col-lg-3 col-md-4">
               <a href="/">
                 {% include logo.html %}
               </a>
             </div>
 
-            <div class="col-8 text-white">
+            <div class="col-lg-9 col-md-8 text-white align-self-center">
 
               {% if page.layout == "page" %}
                 <div class="page-heading-wrapper">
