@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About"
-description: "Learn about the Scrawlon website and its creator, Scott McGrath"
+description: "Learn more about the Scrawlon's purpose, and the author, Scott McGrath"
 tags: []
 heading: "About Scrawlon. Who's the author? What's the point?"
 header_image:
@@ -18,23 +18,32 @@ header_image:
     url: https://flic.kr/p/Kgfvw5
 ---
 
-<h2>Introduction</h2>
+<h2>About Scrawlon</h2>
 <p>
-  Scrawlon.com is the Internet hub for thoughts, works and writings of
-  Baltimore-area web developer, Scott McGrath. If you landed here from a web
-  search or social link, we hope you find what you need. If you're a recruiter
-  or potential future employer, we hope you like what you see.
+  My name is Scott McGrath. I'm an experienced software/web developer with contributtions to hundreds of projects  
+  -- from simple informational webpages to complex interactive web applications. 
 </p>
 <p>
-  Have a question about anything on the site?
-  <a href="/contact">Send us a message</a>.
+  I wasn't always a developer though. I once had a long career in an unrelated field.
+  I stumbled into programming. I don't remember when, but I came a across a free online course and enrolled.
+  It was definitely a struggle in the beginning. In some ways, it still is.
+</p>
+<p>
+  Sometimes I learn just enough to get the job done. Other times, I'll become obessed, spending every 
+  free moment reading blogs, watching videos, 
+  examining source code, and working on example projects to solidify this new knowledge with experience. 
+</p>
+<p>
+  Learning is the core. There will always be stumbling blocks. There will always be too much to remember.
+  When I'm first getting started, I take notes. When I struggle with something, and can't find the answer
+  online, I try to make a note of it. If and when I find the time, I'll write about it here -- for my own
+  sake, and for those that might stumble here searching for an answer.
 </p>
 
-<h2>AKA Scott McGrath</h2>
+<h2>AKA Scrawlon</h2>
 <p>
-On the Internet, I go by Scrawlon. It's short, memorable and has that cool "hacker"
-vibe -- like Neo, Count Zero or Mr. Robot -- Scrawlon is the unknown cyberpunk
-hero on the other side of your computer screen...
+On the Internet, I often go by Scrawlon. It's short, memorable and has that cool "hacker"
+vibe -- like Neo, Count Zero or Mr. Robot -- Hey. I loved sci-fi long before I loved programming. LOL.
 </p>
 
 <ul class="social-networks">
@@ -42,52 +51,12 @@ hero on the other side of your computer screen...
 
   {% for social_network in social_networks %}
     <li>
-      <a href="{{social_network.url}}" title="{{social_network.name}}" target="_blank" rel="noopener noreferrer">
-        <i class="fa {{social_network.icon}}"></i> / scrawlon
+      <a class="bg-primary text-white p-2 rounded text-decoration-none" 
+          href="{{social_network.url}}" 
+          title="{{social_network.name}}" 
+          target="_blank" rel="noopener noreferrer">
+        <i class="fa {{social_network.icon}}"></i> scrawlon
       </a>
     </li>
   {% endfor %}
 </ul>
-
-<p>
-  Back in the real world, they call me Scott. I'm no hacker, but I do write
-  code. Professionally, 40 hours a week at
-  <a href="https://compulse.com/" title="Compulse Integrated Marketing" target="_blank" rel="noopener noreferrer">Compulse Integrated Marketing</a>,
-  building and maintaining hundreds of WordPress websites, serving clients
-  in many sectors across the country --
-  national brands
-  <a href="/portfolio/schmidt-baking" title="Schmidt Baking">(Schmidt Baking)</a> --
-  broadcast television
-  <a href="/portfolio/comet-tv" title="Comet TV">(Comet TV)</a> --
-  real estate
-  <a href="/portfolio/southern-highlands" title="Southern Highlands">(Southern Highlands)</a> --
-  education
-  <a href="/portfolio/wsu-stories" title="Washington State University">(Washington State University)</a> -- and more.
-  <!-- healthcare
-  <a href="/portfolio/guardian-healthcare" title="Guardian Healthcare">(Guardian Healthcare)</a> -- -->
-  <!-- professional organizations
-  <a href="/portfolio/pab" title="Pennsylvania Assoc. of Broadcasters">(Pennsylvania Assoc. of Broadcasters)</a> -- -->
-</p>
-
-<p>
-  I'm proud of that work, but the drive
-  to learn and create doesn't end at the office door. Programming is as much
-  art as profession. Recent personal projects include --
-  an Amazon Alexa game
-  <a href="/portfolio/alexa-ask-the-ai-hive-mind" title="Ask the A.I. Hive Mind">(Ask the A.I. Hive Mind)</a> --
-  an open source MIDI library
-  <a href="https://github.com/scrawlon/Unofficial-Novation-Circuit-MIDI-CC-JavaScript-data-library"
-    title="Unofficial Novation Circuit&trade; MIDI CC JavaScript data library"
-    target="_blank" rel="noopener noreferrer">(Unofficial Novation Circuit&trade; MIDI CC JavaScript data library)</a> --
-  a YouTube channel for Web MIDI API projects
-  <a href="https://www.youtube.com/channel/UCEMODeZFjTda5LMVgSgJoJQ" title="YouTube - Web MIDI Dev"
-    target="_blank" rel="noopener noreferrer">(Web MIDI Dev)</a> --
-  a professional portfolio and blog
-  <a href="{{site.url}}">(this site!)</a>.
-</p>
-
-<p>
-  When I'm not grinding out code for some active side venture,
-  I'm reading docs, scouring my Twitter feed, experimenting on CodePen,
-  hustling to stay current with the latest web languages and frameworks.
-</p>
