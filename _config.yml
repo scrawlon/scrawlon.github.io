@@ -40,9 +40,6 @@ owner:
       url:        "https://linkedin.com/in/scrawlon"
       icon:       "fa-linkedin-square"
   local_links:
-    - name:       "Email"
-      url:        "/contact"
-      icon:       "fa-envelope"
     - name:       "rss"
       url:        "/feed.xml"
       icon:       "fa-rss"

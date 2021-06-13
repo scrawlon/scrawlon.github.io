@@ -35,13 +35,13 @@ body {
   position: relative;
 }
 
-a {
-  color: #FFF;
+// a {
+//   color: #FFF;
 
-  &:hover, &:active, &:visited {
-    color: #FFF;
-  }
-}
+//   &:hover, &:active, &:visited {
+//     color: #FFF;
+//   }
+// }
 
 iframe {
   margin: 40px auto;
@@ -208,7 +208,7 @@ figcaption {
   a {
     color: #fff;
 
-    &:visited {
+    &:hover, &:visited {
       color: #fff;
     }
   }
