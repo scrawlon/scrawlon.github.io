@@ -89,7 +89,9 @@ iframe {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Pathway Gothic One', sans-serif;
   font-weight: bold;
+  line-height: 1.5em;
   padding-top: 1em;
+  padding-bottom: .5em;
 }
 
 h1 {
@@ -102,14 +104,21 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 2.25em !important;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.75em !important;
+  }
+}
+
 a {
   text-decoration: none;
 }
 
 p {
-  margin: 1em auto 1.2em;
-  font-size: 1.5rem;
-  line-height: 2.6rem;
+  margin: 1em auto 1.2em !important;
+  font-size: 1.45rem;
 
   a {
     font-weight: bold;
@@ -138,7 +147,6 @@ ol {
 
 ul, ol {
   width: 100%;
-  margin: 0.5em;
   padding-left: 1em;
 
   li {
@@ -244,7 +252,13 @@ article {
   font-family: 'Pathway Gothic One', sans-serif;
   word-spacing: .15em;
   letter-spacing: .03em;
-  column-count: 2;
+  column-count: 1;
+
+  @media screen and (min-width: 768px) {
+    & {
+      column-count: 2;
+    }
+  }
 
   a {
     color: #EF6C00;
@@ -305,9 +319,9 @@ article {
     @include font-size(1.7);
   }
 
-  p {
-    line-height: 2.8rem;
-  }
+  // p {
+  //   line-height: 2.8rem;
+  // }
 
   .no-scroll {
     overflow: auto;
@@ -320,9 +334,9 @@ article {
     @include font-size(1.8);
   }
 
-  nav {
-    font-size: 1.1em;
-  }
+  // nav {
+  //   font-size: 1.1em;
+  // }
 
   .wrapper {
     width: 90%;
