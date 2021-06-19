@@ -4,7 +4,7 @@
 // require('./header');
 // require('./mobileMenu');
 // require('./homeSlider');
-require('fg-loadcss');
+// require('fg-loadcss');
 
 // if ( urlPath.indexOf('/portfolio') !== -1 ) {
 //   require('./portfolio');
