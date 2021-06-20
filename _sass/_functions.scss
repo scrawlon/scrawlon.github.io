@@ -28,9 +28,6 @@
   }
 }
 
-// include h1-h6
-// @include h(235%, 175%, 150%, 125%, 115%, 105%);
-
 // Video Scanline effect
 @mixin scanlines($color, $height: 1px, $angle: 0, $opacity: 0.2) {
     position: relative;

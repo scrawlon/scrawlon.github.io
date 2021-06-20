@@ -74,7 +74,6 @@
       background: transparent;
       border-left: 10px solid #fff;
       color: #FFF;
-      // border-radius: 4px;
       -webkit-transition-delay: 100ms;
       -moz-transition-delay: 100ms;
       -o-transition-delay: 100ms;
@@ -104,11 +103,6 @@
     height: 350px;
     background-size: cover;
     background-position: center;
-  	// -webkit-transition: background-size 140ms ease-in;
-  	// -moz-transition: background-size 140ms ease-in;
-  	// -o-transition: background-size 140ms ease-in;
-  	// -ms-transition: background-size 140ms ease-in;
-  	// transition: background-size 140ms ease-in;
 
     @media only screen and #{$tablet} {
       width: 48%;
@@ -131,18 +125,14 @@
     }
 
     &:hover {
-      // background-size: 200%;
-
       & .backdrop {
         opacity: .9;
       }
 
       & h2 {
         border-left: 10px solid #F19057;
-        // color: #FFF;
 
         & .text-highlight {
-          // border-bottom: 3px solid #F19057;
           background: #F19057;
           webkit-box-shadow: 5px 0 0 #F19057, -5px 0 0 #F19057;
           moz-box-shadow: 5px 0 0 #F19057, -5px 0 0 #F19057;
@@ -168,10 +158,6 @@
       moz-box-shadow: none;
       box-shadow: none;
     }
-
-    // &:hover h2 {
-    //   word-spacing: .4em;
-    // }
 
     .backdrop {
       background-image: none;

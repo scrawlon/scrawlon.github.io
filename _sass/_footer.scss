@@ -8,7 +8,6 @@ footer {
   overflow: auto;
 
   p {
-    // padding: 3px 0 0 3vh;
     text-align: center;
     font-size: 1.25em;
   }
@@ -61,14 +60,6 @@ footer {
           padding: 0;
           font-size: 3rem;
         }
-      }
-    }
-  }
-
-  @media only screen and #{$landscape} {
-    ul {
-      &.social-icons {
-
       }
     }
   }
