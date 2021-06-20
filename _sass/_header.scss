@@ -70,6 +70,14 @@
   }
 }
 
+nav {
+  &.navbar {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: .8em;
+  }
+}
+
 // .nav-mobile-backdrop {
 //   @extend .backdrop;
 //   background: #000 !important;
