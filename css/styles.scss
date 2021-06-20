@@ -72,7 +72,7 @@ iframe {
 
 .by-line {
   margin: 20px 0 0;
-  font-size: .8em;
+  font-size: .5em;
   word-spacing: .3em;
 }
 
@@ -99,7 +99,7 @@ h1 {
   line-height: 5.5rem;
   word-spacing: .1em;
   letter-spacing: 0;
-  line-height: 1.2em;
+  line-height: 1.5em;
 
   @media only screen and #{$tablet} {
     letter-spacing: .02em;
@@ -107,11 +107,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25em !important;
-
-  @media screen and (min-width: 768px) {
-    font-size: 2.75em !important;
-  }
+  font-size: 1.75em !important;
+  line-height: 1.2em;
 }
 
 a {
@@ -264,6 +261,11 @@ article {
 
   a {
     color: #EF6C00;
+    font-size: 1.25em;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1em;
+    }
 
     &:hover {
       color: midnightblue;

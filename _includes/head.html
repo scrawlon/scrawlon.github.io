@@ -63,12 +63,12 @@
               {% endif %}
 
               {% if page.author %}
-                <div class="by-line p-4 bg-dark">
+                <span class="by-line px-4 py-2 bg-dark">
                   By {{ page.author }}
                   {% if page.date %}
                     <time datetime="{{ page.date | date_to_xmlschema }}"> - {{ page.date | date: "%B %d, %Y" }}</time>
                   {% endif %}
-                </div>
+                </span>
               {% endif %}
             </div>
 
