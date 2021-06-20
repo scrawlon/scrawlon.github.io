@@ -1,9 +1,7 @@
-title:            Scrawlon
-description: "Programming blog and professional portfolio of Baltimore-area
-web developer, Scott McGrath"
+title:        "Scrawlon"
+description:  "Programming blog written by Baltimore-area web developer, Scott McGrath"
 baseurl: ""
-url: "https://scrawlon.com"
-disqus_shortname: scrawlon
+url:          "https://scrawlon.com"
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -90,21 +88,4 @@ exclude:
   - node_modules
   - gulpfile.js
 
-collections:
-  - slides_home
-  - portfolio_projects
-
 empty_array: []
-mobile_nav:
-  background-image:
-    file: blue-blast.jpg
-    caption:
-      credit:
-        name: Eric Sonstroem
-        url: https://www.flickr.com/photos/sonstroem/
-      license:
-        type: Creative Commons
-        url: https://creativecommons.org/licenses/by/2.0/
-      source: Flickr
-      title: Blue blast
-      url: https://flic.kr/p/Kgfvw5
