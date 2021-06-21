@@ -1,8 +1,6 @@
 ---
 ID: 673
 title: Dysfunctional WordPress Droplets on DigitalOcean
-description: "Having server issues with WordPress on DigitalOcean? Here are some
-problems/solutions I discovered"
 author: Scott McGrath
 header_image:
   file: digital-ocean-droplets.jpg

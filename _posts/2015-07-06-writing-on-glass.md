@@ -2,7 +2,6 @@
 ID: 74
 title: Writing On Glass
 author: Scott McGrath
-description: "Interested in computer tablets for taking handwritten notes?
 Here, I look at the pros/cons of a few popular choices"
 header_image:
   file: tablet-computers.jpg

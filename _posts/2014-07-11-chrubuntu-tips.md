@@ -2,7 +2,6 @@
 author: Scott McGrath
 layout: post
 title: ChrUbuntu + Acer C720
-description: "Tips for getting the most of ChrUbuntu Linux on the Acer C720 Chromebook"
 subheading: Collected Tips and Fixes
 description:
 category:

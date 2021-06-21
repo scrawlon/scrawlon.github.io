@@ -1,7 +1,6 @@
 ---
 ID: 222
 title: Add More Social Media Options to WordPress Divi Theme
-description: "Learn how to add additional social media links to Divi WordPress theme"
 author: Scott McGrath
 header_image:
   file: divi-social-icons.jpg

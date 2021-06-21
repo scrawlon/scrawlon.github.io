@@ -1,7 +1,6 @@
 ---
 ID: 123
 title: Control Your Webcam with HTML and JavaScript
-description: "Learn how to control a webcam in your web browser (JavaScript)"
 author: Scott McGrath
 header_image:
   file: webcam1.jpg
