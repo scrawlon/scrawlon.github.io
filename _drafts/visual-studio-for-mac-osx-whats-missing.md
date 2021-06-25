@@ -39,10 +39,29 @@ and
   - [Docker + SQL Server](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash)
   - [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15#macos-install)
 
+  Bonus Tip: [Docker + SQL Server "Connect String"](https://stackoverflow.com/questions/45712122/connection-string-for-sqlserver-in-docker-container/53702630#answer-65324761)
 <hr />
 ## EF Core Database Migrations
-On Windows, you can run EF Core migrations directly in VS using
+On Windows, you can run 
+[EF Core migrations](https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=vs) 
+directly in VS using
 [Package Manager Console](https://docs.microsoft.com/en-us/ef/core/cli/powershell).
 
 ### **Mac Alternatives:** 
   - [.NET Core CLI](https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli)
+
+<hr />
+## Scaffold Indentity
+On Windows, you can use 
+[Solution Explorer](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-5.0&tabs=visual-studio#scaffold-identity-into-an-empty-project)
+to add 
+[ASP.NET Core Identity](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-5.0&tabs=visual-studio).
+
+### **Mac Alternatives:** 
+  - [.NET Core CLI](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-5.0&tabs=netcore-cli#scaffold-identity-into-an-empty-project)
+  
+<hr />
+## Bonus Tips
+  - [Mac Keyboard Shortcuts](https://docs.microsoft.com/en-us/visualstudio/mac/keyboard-shortcuts?view=vsmac-2019)
+  - [Secret Storage](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-5.0&tabs=linux#secret-manager)
+
