@@ -32,7 +32,7 @@ gulp.task('fontawesome-sass', function() {
     .pipe(gulp.dest('_sass/font-awesome'));
 });
 
-gulp.task('inline-css', function() {
-  return gulp.src('css/inline.scss')
-    .pipe(gulp.dest('_includes/css'));
-});
+// gulp.task('inline-css', function() {
+//   return gulp.src('css/inline.scss')
+//     .pipe(gulp.dest('_includes/css'));
+// });
