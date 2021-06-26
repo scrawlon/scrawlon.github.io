@@ -2,22 +2,22 @@
 title: Visual Studio for Mac OSX - What's Missing?
 author: Scott McGrath
 header_image:
-  file: swiper-js-polaroids.jpg
+  file: visual-studio-for-mac.jpg
   caption:
     credit:
-      name: Virginia rm
-      url: https://www.flickr.com/photos/virgirm/
+      name: C.P.Storm
+      url: https://www.flickr.com/photos/cpstorm/
     license:
       type: Creative Commons
       url: https://creativecommons.org/licenses/by/2.0/
     source: Flickr
-    title: Polaroid photos
-    url: https://www.flickr.com/photos/virgirm/3787704589/in/faves-151359080@N04/
+    title: Broken
+    url: https://www.flickr.com/photos/cpstorm/879782403/in/faves-35579269@N05/
 layout: post
 published: true
 ---
 
-I prefer macOS for software development. Some of the best tools are built right into the OS,
+I prefer macOS for software development. Some great dev tools are built right into the OS,
 and many other compatible applications are available to download and install. 
 Even Microsoft provides some tools, languages and frameworks for macOS.
 
