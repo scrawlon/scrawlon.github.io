@@ -4,5 +4,6 @@ Vagrantfile
 .vagrant
 *.swp
 *.box
+.vscode/
 
 node_modules
